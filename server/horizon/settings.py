@@ -21,7 +21,7 @@ DEBUG = env('DJANGO_DEBUG', default=False)
 
 ALLOWED_HOSTS = []
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
+    'localhost:3000'
 )
 
 # Application definition
