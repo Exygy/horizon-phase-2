@@ -1,0 +1,20 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    container_name: horizon-db
+  horizon:
+    build:
+      context: .
+      dockerfile: ./docker/Docker.server/Dockerfile
+    image: horizon
+    env_file: .env
+    container_name: horizon
+    volumes:
+      - .:/code
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    links:
+      - db:postgres
