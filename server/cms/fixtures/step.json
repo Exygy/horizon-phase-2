@@ -5,9 +5,9 @@
         "fields":{
             "challenge_id": 1,
             "order": 1,
-            "title_md": "yay",
-            "description_md": "sdf",
-            "call_to_action_md": "dsfdsf"
+            "title_md_en": "yay",
+            "description_md_en": "sdf",
+            "call_to_action_md_en": "dsfdsf"
         }
     }
 ]
