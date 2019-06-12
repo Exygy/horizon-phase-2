@@ -1,0 +1,30 @@
+[
+    {
+        "model": "cms.category",
+        "pk": 1,
+        "fields":{
+            "name": "Housing"
+        }
+    },
+    {
+        "model": "cms.category",
+        "pk": 2,
+        "fields":{
+            "name": "Transportation"
+        }
+    },
+    {
+        "model": "cms.category",
+        "pk": 3,
+        "fields":{
+            "name": "Resilience"
+        }
+    },
+    {
+        "model": "cms.category",
+        "pk": 4,
+        "fields":{
+            "name": "Economic Development"
+        }
+    }
+]

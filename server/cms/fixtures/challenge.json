@@ -1,0 +1,26 @@
+[
+    {
+        "model": "cms.challenge",
+        "pk": 1,
+        "fields":{
+            "name": "Housing affordability",
+            "category_id": 1
+        }
+    },
+    {
+        "model": "cms.challenge",
+        "pk": 2,
+        "fields":{
+            "name": "New housing sites",
+            "category_id": 1
+        }
+    },
+    {
+        "model": "cms.challenge",
+        "pk": 3,
+        "fields":{
+            "name": "Policies for renters",
+            "category_id": 1
+        }
+    }
+]

@@ -1,11 +1,9 @@
 import graphene
 
-from .graphql import schema as main_schema
+from cms import queries as cms_queries
 
 
-class Query(main_schema.Query, graphene.ObjectType):
-    # This class will inherit from multiple Queries
-    # as we begin to add more apps to our project
+class Query(cms_queries.Query, graphene.ObjectType):
     pass
 
 

@@ -1,0 +1,13 @@
+[
+    {
+        "model": "cms.step",
+        "pk": 1,
+        "fields":{
+            "challenge_id": 1,
+            "order": 1,
+            "title_md": "yay",
+            "description_md": "sdf",
+            "call_to_action_md": "dsfdsf"
+        }
+    }
+]

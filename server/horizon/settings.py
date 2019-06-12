@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # Our apps
     'horizon',
+    'cms',
 ]
 
 # TODO - turn off in prod when golive
@@ -133,6 +134,9 @@ if not DEBUG:
         os.path.join(REACT_APP_DIR, 'build', 'static'),
     ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
 
 ###################
 # Custom settings, not standard in Django

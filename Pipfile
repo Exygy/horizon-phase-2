@@ -16,6 +16,7 @@ gunicorn = "*"
 django-environ = "*"
 django-heroku = "*"
 django-extensions = "*"
+mistune = "*"
 
 [dev-packages]
 pytest-django = "==3.3.2"

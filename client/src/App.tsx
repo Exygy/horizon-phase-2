@@ -17,7 +17,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <Route exact path="/" component={PostListView} />
+          <Route exact path="/:stepId" component={PostListView} />
         </div>
       </Router>
     </ApolloProvider>
