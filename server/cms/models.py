@@ -42,4 +42,4 @@ class Step(models.Model):
     strategy_field_3_cn = models.CharField(max_length=256, verbose_name='Strategy field 3 (chinese)', blank=True, null=True)
 
     def __str__(self):
-        return self.title_md_en
+        return self.title_md_en if self.title_md_en else ''
