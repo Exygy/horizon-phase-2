@@ -1,0 +1,194 @@
+#custom {
+    @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+    background-color: #f9f9fb;
+
+    /* START OF COLORS */
+
+    .slate {
+        color: #26364C;
+    }
+
+    .slate-light {
+        color: #505E71;
+    }
+
+    .karl {
+        color: #F1F1ED;
+    }
+
+    .mustard {
+        color: #FFA725;
+    }
+
+    .mustard-light {
+        color: #FFD95B;
+    }
+
+    .teal {
+        color: #00796B;
+    }
+
+    .teal-light {
+        color: #48A999;
+    }
+
+    .blue {
+        color: #3977B4;
+    }
+
+    .blue-light {
+        color: #6FA6E5;
+    }
+
+    .red {
+        color: #EE5350;
+    }
+
+    .red-light {
+        color: #FF867C;
+    }
+
+    /* END OF COLORS */
+
+    /* START OF ELEMENTS */
+
+    h1 {
+	font-family: Lora;
+        font-size: 27px;
+        font-weight: bold;
+        line-height: 36px;
+    }
+
+    h2 {
+	font-family: Lora;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 28px;
+    }
+
+    h3 {
+	font-family: Lora;
+        font-size: 21px;
+        font-weight: bold;
+        line-height: 28px;
+    }
+
+    h4 {
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    .sub-heading {
+        font-family: Lato;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 28px;
+
+        &.deemphasized {
+            color: #929AA5;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: Lato;
+        letter-spacing: -0.04px;  
+
+        &.large{
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+
+    .link {
+	color: #3977B4;
+        font-family: Lato;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .btn {
+        border-radius: 100px;
+        padding: 14px 24px;
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: bold;
+	letter-spacing: 0.5px;
+        line-height: 19px;
+
+        &.primary {
+            background-color: #24364D;
+            color: white;
+        }
+
+        &.secondary {
+            background-color: #F1F1ED;
+            color: #26364C;
+
+            &.gameplay {
+                -webkit-box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
+                -moz-box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
+                box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
+
+                img {
+                    max-height:19px;
+                    padding-right:4px;
+                }
+
+                &.action {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    .card {
+        width: 356px;
+        background-color: white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-top:100px;
+
+        .top {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: #505E71;
+            height: 79px;
+            position: relative;
+
+            h2 {
+                color: white;
+                padding-left: 148px;
+                padding-top: 26px;
+                padding-bottom: 25px;
+            }
+
+            img {
+                width: 124px;
+                height: 133px;
+                position: absolute;
+                margin-top: -65px;
+                margin-left: 13px;
+            }
+        }
+
+        .bottom {
+            padding: 17px 30px 38px 30px;
+
+            .btn {
+                margin: 0px auto;
+                display: block;
+            }
+        }
+
+        .action  {
+            text-align: center;
+        }
+    }
+
+    /* END OF ELEMENTS */
+}

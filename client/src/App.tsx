@@ -4,6 +4,9 @@ import { ApolloProvider } from "react-apollo";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import PostListView from "./views/PostList/index";
+import './App.css'
+import 'semantic-ui-css/semantic.min.css'
+
 
 const client = new ApolloClient({
   uri:
@@ -16,7 +19,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
+        <div id="custom">
           <Route exact path="/:stepId" component={PostListView} />
         </div>
       </Router>

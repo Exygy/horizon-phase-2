@@ -1,32 +1,123 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+@import url("https://fonts.googleapis.com/css?family=Lora&display=swap");
+#custom {
+  background-color: #f9f9fb;
+  /* START OF COLORS */
+  /* END OF COLORS */
+  /* START OF ELEMENTS */
+  /* END OF ELEMENTS */ }
+  #custom .slate {
+    color: #26364C; }
+  #custom .slate-light {
+    color: #505E71; }
+  #custom .karl {
+    color: #F1F1ED; }
+  #custom .mustard {
+    color: #FFA725; }
+  #custom .mustard-light {
+    color: #FFD95B; }
+  #custom .teal {
+    color: #00796B; }
+  #custom .teal-light {
+    color: #48A999; }
+  #custom .blue {
+    color: #3977B4; }
+  #custom .blue-light {
+    color: #6FA6E5; }
+  #custom .red {
+    color: #EE5350; }
+  #custom .red-light {
+    color: #FF867C; }
+  #custom h1 {
+    font-family: Lora;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 36px; }
+  #custom h2 {
+    font-family: Lora;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px; }
+  #custom h3 {
+    font-family: Lora;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 28px; }
+  #custom h4 {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px; }
+  #custom .sub-heading {
+    font-family: Lato;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 28px; }
+    #custom .sub-heading.deemphasized {
+      color: #929AA5; }
+  #custom p {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Lato;
+    letter-spacing: -0.04px; }
+    #custom p.large {
+      font-size: 18px;
+      line-height: 27px; }
+  #custom .link {
+    color: #3977B4;
+    font-family: Lato;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px; }
+  #custom .btn {
+    border-radius: 100px;
+    padding: 14px 24px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 19px; }
+    #custom .btn.primary {
+      background-color: #24364D;
+      color: white; }
+    #custom .btn.secondary {
+      background-color: #F1F1ED;
+      color: #26364C; }
+      #custom .btn.secondary.gameplay {
+        -webkit-box-shadow: -1px 2px 5px 0px #24364d;
+        -moz-box-shadow: -1px 2px 5px 0px #24364d;
+        box-shadow: -1px 2px 5px 0px #24364d; }
+        #custom .btn.secondary.gameplay img {
+          max-height: 19px;
+          padding-right: 4px; }
+        #custom .btn.secondary.gameplay.action {
+          font-style: italic; }
+  #custom .card {
+    width: 356px;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 100px; }
+    #custom .card .top {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      background-color: #505E71;
+      height: 79px;
+      position: relative; }
+      #custom .card .top h2 {
+        color: white;
+        padding-left: 148px;
+        padding-top: 26px;
+        padding-bottom: 25px; }
+      #custom .card .top img {
+        width: 124px;
+        height: 133px;
+        position: absolute;
+        margin-top: -65px;
+        margin-left: 13px; }
+    #custom .card .bottom {
+      padding: 17px 30px 38px 30px; }
+      #custom .card .bottom .btn {
+        margin: 0px auto;
+        display: block; }
+    #custom .card .action {
+      text-align: center; }
