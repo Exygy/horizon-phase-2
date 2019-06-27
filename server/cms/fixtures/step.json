@@ -1,13 +1,75 @@
 [
     {
         "model": "cms.step",
-        "pk": 1,
+        "pk": 100,
         "fields":{
             "challenge_id": 1,
-            "order": 1,
-            "title_md_en": "yay",
-            "description_md_en": "sdf",
-            "call_to_action_md_en": "dsfdsf"
+            "public_field_1_en": "You're walking to work from the bus stop when your phone rings. It's the director of the town's affordable housing developer",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "I'll pick up.",
+            "public_field_2_meta_description": "Call to action",
+            "private_field_1": "101",
+            "private_field_1_meta_description": "Next step ID"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 101,
+        "fields":{
+            "challenge_id": 1,
+            "public_field_1_en": "John, the affordable Housing Non-profit Director",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "Hi Mayor! The local university just released a report on the future of housing costs in Bayville. Did you know that by 2050, the average family in our town will spend almost half of their income on housing?",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "That’s concerning. We need to do something right now.",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "102",
+            "private_field_1_meta_description": "Next step ID"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 102,
+        "fields":{
+            "challenge_id": 1,
+            "public_field_1_en": "How are you going to prevent that from happening? Choose one of the following strategies.",
+            "public_field_1_meta_description": "Content",
+
+            "public_field_2_en": "Fund affordable housing production and preservation",
+            "public_field_2_meta_description": "Strategy 1 title",
+            "public_field_3_en": "Raise taxes to generate funds to build a broad range of permanently affordable housing.",
+            "public_field_3_meta_description": "Strategy 1 description",
+            "public_field_4_en": "This would provide a regular stream of funds to address the need for affordable housing. ",
+            "public_field_4_meta_description": "Strategy 1 pros",
+            "public_field_5_en": "Opponents say that taxes raise the cost of living for everyone and that other funding sources should be used.",
+            "public_field_6_meta_description": "Strategy 1 cons",
+            "public_field_6_en": "Choose this Strategy",
+            "public_field_6_meta_description": "Strategy 1 call to action",
+
+            "public_field_7_en": "Require 20 percent of all new housing to be affordable",
+            "public_field_7_meta_description": "Strategy 2 title",
+            "public_field_8_en": "Adopt regulations that require twenty percent of all newly constructed units to be rented at below-market rents.",
+            "public_field_8_meta_description": "Strategy 2 description",
+            "public_field_9_en": "This provides a growing supply of affordable housing that is distributed throughout the region. ",
+            "public_field_9_meta_description": "Strategy 2 pros",
+            "public_field_10_en": "Opponents say this strategy could limit the total amount of housing that is built by increasing the costs to developers.",
+            "public_field_10_meta_description": "Strategy 2 cons",
+            "public_field_11_en": "Choose this Strategy",
+            "public_field_11_meta_description": "Strategy 2 call to action",
+
+            "public_field_12_en": "Increase renter protections",
+            "public_field_12_meta_description": "Strategy 3 title",
+            "public_field_13_en": "Implement a suite of renter protection strategies to prevent large rent increases and protect tenants from discrimination by landlords.",
+            "public_field_13_meta_description": "Strategy 3 description",
+            "public_field_14_en": "This strategy would promote more affordable rents and greater stability for renters.",
+            "public_field_14_meta_description": "Strategy 3 pros",
+            "public_field_15_en": "Opponents say renter protections could cause some landlords to stop renting out their properties, reducing the overall housing supply.",
+            "public_field_15_meta_description": "Strategy 3 cons",
+            "public_field_16_en": "Choose this Strategy",
+            "public_field_16_meta_description": "Strategy 3 call to action",
+
+            "private_field_1": "103",
+            "private_field_1_meta_description": "Next step ID"
         }
     }
 ]

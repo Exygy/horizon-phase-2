@@ -5,59 +5,168 @@ import mistune
 
 from .models import Step as StepModel
 
+def process_output(context, en, es, cn):
+    lang = context.args['lang']
+    render_md_to_html = context.args['render_md_to_html']
+    result = None
+
+    if lang == "en":
+        result = en
+    elif lang == "es":
+        result = es
+    elif lang == "cn":
+        result = cn
+
+    if render_md_to_html and result:
+        return mistune.markdown(result).replace('<p>', '').replace('</p>', '').replace('\n', '')
+    return result
+
 
 class Step(DjangoObjectType):
-    title = graphene.String()
-    description = graphene.String()
-    call_to_action = graphene.String()
+    public_field_1 = graphene.String()
+    public_field_2 = graphene.String()
+    public_field_3 = graphene.String()
+    public_field_4 = graphene.String()
+    public_field_5 = graphene.String()
+    public_field_6 = graphene.String()
+    public_field_7 = graphene.String()
+    public_field_8 = graphene.String()
+    public_field_9 = graphene.String()
+    public_field_10 = graphene.String()
+    public_field_11 = graphene.String()
+    public_field_12 = graphene.String()
+    public_field_13 = graphene.String()
+    public_field_14 = graphene.String()
+    public_field_15 = graphene.String()
+    public_field_16 = graphene.String()
 
     class Meta:
         model = StepModel
 
-    def resolve_title(self, info):
-        lang = info.context.args['lang']
-        render_md_to_html = info.context.args['render_md_to_html']
-        result = None
+    def resolve_public_field_1(self, info):
+        return process_output(
+                info.context,
+                self.public_field_1_en,
+                self.public_field_1_es,
+                self.public_field_1_cn
+                )
 
-        if lang == "en":
-            result = self.title_md_en
-        elif lang == "es":
-            result = self.title_md_es
-        elif lang == "cn":
-            result = self.title_md_cn
+    def resolve_public_field_2(self, info):
+        return process_output(
+                info.context,
+                self.public_field_2_en,
+                self.public_field_2_es,
+                self.public_field_2_cn
+                )
 
-        if render_md_to_html:
-            return mistune.markdown(result)
-        return result
+    def resolve_public_field_3(self, info):
+        return process_output(
+                info.context,
+                self.public_field_3_en,
+                self.public_field_3_es,
+                self.public_field_3_cn
+                )
 
-    def resolve_description(self, info):
-        lang = info.context.args['lang']
-        render_md_to_html = info.context.args['render_md_to_html']
-        result = None
+    def resolve_public_field_4(self, info):
+        return process_output(
+                info.context,
+                self.public_field_4_en,
+                self.public_field_4_es,
+                self.public_field_4_cn
+                )
 
-        if lang == "en":
-            result = self.description_md_en
-        elif lang == "es":
-            result = self.description_md_es
-        elif lang == "cn":
-            result = self.description_md_cn
+    def resolve_public_field_5(self, info):
+        return process_output(
+                info.context,
+                self.public_field_5_en,
+                self.public_field_5_es,
+                self.public_field_5_cn
+                )
 
-        if render_md_to_html:
-            return mistune.markdown(result)
-        return result
+    def resolve_public_field_6(self, info):
+        return process_output(
+                info.context,
+                self.public_field_6_en,
+                self.public_field_6_es,
+                self.public_field_6_cn
+                )
 
-    def resolve_call_to_action(self, info):
-        lang = info.context.args['lang']
-        render_md_to_html = info.context.args['render_md_to_html']
-        result = None
+    def resolve_public_field_7(self, info):
+        return process_output(
+                info.context,
+                self.public_field_7_en,
+                self.public_field_7_es,
+                self.public_field_7_cn
+                )
 
-        if lang == "en":
-            result = self.call_to_action_md_en
-        elif lang == "es":
-            result = self.call_to_action_md_es
-        elif lang == "cn":
-            result = self.call_to_action_md_cn
+    def resolve_public_field_8(self, info):
+        return process_output(
+                info.context,
+                self.public_field_8_en,
+                self.public_field_8_es,
+                self.public_field_8_cn
+                )
 
-        if render_md_to_html:
-            return mistune.markdown(result)
-        return result
+    def resolve_public_field_9(self, info):
+        return process_output(
+                info.context,
+                self.public_field_9_en,
+                self.public_field_9_es,
+                self.public_field_9_cn
+                )
+
+    def resolve_public_field_10(self, info):
+        return process_output(
+                info.context,
+                self.public_field_10_en,
+                self.public_field_10_es,
+                self.public_field_10_cn
+                )
+
+    def resolve_public_field_11(self, info):
+        return process_output(
+                info.context,
+                self.public_field_11_en,
+                self.public_field_11_es,
+                self.public_field_11_cn
+                )
+
+    def resolve_public_field_12(self, info):
+        return process_output(
+                info.context,
+                self.public_field_12_en,
+                self.public_field_12_es,
+                self.public_field_12_cn
+                )
+
+    def resolve_public_field_13(self, info):
+        return process_output(
+                info.context,
+                self.public_field_13_en,
+                self.public_field_13_es,
+                self.public_field_13_cn
+                )
+
+    def resolve_public_field_14(self, info):
+        return process_output(
+                info.context,
+                self.public_field_14_en,
+                self.public_field_14_es,
+                self.public_field_14_cn
+                )
+
+    def resolve_public_field_15(self, info):
+        return process_output(
+                info.context,
+                self.public_field_15_en,
+                self.public_field_15_es,
+                self.public_field_15_cn
+                )
+
+    def resolve_public_field_16(self, info):
+        return process_output(
+                info.context,
+                self.public_field_16_en,
+                self.public_field_16_es,
+                self.public_field_16_cn
+                )

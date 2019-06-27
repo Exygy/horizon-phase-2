@@ -6,14 +6,13 @@ from .models import Step
 
 
 class StepAdmin(admin.ModelAdmin):
-    readonly_fields = ["order", "challenge"]
-    list_display = ('get_edit_link', 'get_category', 'get_challenge', 'order', 'title_md_en', 'description_md_en', 'call_to_action_md_en', )
+    readonly_fields = ["challenge"]
+    list_display = ('id', 'get_category', 'get_challenge', )
     formfield_overrides = {
         models.CharField: {'widget': Textarea(attrs={'rows':3, 'cols':80})},
     }
 
-    def get_edit_link(self, obj):
-        return 'Edit Step'
+    ordering = ('id', 'challenge__category__name', 'challenge__name', )
       
     def get_category(self, obj):
         return obj.challenge.category.name 
@@ -23,7 +22,6 @@ class StepAdmin(admin.ModelAdmin):
 
     get_category.short_description = 'Category'
     get_challenge.short_description = 'Challenge'
-    get_edit_link.short_description = 'Edit'
 
     def has_add_permission(self, request, obj=None):
         return False
