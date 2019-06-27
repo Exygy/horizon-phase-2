@@ -20,7 +20,6 @@ import {
   Sidebar,
   Transition,
 } from 'semantic-ui-react'
-import person6 from 'src/images/person6.png'
 
 const queryString = require('query-string');
 const stepQuery = gql`
@@ -50,7 +49,11 @@ type StepQueryResponse = {
     step: Step
 }
 
-type OwnProps = RouteComponentProps<{}>
+type StepRouteParams = {
+    stepId: string
+}
+
+type OwnProps = RouteComponentProps<StepRouteParams>
 type StepQueryProps = ChildDataProps<StepQueryParams, StepQueryResponse>
 type Props = StepQueryProps & OwnProps
 
@@ -64,7 +67,7 @@ class ScenarioView extends React.Component<Props, {}> {
     return (
       <Container id="scenario-view">
         <h3 dangerouslySetInnerHTML={{ __html: step ? step.publicField1 : '' }} />
-        <Button as={Link} to={`/character?id=${step && step.privateField1}&lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField2}</Button>
+        <Button as={Link} to={`/character/${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField2}</Button>
       </Container>
     )
   }
@@ -73,7 +76,7 @@ class ScenarioView extends React.Component<Props, {}> {
 export default graphql<Props, StepQueryResponse>(stepQuery, {
   options: (props: OwnProps): QueryOpts<StepQueryParams> => ({
     variables: {
-      id: parseInt(queryString.parse(props.location.search).id),
+      id: parseInt(props.match.params.stepId),
       lang: queryString.parse(props.location.search).lang ? queryString.parse(props.location.search).lang : "en",
       renderMdToHtml: true
     },

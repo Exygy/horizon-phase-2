@@ -18,7 +18,7 @@ def process_output(context, en, es, cn):
         result = cn
 
     if render_md_to_html and result:
-        return mistune.markdown(result).replace('<p>', '').replace('</p>', '').replace('\n', '')
+        return mistune.markdown(result).replace('<p>', '').replace('</p>', '')
     return result
 
 
@@ -39,6 +39,9 @@ class Step(DjangoObjectType):
     public_field_14 = graphene.String()
     public_field_15 = graphene.String()
     public_field_16 = graphene.String()
+    public_field_17 = graphene.String()
+    public_field_18 = graphene.String()
+    public_field_19 = graphene.String()
 
     class Meta:
         model = StepModel
@@ -169,4 +172,28 @@ class Step(DjangoObjectType):
                 self.public_field_16_en,
                 self.public_field_16_es,
                 self.public_field_16_cn
+                )
+
+    def resolve_public_field_17(self, info):
+        return process_output(
+                info.context,
+                self.public_field_17_en,
+                self.public_field_17_es,
+                self.public_field_17_cn
+                )
+
+    def resolve_public_field_18(self, info):
+        return process_output(
+                info.context,
+                self.public_field_18_en,
+                self.public_field_18_es,
+                self.public_field_18_cn
+                )
+
+    def resolve_public_field_19(self, info):
+        return process_output(
+                info.context,
+                self.public_field_19_en,
+                self.public_field_19_es,
+                self.public_field_19_cn
                 )

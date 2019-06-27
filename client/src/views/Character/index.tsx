@@ -71,7 +71,7 @@ class CharacterView extends React.Component<Props, {}> {
       <Container id="choose-strategy-view">
         <h2 dangerouslySetInnerHTML={{ __html: step ? step.publicField1 : '' }} />
         <h3 dangerouslySetInnerHTML={{ __html: step ? step.publicField2 : '' }} />
-        <Button as={Link} to={`/choose-strategy?id=${step && step.privateField1}&lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField3}</Button>
+        <Button as={Link} to={`/choose-strategy/${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField3}</Button>
       </Container>
     )
   }
@@ -80,7 +80,7 @@ class CharacterView extends React.Component<Props, {}> {
 export default graphql<Props, StepQueryResponse>(stepQuery, {
   options: (props: OwnProps): QueryOpts<StepQueryParams> => ({
     variables: {
-      id: parseInt(queryString.parse(props.location.search).id),
+      id: parseInt(props.match.params.stepId),
       lang: queryString.parse(props.location.search).lang ? queryString.parse(props.location.search).lang : "en",
       renderMdToHtml: true
     },

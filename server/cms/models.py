@@ -99,6 +99,21 @@ class Step(models.Model):
     public_field_16_cn = models.CharField(max_length=1024, verbose_name='Public field 16 (Chinese)', blank=True, null=True)
     public_field_16_meta_description = models.CharField(max_length=128, verbose_name='Public field 16 Meta Description', blank=True, null=True)
 
+    public_field_17_en = models.CharField(max_length=1024, verbose_name='Public field 17 (English)', blank=True, null=True)
+    public_field_17_es = models.CharField(max_length=1024, verbose_name='Public field 17 (Spanish)', blank=True, null=True)
+    public_field_17_cn = models.CharField(max_length=1024, verbose_name='Public field 17 (Chinese)', blank=True, null=True)
+    public_field_17_meta_description = models.CharField(max_length=128, verbose_name='Public field 17 Meta Description', blank=True, null=True)
+
+    public_field_18_en = models.CharField(max_length=1024, verbose_name='Public field 18 (English)', blank=True, null=True)
+    public_field_18_es = models.CharField(max_length=1024, verbose_name='Public field 18 (Spanish)', blank=True, null=True)
+    public_field_18_cn = models.CharField(max_length=1024, verbose_name='Public field 18 (Chinese)', blank=True, null=True)
+    public_field_18_meta_description = models.CharField(max_length=128, verbose_name='Public field 18 Meta Description', blank=True, null=True)
+
+    public_field_19_en = models.CharField(max_length=1024, verbose_name='Public field 19 (English)', blank=True, null=True)
+    public_field_19_es = models.CharField(max_length=1024, verbose_name='Public field 19 (Spanish)', blank=True, null=True)
+    public_field_19_cn = models.CharField(max_length=1024, verbose_name='Public field 19 (Chinese)', blank=True, null=True)
+    public_field_19_meta_description = models.CharField(max_length=128, verbose_name='Public field 19 Meta Description', blank=True, null=True)
+
     private_field_1 = models.CharField(max_length=1024, verbose_name='Private field 1', blank=True, null=True)
     private_field_1_meta_description = models.CharField(max_length=128, verbose_name='Private field 1 Meta Description', blank=True, null=True)
 
