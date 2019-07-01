@@ -76,9 +76,9 @@ class SummaryView extends React.Component<Props, {}> {
         <br/>
         % of people who voted for Strategy 1: {strategyChoiceSummary && strategyChoiceSummary.s1 * 100}%
         <br/>
-        % of people who voted for Strategy 1: {strategyChoiceSummary && strategyChoiceSummary.s2 * 100}%
+        % of people who voted for Strategy 2: {strategyChoiceSummary && strategyChoiceSummary.s2 * 100}%
         <br/>
-        % of people who voted for Strategy 1: {strategyChoiceSummary && strategyChoiceSummary.s3 * 100}%
+        % of people who voted for Strategy 3: {strategyChoiceSummary && strategyChoiceSummary.s3 * 100}%
       </Container>
     )
   }
