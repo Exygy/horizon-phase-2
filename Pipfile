@@ -17,6 +17,7 @@ django-environ = "*"
 django-heroku = "*"
 django-extensions = "*"
 mistune = "*"
+django-import-export = "*"
 
 [dev-packages]
 pytest-django = "==3.3.2"
