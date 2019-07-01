@@ -1,8 +1,10 @@
 from django.contrib import admin
 from django.db import models
 from django.forms import TextInput, Textarea
+from import_export import resources
+from import_export.admin import ImportExportModelAdmin, ExportMixin
 
-from .models import Category, Challenge, Step
+from .models import Category, Challenge, StrategyChoice, Step, SurveyResponse
 
 
 class StepAdmin(admin.ModelAdmin):
@@ -125,6 +127,46 @@ class ChallengeAdmin(admin.ModelAdmin):
         return False
 
 
+class StrategyChoiceResource(resources.ModelResource):
+    class Meta:
+        model = StrategyChoice
+
+
+class SurveyResponseResource(resources.ModelResource):
+    class Meta:
+        model = SurveyResponse
+
+
+class SurveyResponseAdmin(ExportMixin, admin.ModelAdmin):
+    resource_class = SurveyResponseResource
+    list_display_links = None
+    list_display = ('session_id', 'name', 'date_updated', )
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
+class StrategyChoiceAdmin(ExportMixin, admin.ModelAdmin):
+    resource_class = StrategyChoiceResource
+    list_display_links = None
+    list_display = ('session_id', 'get_choice_desc', 'date_updated', )
+
+    def get_choice_desc(self, obj):
+        return obj.step.public_field_2_en
+
+    get_choice_desc.short_description = 'Choice'
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
 admin.site.register(Step, StepAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Challenge, ChallengeAdmin)
+admin.site.register(SurveyResponse, SurveyResponseAdmin)
+admin.site.register(StrategyChoice, StrategyChoiceAdmin)

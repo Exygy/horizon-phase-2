@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # Third party apps
     'graphene_django',
     'corsheaders',
+    'import_export',
 
     # Our apps
     'horizon',

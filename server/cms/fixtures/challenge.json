@@ -22,5 +22,13 @@
             "name": "Policies for renters",
             "category_id": 1
         }
+    },
+    {
+        "model": "cms.challenge",
+        "pk": 4,
+        "fields":{
+            "name": "Onboarding",
+            "category_id": 5
+        }
     }
 ]

@@ -21,6 +21,7 @@ import {
   Transition,
 } from 'semantic-ui-react'
 import person6 from 'src/images/person6.png'
+import {getProgress} from 'src/Helpers'
 
 const queryString = require('query-string');
 const stepQuery = gql`
@@ -72,6 +73,9 @@ class CharacterView extends React.Component<Props, {}> {
         <h2 dangerouslySetInnerHTML={{ __html: step ? step.publicField1 : '' }} />
         <h3 dangerouslySetInnerHTML={{ __html: step ? step.publicField2 : '' }} />
         <Button as={Link} to={`/choose-strategy/${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField3}</Button>
+        <br/>
+        <br/>
+        {getProgress(this.props.match.params.stepId)}
       </Container>
     )
   }

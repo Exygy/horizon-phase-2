@@ -1,9 +1,11 @@
+from graphene import ObjectType, String
 from graphene_django.types import DjangoObjectType
+
 
 import graphene
 import mistune
 
-from .models import Step as StepModel
+from .models import Step as StepModel, StrategyChoice as StrategyChoiceModel
 
 def process_output(context, en, es, cn):
     lang = context.args['lang']
@@ -18,8 +20,43 @@ def process_output(context, en, es, cn):
         result = cn
 
     if render_md_to_html and result:
-        return mistune.markdown(result).replace('<p>', '').replace('</p>', '')
+        return mistune.markdown(result).replace('<p>', '').replace('</p>', '').strip('\n').replace('\n', '<br/><br/>')
     return result
+
+
+class StrategyChoiceSummary(ObjectType):
+    you = graphene.String()
+    s1 = graphene.Float()
+    s2 = graphene.Float()
+    s3 = graphene.Float()
+
+    def resolve_you(self, info):
+        step_id = info.context.args['step_id']
+        session_id = info.context.args['session_id']
+
+        if step_id == 106:
+            return StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=102).step.public_field_2_en
+
+    def resolve_s1(self, info):
+        step_id = info.context.args['step_id']
+        session_id = info.context.args['session_id']
+
+        if step_id == 106:
+            return StrategyChoiceModel.objects.filter(step_id=103).count() / StrategyChoiceModel.objects.filter(step_id__in=[103,104,105]).count()
+
+    def resolve_s2(self, info):
+        step_id = info.context.args['step_id']
+        session_id = info.context.args['session_id']
+
+        if step_id == 106:
+            return StrategyChoiceModel.objects.filter(step_id=104).count() / StrategyChoiceModel.objects.filter(step_id__in=[103,104,105]).count()
+
+    def resolve_s3(self, info):
+        step_id = info.context.args['step_id']
+        session_id = info.context.args['session_id']
+
+        if step_id == 106:
+            return StrategyChoiceModel.objects.filter(step_id=105).count() / StrategyChoiceModel.objects.filter(step_id__in=[103,104,105]).count()
 
 
 class Step(DjangoObjectType):

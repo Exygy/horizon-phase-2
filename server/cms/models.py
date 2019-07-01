@@ -1,6 +1,22 @@
 from django.db import models
 
 
+class SurveyResponse(models.Model):
+    name = models.CharField(max_length=256, null=True, blank=True)
+    session_id = models.UUIDField(null=True, blank=True)
+    date_updated = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+
+class StrategyChoice(models.Model):
+    origin_step = models.ForeignKey('Step', on_delete=models.CASCADE, related_name='origin')
+    step = models.ForeignKey('Step', on_delete=models.CASCADE)
+    session_id = models.UUIDField(null=True, blank=True)
+    date_updated = models.DateTimeField(auto_now_add=True)
+
+
 class Category(models.Model):
     name = models.CharField(max_length=128)
 

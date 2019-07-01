@@ -20,6 +20,7 @@ import {
   Sidebar,
   Transition,
 } from 'semantic-ui-react'
+import {getProgress} from 'src/Helpers'
 
 const queryString = require('query-string');
 const stepQuery = gql`
@@ -68,6 +69,9 @@ class ScenarioView extends React.Component<Props, {}> {
       <Container id="scenario-view">
         <h3 dangerouslySetInnerHTML={{ __html: step ? step.publicField1 : '' }} />
         <Button as={Link} to={`/character/${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField2}</Button>
+        <br/>
+        <br/>
+        {getProgress(this.props.match.params.stepId)}
       </Container>
     )
   }

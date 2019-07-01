@@ -21,87 +21,68 @@ import {
   Transition,
 } from 'semantic-ui-react'
 import person6 from 'src/images/person6.png'
+import {stepQuery} from 'src/Queries'
+import {StepQueryParams, Step, StepQueryResponse, StepRouteParams} from 'src/Types'
+import cookie from 'react-cookies'
+import {getProgress} from 'src/Helpers'
 
 const queryString = require('query-string');
-const stepQuery = gql`
-  query step($id: ID, $lang: String, $renderMdToHtml: Boolean) {
-    step(id: $id, lang: $lang, renderMdToHtml: $renderMdToHtml) {
-      id
-      publicField1
-      publicField2
-      publicField3
-      publicField4
-      publicField5
-      publicField6
-      publicField7
-      publicField8
-      publicField9
-      publicField10
-      publicField11
-      publicField12
-      publicField13
-      publicField14
-      publicField15
-      publicField16
-      publicField17
-      publicField18
-      publicField19
-      privateField1
-      privateField2
-      privateField3
-    },
+
+const strategyChoiceMutation = gql`
+  mutation createStrategyChoice($originStepId: Int!, $stepId: Int!, $sessionId: UUID!) {
+    createStrategyChoice(originStepId: $originStepId, stepId: $stepId, sessionId: $sessionId) {
+      error
+    }
   }
 `
-
-type StepRouteParams = {
-  stepId: string
+type StrategyChoiceMutationResponse = {
+  error: string
 }
 
-type StepQueryParams = {
-  id: number
-  lang: 'en' | 'es' | 'cn'
-  renderMdToHtml: boolean
-}
-
-type Step = {
-    publicField1: string
-    publicField2: string
-    publicField3: string
-    publicField4: string
-    publicField5: string
-    publicField6: string
-    publicField7: string
-    publicField8: string
-    publicField9: string
-    publicField10: string
-    publicField11: string
-    publicField12: string
-    publicField13: string
-    publicField14: string
-    publicField15: string
-    publicField16: string
-    publicField17: string
-    publicField18: string
-    publicField19: string
-    privateField1: string
-    privateField2: string
-    privateField3: string
-}
-
-type StepQueryResponse = {
-    step: Step
+type StrategyChoiceMutationParams = {
+  stepId: number
 }
 
 type OwnProps = RouteComponentProps<StepRouteParams>
-type StepQueryProps = ChildDataProps<StepQueryParams, StepQueryResponse>
+type StepQueryProps = ChildDataProps<StepQueryParams, StepQueryResponse> & {
+    strategyChoiceMutation: Function
+}
 type Props = StepQueryProps & OwnProps
 
-class ChooseStrategyView extends React.Component<Props, {}> {
+type State = {
+  isSubmitting: boolean
+}
+
+class ChooseStrategyView extends React.Component<Props, State> {
+      state = {
+        isSubmitting: false,
+      }
+
   componentDidMount = () => {
   }
 
+  recordChoiceAndRedirect = async (stepId: string | undefined, path:string, coinsSpent: string | undefined) => {
+      if (!stepId || ! coinsSpent)
+          return
+
+    this.setState({ isSubmitting: true })
+    let { data } = await this.props.strategyChoiceMutation({
+        variables: { originStepId: this.props.match.params.stepId, stepId, sessionId: cookie.load('session_id')},
+    })
+    this.setState({ isSubmitting: false })
+
+    if (!data.error) {
+        cookie.save(this.props.match.params.stepId, coinsSpent, { path: '/' })
+        this.props.history.push(path)
+    }
+
+    else {
+        alert("There was a problem recording your choice.")
+    }
+  }
+
   render() {
-    const { step, loading } = this.props.data
+    const { step, loading, } = this.props.data
 
     return (
       <Container id="scenario-view">
@@ -114,7 +95,7 @@ class ChooseStrategyView extends React.Component<Props, {}> {
         <p>{step && step.publicField5}</p>
         <h4>Coins</h4>
         <p>{step && step.publicField6}</p>
-        <Button as={Link} to={`/strategy-feedback/${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField7}</Button>
+        <Button onClick={() => this.recordChoiceAndRedirect(step && step.privateField1, `/strategy-feedback/${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}&coins_spent=${step && step.publicField6}`, step && step.publicField6)} className="btn primary">{step && step.publicField7}</Button>
         <br/>
         <h3 dangerouslySetInnerHTML={{ __html: step ? step.publicField8 : '' }} />
         <p>{step && step.publicField9}</p>
@@ -124,7 +105,7 @@ class ChooseStrategyView extends React.Component<Props, {}> {
         <p>{step && step.publicField11}</p>
         <h4>Coins</h4>
         <p>{step && step.publicField12}</p>
-        <Button as={Link} to={`/strategy-feedback/${step && step.privateField2}?lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField13}</Button>
+        <Button onClick={() => this.recordChoiceAndRedirect(step && step.privateField2, `/strategy-feedback/${step && step.privateField2}?lang=${queryString.parse(this.props.location.search).lang}&coins_spent=${step && step.publicField12}`, step && step.publicField12)} className="btn primary">{step && step.publicField13}</Button>
         <br/>
         <h3 dangerouslySetInnerHTML={{ __html: step ? step.publicField14 : '' }} />
         <p>{step && step.publicField15}</p>
@@ -134,13 +115,18 @@ class ChooseStrategyView extends React.Component<Props, {}> {
         <p>{step && step.publicField17}</p>
         <h4>Coins</h4>
         <p>{step && step.publicField18}</p>
-        <Button as={Link} to={`/strategy-feedback/${step && step.privateField3}?lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField19}</Button>
+        <Button onClick={() => this.recordChoiceAndRedirect(step && step.privateField3, `/strategy-feedback/${step && step.privateField3}?lang=${queryString.parse(this.props.location.search).lang}&coins_spent=${step && step.publicField18}`, step && step.publicField18)} className="btn primary">{step && step.publicField19}</Button>
+        <br/>
+        <br/>
+        {getProgress(this.props.match.params.stepId)}
       </Container>
     )
   }
 }
 
-export default graphql<Props, StepQueryResponse>(stepQuery, {
+export default compose(
+    graphql(strategyChoiceMutation, { name: 'strategyChoiceMutation' }),
+graphql<Props, StepQueryResponse>(stepQuery, {
   options: (props: OwnProps): QueryOpts<StepQueryParams> => ({
     variables: {
       id: parseInt(props.match.params.stepId),
@@ -148,4 +134,4 @@ export default graphql<Props, StepQueryResponse>(stepQuery, {
       renderMdToHtml: true
     },
   }),
-})(ChooseStrategyView)
+}))(ChooseStrategyView)

@@ -75,13 +75,13 @@
             "public_field_19_meta_description": "Strategy 3 call to action",
 
             "private_field_1": "103",
-            "private_field_1_meta_description": "Next step ID",
+            "private_field_1_meta_description": "Strategy 1 step ID",
 
             "private_field_2": "104",
-            "private_field_2_meta_description": "Next step ID",
+            "private_field_2_meta_description": "Strategy 2 step ID",
 
             "private_field_3": "105",
-            "private_field_3_meta_description": "Next step ID"
+            "private_field_3_meta_description": "Strategy 3 step ID"
         }
     },
     {
@@ -89,8 +89,14 @@
         "pk": 103,
         "fields":{
             "challenge_id": 1,
-            "public_field_1_en": "Great! You selected Strategy 1: Streamline accessory dwelling units and spent 20 coins from your budget.\n\nYou selected fund affordable housing production and preservation! Implementing this strategy in the Bay Area is estimated to produce between 400 and 600 new permanently affordable rental units each year. That’s around 11,000 to 17,000 units between now and 2050. Thousands more already affordable units were maintained and remained affordable.\n\nNow you only have 20 coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
-            "public_field_1_meta_description": "Content"
+            "public_field_1_en": "Great! You selected Strategy 1: Streamline accessory dwelling units and spent <coins_spent> coins from your budget.\n\nYou selected fund affordable housing production and preservation! Implementing this strategy in the Bay Area is estimated to produce between 400 and 600 new permanently affordable rental units each year. That’s around 11,000 to 17,000 units between now and 2050. Thousands more already affordable units were maintained and remained affordable.\n\nNow you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
+            "public_field_1_meta_description": "Content. <coins_spent> and <coins_left> are variables - do not modify them.",
+            "public_field_2_en": "Build affordable housing",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+            "public_field_3_en": "Next",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "106",
+            "private_field_1_meta_description": "Next step ID"
         }
     },
     {
@@ -98,8 +104,14 @@
         "pk": 104,
         "fields":{
             "challenge_id": 1,
-            "public_field_1_en": "Great! You selected Strategy 2: Require 20 percent of all new housing to be affordable.\n\nYou selected require 20 percent of all new housing to be affordable! Implementing this strategy in the Bay Area is estimated to produce between 2,400 and 4,000 new permanently affordable rental units each year. That’s around 70,000 to 100,000 units between now and 2050. However, this policy only improved affordability for those that were able to move to these new units and did not help people afford to stay in their existing homes.\n\nNow you only have 50 coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
-            "public_field_1_meta_description": "Content"
+            "public_field_1_en": "Great! You selected Strategy 2: Require 20 percent of all new housing to be affordable.\n\nYou selected require 20 percent of all new housing to be affordable! Implementing this strategy in the Bay Area is estimated to produce between 2,400 and 4,000 new permanently affordable rental units each year. That’s around 70,000 to 100,000 units between now and 2050. However, this policy only improved affordability for those that were able to move to these new units and did not help people afford to stay in their existing homes.\n\nNow you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
+            "public_field_1_meta_description": "Content. <coins_spent> and <coins_left> are variables - do not modify them.",
+            "public_field_2_en": "Build ADUs",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+            "public_field_3_en": "Next",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "106",
+            "private_field_1_meta_description": "Next step ID"
         } 
     },
     {
@@ -107,8 +119,118 @@
         "pk": 105,
         "fields":{
             "challenge_id": 1,
-            "public_field_1_en": "Great! You selected Strategy 3: Increase renter protections and spent 30 coins from your budget.\n\nYou selected increase renter protections! A similar set of policies implemented in Portland, Oregon capped annual rent increases at 2% and resulted in a fifteen percent decrease in no-fault evictions. \n\nNow you only have XX coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
-            "public_field_1_meta_description": "Content"
+            "public_field_1_en": "Great! You selected Strategy 3: Increase renter protections and spent <coins_spent> coins from your budget.\n\nYou selected increase renter protections! A similar set of policies implemented in Portland, Oregon capped annual rent increases at 2% and resulted in a fifteen percent decrease in no-fault evictions. \n\nNow you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
+            "public_field_1_meta_description": "Content. <coins_spent> and <coins_left> are variables - do not modify them.",
+            "public_field_2_en": "Renter protections",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+            "public_field_3_en": "Next",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "106",
+            "private_field_1_meta_description": "Next step ID"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 106,
+        "fields":{
+            "challenge_id": 1
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 10000,
+        "fields":{
+            "challenge_id": 4,
+            "public_field_1_en": "Welcome to Bayville",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "Bayville is a fictional mid-sized city in the very real Bay Area. It’s a great place to live, but life here does have its challenges.",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "Let's start.",
+            "public_field_3_meta_description": "Call to action"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 10001,
+        "fields":{
+            "challenge_id": 4,
+            "public_field_1_en": "Bayville has challenges",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "Traffic congestion, housing affordability, a declining share of jobs in middle-wage industries, and neighborhoods at risk of sea level rise are all problems facing the residents today.",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "That sounds familiar.",
+            "public_field_3_meta_description": "Call to action"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 10002,
+        "fields":{
+            "challenge_id": 4,
+            "public_field_1_en": "The future is uncertain",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "In the future, residents may also be confronted with damage from a major earthquake, experience a global economic recession, or witness the widespread adoption of self-driving cars.",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "I’m intrigued.",
+            "public_field_3_meta_description": "Call to action"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 10003,
+        "fields":{
+            "challenge_id": 4,
+            "public_field_1_en": "Congratulations",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "How will Bayville prepare for the future that lies ahead?\nThat’s up to you!\nYou were just elected mayor.",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "Wow, I’m honored.",
+            "public_field_3_meta_description": "Call to action"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 10004,
+        "fields":{
+            "challenge_id": 4,
+            "public_field_1_en": "Your challenge",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "As mayor, you will develop a long-range plan that charts the course for housing, transportation, environmental resilience, and economic development for your town through the year 2050.\nYou'll receive policy proposals from advisors and helpful residents and choose your top priorities.",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "Bring it on!",
+            "public_field_3_meta_description": "Call to action"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 10004,
+        "fields":{
+            "challenge_id": 4,
+            "public_field_1_en": "Instructions",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "You'll have a budget of 100 coins for each of the four topic areas, representing the cost and political difficulty of enacting each policy. Be careful not to go over budget!",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "Let's start.",
+            "public_field_3_meta_description": "Call to action"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 10005,
+        "fields":{
+            "challenge_id": 4,
+            "public_field_1_en": "One more thing before we start...",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "Please answer a few questions so that we can better understand who our new mayor is.",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "What should we call you?",
+            "public_field_3_meta_description": "First question",
+            "public_field_4_en": "Where do you live?",
+            "public_field_4_meta_description": "Second question",
+            "public_field_5_en": "When were you born?",
+            "public_field_5_meta_description": "Third question",
+            "public_field_6_en": "Let's start.",
+            "public_field_6_meta_description": "Call to action"
         } 
     }
 ]

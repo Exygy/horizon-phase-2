@@ -26,5 +26,12 @@
         "fields":{
             "name": "Economic Development"
         }
+    },
+    {
+        "model": "cms.category",
+        "pk": 5,
+        "fields":{
+            "name": "Onboarding"
+        }
     }
 ]
