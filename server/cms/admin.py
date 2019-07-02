@@ -1,3 +1,6 @@
+import pytz
+
+from django.conf import settings
 from django.contrib import admin
 from django.db import models
 from django.forms import TextInput, Textarea
@@ -131,16 +134,26 @@ class ChallengeAdmin(admin.ModelAdmin):
 
 class StrategyChoiceResource(resources.ModelResource):
     choice = Field(attribute='step__public_field_2_en', column_name='choice')
+    date_updated = Field()
 
     class Meta:
         model = StrategyChoice
         fields = ('id', 'session_id', 'date_updated', 'choice', )
         export_order = ('id', 'session_id', 'choice', 'date_updated')
 
+    def dehydrate_date_updated(self, strategy_choice):
+        return strategy_choice.date_updated.astimezone(pytz.timezone(settings.ZONE)).strftime('%B %-d, %Y %-I:%M:%S %p')
+
 
 class SurveyResponseResource(resources.ModelResource):
+    date_updated = Field()
+
     class Meta:
         model = SurveyResponse
+        export_order = ('id', 'session_id', 'name', 'date_updated')
+
+    def dehydrate_date_updated(self, strategy_choice):
+        return strategy_choice.date_updated.astimezone(pytz.timezone(settings.ZONE)).strftime('%B %-d, %Y %-I:%M:%S %p')
 
 
 class SurveyResponseAdmin(ExportMixin, admin.ModelAdmin):
