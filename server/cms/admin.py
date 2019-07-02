@@ -3,6 +3,7 @@ from django.db import models
 from django.forms import TextInput, Textarea
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin, ExportMixin
+from import_export.fields import Field
 
 from .models import Category, Challenge, StrategyChoice, Step, SurveyResponse
 
@@ -118,6 +119,7 @@ class CategoryAdmin(admin.ModelAdmin):
 class ChallengeAdmin(admin.ModelAdmin):
     readonly_fields = [
         "name",
+        "category",
     ]
 
     def has_add_permission(self, request, obj=None):
@@ -128,8 +130,12 @@ class ChallengeAdmin(admin.ModelAdmin):
 
 
 class StrategyChoiceResource(resources.ModelResource):
+    choice = Field(attribute='step__public_field_2_en', column_name='choice')
+
     class Meta:
         model = StrategyChoice
+        fields = ('id', 'session_id', 'date_updated', 'choice', )
+        export_order = ('id', 'session_id', 'choice', 'date_updated')
 
 
 class SurveyResponseResource(resources.ModelResource):
