@@ -34,6 +34,8 @@ type StepQueryProps = ChildDataProps<StepQueryParams, StepQueryResponse>
 type Props = StepQueryProps & OwnProps
 
 class OnboardingWelcomeView extends React.Component<Props, {}> {
+  // NOTE: The session ID gets created here and gets used down the line. 
+  // This will overwrite an existing session ID - this is done on purpose.
   componentDidMount = () => {
       cookie.save('session_id', uuidv4(), { path: '/' })
   }

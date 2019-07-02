@@ -47,6 +47,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div id="custom">
+          <Route exact path="/kitchensink" component={PostListView} />
           <Route exact path="/scenario/:stepId" component={ScenarioView} />
           <Route exact path="/character/:stepId" component={CharacterView} />
           <Route exact path="/choose-strategy/:stepId" component={ChooseStrategyView} />
