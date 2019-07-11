@@ -35,8 +35,7 @@ class CreateStrategyChoice(graphene.Mutation):
         session_id = graphene.UUID(required=True)
   
     def mutate(self, info, origin_step_id, step_id, session_id):
-        if step_id not in [
-                103,104,105]:
+        if step_id not in [103,104,105,204,205,308,309]:
             return CreateSurveyResponse(error="Invalid step supplied")
 
         try:

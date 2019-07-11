@@ -72,7 +72,7 @@ class CharacterView extends React.Component<Props, {}> {
       <Container id="choose-strategy-view">
         <h2 dangerouslySetInnerHTML={{ __html: step ? step.publicField1 : '' }} />
         <h3 dangerouslySetInnerHTML={{ __html: step ? step.publicField2 : '' }} />
-        <Button as={Link} to={`/choose-strategy/${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField3}</Button>
+        <Button as={Link} to={`${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField3}</Button>
         <br/>
         <br/>
         {getProgress(this.props.match.params.stepId)}

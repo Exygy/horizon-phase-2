@@ -37,6 +37,12 @@ class StrategyChoiceSummary(ObjectType):
         if step_id == 106:
             return StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=102).step.public_field_2_en
 
+        elif step_id == 206:
+            return StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=203).step.public_field_2_en
+
+        elif step_id == 310:
+            return StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=307).step.public_field_2_en
+
     def resolve_s1(self, info):
         step_id = info.context.args['step_id']
         session_id = info.context.args['session_id']
@@ -44,12 +50,24 @@ class StrategyChoiceSummary(ObjectType):
         if step_id == 106:
             return StrategyChoiceModel.objects.filter(step_id=103).count() / StrategyChoiceModel.objects.filter(step_id__in=[103,104,105]).count()
 
+        elif step_id == 206:
+            return StrategyChoiceModel.objects.filter(step_id=204).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
+
+        elif step_id == 310:
+            return StrategyChoiceModel.objects.filter(step_id=308).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
+
     def resolve_s2(self, info):
         step_id = info.context.args['step_id']
         session_id = info.context.args['session_id']
 
         if step_id == 106:
             return StrategyChoiceModel.objects.filter(step_id=104).count() / StrategyChoiceModel.objects.filter(step_id__in=[103,104,105]).count()
+
+        elif step_id == 206:
+            return StrategyChoiceModel.objects.filter(step_id=205).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
+
+        elif step_id == 310:
+            return StrategyChoiceModel.objects.filter(step_id=309).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
 
     def resolve_s3(self, info):
         step_id = info.context.args['step_id']

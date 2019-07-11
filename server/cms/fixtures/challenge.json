@@ -11,7 +11,7 @@
         "model": "cms.challenge",
         "pk": 2,
         "fields":{
-            "name": "New housing sites",
+            "name": "Redevelopment",
             "category_id": 1
         }
     },
@@ -19,7 +19,7 @@
         "model": "cms.challenge",
         "pk": 3,
         "fields":{
-            "name": "Policies for renters",
+            "name": "Regional policy",
             "category_id": 1
         }
     },

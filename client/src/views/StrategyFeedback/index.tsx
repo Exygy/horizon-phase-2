@@ -51,7 +51,7 @@ class StrategyFeedbackView extends React.Component<Props, {}> {
     return (
       <Container id="strategy-feedback-view">
         <p dangerouslySetInnerHTML={constructInnerHTML(this.processText(step && step.publicField1))}/>
-        <Button as={Link} to={`/summary/${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField3}</Button>
+        <Button as={Link} to={`${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`} className="btn primary">{step && step.publicField3}</Button>
         <br/>
         {getProgress(this.props.match.params.stepId)}
       </Container>
