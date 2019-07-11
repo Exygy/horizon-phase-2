@@ -38,11 +38,21 @@ class OnboardingChallengesView extends React.Component<Props, {}> {
     const { step, loading } = this.props.data
 
     return (
-      <Container id="onboarding-welcome-view">
-        <h1 className="slate">{step && step.publicField1}</h1>
-        <p dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}/>
-        <Button className="btn primary" as={Link} to='/onboarding/future/10002'>{step && step.publicField3}</Button>
-      </Container>
+      <div id="onboarding-welcome-view">
+        <div className="top-header">
+            <h3>Mayor of Bayville</h3>
+        </div>
+        <div className="main">
+            <div className="content">
+                <h1 className="">{step && step.publicField1}</h1>
+                <br/>
+                <p className="large" dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}/>
+            </div>
+            <div className="btn-holder">
+                <Button className="btn primary" as={Link} to='/onboarding/future/10002'>{step && step.publicField3}</Button>
+            </div>
+        </div>
+      </div>
     )
   }
 }

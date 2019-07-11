@@ -71,7 +71,7 @@ class SummaryView extends React.Component<Props, {}> {
     return (
       <Container id="summary-view">
         <h1>Summary</h1>
-        You voted for {strategyChoiceSummary && strategyChoiceSummary.you}
+        You voted for: {strategyChoiceSummary && strategyChoiceSummary.you}
         <br/>
         <br/>
         % of people who voted for Strategy 1: {strategyChoiceSummary && strategyChoiceSummary.s1 * 100}%
