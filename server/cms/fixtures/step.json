@@ -45,8 +45,8 @@
             "public_field_5_meta_description": "Strategy 1 cons",
             "public_field_6_en": "20",
             "public_field_6_meta_description": "Strategy 1 coins",
-            "public_field_7_en": "Choose this Strategy",
-            "public_field_7_meta_description": "Strategy 1 call to action",
+            "public_field_7_en": "",
+            "public_field_7_meta_description": "DO NOT USE",
 
             "public_field_8_en": "Require 20 percent of all new housing to be affordable",
             "public_field_8_meta_description": "Strategy 2 title",
@@ -58,8 +58,8 @@
             "public_field_11_meta_description": "Strategy 2 cons",
             "public_field_12_en": "50",
             "public_field_12_meta_description": "Strategy 2 coins",
-            "public_field_13_en": "Choose this Strategy",
-            "public_field_13_meta_description": "Strategy 2 call to action",
+            "public_field_13_en": "",
+            "public_field_13_meta_description": "DO NOT USE",
 
             "public_field_14_en": "Increase renter protections",
             "public_field_14_meta_description": "Strategy 3 title",
@@ -71,8 +71,8 @@
             "public_field_17_meta_description": "Strategy 3 cons",
             "public_field_18_en": "30",
             "public_field_18_meta_description": "Strategy 3 coins",
-            "public_field_19_en": "Choose this Strategy",
-            "public_field_19_meta_description": "Strategy 3 call to action",
+            "public_field_19_en": "",
+            "public_field_19_meta_description": "DO NOT USE",
 
             "private_field_1": "/strategy-feedback/103",
             "private_field_1_meta_description": "Strategy 1 step ID path",
@@ -95,7 +95,7 @@
             "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
             "public_field_3_en": "Next",
             "public_field_3_meta_description": "Call to action",
-            "private_field_1": "/summary/106",
+            "private_field_1": "/scenario/200",
             "private_field_1_meta_description": "Next step path"
         }
     },
@@ -110,7 +110,7 @@
             "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
             "public_field_3_en": "Next",
             "public_field_3_meta_description": "Call to action",
-            "private_field_1": "/summary/106",
+            "private_field_1": "/scenario/200",
             "private_field_1_meta_description": "Next step path"
         } 
     },
@@ -125,15 +125,8 @@
             "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
             "public_field_3_en": "Next",
             "public_field_3_meta_description": "Call to action",
-            "private_field_1": "/summary/106",
+            "private_field_1": "/scenario/200",
             "private_field_1_meta_description": "Next step path"
-        } 
-    },
-    {
-        "model": "cms.step",
-        "pk": 106,
-        "fields":{
-            "challenge_id": 1
         } 
     },
     {
@@ -196,8 +189,8 @@
             "public_field_5_meta_description": "Strategy 1 cons",
             "public_field_6_en": "20",
             "public_field_6_meta_description": "Strategy 1 coins",
-            "public_field_7_en": "Choose this Strategy",
-            "public_field_7_meta_description": "Strategy 1 call to action",
+            "public_field_7_en": "",
+            "public_field_7_meta_description": "DO NOT USE",
 
             "public_field_8_en": "Transform aging malls into neighborhoods",
             "public_field_8_meta_description": "Strategy 2 title",
@@ -209,8 +202,8 @@
             "public_field_11_meta_description": "Strategy 2 cons",
             "public_field_12_en": "50",
             "public_field_12_meta_description": "Strategy 2 coins",
-            "public_field_13_en": "Choose this Strategy",
-            "public_field_13_meta_description": "Strategy 2 call to action",
+            "public_field_13_en": "",
+            "public_field_13_meta_description": "DO NOT USE",
 
             "private_field_1": "/strategy-feedback/204",
             "private_field_1_meta_description": "Strategy 1 step ID path",
@@ -230,7 +223,7 @@
             "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
             "public_field_3_en": "Next",
             "public_field_3_meta_description": "Call to action",
-            "private_field_1": "/summary/206",
+            "private_field_1": "/scenario/300",
             "private_field_1_meta_description": "Next step path"
         }
     },
@@ -245,15 +238,8 @@
             "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
             "public_field_3_en": "Next",
             "public_field_3_meta_description": "Call to action",
-            "private_field_1": "/summary/206",
+            "private_field_1": "/scenario/300",
             "private_field_1_meta_description": "Next step path"
-        } 
-    },
-    {
-        "model": "cms.step",
-        "pk": 206,
-        "fields":{
-            "challenge_id": 2
         } 
     },
     {
@@ -376,8 +362,8 @@
             "public_field_5_meta_description": "Strategy 1 cons",
             "public_field_6_en": "20",
             "public_field_6_meta_description": "Strategy 1 coins",
-            "public_field_7_en": "Choose this Strategy",
-            "public_field_7_meta_description": "Strategy 1 call to action",
+            "public_field_7_en": "",
+            "public_field_7_meta_description": "DO NOT USE",
 
             "public_field_8_en": "Allow diverse housing around transit stops",
             "public_field_8_meta_description": "Strategy 2 title",
@@ -389,8 +375,8 @@
             "public_field_11_meta_description": "Strategy 2 cons",
             "public_field_12_en": "50",
             "public_field_12_meta_description": "Strategy 2 coins",
-            "public_field_13_en": "Choose this Strategy",
-            "public_field_13_meta_description": "Strategy 2 call to action",
+            "public_field_13_en": "",
+            "public_field_13_meta_description": "DO NOT USE",
 
             "private_field_1": "/strategy-feedback/308",
             "private_field_1_meta_description": "Strategy 1 step ID path",

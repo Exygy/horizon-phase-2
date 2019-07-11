@@ -31,10 +31,18 @@ const queryString = require('query-string');
 export const strategyChoiceSummaryQuery = gql`
   query strategyChoiceSummary($id: ID, $lang: String, $sessionId: UUID) {
     strategyChoiceSummary(id: $id, lang: $lang, sessionId: $sessionId) {
-        you
-        s1
-        s2
-        s3
+        youC1
+        youC2
+        youC3
+        c1S1Percentage
+        c1S2Percentage
+        c1S3Percentage
+        c2S1Percentage
+        c2S2Percentage
+        c2S3Percentage
+        c3S1Percentage
+        c3S2Percentage
+        c3S3Percentage
     },
   }
 `
@@ -46,10 +54,18 @@ export type StrategyChoiceSummaryQueryParams = {
 }
 
 export type StrategyChoiceSummary = {
-    you: string
-    s1: number
-    s2: number
-    s3: number
+    youC1: string
+    youC2: string
+    youC3: string
+        c1S1Percentage: number
+        c1S2Percentage: number
+        c1S3Percentage: number
+        c2S1Percentage: number
+        c2S2Percentage: number
+        c2S3Percentage: number
+        c3S1Percentage: number
+        c3S2Percentage: number
+        c3S3Percentage: number
 }
 
 export type StrategyChoiceSummaryResponse = {
@@ -71,22 +87,61 @@ class SummaryView extends React.Component<Props, {}> {
     return (
       <Container id="summary-view">
         <h1>Summary</h1>
-        You voted for: {strategyChoiceSummary && strategyChoiceSummary.you}
+
+        <h2>First challenge</h2>
+        You voted for: {strategyChoiceSummary && strategyChoiceSummary.youC1}
         <br/>
         <br/>
-        % of people who voted for Strategy 1: {strategyChoiceSummary && strategyChoiceSummary.s1 * 100}%
+        % of people who voted for Strategy 1: {strategyChoiceSummary && strategyChoiceSummary.c1S1Percentage * 100}%
         <br/>
-        {strategyChoiceSummary && strategyChoiceSummary.s2 !== null && 
+        {strategyChoiceSummary && strategyChoiceSummary.c1S2Percentage !== null && 
         <>
-        % of people who voted for Strategy 2: {strategyChoiceSummary && strategyChoiceSummary.s2 * 100}%
+        % of people who voted for Strategy 2: {strategyChoiceSummary && strategyChoiceSummary.c1S2Percentage * 100}%
         </>
         }
         <br/>
-        {strategyChoiceSummary && strategyChoiceSummary.s3 !== null && 
+        {strategyChoiceSummary && strategyChoiceSummary.c1S3Percentage !== null && 
         <>
-        % of people who voted for Strategy 3: {strategyChoiceSummary && strategyChoiceSummary.s3 * 100}%
+        % of people who voted for Strategy 3: {strategyChoiceSummary && strategyChoiceSummary.c1S3Percentage * 100}%
         </>
         }
+
+        <h2>Second challenge</h2>
+        You voted for: {strategyChoiceSummary && strategyChoiceSummary.youC2}
+        <br/>
+        <br/>
+        % of people who voted for Strategy 1: {strategyChoiceSummary && strategyChoiceSummary.c2S1Percentage * 100}%
+        <br/>
+        {strategyChoiceSummary && strategyChoiceSummary.c2S2Percentage !== null && 
+        <>
+        % of people who voted for Strategy 2: {strategyChoiceSummary && strategyChoiceSummary.c2S2Percentage * 100}%
+        </>
+        }
+        <br/>
+        {strategyChoiceSummary && strategyChoiceSummary.c2S3Percentage !== null && 
+        <>
+        % of people who voted for Strategy 3: {strategyChoiceSummary && strategyChoiceSummary.c2S3Percentage * 100}%
+        </>
+        }
+
+        <h2>Third challenge</h2>
+        You voted for: {strategyChoiceSummary && strategyChoiceSummary.youC3}
+        <br/>
+        <br/>
+        % of people who voted for Strategy 1: {strategyChoiceSummary && strategyChoiceSummary.c3S1Percentage * 100}%
+        <br/>
+        {strategyChoiceSummary && strategyChoiceSummary.c3S2Percentage !== null && 
+        <>
+        % of people who voted for Strategy 2: {strategyChoiceSummary && strategyChoiceSummary.c3S2Percentage * 100}%
+        </>
+        }
+        <br/>
+        {strategyChoiceSummary && strategyChoiceSummary.c3S3Percentage !== null && 
+        <>
+        % of people who voted for Strategy 3: {strategyChoiceSummary && strategyChoiceSummary.c3S3Percentage * 100}%
+        </>
+        }
+
         <br/>
         <br/>
         {getProgress(this.props.match.params.stepId)}

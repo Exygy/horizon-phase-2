@@ -25,56 +25,101 @@ def process_output(context, en, es, cn):
 
 
 class StrategyChoiceSummary(ObjectType):
-    you = graphene.String()
-    s1 = graphene.Float()
-    s2 = graphene.Float()
-    s3 = graphene.Float()
+    # How user vote per challenge
+    you_c1 = graphene.String()
+    you_c2 = graphene.String()
+    you_c3 = graphene.String()
 
-    def resolve_you(self, info):
+    # How used vote in aggregate across each strategy within each challenge
+    c1_s1_percentage = graphene.Float()
+    c1_s2_percentage = graphene.Float()
+    c1_s3_percentage = graphene.Float()
+    c2_s1_percentage = graphene.Float()
+    c2_s2_percentage = graphene.Float()
+    c2_s3_percentage = graphene.Float()
+    c3_s1_percentage = graphene.Float()
+    c3_s2_percentage = graphene.Float()
+    c3_s3_percentage = graphene.Float()
+
+    def resolve_you_c1(self, info):
         step_id = info.context.args['step_id']
         session_id = info.context.args['session_id']
 
-        if step_id == 106:
+        # Housing
+        if step_id == 310:
             return StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=102).step.public_field_2_en
 
-        elif step_id == 206:
+    def resolve_you_c2(self, info):
+        step_id = info.context.args['step_id']
+        session_id = info.context.args['session_id']
+
+        # Housing
+        if step_id == 310:
             return StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=203).step.public_field_2_en
 
-        elif step_id == 310:
+    def resolve_you_c3(self, info):
+        step_id = info.context.args['step_id']
+        session_id = info.context.args['session_id']
+
+        # Housing
+        if step_id == 310:
             return StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=307).step.public_field_2_en
 
-    def resolve_s1(self, info):
+    def resolve_c1_s1_percentage(self, info):
         step_id = info.context.args['step_id']
         session_id = info.context.args['session_id']
 
-        if step_id == 106:
+        # Housing
+        if step_id == 310:
             return StrategyChoiceModel.objects.filter(step_id=103).count() / StrategyChoiceModel.objects.filter(step_id__in=[103,104,105]).count()
 
-        elif step_id == 206:
-            return StrategyChoiceModel.objects.filter(step_id=204).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
-
-        elif step_id == 310:
-            return StrategyChoiceModel.objects.filter(step_id=308).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
-
-    def resolve_s2(self, info):
+    def resolve_c1_s2_percentage(self, info):
         step_id = info.context.args['step_id']
         session_id = info.context.args['session_id']
 
-        if step_id == 106:
+        # Housing
+        if step_id == 310:
             return StrategyChoiceModel.objects.filter(step_id=104).count() / StrategyChoiceModel.objects.filter(step_id__in=[103,104,105]).count()
 
-        elif step_id == 206:
-            return StrategyChoiceModel.objects.filter(step_id=205).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
-
-        elif step_id == 310:
-            return StrategyChoiceModel.objects.filter(step_id=309).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
-
-    def resolve_s3(self, info):
+    def resolve_c1_s3_percentage(self, info):
         step_id = info.context.args['step_id']
         session_id = info.context.args['session_id']
 
-        if step_id == 106:
+        # Housing
+        if step_id == 310:
             return StrategyChoiceModel.objects.filter(step_id=105).count() / StrategyChoiceModel.objects.filter(step_id__in=[103,104,105]).count()
+
+    def resolve_c2_s1_percentage(self, info):
+        step_id = info.context.args['step_id']
+        session_id = info.context.args['session_id']
+
+        # Housing
+        if step_id == 310:
+            return StrategyChoiceModel.objects.filter(step_id=204).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
+
+    def resolve_c2_s2_percentage(self, info):
+        step_id = info.context.args['step_id']
+        session_id = info.context.args['session_id']
+
+        # Housing
+        if step_id == 310:
+            return StrategyChoiceModel.objects.filter(step_id=205).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
+
+    def resolve_c3_s1_percentage(self, info):
+        step_id = info.context.args['step_id']
+        session_id = info.context.args['session_id']
+
+        # Housing
+        if step_id == 310:
+            return StrategyChoiceModel.objects.filter(step_id=308).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
+
+    def resolve_c3_s2_percentage(self, info):
+        step_id = info.context.args['step_id']
+        session_id = info.context.args['session_id']
+
+        # Housing
+        if step_id == 310:
+            return StrategyChoiceModel.objects.filter(step_id=309).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
 
 
 class Step(DjangoObjectType):

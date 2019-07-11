@@ -100,7 +100,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
         <p>{step && step.publicField5}</p>
         <h4>Coins</h4>
         <p>{step && step.publicField6}</p>
-        <Button onClick={() => this.recordChoiceAndRedirect(step && step.privateField1, `${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}&coins_spent=${step && step.publicField6}`, step && step.publicField6)} className="btn primary">{step && step.publicField7}</Button>
+        <Button onClick={() => this.recordChoiceAndRedirect(step && step.privateField1, `${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}&coins_spent=${step && step.publicField6}`, step && step.publicField6)} className="btn primary">Choose this strategy</Button>
         <br/>
         <h3 dangerouslySetInnerHTML={{ __html: step ? step.publicField8 : '' }} />
         <p>{step && step.publicField9}</p>
@@ -110,7 +110,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
         <p>{step && step.publicField11}</p>
         <h4>Coins</h4>
         <p>{step && step.publicField12}</p>
-        <Button onClick={() => this.recordChoiceAndRedirect(step && step.privateField2, `${step && step.privateField2}?lang=${queryString.parse(this.props.location.search).lang}&coins_spent=${step && step.publicField12}`, step && step.publicField12)} className="btn primary">{step && step.publicField13}</Button>
+        <Button onClick={() => this.recordChoiceAndRedirect(step && step.privateField2, `${step && step.privateField2}?lang=${queryString.parse(this.props.location.search).lang}&coins_spent=${step && step.publicField12}`, step && step.publicField12)} className="btn primary">Choose this strategy</Button>
         <br/>
         {step && step.publicField14 &&
         <>
@@ -122,7 +122,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
         <p>{step && step.publicField17}</p>
         <h4>Coins</h4>
         <p>{step && step.publicField18}</p>
-        <Button onClick={() => this.recordChoiceAndRedirect(step && step.privateField3, `${step && step.privateField3}?lang=${queryString.parse(this.props.location.search).lang}&coins_spent=${step && step.publicField18}`, step && step.publicField18)} className="btn primary">{step && step.publicField19}</Button>
+        <Button onClick={() => this.recordChoiceAndRedirect(step && step.privateField3, `${step && step.privateField3}?lang=${queryString.parse(this.props.location.search).lang}&coins_spent=${step && step.publicField18}`, step && step.publicField18)} className="btn primary">Choose this strategy</Button>
         </>
         }
         <br/>
