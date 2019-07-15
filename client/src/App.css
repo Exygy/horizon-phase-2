@@ -121,29 +121,5 @@
         display: block; }
     #custom .card .action {
       text-align: center; }
-  #custom #onboarding-welcome-view {
+  #custom .view {
     height: 100%; }
-  #custom .top-header {
-    background-color: #24364d;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    #custom .top-header h3 {
-      color: white;
-      text-align: center; }
-  #custom .main {
-    background: url(images/bg.png);
-    display: flex;
-    flex-flow: column;
-    height: 100%; }
-  #custom .content {
-    background: white;
-    border-radius: 20px;
-    margin-top: 49px;
-    margin-left: 39px;
-    margin-right: 27px;
-    padding: 37px; }
-  #custom .btn-holder {
-    margin-top: 50px;
-    text-align: center; }

@@ -26,6 +26,9 @@ import {stepQuery} from 'src/Queries'
 import {StepQueryParams, Step, StepQueryResponse, StepRouteParams} from 'src/Types'
 import { constructInnerHTML } from 'src/Helpers'
 import cookie from 'react-cookies'
+import CustomHeader from 'src/components/CustomHeader/'
+import Main from 'src/components/Main/'
+import { MOB, translate } from 'src/Translate'
 
 const queryString = require('query-string');
 
@@ -77,9 +80,9 @@ class OnboardingSurveyView extends React.Component<Props, State> {
     this.setState({ isSubmitting: false })
 
     if (!data.createSurveyResponse.error) {
-        alert("Thank you. Your response has been submitted.")
+        this.props.history.push(`/scenario/100?lang=${queryString.parse(this.props.location.search).lang}`)
     } else {
-      this.setState({ errorMsg: 'There was an error submitting your survey.' })
+        console.error("Error")
     }
   }
 
@@ -92,31 +95,37 @@ class OnboardingSurveyView extends React.Component<Props, State> {
     }))
   }
 
-
   render() {
     const { step, loading } = this.props.data
     const { isSubmitting, errorMsg } = this.state
 
     return (
-      <Container id="onboarding-welcome-view">
-        <h1 className="slate">{step && step.publicField1}</h1>
-        <p dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}/>
-                      <Form
-                        className=""
-                        loading={isSubmitting}
-                        onValidSubmit={this.onValidSubmit}
-                        error={errorMsg ? true : false}
-                      >
-                        <Message error header="Oops" content={errorMsg} />
+      <div className="view">
+        <Main stepId={this.props.match.params.stepId}>
+          <Form
+            className="forma"
+            loading={isSubmitting}
+            onValidSubmit={this.onValidSubmit}
+          >
+        <CustomHeader stepId={this.props.match.params.stepId} lang={queryString.parse(this.props.location.search).lang}/>
+            <div className="content-box">
+                <h1 className="">{step && step.publicField1}</h1>
+                <br/>
+                <p className="large" dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}/>
                         <Form.Input
                           name="name"
                           label="Name"
                           required
+                          placeholder="Type your name"
                           onChange={this.onFieldChange}
                         />
-                        <Button content={step && step.publicField6} size="large" disabled={isSubmitting} />
-                      </Form>
-      </Container>
+            </div>
+            <div className="btn-holder">
+                <Button className="btn primary" disabled={isSubmitting}>{step && step.publicField6}</Button>
+            </div>
+          </Form>
+        </Main>
+      </div>
     )
   }
 }

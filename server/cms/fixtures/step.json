@@ -23,6 +23,19 @@
             "public_field_2_meta_description": "Content",
             "public_field_3_en": "That’s concerning. We need to do something right now.",
             "public_field_3_meta_description": "Call to action",
+            "private_field_1": "/make-decision/106",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 106,
+        "fields":{
+            "challenge_id": 1,
+            "public_field_1_en": "How are you going to prevent that from happening?",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Make a decision",
+            "public_field_2_meta_description": "CTA text",
             "private_field_1": "/choose-strategy/102",
             "private_field_1_meta_description": "Next step path"
         }
@@ -32,9 +45,8 @@
         "pk": 102,
         "fields":{
             "challenge_id": 1,
-            "public_field_1_en": "How are you going to prevent that from happening? Choose one of the following strategies.",
-            "public_field_1_meta_description": "Content",
-
+            "public_field_1_en": "",
+            "public_field_1_meta_description": "DO NOT USE",
             "public_field_2_en": "Fund affordable housing production and preservation",
             "public_field_2_meta_description": "Strategy 1 title",
             "public_field_3_en": "Raise taxes to generate funds to build a broad range of permanently affordable housing.",

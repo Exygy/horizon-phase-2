@@ -141,10 +141,6 @@ class SummaryView extends React.Component<Props, {}> {
         % of people who voted for Strategy 3: {strategyChoiceSummary && strategyChoiceSummary.c3S3Percentage * 100}%
         </>
         }
-
-        <br/>
-        <br/>
-        {getProgress(this.props.match.params.stepId)}
       </Container>
     )
   }

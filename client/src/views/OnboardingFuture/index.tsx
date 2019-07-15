@@ -23,6 +23,9 @@ import {
 import {stepQuery} from 'src/Queries'
 import {StepQueryParams, Step, StepQueryResponse, StepRouteParams} from 'src/Types'
 import { constructInnerHTML } from 'src/Helpers'
+import CustomHeader from 'src/components/CustomHeader/'
+import Main from 'src/components/Main/'
+import { MOB, translate } from 'src/Translate'
 
 const queryString = require('query-string');
 
@@ -38,11 +41,24 @@ class OnboardingFutureView extends React.Component<Props, {}> {
     const { step, loading } = this.props.data
 
     return (
-      <Container id="onboarding-welcome-view">
-        <h1 className="slate">{step && step.publicField1}</h1>
-        <p dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}/>
-        <Button className="btn primary" as={Link} to='/onboarding/elected/10003'>{step && step.publicField3}</Button>
-      </Container>
+      <div className="view">
+        <Main stepId={this.props.match.params.stepId}>
+          <Form
+            className="forma"
+            loading={loading}
+          >
+        <CustomHeader stepId={this.props.match.params.stepId} lang={queryString.parse(this.props.location.search).lang}/>
+            <div className="content-box">
+                <h1 className="">{step && step.publicField1}</h1>
+                <br/>
+                <p className="large" dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}/>
+            </div>
+            <div className="btn-holder">
+                <Button className="btn primary" as={Link} to={`/onboarding/elected/10003?lang=${queryString.parse(this.props.location.search).lang}`}>{step && step.publicField3}</Button>
+            </div>
+        </Form>
+        </Main>
+      </div>
     )
   }
 }

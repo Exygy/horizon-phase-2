@@ -8,6 +8,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import PostListView from "./views/PostList/index"
 import ScenarioView from "./views/Scenario/index"
 import CharacterView from "./views/Character/index"
+import MakeDecisionView from "./views/MakeDecision/index"
 import ChooseStrategyView from "./views/ChooseStrategy/index"
 import StrategyFeedbackView from "./views/StrategyFeedback/index"
 import SummaryView from "./views/Summary/index"
@@ -50,6 +51,7 @@ function App() {
           <Route exact path="/kitchensink" component={PostListView} />
           <Route exact path="/scenario/:stepId" component={ScenarioView} />
           <Route exact path="/character/:stepId" component={CharacterView} />
+          <Route exact path="/make-decision/:stepId" component={MakeDecisionView} />
           <Route exact path="/choose-strategy/:stepId" component={ChooseStrategyView} />
           <Route exact path="/strategy-feedback/:stepId" component={StrategyFeedbackView} />
           <Route exact path="/summary/:stepId" component={SummaryView} />

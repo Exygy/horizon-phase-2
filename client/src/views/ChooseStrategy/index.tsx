@@ -20,11 +20,18 @@ import {
   Sidebar,
   Transition,
 } from 'semantic-ui-react'
-import person6 from 'src/images/person6.png'
 import {stepQuery} from 'src/Queries'
 import {StepQueryParams, Step, StepQueryResponse, StepRouteParams} from 'src/Types'
 import cookie from 'react-cookies'
-import {getProgress} from 'src/Helpers'
+import Main from 'src/components/Main/'
+import CustomHeader from 'src/components/CustomHeader/'
+import { getCoinCount, constructInnerHTML } from 'src/Helpers'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import './style.css'
+import ReactCardFlip from 'react-card-flip';
+
 
 const queryString = require('query-string');
 
@@ -51,11 +58,13 @@ type Props = StepQueryProps & OwnProps
 
 type State = {
   isSubmitting: boolean
+    isFlipped: boolean
 }
 
 class ChooseStrategyView extends React.Component<Props, State> {
       state = {
         isSubmitting: false,
+          isFlipped: false
       }
 
   componentDidMount = () => {
@@ -86,49 +95,60 @@ class ChooseStrategyView extends React.Component<Props, State> {
     }
   }
 
+    x = () => {
+        this.setState({isFlipped: !this.state.isFlipped})
+    }
+
   render() {
     const { step, loading, } = this.props.data
+          var settings = {
+      speed: 500,
+     infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
 
     return (
-      <Container id="scenario-view">
-        <h2 dangerouslySetInnerHTML={{ __html: step ? step.publicField1 : '' }} />
-        <h3 dangerouslySetInnerHTML={{ __html: step ? step.publicField2 : '' }} />
-        <p>{step && step.publicField3}</p>
-        <h4>Pros:</h4>
-        <p>{step && step.publicField4}</p>
-        <h4>Cons</h4>
-        <p>{step && step.publicField5}</p>
-        <h4>Coins</h4>
-        <p>{step && step.publicField6}</p>
-        <Button onClick={() => this.recordChoiceAndRedirect(step && step.privateField1, `${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}&coins_spent=${step && step.publicField6}`, step && step.publicField6)} className="btn primary">Choose this strategy</Button>
-        <br/>
-        <h3 dangerouslySetInnerHTML={{ __html: step ? step.publicField8 : '' }} />
-        <p>{step && step.publicField9}</p>
-        <h4>Pros:</h4>
-        <p>{step && step.publicField10}</p>
-        <h4>Cons</h4>
-        <p>{step && step.publicField11}</p>
-        <h4>Coins</h4>
-        <p>{step && step.publicField12}</p>
-        <Button onClick={() => this.recordChoiceAndRedirect(step && step.privateField2, `${step && step.privateField2}?lang=${queryString.parse(this.props.location.search).lang}&coins_spent=${step && step.publicField12}`, step && step.publicField12)} className="btn primary">Choose this strategy</Button>
-        <br/>
-        {step && step.publicField14 &&
-        <>
-        <h3 dangerouslySetInnerHTML={{ __html: step ? step.publicField14 : '' }} />
-        <p>{step && step.publicField15}</p>
-        <h4>Pros:</h4>
-        <p>{step && step.publicField16}</p>
-        <h4>Cons</h4>
-        <p>{step && step.publicField17}</p>
-        <h4>Coins</h4>
-        <p>{step && step.publicField18}</p>
-        <Button onClick={() => this.recordChoiceAndRedirect(step && step.privateField3, `${step && step.privateField3}?lang=${queryString.parse(this.props.location.search).lang}&coins_spent=${step && step.publicField18}`, step && step.publicField18)} className="btn primary">Choose this strategy</Button>
-        </>
-        }
-        <br/>
-        <br/>
-        {getProgress(this.props.match.params.stepId)}
-      </Container>
+      <div id="choose-strategy-view" className="view">
+        <Main stepId={this.props.match.params.stepId}>
+          <Form
+            className="forma"
+            loading={loading}
+          >
+        <CustomHeader stepId={this.props.match.params.stepId} lang={queryString.parse(this.props.location.search).lang}/>
+            <div className="coin-status" onClick={this.x}>
+                <h4 className="">{getCoinCount()}</h4>
+                <Image avatar src='http://icons.iconarchive.com/icons/cornmanthe3rd/metronome/256/Communication-email-green-icon.png'/>
+                <p>remaining</p>
+            </div>
+            <p>Choose one of the following strategies</p>
+        <div id="slider">
+              <Slider {...settings}>
+        <div>
+              <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
+
+            <div className="content-box centered" key='front'>
+                <h1 className="">{step && step.publicField1}</h1>
+                <Button className="btn primary" as={Link} to={`${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`}>{step && step.publicField2}</Button>
+            </div>
+            <div className="content-box centered" key='back'>
+                <h1 className="">{step && step.publicField1}</h1>
+                <Button className="btn primary" as={Link} to={`${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`}>{step && step.publicField2}</Button>
+            </div>
+              </ReactCardFlip>
+
+        </div>
+        <div>
+        <img src="http://placekitten.com/g/400/200" />
+        </div>
+        <div>
+        <img src="http://placekitten.com/g/400/200" />
+        </div>
+      </Slider>
+        </div>
+        </Form>
+        </Main>
+      </div>
     )
   }
 }

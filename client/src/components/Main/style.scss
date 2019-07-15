@@ -1,0 +1,112 @@
+
+.main {
+        &.housing-default {
+            background: url(../../images/bg.png);
+        }
+
+        &.housing-special {
+        }
+
+        &.housing-choose-strategy {
+            background-color: #FDC228;
+        }
+
+      display: flex;
+      flex-flow: column;
+      height: 100%;
+
+      .coin-status {
+        background: white;
+        position: absolute;
+             border-top-left-radius: 29px;
+             border-bottom-left-radius: 29px;
+             width: 92px;
+             height: 46px;
+             right: 0px;
+             margin-top: 10px;
+             margin-left: 15px;
+            padding: 5px 20px;
+
+            -webkit-box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
+            -moz-box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
+            box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
+
+            h4 {
+                margin-bottom: 0px;
+                float: left;
+            }
+
+            p {
+                font-size: 11px !important;
+                position: absolute;
+                margin-top: 20px;
+            }
+
+            img {
+                position: absolute;
+                margin-left: 6px;
+                top: 2px;
+            }
+      }
+
+    .content-box {
+        background: white;
+        border-radius: 20px;
+        margin-top: 200px;
+        padding: 37px;
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media only screen and (max-width: 768px) {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+                -webkit-box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
+                -moz-box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
+                box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
+
+        &.bottom {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin-top:0px;
+             border-top-left-radius: 29px;
+             border-top-right-radius: 29px;
+             border-bottom-left-radius: 0px;
+             border-bottom-right-radius: 0px;
+
+            .person {
+                width: 124px;
+                height: 133px;
+                position: absolute;
+                right: 0px;
+                top: -60px;
+            }
+        }
+    }
+
+    .forma {
+        height: 100%;
+    }
+
+    .btn-holder {
+        bottom: 20px;
+        position: absolute;
+        width: 100%;
+        margin-top: 50px;
+        text-align: center;
+
+        &.bottom {
+            position:relative;
+            bottom:0px;
+        }
+    }
+}
+

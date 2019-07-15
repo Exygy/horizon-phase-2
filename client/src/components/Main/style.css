@@ -1,0 +1,77 @@
+.main {
+  display: flex;
+  flex-flow: column;
+  height: 100%; }
+  .main.housing-default {
+    background: url(../../images/bg.png); }
+  .main.housing-choose-strategy {
+    background-color: #FDC228; }
+  .main .coin-status {
+    background: white;
+    position: absolute;
+    border-top-left-radius: 29px;
+    border-bottom-left-radius: 29px;
+    width: 92px;
+    height: 46px;
+    right: 0px;
+    margin-top: 10px;
+    margin-left: 15px;
+    padding: 5px 20px;
+    -webkit-box-shadow: -1px 2px 5px 0px #24364d;
+    -moz-box-shadow: -1px 2px 5px 0px #24364d;
+    box-shadow: -1px 2px 5px 0px #24364d; }
+    .main .coin-status h4 {
+      margin-bottom: 0px;
+      float: left; }
+    .main .coin-status p {
+      font-size: 11px !important;
+      position: absolute;
+      margin-top: 20px; }
+    .main .coin-status img {
+      position: absolute;
+      margin-left: 6px;
+      top: 2px; }
+  .main .content-box {
+    background: white;
+    border-radius: 20px;
+    margin-top: 200px;
+    padding: 37px;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: -1px 2px 5px 0px #24364d;
+    -moz-box-shadow: -1px 2px 5px 0px #24364d;
+    box-shadow: -1px 2px 5px 0px #24364d; }
+    @media only screen and (max-width: 768px) {
+      .main .content-box {
+        margin-left: 10px;
+        margin-right: 10px; } }
+    .main .content-box h1 {
+      text-align: center; }
+    .main .content-box.bottom {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      margin-top: 0px;
+      border-top-left-radius: 29px;
+      border-top-right-radius: 29px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px; }
+      .main .content-box.bottom .person {
+        width: 124px;
+        height: 133px;
+        position: absolute;
+        right: 0px;
+        top: -60px; }
+  .main .forma {
+    height: 100%; }
+  .main .btn-holder {
+    bottom: 20px;
+    position: absolute;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center; }
+    .main .btn-holder.bottom {
+      position: relative;
+      bottom: 0px; }

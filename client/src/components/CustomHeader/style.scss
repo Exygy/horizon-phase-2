@@ -1,0 +1,28 @@
+#custom-header {
+    background-color: #24364d;
+    height: 70px;
+    padding-top: 20px;
+
+    &.extended {
+        height: 100px;
+    }
+
+    p {
+        color: white;
+        text-align: center;
+    }
+
+    h3 {
+        color: white;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .back-btn {
+        padding-top: 5px;
+        color: white;
+        float: left;
+        position: absolute;
+        padding-left: 15px;
+    }
+}

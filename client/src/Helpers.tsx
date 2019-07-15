@@ -5,7 +5,6 @@ let constructInnerHTML = (text: string | undefined) => {
         return {__html: ''}
     return {__html: text}
 }
-
 export {constructInnerHTML}
 
 const STARTING_COINS = 100
@@ -15,7 +14,6 @@ let getCoinCount = () => {
     // Start coins = 100
     return STARTING_COINS - parseInt(coinsUsed)
 }
-
 export {getCoinCount}
 
 let getProgress = (stepId: string) => {
@@ -31,5 +29,4 @@ let getProgress = (stepId: string) => {
         return "3 of 3";
     }
 }
-
 export {getProgress}

@@ -193,42 +193,7 @@
 
     /* END OF ELEMENTS */
 
-    #onboarding-welcome-view {
+    .view {
         height: 100%;
-    }
-
-    .top-header {
-        background-color: #24364d;
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        h3 {
-            color: white;
-            text-align: center;
-        }
-    }
-
-    .main {
-        background: url(images/bg.png);
-          display: flex;
-          flex-flow: column;
-          height: 100%;
-
-    }
-
-    .content {
-        background: white;
-        border-radius: 20px;
-        margin-top: 49px;
-        margin-left: 39px;
-        margin-right: 27px;
-        padding: 37px;
-    }
-
-    .btn-holder {
-        margin-top: 50px;
-        text-align: center;
     }
 }

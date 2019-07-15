@@ -24,6 +24,7 @@ import Main from 'src/components/Main/'
 import CustomHeader from 'src/components/CustomHeader/'
 import { getCoinCount, constructInnerHTML } from 'src/Helpers'
 import person6 from 'src/images/person6.png'
+import './style.css'
 
 const queryString = require('query-string');
 const stepQuery = gql`
@@ -63,7 +64,7 @@ type OwnProps = RouteComponentProps<StepRouteParams>
 type StepQueryProps = ChildDataProps<StepQueryParams, StepQueryResponse>
 type Props = StepQueryProps & OwnProps
 
-class CharacterView extends React.Component<Props, {}> {
+class MakeDecisionView extends React.Component<Props, {}> {
   componentDidMount = () => {
   }
 
@@ -76,7 +77,7 @@ class CharacterView extends React.Component<Props, {}> {
       }
 
     return (
-      <div id="choose-scenario-view" className="view">
+      <div id="make-decision-view" className="view">
         <Main stepId={this.props.match.params.stepId}>
           <Form
             className="forma"
@@ -88,16 +89,9 @@ class CharacterView extends React.Component<Props, {}> {
                 <Image avatar src='http://icons.iconarchive.com/icons/cornmanthe3rd/metronome/256/Communication-email-green-icon.png'/>
                 <p>remaining</p>
             </div>
-            <div className="content-box bottom">
-                <Image className="person" src={person6}/>
+            <div className="content-box centered">
                 <h1 className="">{step && step.publicField1}</h1>
-                <p className="large" dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}/>
-                <div className="btn-holder bottom">
-                    <Button className="btn secondary gameplay action" as={Link} to={`${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`}>
-                        <Image avatar src='http://icons.iconarchive.com/icons/cornmanthe3rd/metronome/256/Communication-email-green-icon.png'/>
-                        <span>{step && step.publicField3}</span>
-                    </Button>
-                </div>
+                <Button className="btn primary" as={Link} to={`${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`}>{step && step.publicField2}</Button>
             </div>
         </Form>
         </Main>
@@ -114,4 +108,4 @@ export default graphql<Props, StepQueryResponse>(stepQuery, {
       renderMdToHtml: true
     },
   }),
-})(CharacterView)
+})(MakeDecisionView)

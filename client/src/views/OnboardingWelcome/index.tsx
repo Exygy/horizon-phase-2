@@ -23,8 +23,10 @@ import {
 import {stepQuery} from 'src/Queries'
 import {StepQueryParams, Step, StepQueryResponse, StepRouteParams} from 'src/Types'
 import { constructInnerHTML } from 'src/Helpers'
+import { MOB, translate } from 'src/Translate'
 import cookie from 'react-cookies'
-
+import CustomHeader from 'src/components/CustomHeader/'
+import Main from 'src/components/Main/'
 
 const uuidv4 = require('uuid/v4');
 const queryString = require('query-string');
@@ -35,7 +37,8 @@ type Props = StepQueryProps & OwnProps
 
 class OnboardingWelcomeView extends React.Component<Props, {}> {
   // NOTE: The session ID gets created here and gets used down the line. 
-  // This will overwrite an existing session ID - this is done on purpose.
+  // This will overwrite an existing session ID - this is done on purpose so
+  // that a person can replay the game with a fresh state
   componentDidMount = () => {
       cookie.save('session_id', uuidv4(), { path: '/' })
   }
@@ -44,20 +47,23 @@ class OnboardingWelcomeView extends React.Component<Props, {}> {
     const { step, loading } = this.props.data
 
     return (
-      <div id="onboarding-welcome-view">
-        <div className="top-header">
-            <h3>Mayor of Bayville</h3>
-        </div>
-        <div className="main">
-            <div className="content">
+      <div className="view">
+        <Main stepId={this.props.match.params.stepId}>
+          <Form
+            className="forma"
+            loading={loading}
+          >
+        <CustomHeader stepId={this.props.match.params.stepId} lang={queryString.parse(this.props.location.search).lang}/>
+            <div className="content-box">
                 <h1 className="">{step && step.publicField1}</h1>
                 <br/>
                 <p className="large" dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}/>
-                <div className="btn-holder">
-                    <Button className="btn primary" as={Link} to='/onboarding/challenges/10001'>{step && step.publicField3}</Button>
-                </div>
             </div>
-        </div>
+            <div className="btn-holder">
+                <Button className="btn primary" as={Link} to={`/onboarding/challenges/10001?lang=${queryString.parse(this.props.location.search).lang}`}>{step && step.publicField3}</Button>
+            </div>
+        </Form>
+        </Main>
       </div>
     )
   }
