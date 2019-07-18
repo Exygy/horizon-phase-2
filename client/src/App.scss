@@ -136,8 +136,9 @@
                 box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
 
                 img {
-                    max-height:19px;
-                    padding-right:4px;
+                    height: 24px;
+                    width: 24px;
+                    margin-right: 10px;
                 }
 
                 &.action {

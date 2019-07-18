@@ -31,6 +31,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './style.css'
 import ReactCardFlip from 'react-card-flip';
+import coin from 'src/images/money.png'
 
 
 const queryString = require('query-string');
@@ -118,7 +119,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
         <CustomHeader stepId={this.props.match.params.stepId} lang={queryString.parse(this.props.location.search).lang}/>
             <div className="coin-status" onClick={this.x}>
                 <h4 className="">{getCoinCount()}</h4>
-                <Image avatar src='http://icons.iconarchive.com/icons/cornmanthe3rd/metronome/256/Communication-email-green-icon.png'/>
+                <Image className="coin-img" src={coin}/>
                 <p>remaining</p>
             </div>
             <p>Choose one of the following strategies</p>

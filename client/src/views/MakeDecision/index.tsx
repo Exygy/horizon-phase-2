@@ -24,6 +24,7 @@ import Main from 'src/components/Main/'
 import CustomHeader from 'src/components/CustomHeader/'
 import { getCoinCount, constructInnerHTML } from 'src/Helpers'
 import person6 from 'src/images/person6.png'
+import coin from 'src/images/money.png'
 import './style.css'
 
 const queryString = require('query-string');
@@ -86,7 +87,7 @@ class MakeDecisionView extends React.Component<Props, {}> {
         <CustomHeader stepId={this.props.match.params.stepId} lang={queryString.parse(this.props.location.search).lang}/>
             <div className="coin-status">
                 <h4 className="">{getCoinCount()}</h4>
-                <Image avatar src='http://icons.iconarchive.com/icons/cornmanthe3rd/metronome/256/Communication-email-green-icon.png'/>
+                <Image className="coin-img" src={coin}/>
                 <p>remaining</p>
             </div>
             <div className="content-box centered">

@@ -24,6 +24,8 @@ import {getProgress} from 'src/Helpers'
 import CustomHeader from 'src/components/CustomHeader/'
 import Main from 'src/components/Main/'
 import { getCoinCount, constructInnerHTML } from 'src/Helpers'
+import coin from 'src/images/money.png'
+import chat from 'src/images/chat.png'
 
 const queryString = require('query-string');
 const stepQuery = gql`
@@ -78,14 +80,14 @@ class ScenarioView extends React.Component<Props, {}> {
         <CustomHeader stepId={this.props.match.params.stepId} lang={queryString.parse(this.props.location.search).lang}/>
             <div className="coin-status">
                 <h4 className="">{getCoinCount()}</h4>
-                <Image avatar src='http://icons.iconarchive.com/icons/cornmanthe3rd/metronome/256/Communication-email-green-icon.png'/>
+                <Image className="coin-img" src={coin}/>
                 <p>remaining</p>
             </div>
             <div className="content-box bottom">
                 <p className="large" dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField1)}/>
                 <div className="btn-holder bottom">
                     <Button className="btn secondary gameplay action" as={Link} to={`${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`}>
-                        <Image avatar src='http://icons.iconarchive.com/icons/cornmanthe3rd/metronome/256/Communication-email-green-icon.png'/>
+                        <Image avatar src={chat}/>
                         <span>{step && step.publicField2}</span>
                     </Button>
                 </div>

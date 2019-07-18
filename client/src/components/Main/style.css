@@ -2,9 +2,11 @@
   display: flex;
   flex-flow: column;
   height: 100%; }
-  .main.housing-default {
-    background: url(../../images/bg.png); }
-  .main.housing-choose-strategy {
+  .main.default-bg {
+    background: url(../../images/default_housing_bg.png); }
+  .main.housing-special-bg {
+    background: url(../../images/special_housing_bg.png) no-repeat center center; }
+  .main.housing-choose-strategy-bg {
     background-color: #FDC228; }
   .main .coin-status {
     background: white;
@@ -20,6 +22,11 @@
     -webkit-box-shadow: -1px 2px 5px 0px #24364d;
     -moz-box-shadow: -1px 2px 5px 0px #24364d;
     box-shadow: -1px 2px 5px 0px #24364d; }
+    .main .coin-status .coin-img {
+      width: 20px;
+      height: 20px;
+      margin-top: 4px;
+      margin-left: 30px; }
     .main .coin-status h4 {
       margin-bottom: 0px;
       float: left; }
@@ -34,7 +41,7 @@
   .main .content-box {
     background: white;
     border-radius: 20px;
-    margin-top: 200px;
+    margin-top: 150px;
     padding: 37px;
     max-width: 768px;
     margin-left: auto;
@@ -70,7 +77,7 @@
     bottom: 20px;
     position: absolute;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 40px;
     text-align: center; }
     .main .btn-holder.bottom {
       position: relative;

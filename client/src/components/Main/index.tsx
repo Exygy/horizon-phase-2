@@ -9,20 +9,18 @@ type Props = {
 class Main extends React.Component<Props, {}> {
   render() {
     const { stepId, children } = this.props
-    let backgroundClass = null
+    let backgroundClass = ''
 
-    if (parseInt(stepId) >= 100 && parseInt(stepId) < 200) {
-        if (parseInt(stepId) === 100) {
-            backgroundClass = 'housing-special'
-        }
+    if (parseInt(stepId) === 100) {
+        backgroundClass = 'housing-special-bg'
+    }
 
-        else if (parseInt(stepId) === 102) {
-            backgroundClass = 'housing-choose-strategy'
-        }
+    else if (parseInt(stepId) === 102) {
+        backgroundClass = 'housing-choose-strategy-bg'
+    }
 
-        else {
-            backgroundClass = 'housing-default'
-        }
+    else {
+        backgroundClass = 'default-bg'
     }
 
     return (
