@@ -12,6 +12,7 @@ import MakeDecisionView from "./views/MakeDecision/index"
 import ChooseStrategyView from "./views/ChooseStrategy/index"
 import StrategyFeedbackView from "./views/StrategyFeedback/index"
 import SummaryView from "./views/Summary/index"
+import ChatDialogueView from "./views/ChatDialogue/index"
 import OnboardingWelcome from "./views/OnboardingWelcome/index"
 import OnboardingChallenges from "./views/OnboardingChallenges/index"
 import OnboardingFuture from "./views/OnboardingFuture/index"
@@ -55,6 +56,7 @@ function App() {
           <Route exact path="/choose-strategy/:stepId" component={ChooseStrategyView} />
           <Route exact path="/strategy-feedback/:stepId" component={StrategyFeedbackView} />
           <Route exact path="/summary/:stepId" component={SummaryView} />
+          <Route exact path="/chat-dialogue/:stepId" component={ChatDialogueView} />
           <Route exact path="/onboarding/welcome/:stepId" component={OnboardingWelcome} />
           <Route exact path="/onboarding/challenges/:stepId" component={OnboardingChallenges} />
           <Route exact path="/onboarding/future/:stepId" component={OnboardingFuture} />

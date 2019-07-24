@@ -2,6 +2,8 @@
     @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
     //background-color: #f9f9fb;
     height: 100%;
+      display: flex;
+  flex-flow: column;
 
     /* START OF COLORS */
 
@@ -148,6 +150,14 @@
         }
     }
 
+    .custom-btn-holder {
+        text-align: center;
+        width: 100%;
+        margin-top: 40px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
     .card {
         width: 356px;
         background-color: white;
@@ -195,6 +205,6 @@
     /* END OF ELEMENTS */
 
     .view {
-        height: 100%;
+        flex: 1;
     }
 }

@@ -9,18 +9,18 @@ class CreateSurveyResponse(graphene.Mutation):
     error = graphene.String()
     
     class Arguments:
-        name = graphene.String(required=True)
+        zipcode = graphene.String(required=True)
         session_id = graphene.UUID(required=True)
   
-    def mutate(self, info, name, session_id):
+    def mutate(self, info, zipcode, session_id):
         try:
             sr = SurveyResponse.objects.get(session_id=session_id)
-            sr.name = name
+            sr.zipcode = zipcode
             sr.date_updated = timezone.now()
             sr.save()
         except SurveyResponse.DoesNotExist:
             SurveyResponse.objects.create(
-                name=name,
+                zipcode=zipcode,
                 session_id=session_id
             )
         return CreateSurveyResponse()

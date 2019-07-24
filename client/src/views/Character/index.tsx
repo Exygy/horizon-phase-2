@@ -23,7 +23,7 @@ import {
 import Main from 'src/components/Main/'
 import CustomHeader from 'src/components/CustomHeader/'
 import { getCoinCount, constructInnerHTML } from 'src/Helpers'
-import person6 from 'src/images/person6.png'
+import person from 'src/images/person6.png'
 import coin from 'src/images/money.png'
 import chat from 'src/images/chat.png'
 
@@ -74,7 +74,7 @@ class CharacterView extends React.Component<Props, {}> {
       let personImg = null
 
       if (parseInt(this.props.match.params.stepId) === 101) {
-          personImg = person6
+          personImg = person
       }
 
     return (
@@ -91,13 +91,13 @@ class CharacterView extends React.Component<Props, {}> {
                 <p>remaining</p>
             </div>
             <div className="content-box bottom">
-                <Image className="person" src={person6}/>
+                <Image className="person" src={person}/>
                 <h1 className="">{step && step.publicField1}</h1>
                 <p className="large" dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}/>
-                <div className="btn-holder bottom">
+                <div className="btn-holder-bottom">
                     <Button className="btn secondary gameplay action" as={Link} to={`${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`}>
                         <Image avatar src={chat}/>
-                        <span>{step && step.publicField3}</span>
+                        {step && step.publicField3}
                     </Button>
                 </div>
             </div>

@@ -24,7 +24,6 @@ import {stepQuery} from 'src/Queries'
 import {StepQueryParams, Step, StepQueryResponse, StepRouteParams} from 'src/Types'
 import { constructInnerHTML, getCoinCount } from 'src/Helpers'
 import cookie from 'react-cookies'
-import {getProgress} from 'src/Helpers'
 
 const queryString = require('query-string');
 

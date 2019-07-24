@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lora&display=swap");
 #custom {
   height: 100%;
+  display: flex;
+  flex-flow: column;
   /* START OF COLORS */
   /* END OF COLORS */
   /* START OF ELEMENTS */
@@ -92,6 +94,12 @@
           margin-right: 10px; }
         #custom .btn.secondary.gameplay.action {
           font-style: italic; }
+  #custom .custom-btn-holder {
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    padding-bottom: 10px; }
   #custom .card {
     width: 356px;
     background-color: white;
@@ -123,4 +131,4 @@
     #custom .card .action {
       text-align: center; }
   #custom .view {
-    height: 100%; }
+    flex: 1; }

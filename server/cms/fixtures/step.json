@@ -101,12 +101,21 @@
         "pk": 103,
         "fields":{
             "challenge_id": 1,
-            "public_field_1_en": "Great! You selected Strategy 1: Streamline accessory dwelling units and spent <coins_spent> coins from your budget.\n\nYou selected fund affordable housing production and preservation! Implementing this strategy in the Bay Area is estimated to produce between 400 and 600 new permanently affordable rental units each year. That’s around 11,000 to 17,000 units between now and 2050. Thousands more already affordable units were maintained and remained affordable.\n\nNow you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
-            "public_field_1_meta_description": "Content. <coins_spent> and <coins_left> are available variables",
+            "public_field_1_en": "fund affordable housing production and preservation!",
+            "public_field_1_meta_description": "Content.",
+
             "public_field_2_en": "Build affordable housing",
             "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
-            "public_field_3_en": "Next",
-            "public_field_3_meta_description": "Call to action",
+
+            "public_field_3_en": "Implementing this strategy in the Bay Area is estimated to produce between 400 and 600 new permanently affordable rental units each year. That’s around 11,000 to 17,000 units between now and 2050. Thousands more already affordable units were maintained and remained affordable.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
             "private_field_1": "/scenario/200",
             "private_field_1_meta_description": "Next step path"
         }
@@ -116,12 +125,21 @@
         "pk": 104,
         "fields":{
             "challenge_id": 1,
-            "public_field_1_en": "Great! You selected Strategy 2: Require 20 percent of all new housing to be affordable.\n\nYou selected require 20 percent of all new housing to be affordable! Implementing this strategy in the Bay Area is estimated to produce between 2,400 and 4,000 new permanently affordable rental units each year. That’s around 70,000 to 100,000 units between now and 2050. However, this policy only improved affordability for those that were able to move to these new units and did not help people afford to stay in their existing homes.\n\nNow you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
-            "public_field_1_meta_description": "Content. <coins_spent> and <coins_left> are available variables",
+            "public_field_1_en": "require 20 percent of all new housing to be affordable!",
+            "public_field_1_meta_description": "Content.",
+
             "public_field_2_en": "Build ADUs",
             "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
-            "public_field_3_en": "Next",
-            "public_field_3_meta_description": "Call to action",
+
+            "public_field_3_en": "Implementing this strategy in the Bay Area is estimated to produce between 2,400 and 4,000 new permanently affordable rental units each year. That’s around 70,000 to 100,000 units between now and 2050. However, this policy only improved affordability for those that were able to move to these new units and did not help people afford to stay in their existing homes.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
             "private_field_1": "/scenario/200",
             "private_field_1_meta_description": "Next step path"
         } 
@@ -131,12 +149,21 @@
         "pk": 105,
         "fields":{
             "challenge_id": 1,
-            "public_field_1_en": "Great! You selected Strategy 3: Increase renter protections and spent <coins_spent> coins from your budget.\n\nYou selected increase renter protections! A similar set of policies implemented in Portland, Oregon capped annual rent increases at 2% and resulted in a fifteen percent decrease in no-fault evictions. \n\nNow you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
-            "public_field_1_meta_description": "Content. <coins_spent> and <coins_left> are available variables",
+            "public_field_1_en": "increase renter protections!",
+            "public_field_1_meta_description": "Content.",
+
             "public_field_2_en": "Renter protections",
             "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
-            "public_field_3_en": "Next",
-            "public_field_3_meta_description": "Call to action",
+
+            "public_field_3_en": "A similar set of policies implemented in Portland, Oregon capped annual rent increases at 2% and resulted in a fifteen percent decrease in no-fault evictions.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
             "private_field_1": "/scenario/200",
             "private_field_1_meta_description": "Next step path"
         } 
@@ -229,12 +256,21 @@
         "pk": 204,
         "fields":{
             "challenge_id": 2,
-            "public_field_1_en": "You selected repurpose public land to build housing!\nImplementing this strategy in the Bay Area is estimated to produce between 1,000 and 2,000 new homes each year.\nWhile this covers just a small fraction of the projected need for new housing in the region, these new homes tend to be more affordable than the average home in the region.",
-            "public_field_1_meta_description": "Content. <coins_spent> and <coins_left> are available variables",
+            "public_field_1_en": "repurpose public land to build housing!",
+            "public_field_1_meta_description": "Content.",
+
             "public_field_2_en": "Repurpose public land",
             "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
-            "public_field_3_en": "Next",
-            "public_field_3_meta_description": "Call to action",
+
+            "public_field_3_en": "Implementing this strategy in the Bay Area is estimated to produce between 1,000 and 2,000 new homes each year. While this covers just a small fraction of the projected need for new housing in the region, these new homes tend to be more affordable than the average home in the region.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
             "private_field_1": "/scenario/300",
             "private_field_1_meta_description": "Next step path"
         }
@@ -244,14 +280,24 @@
         "pk": 205,
         "fields":{
             "challenge_id": 2,
-            "public_field_1_en": "You selected transform aging malls into neighborhoods!\nImplementing this strategy in the Bay Area is estimated to produce between 3,000 and 6,000 new homes per year.\nAdditionally, new stores and other workplaces in the new neighborhoods are expected to employ almost twice as many people as were employed when the malls were in operation.",
+            "public_field_1_en": "transform aging malls into neighborhoods!",
             "public_field_1_meta_description": "Content. <coins_spent> and <coins_left> are available variables",
+
             "public_field_2_en": "Transform aging malls",
             "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
-            "public_field_3_en": "Next",
-            "public_field_3_meta_description": "Call to action",
+
+            "public_field_3_en": "Implementing this strategy in the Bay Area is estimated to produce between 3,000 and 6,000 new homes per year. Additionally, new stores and other workplaces in the new neighborhoods are expected to employ almost twice as many people as were employed when the malls were in operation.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
             "private_field_1": "/scenario/300",
             "private_field_1_meta_description": "Next step path"
+
         } 
     },
     {
@@ -263,7 +309,7 @@
             "public_field_1_meta_description": "Content",
             "public_field_2_en": "Let’s see what they’re saying.",
             "public_field_2_meta_description": "Call to action",
-            "private_field_1": "/character/301",
+            "private_field_1": "/chat-dialogue/301",
             "private_field_1_meta_description": "Next step path"
         }
     },
@@ -272,87 +318,27 @@
         "pk": 301,
         "fields":{
             "challenge_id": 3,
-            "public_field_1_en": "John",
-            "public_field_1_meta_description": "Title",
+            "public_field_1_en": "HousingForAll123",
+            "public_field_1_meta_description": "User 1 screen name",
             "public_field_2_en": "Transit and higher density housing make sense together.",
-            "public_field_2_meta_description": "Content",
-            "public_field_3_en": "NEEDS_TO_BE_FILLED_IN",
-            "public_field_3_meta_description": "Call to action",
-            "private_field_1": "/character/302",
-            "private_field_1_meta_description": "Next step path"
-        }
-    },
-    {
-        "model": "cms.step",
-        "pk": 302,
-        "fields":{
-            "challenge_id": 3,
-            "public_field_1_en": "John",
-            "public_field_1_meta_description": "Title",
-            "public_field_2_en": "We should change current zoning regulations to make it possible to build duplexes and apartments within walking distance of transit, instead of single-family houses.",
-            "public_field_2_meta_description": "Content",
-            "public_field_3_en": "NEEDS_TO_BE_FILLED_IN",
-            "public_field_3_meta_description": "Call to action",
-            "private_field_1": "/character/303",
-            "private_field_1_meta_description": "Next step path"
-        }
-    },
-    {
-        "model": "cms.step",
-        "pk": 303,
-        "fields":{
-            "challenge_id": 3,
-            "public_field_1_en": "John",
-            "public_field_1_meta_description": "Title",
-            "public_field_2_en": "Existing homes wouldn’t necessarily be rebuilt, but it gives property owners the option.",
-            "public_field_2_meta_description": "Content",
-            "public_field_3_en": "NEEDS_TO_BE_FILLED_IN",
-            "public_field_3_meta_description": "Call to action",
-            "private_field_1": "/character/304",
-            "private_field_1_meta_description": "Next step path"
-        }
-    },
-    {
-        "model": "cms.step",
-        "pk": 304,
-        "fields":{
-            "challenge_id": 3,
-            "public_field_1_en": "John",
-            "public_field_1_meta_description": "Title",
-            "public_field_2_en": "Some neighborhoods in Bayville have better schools, more parks, and better transportation options.",
-            "public_field_2_meta_description": "Content",
-            "public_field_3_en": "NEEDS_TO_BE_FILLED_IN",
-            "public_field_3_meta_description": "Call to action",
-            "private_field_1": "/character/305",
-            "private_field_1_meta_description": "Next step path"
-        }
-    },
-    {
-        "model": "cms.step",
-        "pk": 305,
-        "fields":{
-            "challenge_id": 3,
-            "public_field_1_en": "John",
-            "public_field_1_meta_description": "Title",
-            "public_field_2_en": "Unfortunately, these same neighborhoods tend to have high housing costs, meaning only those that can afford to live there have access to these opportunities.",
-            "public_field_2_meta_description": "Content",
-            "public_field_3_en": "NEEDS_TO_BE_FILLED_IN",
-            "public_field_3_meta_description": "Call to action",
-            "private_field_1": "/character/306",
-            "private_field_1_meta_description": "Next step path"
-        }
-    },
-    {
-        "model": "cms.step",
-        "pk": 306,
-        "fields":{
-            "challenge_id": 3,
-            "public_field_1_en": "John",
-            "public_field_1_meta_description": "Title",
-            "public_field_2_en": "If we allowed for more affordable housing in these neighborhoods, people of all walks of life could have the chance to benefit from these resources.",
-            "public_field_2_meta_description": "Content",
-            "public_field_3_en": "These ideas could work for Bayville!",
-            "public_field_3_meta_description": "Call to action",
+            "public_field_2_meta_description": "User 1 message 1",
+            "public_field_3_en": "We should change current zoning regulations to make it possible to build duplexes and apartments within walking distance of transit, instead of single-family houses.",
+            "public_field_3_meta_description": "User 1 message 2",
+            "public_field_4_en": "Existing homes wouldn’t necessarily be rebuilt, but it gives property owners the option.",
+            "public_field_4_meta_description": "User 1 message 3",
+
+            "public_field_5_en": "HousingForAll456",
+            "public_field_5_meta_description": "User 2 screen name",
+            "public_field_6_en": "Some neighborhoods in Bayville have better schools, more parks, and better transportation options.",
+            "public_field_6_meta_description": "User 2 message 1",
+            "public_field_7_en": "Unfortunately, these same neighborhoods tend to have high housing costs, meaning only those that can afford to live there have access to these opportunities.",
+            "public_field_7_meta_description": "User 2 message 2",
+            "public_field_8_en": "If we allowed for more affordable housing in these neighborhoods, people of all walks of life could have the chance to benefit from these resources.",
+            "public_field_8_meta_description": "User 2 message 3",
+
+            "public_field_9_en": "These ideas could work for Bayville!",
+            "public_field_9_meta_description": "CTA text",
+
             "private_field_1": "/choose-strategy/307",
             "private_field_1_meta_description": "Next step path"
         }

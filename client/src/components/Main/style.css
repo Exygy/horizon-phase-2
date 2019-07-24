@@ -43,7 +43,7 @@
     border-radius: 20px;
     margin-top: 150px;
     padding: 37px;
-    max-width: 768px;
+    max-width: 668px;
     margin-left: auto;
     margin-right: auto;
     -webkit-box-shadow: -1px 2px 5px 0px #24364d;
@@ -66,19 +66,30 @@
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px; }
       .main .content-box.bottom .person {
-        width: 124px;
-        height: 133px;
+        width: 100px;
+        height: 107px;
         position: absolute;
         right: 0px;
         top: -60px; }
   .main .forma {
     height: 100%; }
-  .main .btn-holder {
+  .main .btn-holder-bottom {
     bottom: 20px;
     position: absolute;
     width: 100%;
     margin-top: 40px;
-    text-align: center; }
-    .main .btn-holder.bottom {
-      position: relative;
-      bottom: 0px; }
+    text-align: center;
+    position: relative;
+    bottom: 0px; }
+  @media only screen and (max-width: 480px) {
+    .main .btn-holder {
+      bottom: 20px;
+      position: absolute;
+      width: 100%;
+      margin-top: 40px;
+      text-align: center; } }
+  @media only screen and (min-width: 480px) {
+    .main .btn-holder {
+      width: 100%;
+      margin-top: 40px;
+      text-align: center; } }

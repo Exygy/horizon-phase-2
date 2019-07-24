@@ -162,7 +162,8 @@ class SurveyResponseResource(resources.ModelResource):
 class SurveyResponseAdmin(ExportMixin, admin.ModelAdmin):
     resource_class = SurveyResponseResource
     list_display_links = None
-    list_display = ('session_id', 'name', 'date_updated', )
+    list_display = ('session_id', 'zipcode', 'date_updated', )
+    ordering = ('-date_updated', )
 
     def has_add_permission(self, request, obj=None):
         return False
@@ -175,6 +176,7 @@ class StrategyChoiceAdmin(ExportMixin, admin.ModelAdmin):
     resource_class = StrategyChoiceResource
     list_display_links = None
     list_display = ('session_id', 'get_choice_desc', 'date_updated', )
+    ordering = ('-date_updated', )
 
     def get_choice_desc(self, obj):
         return obj.step.public_field_2_en

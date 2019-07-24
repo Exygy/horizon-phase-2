@@ -1,0 +1,11 @@
+#chat-dialogue-view .content-box.top-msg {
+  margin-top: 90px; }
+
+#chat-dialogue-view .content-box.bottom-msg {
+  margin-top: 20px; }
+
+#chat-dialogue-view .content-box .heart i {
+  font-weight: 600; }
+
+#chat-dialogue-view .content-box .message .retweet {
+  margin-left: 10px; }

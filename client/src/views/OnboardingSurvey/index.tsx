@@ -34,13 +34,13 @@ const queryString = require('query-string');
 
 type State = {
   isSubmitting: boolean
-  name: string
+  zipcode: string
   errorMsg: string
 }
 
 const surveyMutation = gql`
-  mutation createSurveyResponse($name: String!, $sessionId: UUID!) {
-    createSurveyResponse(name: $name, sessionId: $sessionId) {
+  mutation createSurveyResponse($zipcode: String!, $sessionId: UUID!) {
+    createSurveyResponse(zipcode: $zipcode, sessionId: $sessionId) {
       error
     }
   }
@@ -50,7 +50,7 @@ type SurveyMutationResponse = {
 }
 
 type SurveyMutationParams = {
-  name: string
+  zipcode: string
   sessionId: string
 }
 
@@ -63,7 +63,7 @@ type Props = StepQueryProps & OwnProps
 class OnboardingSurveyView extends React.Component<Props, State> {
       state = {
         isSubmitting: false,
-        name: '',
+        zipcode: '',
         errorMsg: '',
       }
 
@@ -72,10 +72,10 @@ class OnboardingSurveyView extends React.Component<Props, State> {
 
   onValidSubmit = async () => {
     this.setState({ errorMsg: '', isSubmitting: true })
-    const { name, } = this.state
+    const { zipcode, } = this.state
 
     let { data } = await this.props.surveyMutation({
-        variables: { name, sessionId: cookie.load('session_id')},
+        variables: { zipcode, sessionId: cookie.load('session_id')},
     })
     this.setState({ isSubmitting: false })
 
@@ -97,7 +97,7 @@ class OnboardingSurveyView extends React.Component<Props, State> {
 
   render() {
     const { step, loading } = this.props.data
-    const { isSubmitting, errorMsg } = this.state
+    const { zipcode, isSubmitting, errorMsg } = this.state
 
     return (
       <div className="view">
@@ -113,10 +113,11 @@ class OnboardingSurveyView extends React.Component<Props, State> {
                 <br/>
                 <p className="large" dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}/>
                         <Form.Input
-                          name="name"
-                          label="Name"
+                          name="zipcode"
+                          label="Zipcode"
                           required
-                          placeholder="Type your name"
+                          value={zipcode}
+                          placeholder="Type your zipcode"
                           onChange={this.onFieldChange}
                         />
             </div>

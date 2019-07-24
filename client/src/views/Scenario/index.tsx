@@ -20,7 +20,6 @@ import {
   Sidebar,
   Transition,
 } from 'semantic-ui-react'
-import {getProgress} from 'src/Helpers'
 import CustomHeader from 'src/components/CustomHeader/'
 import Main from 'src/components/Main/'
 import { getCoinCount, constructInnerHTML } from 'src/Helpers'
@@ -85,7 +84,7 @@ class ScenarioView extends React.Component<Props, {}> {
             </div>
             <div className="content-box bottom">
                 <p className="large" dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField1)}/>
-                <div className="btn-holder bottom">
+                <div className="btn-holder-bottom">
                     <Button className="btn secondary gameplay action" as={Link} to={`${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`}>
                         <Image avatar src={chat}/>
                         <span>{step && step.publicField2}</span>
