@@ -28,6 +28,7 @@ import Main from 'src/components/Main/'
 import CustomHeader from 'src/components/CustomHeader/'
 import coin from 'src/images/money.png'
 import './style.css'
+import { translate, HOW_IT_AFFECTS_BAYVILLE, REMAINING_BUDGET, YOU_SELECTED } from 'src/Translate'
 
 const queryString = require('query-string')
 
@@ -66,12 +67,22 @@ class StrategyFeedbackView extends React.Component<Props, {}> {
               <p>remaining</p>
             </div>
             <div className="content-box">
-              <h2 className="">
-                <span className="you-selected">You selected</span> {step && step.publicField1}
+              <h2>
+                <span className="you-selected">
+                  {translate(queryString.parse(this.props.location.search).lang, YOU_SELECTED)}
+                </span>{' '}
+                {step && step.publicField1}
               </h2>
-              <h3 className="">How it affects Bayville</h3>
+              <h3 className="">
+                {translate(
+                  queryString.parse(this.props.location.search).lang,
+                  HOW_IT_AFFECTS_BAYVILLE
+                )}
+              </h3>
               <p className="large">{step && step.publicField3}</p>
-              <h3 className="">Remaining budget</h3>
+              <h3 className="">
+                {translate(queryString.parse(this.props.location.search).lang, REMAINING_BUDGET)}
+              </h3>
               <p
                 className="large"
                 dangerouslySetInnerHTML={constructInnerHTML(
