@@ -32,7 +32,6 @@ import './style.css'
 const queryString = require('query-string');
 
 
-
 type OwnProps = RouteComponentProps<StepRouteParams>
 type StepQueryProps = ChildDataProps<StepQueryParams, StepQueryResponse>
 type Props = StepQueryProps & OwnProps
