@@ -25,38 +25,11 @@ import Main from 'src/components/Main/'
 import { getCoinCount, constructInnerHTML } from 'src/Helpers'
 import coin from 'src/images/money.png'
 import chat from 'src/images/chat.png'
+import {stepQuery} from 'src/Queries'
+import {StepQueryParams, Step, StepQueryResponse, StepRouteParams} from 'src/Types'
+
 
 const queryString = require('query-string');
-const stepQuery = gql`
-  query step($id: ID, $lang: String, $renderMdToHtml: Boolean) {
-    step(id: $id, lang: $lang, renderMdToHtml: $renderMdToHtml) {
-      id
-      publicField1
-      publicField2
-      privateField1
-    },
-  }
-`
-
-type StepQueryParams = {
-  id: number
-  lang: 'en' | 'es' | 'cn'
-  renderMdToHtml: boolean
-}
-
-type Step = {
-    publicField1: string
-    publicField2: string
-    privateField1: string
-}
-
-type StepQueryResponse = {
-    step: Step
-}
-
-type StepRouteParams = {
-    stepId: string
-}
 
 type OwnProps = RouteComponentProps<StepRouteParams>
 type StepQueryProps = ChildDataProps<StepQueryParams, StepQueryResponse>
