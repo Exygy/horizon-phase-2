@@ -29,7 +29,6 @@ import CustomHeader from 'src/components/CustomHeader/'
 import coin from 'src/images/money.png'
 import './style.css'
 
-
 const queryString = require('query-string');
 
 type OwnProps = RouteComponentProps<StepRouteParams>
