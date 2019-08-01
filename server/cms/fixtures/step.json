@@ -173,7 +173,7 @@
         "pk": 200,
         "fields":{
             "challenge_id": 2,
-            "public_field_1_en": "The first thing on your agenda today is a meeting with the citizens’ advisory council to discuss your housing plan. This group always has a lot to say, but they have some good advice",
+            "public_field_1_en": "Your housing plan is almost complete! The final item is choosing a strategy to guide infill development on vacant or underutilized properties throughout the city. Your next stop is the Citizens’ Advisory Council meeting, where you will hear about two proposals for infill development in your city.",
             "public_field_1_meta_description": "Content",
             "public_field_2_en": "Attend Meeting",
             "public_field_2_meta_description": "Call to action",
@@ -188,7 +188,7 @@
             "challenge_id": 2,
             "public_field_1_en": "Resident 1",
             "public_field_1_meta_description": "Title",
-            "public_field_2_en": "Our town owns some land at the edge of town that is currently sitting vacant with no plans for future use.\nSince our town already owns that land, building housing there would be cheaper and faster than if we had to find a site and buy it first. We could build there ourselves or sell the land to an affordable housing developer. \nWhat do you think?",
+            "public_field_2_en": "Our city owns some land that is currently sitting vacant, with no plans for future use. Since we already own that land, building housing there would be cheaper and faster than if we had to find a site and buy it first. We could build there ourselves or sell the land to an affordable housing developer.",
             "public_field_2_meta_description": "Content",
             "public_field_3_en": "See what __ has to say",
             "public_field_3_meta_description": "Call to action",
@@ -203,7 +203,7 @@
             "challenge_id": 2,
             "public_field_1_en": "Resident 2",
             "public_field_1_meta_description": "Title",
-            "public_field_2_en": "I like that idea, but I have another idea that could work for the housing plan.\nThere are several malls around town that have seen better days. Storefronts have been empty for months and overall more customers are choosing to shop online. These malls are on large lots located in the middle of town.\nWe could work with the mall owners to build vibrant neighborhoods that have housing, workplaces, parks, and stores.",
+            "public_field_2_en": "There are several malls around town that have seen better days. Storefronts have been empty for months, and it is only going to get worse as more people choose to shop online. We could work with the mall owners to turn these sites into vibrant neighborhoods with a mix of housing, workplaces, and shops!",
             "public_field_2_meta_description": "Content",
             "public_field_3_en": "Those are both interesting ideas!",
             "public_field_3_meta_description": "Call to action",
@@ -318,7 +318,7 @@
         "pk": 301,
         "fields":{
             "challenge_id": 3,
-            "public_field_1_en": "HousingForAll123",
+            "public_field_1_en": "MoreHousingMoreRiders",
             "public_field_1_meta_description": "User 1 screen name",
             "public_field_2_en": "Transit and higher density housing make sense together.",
             "public_field_2_meta_description": "User 1 message 1",
@@ -327,7 +327,7 @@
             "public_field_4_en": "Existing homes wouldn’t necessarily be rebuilt, but it gives property owners the option.",
             "public_field_4_meta_description": "User 1 message 3",
 
-            "public_field_5_en": "HousingForAll456",
+            "public_field_5_en": "OpportunityForAll",
             "public_field_5_meta_description": "User 2 screen name",
             "public_field_6_en": "Some neighborhoods in Bayville have better schools, more parks, and better transportation options.",
             "public_field_6_meta_description": "User 2 message 1",
@@ -336,9 +336,31 @@
             "public_field_8_en": "If we allowed for more affordable housing in these neighborhoods, people of all walks of life could have the chance to benefit from these resources.",
             "public_field_8_meta_description": "User 2 message 3",
 
-            "public_field_9_en": "These ideas could work for Bayville!",
-            "public_field_9_meta_description": "CTA text",
+            "public_field_9_en": "",
+            "public_field_9_meta_description": "NOT USED",
+            "public_field_10_en": "",
+            "public_field_10_meta_description": "NOT USED",
+            "public_field_11_en": "",
+            "public_field_11_meta_description": "NOT USED",
+            "public_field_12_en": "",
+            "public_field_12_meta_description": "NOT USED",
 
+            "public_field_13_en": "These ideas could work for Bayville!",
+            "public_field_13_meta_description": "CTA text",
+
+            "private_field_1": "/make-decision/302",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 302,
+        "fields":{
+            "challenge_id": 3,
+            "public_field_1_en": "Which policy would you choose to guide future development in your town?",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Make a decision",
+            "public_field_2_meta_description": "CTA text",
             "private_field_1": "/choose-strategy/307",
             "private_field_1_meta_description": "Next step path"
         }
@@ -420,6 +442,263 @@
             "challenge_id": 3
         } 
     },
+    {
+        "model": "cms.step",
+        "pk": 400,
+        "fields":{
+            "challenge_id": 5,
+            "public_field_1_en": "You get to your office and sit down at your desk. You hear a knock at the door - it’s the planning commissioner here for your monthly meeting. Today’s topic: policies to influence the location of jobs.",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Open the door.",
+            "public_field_2_meta_description": "Call to action",
+            "private_field_1": "/character/401",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 401,
+        "fields":{
+            "challenge_id": 5,
+            "public_field_1_en": "",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "Over time, parts of our city have become primarily residential, while jobs have concentrated in neighborhoods around downtown. Every morning, waves of workers travel from the residential neighborhoods to their workplaces downtown, resulting in traffic congestion and crowded buses and trains. If more neighborhoods had a mix of jobs and housing, peak commute periods would be less hectic.",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "Go to your economy plan!",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "/make-decision/402",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 402,
+        "fields":{
+            "challenge_id": 5,
+            "public_field_1_en": "Which approach would you take to address the mismatch of jobs and housing?",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Make a decision",
+            "public_field_2_meta_description": "CTA text",
+            "private_field_1": "/choose-strategy/403",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 403,
+        "fields":{
+            "challenge_id": 5,
+            "public_field_1_en": "",
+            "public_field_1_meta_description": "DO NOT USE",
+            "public_field_2_en": "Place office caps in jobs-rich locations",
+            "public_field_2_meta_description": "Strategy 1 title",
+            "public_field_3_en": "Limit the number of new office buildings that can be built each year in areas with many more jobs than residents.",
+            "public_field_3_meta_description": "Strategy 1 description",
+            "public_field_4_en": "This could make office space in high-demand areas more expensive, encouraging other employers to seek cheaper land or rents elsewhere within the region.",
+            "public_field_4_meta_description": "Strategy 1 pros",
+            "public_field_5_en": "Placing a limit on where office space can be built could lead to some employers moving out of the city.",
+            "public_field_5_meta_description": "Strategy 1 cons",
+            "public_field_6_en": "20",
+            "public_field_6_meta_description": "Strategy 1 coins",
+            "public_field_7_en": "",
+            "public_field_7_meta_description": "DO NOT USE",
+
+            "public_field_8_en": "Create incubator program in economically challenged neighborhoods",
+            "public_field_8_meta_description": "Strategy 2 title",
+            "public_field_9_en": "Provide resources to support the creation of businesses by low- and moderate-income people in communities with limited job opportunities.",
+            "public_field_9_meta_description": "Strategy 2 description",
+            "public_field_10_en": "This strategy could spur economic activity, create jobs, and keep wealth circulating within the economically challenged communities.",
+            "public_field_10_meta_description": "Strategy 2 pros",
+            "public_field_11_en": "Small businesses need time to grow and mature before they can provide a substantial number of jobs.",
+            "public_field_11_meta_description": "Strategy 2 cons",
+            "public_field_12_en": "50",
+            "public_field_12_meta_description": "Strategy 2 coins",
+            "public_field_13_en": "",
+            "public_field_13_meta_description": "DO NOT USE",
+
+            "private_field_1": "/strategy-feedback/404",
+            "private_field_1_meta_description": "Strategy 1 step ID path",
+
+            "private_field_2": "/strategy-feedback/405",
+            "private_field_2_meta_description": "Strategy 2 step ID path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 404,
+        "fields":{
+            "challenge_id": 5,
+            "public_field_1_en": "place office caps in jobs-rich locations!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Office caps in jobs-rich locations",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "New office developments are starting to pop up in residential areas. However, some businesses have threatened to move jobs to a neighboring city where offices are cheaper, leading residents to worry this policy could damage the local economy. Implementing this strategy in the Bay Area is estimated to increase the number of jobs in predominantly residential areas by XX percent and increase the amount of new home construction in employment centers by XX percent by 2050, leading to a more balanced distribution of homes and jobs.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other economic issues. Don’t spent too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/scenario/500",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 405,
+        "fields":{
+            "challenge_id": 5,
+            "public_field_1_en": "create incubator program in economically challenged neighborhoods!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Create incubator program",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "New incubators are opening in communities around the city. While most new businesses have just a few employees for now, several businesses have grown rapidly. These growing businesses are hiring new employees and doing business in their communities, which has benefitted other local shops. Implementing this strategy in the Bay Area is estimated to increase the number of overall jobs in economically challenged communities from XXX to XXX by 2050, more than doubling total employment in these areas which have previously seen few job opportunities for residents.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other economic issues. Don’t spent too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/scenario/500",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+
+
+    {
+        "model": "cms.step",
+        "pk": 500,
+        "fields":{
+            "challenge_id": 5,
+            "public_field_1_en": "You have a full schedule today, which means you are on your way to work early. As you wait for your train, your phone starts buzzing. It looks like one of your posts seeking input for the economy plan has gone viral!",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Keep reading",
+            "public_field_2_meta_description": "Call to action",
+            "private_field_1": "/chat-dialogue/501",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 501,
+        "fields":{
+            "challenge_id": 5,
+            "public_field_1_en": "BackToWork",
+            "public_field_1_meta_description": "User 1 screen name",
+            "public_field_2_en": "Many working parents can’t afford childcare and have to put their careers on hold because of it. If we provided low-cost childcare to low-income families, parents would have the option to return to work or school if they wanted, without having to weigh the costs of childcare",
+            "public_field_2_meta_description": "User 1 message 1",
+            "public_field_3_en": "",
+            "public_field_3_meta_description": "NOT USED",
+            "public_field_4_en": "",
+            "public_field_4_meta_description": "NOT USED",
+
+            "public_field_5_en": "CranesForDays",
+            "public_field_5_meta_description": "User 2 screen name",
+            "public_field_6_en": "With a growing population like ours, we need to build more housing and maintain our infrastructure. We don’t have enough trained people to fill the construction jobs we have today, much less meet the increased demand in the future. Investing in training the construction workforce will help us keep up and will provide more middle-wage jobs.",
+            "public_field_6_meta_description": "User 2 message 1",
+            "public_field_7_en": "",
+            "public_field_7_meta_description": "NOT USED",
+            "public_field_8_en": "",
+            "public_field_8_meta_description": "NOT USED",
+
+            "public_field_9_en": "Go to your economy plan!",
+            "public_field_9_meta_description": "CTA text",
+
+            "public_field_10_en": "GigWorkersUnite",
+            "public_field_10_meta_description": "User 3 screen name",
+            "public_field_11_en": "Many people in our city today are part-time or freelance workers. They like the flexibility, but most of these jobs don’t provide benefits like health insurance the way many full-time jobs do. We should require employers to pay for a fair share of worker benefits.",
+            "public_field_11_meta_description": "User 3 message 1",
+            "public_field_12_en": "",
+            "public_field_12_meta_description": "NOT USED",
+
+            "public_field_13_en": "Go to your economy plan!",
+            "public_field_13_meta_description": "CTA text",
+
+            "private_field_1": "/make-decision/502",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 502,
+        "fields":{
+            "challenge_id": 5,
+            "public_field_1_en": "Which workforce policy do you want to implement?",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Make a decision",
+            "public_field_2_meta_description": "CTA text",
+            "private_field_1": "/choose-strategy/507",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+
+    {
+        "model": "cms.step",
+        "pk": 507,
+        "fields":{
+            "challenge_id": 5,
+            "public_field_1_en": "",
+            "public_field_1_meta_description": "DO NOT USE",
+            "public_field_2_en": "Provide portable benefits for part-time and freelance workers",
+            "public_field_2_meta_description": "Strategy 1 title",
+            "public_field_3_en": "Pass state legislation requiring companies that rely on part-time or freelance workers to contribute benefits in proportion to the hours worked.",
+            "public_field_3_meta_description": "Strategy 1 description",
+            "public_field_4_en": "This would reduce the costs of obtaining insurance for thousands of part-time or freelance workers",
+            "public_field_4_meta_description": "Strategy 1 pros",
+            "public_field_5_en": "Businesses that rely on part-time or freelance workers could choose to employ fewer people, automate jobs, or move away entirely, reducing the total number of jobs in the city.",
+            "public_field_5_meta_description": "Strategy 1 cons",
+            "public_field_6_en": "20",
+            "public_field_6_meta_description": "Strategy 1 coins",
+            "public_field_7_en": "",
+            "public_field_7_meta_description": "DO NOT USE",
+
+            "public_field_8_en": "Expand childcare support for low-income families",
+            "public_field_8_meta_description": "Strategy 2 title",
+            "public_field_9_en": "Provide reduced cost childcare for low-income families, enabling parents to return to work or attend school without worrying about the cost of childcare.",
+            "public_field_9_meta_description": "Strategy 2 description",
+            "public_field_10_en": "This strategy would allow thousands of parents to return to work or school and would benefit children through education and socialization.",
+            "public_field_10_meta_description": "Strategy 2 pros",
+            "public_field_11_en": "Providing safe, high quality childcare can be expensive. Costs to operate this program could increase substantially in the future if many families choose to participate.",
+            "public_field_11_meta_description": "Strategy 2 cons",
+            "public_field_12_en": "50",
+            "public_field_12_meta_description": "Strategy 2 coins",
+            "public_field_13_en": "",
+            "public_field_13_meta_description": "DO NOT USE",
+
+            "public_field_14_en": "Expand construction workforce programs",
+            "public_field_14_meta_description": "Strategy 3 title",
+            "public_field_15_en": "Partner with neighboring cities and the construction industry to provide training programs, apprenticeships, and financial incentives that prepare workers for middle-wage construction-related jobs.",
+            "public_field_15_meta_description": "Strategy 3 description",
+            "public_field_16_en": "This would address the current deficit in the construction workforce, training the workers needed to build new housing and maintain infrastructure.",
+            "public_field_16_meta_description": "Strategy 3 pros",
+            "public_field_17_en": "This program could be seen as subsidizing the training costs of privately-owned construction companies",
+            "public_field_17_meta_description": "Strategy 3 cons",
+            "public_field_18_en": "30",
+            "public_field_18_meta_description": "Strategy 3 coins",
+            "public_field_19_en": "",
+            "public_field_19_meta_description": "DO NOT USE",
+
+            "private_field_1": "/strategy-feedback/508",
+            "private_field_1_meta_description": "Strategy 1 step ID path",
+
+            "private_field_2": "/strategy-feedback/509",
+            "private_field_2_meta_description": "Strategy 2 step ID path",
+
+            "private_field_3": "/strategy-feedback/510",
+            "private_field_3_meta_description": "Strategy 3 step ID path"
+        }
+    },
+
+
+
     {
         "model": "cms.step",
         "pk": 10000,

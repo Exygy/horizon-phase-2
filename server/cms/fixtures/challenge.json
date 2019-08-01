@@ -11,7 +11,7 @@
         "model": "cms.challenge",
         "pk": 2,
         "fields":{
-            "name": "Redevelopment",
+            "name": "Infill Development",
             "category_id": 1
         }
     },
@@ -29,6 +29,14 @@
         "fields":{
             "name": "Onboarding",
             "category_id": 5
+        }
+    },
+    {
+        "model": "cms.challenge",
+        "pk": 5,
+        "fields":{
+            "name": "Shift Location of Jobs",
+            "category_id": 4
         }
     }
 ]

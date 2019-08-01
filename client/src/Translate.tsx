@@ -24,7 +24,7 @@ const translations: any = {
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   HOUSING_C2OF3: {
-    en: 'Challenge 2 of 3: Redevelopment',
+    en: 'Challenge 2 of 3: Infill Development',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
