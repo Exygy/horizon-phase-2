@@ -110,7 +110,7 @@
             "public_field_3_en": "Implementing this strategy in the Bay Area is estimated to produce between 400 and 600 new permanently affordable rental units each year. That’s around 11,000 to 17,000 units between now and 2050. Thousands more already affordable units were maintained and remained affordable.",
             "public_field_3_meta_description": "Description of effects of strategy",
 
-            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spend too much!",
             "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
 
             "public_field_5_en": "Next",
@@ -134,7 +134,7 @@
             "public_field_3_en": "Implementing this strategy in the Bay Area is estimated to produce between 2,400 and 4,000 new permanently affordable rental units each year. That’s around 70,000 to 100,000 units between now and 2050. However, this policy only improved affordability for those that were able to move to these new units and did not help people afford to stay in their existing homes.",
             "public_field_3_meta_description": "Description of effects of strategy",
 
-            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spend too much!",
             "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
             
             "public_field_5_en": "Next",
@@ -159,7 +159,7 @@
             "public_field_3_meta_description": "Description of effects of strategy",
 
             "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
-            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            "public_field_4_meta_description": "Remaining budget. <coins_spend> and <coins_left> are available variables",
 
             "public_field_5_en": "Next",
             "public_field_5_meta_description": "Call to action",
@@ -265,7 +265,7 @@
             "public_field_3_en": "Implementing this strategy in the Bay Area is estimated to produce between 1,000 and 2,000 new homes each year. While this covers just a small fraction of the projected need for new housing in the region, these new homes tend to be more affordable than the average home in the region.",
             "public_field_3_meta_description": "Description of effects of strategy",
 
-            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spend too much!",
             "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
 
             "public_field_5_en": "Next",
@@ -289,7 +289,7 @@
             "public_field_3_en": "Implementing this strategy in the Bay Area is estimated to produce between 3,000 and 6,000 new homes per year. Additionally, new stores and other workplaces in the new neighborhoods are expected to employ almost twice as many people as were employed when the malls were in operation.",
             "public_field_3_meta_description": "Description of effects of strategy",
 
-            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spent too much!",
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spend too much!",
             "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
 
             "public_field_5_en": "Next",
@@ -337,13 +337,13 @@
             "public_field_8_meta_description": "User 2 message 3",
 
             "public_field_9_en": "",
-            "public_field_9_meta_description": "NOT USED",
+            "public_field_9_meta_description": "DO NOT USE",
             "public_field_10_en": "",
-            "public_field_10_meta_description": "NOT USED",
+            "public_field_10_meta_description": "DO NOT USE",
             "public_field_11_en": "",
-            "public_field_11_meta_description": "NOT USED",
+            "public_field_11_meta_description": "DO NOT USE",
             "public_field_12_en": "",
-            "public_field_12_meta_description": "NOT USED",
+            "public_field_12_meta_description": "DO NOT USE",
 
             "public_field_13_en": "These ideas could work for Bayville!",
             "public_field_13_meta_description": "CTA text",
@@ -537,7 +537,7 @@
             "public_field_3_en": "New office developments are starting to pop up in residential areas. However, some businesses have threatened to move jobs to a neighboring city where offices are cheaper, leading residents to worry this policy could damage the local economy. Implementing this strategy in the Bay Area is estimated to increase the number of jobs in predominantly residential areas by XX percent and increase the amount of new home construction in employment centers by XX percent by 2050, leading to a more balanced distribution of homes and jobs.",
             "public_field_3_meta_description": "Description of effects of strategy",
 
-            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other economic issues. Don’t spent too much!",
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other economic issues. Don’t spend too much!",
             "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
 
             "public_field_5_en": "Next",
@@ -561,7 +561,7 @@
             "public_field_3_en": "New incubators are opening in communities around the city. While most new businesses have just a few employees for now, several businesses have grown rapidly. These growing businesses are hiring new employees and doing business in their communities, which has benefitted other local shops. Implementing this strategy in the Bay Area is estimated to increase the number of overall jobs in economically challenged communities from XXX to XXX by 2050, more than doubling total employment in these areas which have previously seen few job opportunities for residents.",
             "public_field_3_meta_description": "Description of effects of strategy",
 
-            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other economic issues. Don’t spent too much!",
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other economic issues. Don’t spend too much!",
             "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
             
             "public_field_5_en": "Next",
@@ -577,7 +577,7 @@
         "model": "cms.step",
         "pk": 500,
         "fields":{
-            "challenge_id": 5,
+            "challenge_id": 6,
             "public_field_1_en": "You have a full schedule today, which means you are on your way to work early. As you wait for your train, your phone starts buzzing. It looks like one of your posts seeking input for the economy plan has gone viral!",
             "public_field_1_meta_description": "Content",
             "public_field_2_en": "Keep reading",
@@ -590,34 +590,33 @@
         "model": "cms.step",
         "pk": 501,
         "fields":{
-            "challenge_id": 5,
+            "challenge_id": 6,
             "public_field_1_en": "BackToWork",
             "public_field_1_meta_description": "User 1 screen name",
-            "public_field_2_en": "Many working parents can’t afford childcare and have to put their careers on hold because of it. If we provided low-cost childcare to low-income families, parents would have the option to return to work or school if they wanted, without having to weigh the costs of childcare",
+            "public_field_2_en": "Many working parents can’t afford childcare and have to put their careers on hold because of it.",
             "public_field_2_meta_description": "User 1 message 1",
-            "public_field_3_en": "",
-            "public_field_3_meta_description": "NOT USED",
+            "public_field_3_en": "If we provided low-cost childcare to low-income families, parents would have the option to return to work or school if they wanted, without having to weigh the costs of childcare",
+            "public_field_3_meta_description": "User 1 message 2",
             "public_field_4_en": "",
-            "public_field_4_meta_description": "NOT USED",
+            "public_field_4_meta_description": "DO NOT USE",
 
             "public_field_5_en": "CranesForDays",
             "public_field_5_meta_description": "User 2 screen name",
-            "public_field_6_en": "With a growing population like ours, we need to build more housing and maintain our infrastructure. We don’t have enough trained people to fill the construction jobs we have today, much less meet the increased demand in the future. Investing in training the construction workforce will help us keep up and will provide more middle-wage jobs.",
+            "public_field_6_en": "With a growing population like ours, we need to build more housing and maintain our infrastructure.",
             "public_field_6_meta_description": "User 2 message 1",
-            "public_field_7_en": "",
-            "public_field_7_meta_description": "NOT USED",
-            "public_field_8_en": "",
-            "public_field_8_meta_description": "NOT USED",
+            "public_field_7_en": "We don’t have enough trained people to fill the construction jobs we have today, much less meet the increased demand in the future.",
+            "public_field_7_meta_description": "User 2 message 2",
+            "public_field_8_en": "Investing in training the construction workforce will help us keep up and will provide more middle-wage jobs.",
+            "public_field_8_meta_description": "User 2 message 3",
 
-            "public_field_9_en": "Go to your economy plan!",
-            "public_field_9_meta_description": "CTA text",
-
-            "public_field_10_en": "GigWorkersUnite",
-            "public_field_10_meta_description": "User 3 screen name",
-            "public_field_11_en": "Many people in our city today are part-time or freelance workers. They like the flexibility, but most of these jobs don’t provide benefits like health insurance the way many full-time jobs do. We should require employers to pay for a fair share of worker benefits.",
-            "public_field_11_meta_description": "User 3 message 1",
-            "public_field_12_en": "",
-            "public_field_12_meta_description": "NOT USED",
+            "public_field_9_en": "GigWorkersUnite",
+            "public_field_9_meta_description": "User 3 screen name",
+            "public_field_10_en": "Many people in our city today are part-time or freelance workers.",
+            "public_field_10_meta_description": "User 3 message 1",
+            "public_field_11_en": "They like the flexibility, but most of these jobs don’t provide benefits like health insurance the way many full-time jobs do.",
+            "public_field_11_meta_description": "User 3 message 2",
+            "public_field_12_en": "We should require employers to pay for a fair share of worker benefits.",
+            "public_field_12_meta_description": "User 3 message 3",
 
             "public_field_13_en": "Go to your economy plan!",
             "public_field_13_meta_description": "CTA text",
@@ -630,7 +629,7 @@
         "model": "cms.step",
         "pk": 502,
         "fields":{
-            "challenge_id": 5,
+            "challenge_id": 6,
             "public_field_1_en": "Which workforce policy do you want to implement?",
             "public_field_1_meta_description": "Content",
             "public_field_2_en": "Make a decision",
@@ -644,7 +643,7 @@
         "model": "cms.step",
         "pk": 507,
         "fields":{
-            "challenge_id": 5,
+            "challenge_id": 6,
             "public_field_1_en": "",
             "public_field_1_meta_description": "DO NOT USE",
             "public_field_2_en": "Provide portable benefits for part-time and freelance workers",
@@ -698,6 +697,605 @@
     },
 
 
+    {
+        "model": "cms.step",
+        "pk": 508,
+        "fields":{
+            "challenge_id": 6,
+            "public_field_1_en": "provide portable benefits for part-time and freelance workers!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Portable benefits",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Companies that hire part-time or freelance workers now contribute to their workers’ insurance costs based on the number of hours worked. Without this strategy, these workers would have had to pay the full cost of benefits out of pocket or risk being uninsured. Implementing this strategy in the Bay Area is estimated to benefit XXX part-time or freelance workers each year.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other economic issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/summary/511",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 509,
+        "fields":{
+            "challenge_id": 6,
+            "public_field_1_en": "expand childcare support for low-income families!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Expand childcare support",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Families are already enrolling their children, and new workers are returning to the labor force. Implementing this strategy in the Bay Area is estimated to enable XXX additional people this year to join the workforce and XXX additional people to enroll in higher education. Women would especially benefit from this strategy - with XX percent of the new workers and students being women.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other economic issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/summary/511",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 510,
+        "fields":{
+            "challenge_id": 6,
+            "public_field_1_en": "expand construction workforce programs!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Expand construction workforce program",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "There is a line out the door to sign up for training programs at the local community college! New trainees are excited to learn a new trade and enter the construction workforce. Many of these new positions will be middle-wage jobs that do not require a college degree, providing new pathways to economic opportunity. Implementing this strategy in the Bay Area is estimated to increase the number of construction jobs from XXX to XXX by 2050, more than doubling total employment in the industry.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other economic issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/summary/511",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 511,
+        "fields":{
+            "challenge_id": 6
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 600,
+        "fields":{
+            "challenge_id": 7,
+            "public_field_1_en": "You get back to your office after the community meeting. Suddenly, everything starts to shake. This time, it was just a small tremor - no major damage to report. However, it has started a conversation online about how the city should respond to the threat of a major earthquake. ",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Check messages",
+            "public_field_2_meta_description": "Call to action",
+            "private_field_1": "/chat-dialogue/601",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 601,
+        "fields":{
+            "challenge_id": 7,
+            "public_field_1_en": "LomaPrieta1989",
+            "public_field_1_meta_description": "User 1 screen name",
+            "public_field_2_en": "Geologists say the next major earthquake is likely to happen by the year 2050.",
+            "public_field_2_meta_description": "User 1 message 1",
+            "public_field_3_en": "The city needs to buy a disaster recovery bond that would provide us with funds to start rebuilding right away, without having to wait for federal assistance.",
+            "public_field_3_meta_description": "User 1 message 2",
+            "public_field_4_en": "",
+            "public_field_4_meta_description": "DO NOT USE",
+
+            "public_field_5_en": "BePrepared",
+            "public_field_5_meta_description": "User 2 screen name",
+            "public_field_6_en": "An earthquake could destroy thousands of homes and other buildings.",
+            "public_field_6_meta_description": "User 2 message 1",
+            "public_field_7_en": "What our city needs is a low-interest loan program that homeowners could use to retrofit their homes and reduce their risk of damage before the next earthquake strikes.",
+            "public_field_7_meta_description": "User 2 message 2",
+            "public_field_8_en": "Landlords could use the fund to improve their properties, too!",
+            "public_field_8_meta_description": "User 2 message 3",
+
+            "public_field_9_en": "",
+            "public_field_9_meta_description": "DO NOT USE",
+            "public_field_10_en": "",
+            "public_field_10_meta_description": "DO NOT USE",
+            "public_field_11_en": "",
+            "public_field_11_meta_description": "DO NOT USE",
+            "public_field_12_en": "",
+            "public_field_12_meta_description": "DO NOT USE",
+
+            "public_field_13_en": "Go to your environment plan!",
+            "public_field_13_meta_description": "CTA text",
+
+            "private_field_1": "/make-decision/602",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 602,
+        "fields":{
+            "challenge_id": 7,
+            "public_field_1_en": "Which strategy would you add to your environment plan to prepare for a future earthquake?",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Make a decision",
+            "public_field_2_meta_description": "CTA text",
+            "private_field_1": "/choose-strategy/607",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+
+    {
+        "model": "cms.step",
+        "pk": 607,
+        "fields":{
+            "challenge_id": 7,
+            "public_field_1_en": "",
+            "public_field_1_meta_description": "DO NOT USE",
+            "public_field_2_en": "Purchase disaster recovery financing to recover after disasters",
+            "public_field_2_meta_description": "Strategy 1 title",
+            "public_field_3_en": "Purchase a catastrophe bond that would provide funds for recovery in the event of a disaster like an earthquake or wildfire.",
+            "public_field_3_meta_description": "Strategy 1 description",
+            "public_field_4_en": "Disaster financing funds could be ready quickly and would shorten the amount of time it takes to rebuild.",
+            "public_field_4_meta_description": "Strategy 1 pros",
+            "public_field_5_en": "This strategy does not do anything to protect damage from occurring",
+            "public_field_5_meta_description": "Strategy 1 cons",
+            "public_field_6_en": "20",
+            "public_field_6_meta_description": "Strategy 1 coins",
+            "public_field_7_en": "",
+            "public_field_7_meta_description": "DO NOT USE",
+
+            "public_field_8_en": "Expand financing for energy, water, seismic, fire, and accessibility improvements",
+            "public_field_8_meta_description": "Strategy 2 title",
+            "public_field_9_en": "Provide low-cost loans to owners of existing homes and commercial buildings to upgrade their properties to better withstand natural disasters.",
+            "public_field_9_meta_description": "Strategy 2 description",
+            "public_field_10_en": "This strategy reduces the number of homes lost to earthquake damage",
+            "public_field_10_meta_description": "Strategy 2 pros",
+            "public_field_11_en": "This strategy largely benefits homeowners that have the resources to make these upgrades, leaving out renters and lower-income homeowners.",
+            "public_field_11_meta_description": "Strategy 2 cons",
+            "public_field_12_en": "50",
+            "public_field_12_meta_description": "Strategy 2 coins",
+            "public_field_13_en": "",
+            "public_field_13_meta_description": "DO NOT USE",
+
+            "public_field_14_en": "",
+            "public_field_14_meta_description": "DO NOT USE",
+            "public_field_15_en": "",
+            "public_field_15_meta_description": "DO NOT USE",
+            "public_field_16_en": "",
+            "public_field_16_meta_description": "DO NOT USE",
+            "public_field_17_en": "",
+            "public_field_17_meta_description": "DO NOT USE",
+            "public_field_18_en": "",
+            "public_field_18_meta_description": "DO NOT USE",
+            "public_field_19_en": "",
+            "public_field_19_meta_description": "DO NOT USE",
+
+            "private_field_1": "/strategy-feedback/608",
+            "private_field_1_meta_description": "Strategy 1 step ID path",
+
+            "private_field_2": "/strategy-feedback/609",
+            "private_field_2_meta_description": "Strategy 2 step ID path"
+        }
+    },
+
+
+    {
+        "model": "cms.step",
+        "pk": 608,
+        "fields":{
+            "challenge_id": 7,
+            "public_field_1_en": "purchase disaster recovery financing to recover after disasters!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Purchase disaster recovery financing",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "With the disaster fund, you can breathe easy knowing that you will have the resources to rebuild in the event of an earthquake. However, the bond does not reduce the amount of damage that occurs, meaning life in your city could still be significantly disrupted. Implementing this strategy in the Bay Area is estimated to increase the rate of housing production after a simulated major earthquake from XXX homes per year to XXX homes per year. ",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other environmental issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/scenario/700",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 609,
+        "fields":{
+            "challenge_id": 7,
+            "public_field_1_en": "expand financing for energy, water, seismic, fire, and accessibility improvements!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Expand financing",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Homeowners and landlords have already started to renovate their buildings. The projected number of homes lost to earthquake damage decreases with every building that is retrofitted. Implementing this strategy in the Bay Area is estimated to decrease the number of homes destroyed in the event of a major earthquake from XXX to XXX and would likely reduce the number of deaths and injuries as well.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/scenario/700",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+
+    {
+        "model": "cms.step",
+        "pk": 700,
+        "fields":{
+            "challenge_id": 8,
+            "public_field_1_en": "You are taking a walk through the park when you see the local environmental advocacy organization setting up for a rally. You walk over and strike up a conversation with one of the volunteers.",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Stop to listen.",
+            "public_field_2_meta_description": "Call to action",
+            "private_field_1": "/character/701",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 701,
+        "fields":{
+            "challenge_id": 8,
+            "public_field_1_en": "",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "Our city’s population is projected to continue growing between now and 2050. That means more people will be using our parks and natural spaces every day. We want to accommodate these new visitors while also maintaining our parks, trails, and greenways in good condition. We need to pass a measure to generate new revenue for maintenance and new facilities. Do you think you could include this in your plan?",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "Go to your environment plan!",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "/make-decision/702",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 702,
+        "fields":{
+            "challenge_id": 8,
+            "public_field_1_en": "Do you support this proposal, or would you rather save your budget to address other environmental challenges?",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Make a decision",
+            "public_field_2_meta_description": "CTA text",
+            "private_field_1": "/choose-strategy/703",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 703,
+        "fields":{
+            "challenge_id": 8,
+            "public_field_1_en": "",
+            "public_field_1_meta_description": "DO NOT USE",
+            "public_field_2_en": "Pass a regional measure for parks, trails, and greenways",
+            "public_field_2_meta_description": "Strategy 1 title",
+            "public_field_3_en": "Pass a regional funding measure to generate new money for open space preservation, recreational trails, and wildlife corridors.",
+            "public_field_3_meta_description": "Strategy 1 description",
+            "public_field_4_en": "This strategy would provide funding to expand maintenance as the population grows, protecting parks and recreation areas from overuse and opening new facilities where possible.",
+            "public_field_4_meta_description": "Strategy 1 pros",
+            "public_field_5_en": "The regional measure would have to be paid back using funds from new taxes and fees or from the general fund.",
+            "public_field_5_meta_description": "Strategy 1 cons",
+            "public_field_6_en": "20",
+            "public_field_6_meta_description": "Strategy 1 coins",
+            "public_field_7_en": "",
+            "public_field_7_meta_description": "DO NOT USE",
+
+            "public_field_8_en": "NEEDS TO BE FILLED IN",
+            "public_field_8_meta_description": "Strategy 2 title",
+            "public_field_9_en": "NEEDS TO BE FILLED IN",
+            "public_field_9_meta_description": "Strategy 2 description",
+            "public_field_10_en": "NEEDS TO BE FILLED IN",
+            "public_field_10_meta_description": "Strategy 2 pros",
+            "public_field_11_en": "NEEDS TO BE FILLED IN",
+            "public_field_11_meta_description": "Strategy 2 cons",
+            "public_field_12_en": "50",
+            "public_field_12_meta_description": "Strategy 2 coins",
+            "public_field_13_en": "",
+            "public_field_13_meta_description": "DO NOT USE",
+
+            "public_field_14_en": "",
+            "public_field_14_meta_description": "DO NOT USE",
+            "public_field_15_en": "",
+            "public_field_15_meta_description": "DO NOT USE",
+            "public_field_16_en": "",
+            "public_field_16_meta_description": "DO NOT USE",
+            "public_field_17_en": "",
+            "public_field_17_meta_description": "DO NOT USE",
+            "public_field_18_en": "",
+            "public_field_18_meta_description": "DO NOT USE",
+            "public_field_19_en": "",
+            "public_field_19_meta_description": "DO NOT USE",
+
+            "private_field_1": "/strategy-feedback/704",
+            "private_field_1_meta_description": "Strategy 1 step ID path",
+
+            "private_field_2": "/strategy-feedback/705",
+            "private_field_2_meta_description": "Strategy 2 step ID path"
+        }
+    },
+
+    {
+        "model": "cms.step",
+        "pk": 704,
+        "fields":{
+            "challenge_id": 8,
+            "public_field_1_en": "pass a regional measure for parks, trails, and greenways",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Pass regional measure",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "You selected pass a regional measure for parks, trails, and greenways! TBD, depends on how policy will be evaluated",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other environmental issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/scenario/800",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 705,
+        "fields":{
+            "challenge_id": 8,
+            "public_field_1_en": "FILL IN",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "FILL IN",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "FILL IN",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other environmental issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/scenario/800",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+
+    {
+        "model": "cms.step",
+        "pk": 800,
+        "fields":{
+            "challenge_id": 9,
+            "public_field_1_en": "Now that you have made your decision on the funding measure, it is time to head to your next meeting of the day. You have a community meeting at your city’s beachside neighborhood, where residents will be discussing sea level rise.",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Let’s go!",
+            "public_field_2_meta_description": "Call to action",
+            "private_field_1": "/character/801",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 801,
+        "fields":{
+            "challenge_id": 9,
+            "public_field_1_en": "Resident 1",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "Sea levels are projected to rise between 1 and 3 feet over the next 30 years. This could flood roads and homes in our city’s coastal communities. Personally, I think we need to adapt all of our coastal communities to sea level rise to prevent flooding. We have a number of tools to use: marsh restoration, levees, and sea walls, to name a few!",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "See what __ has to say",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "/character/802",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 802,
+        "fields":{
+            "challenge_id": 9,
+            "public_field_1_en": "Resident 2",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": " I agree that sea level rise is a major threat, and I wish we could fully adapt to sea level rise as well. Unfortunately, some places are not easy to protect, and it would cost a lot to make a small difference. I say we partially adapt to sea level rise, agreeing to let some places flood when the cost does not justify the benefit.",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "See what __ has to say",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "/character/803",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 803,
+        "fields":{
+            "challenge_id": 9,
+            "public_field_1_en": "Resident 3",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "Sea level rise is already affecting our community. There’s a highway north of town that already floods during heavy rains. It’s not located in the most populous part of town, but I still think we should direct our money toward fixing that problem first.",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "Those are both interesting ideas!",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "/make-decision/804",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 804,
+        "fields":{
+            "challenge_id": 9,
+            "public_field_1_en": "How will you plan to adapt to sea level rise?",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Make a Decision",
+            "public_field_2_meta_description": "CTA text",
+            "private_field_1": "/choose-strategy/805",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 805,
+        "fields":{
+            "challenge_id": 9,
+            "public_field_1_en": "",
+            "public_field_1_meta_description": "DO NOT USE",
+            "public_field_2_en": "Partially adapt to sea level rise",
+            "public_field_2_meta_description": "Strategy 1 title",
+            "public_field_3_en": "Use marsh restoration, levees, and sea walls to protect the parts of the community most vulnerable to sea level rise, accepting that difficult to protect areas will eventually be flooded.",
+            "public_field_3_meta_description": "Strategy 1 description",
+            "public_field_4_en": "This strategy targets resources at the easiest to protect areas.",
+            "public_field_4_meta_description": "Strategy 1 pros",
+            "public_field_5_en": "This strategy only protects some communities, leaving around 25 percent of vulnerable land area to be flooded.",
+            "public_field_5_meta_description": "Strategy 1 cons",
+            "public_field_6_en": "20",
+            "public_field_6_meta_description": "Strategy 1 coins",
+            "public_field_7_en": "",
+            "public_field_7_meta_description": "DO NOT USE",
+
+            "public_field_8_en": "Fully adapt to sea level rise",
+            "public_field_8_meta_description": "Strategy 2 title",
+            "public_field_9_en": "Use marsh restoration, levees, and sea walls to protect all at-risk communities from up to three feet of sea level rise.",
+            "public_field_9_meta_description": "Strategy 2 description",
+            "public_field_10_en": "All communities are protected from up to three feet of sea level rise.",
+            "public_field_10_meta_description": "Strategy 2 pros",
+            "public_field_11_en": "Protecting the remaining 25 percent of communities is much more expensive than the first 75 percent.",
+            "public_field_11_meta_description": "Strategy 2 cons",
+            "public_field_12_en": "50",
+            "public_field_12_meta_description": "Strategy 2 coins",
+            "public_field_13_en": "",
+            "public_field_13_meta_description": "DO NOT USE",
+
+            "public_field_14_en": "Adapt a highway to sea level rise",
+            "public_field_14_meta_description": "Strategy 3 title",
+            "public_field_15_en": "Adapt one highway which is frequently flooded by rains and forecasted to be permanently closed due to flooding by the year 2050, like Highway 37 in the North Bay.",
+            "public_field_15_meta_description": "Strategy 3 description",
+            "public_field_16_en": "Adapting the road to sea level rise would address the flooding problem that currently exists, while the other strategies protect areas that are not yet affected by flooding.",
+            "public_field_16_meta_description": "Strategy 3 pros",
+            "public_field_17_en": "This is one of the lesser-used highways in a lower-density part of the community, meaning relatively few people use it.",
+            "public_field_17_meta_description": "Strategy 3 cons",
+            "public_field_18_en": "30",
+            "public_field_18_meta_description": "Strategy 3 coins",
+            "public_field_19_en": "",
+            "public_field_19_meta_description": "DO NOT USE",
+
+            "private_field_1": "/strategy-feedback/806",
+            "private_field_1_meta_description": "Strategy 1 step ID path",
+
+            "private_field_2": "/strategy-feedback/807",
+            "private_field_2_meta_description": "Strategy 2 step ID path",
+
+            "private_field_3": "/strategy-feedback/808",
+            "private_field_3_meta_description": "Strategy 3 step ID path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 806,
+        "fields":{
+            "challenge_id": 9,
+            "public_field_1_en": "partially adapt to sea level rise!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Adapt to sea level rise",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Your team immediately springs to action, planting marshes and installing levees and sea walls in strategic locations. Unfortunately, residents living in an area that will remain unprotected are unhappy with the policy and are calling for your removal. Implementing this strategy in the Bay Area is estimated to decrease the number of flooded homes from  XXX to XXX by 2050, with over XXX acres protected from flooding if the sea level were to rise up to three feet. ",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other environmental issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/summary/809",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 807,
+        "fields":{
+            "challenge_id": 9,
+            "public_field_1_en": "fully adapt to sea level rise!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Fully adapt to sea level rise",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Your team knows that protecting all threatened areas from sea level rise will be a challenge, but they come up with a plan and get to work implementing it. Unfortunately, some residents are upset with the cost of the project and are calling on you to cut back the project scope. Implementing this strategy in the Bay Area is estimated to decrease the number of flooded homes from  XXX to 0 by 2050, with over XXX acres protected from flooding if the sea level were to rise up to three feet.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other environmental issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/summary/809",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 808,
+        "fields":{
+            "challenge_id": 9,
+            "public_field_1_en": "adapt a key highway to sea level rise!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Adapt a key highway",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Residents are pleased to see construction crews at work on the at-risk highway. However, usage has been lower than anticipated, meaning the cost per user is high compared to other projects. Implementing this strategy in the Bay Area on State Route 37, which connects Solano and Marin counties, would prevent this corridor from flooding in the event of sea level rise up to three feet. Without this strategy, average travel times for North Bay residents are expected to increase from XX minutes to XX minutes by 2050, as travelers are forced to find more indirect routes around the flooded roadway. While the strategy has a specific geographic focus, its effects could reduce traffic on nearby roads as well. ",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other environmental issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/summary/809",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 809,
+        "fields":{
+            "challenge_id": 9
+        } 
+    },
 
     {
         "model": "cms.step",

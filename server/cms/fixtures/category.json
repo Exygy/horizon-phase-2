@@ -33,5 +33,19 @@
         "fields":{
             "name": "Onboarding"
         }
+    },
+    {
+        "model": "cms.category",
+        "pk": 6,
+        "fields":{
+            "name": "Environment"
+        }
+    },
+    {
+        "model": "cms.category",
+        "pk": 7,
+        "fields":{
+            "name": "Transportation"
+        }
     }
 ]

@@ -24,9 +24,16 @@ import {
 import Main from 'src/components/Main/'
 import CustomHeader from 'src/components/CustomHeader/'
 import { getCoinCount, constructInnerHTML } from 'src/Helpers'
-import person6 from 'src/images/person6.png'
-import person7 from 'src/images/avatar-3.png'
+import avatar3 from 'src/images/avatar3.png'
+import avatar6 from 'src/images/avatar-3.png'
+import avatar23 from 'src/images/avatar-23.png'
+import avatar13 from 'src/images/avatar-13.png'
+import avatar1 from 'src/images/avatar-1.png'
+import avatar21 from 'src/images/avatar-21.png'
+import avatar22a from 'src/images/avatar-22a.png'
+import avatar16 from 'src/images/avatar-16.png'
 import coin from 'src/images/money.png'
+import chat from 'src/images/chat.png'
 import './style.css'
 import { stepQuery } from 'src/Queries'
 import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/Types'
@@ -42,10 +49,20 @@ class ChatDialogueView extends React.Component<Props, {}> {
 
   render() {
     const { step, loading } = this.props.data
-    let personImg = null
+    let msg1Avatar = null
+    let msg2Avatar = null
+    let msg3Avatar = null
 
-    if (parseInt(this.props.match.params.stepId) === 101) {
-      personImg = person6
+    if (parseInt(this.props.match.params.stepId) === 301) {
+      msg1Avatar = avatar23
+      msg2Avatar = avatar6
+    } else if (parseInt(this.props.match.params.stepId) === 501) {
+      msg1Avatar = avatar13
+      msg2Avatar = avatar1
+      msg3Avatar = avatar21
+    } else if (parseInt(this.props.match.params.stepId) === 601) {
+      msg1Avatar = avatar22a
+      msg2Avatar = avatar16
     }
 
     return (
@@ -64,11 +81,12 @@ class ChatDialogueView extends React.Component<Props, {}> {
             <div className="content-box top-msg">
               <Grid>
                 <Grid.Row className="message">
-                  <Grid.Column width={4}>
-                    <Image src={person6} />
+                  <Grid.Column width={3}>
+                    <Image src={msg1Avatar} />
                   </Grid.Column>
-                  <Grid.Column width={12}>
+                  <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField1}</p>
+                    <span className="sub-heading deemphasized">1 min ago</span>
                     <p>{step && step.publicField2}</p>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
@@ -79,11 +97,12 @@ class ChatDialogueView extends React.Component<Props, {}> {
                   </Grid.Column>
                 </Grid.Row>
                 <Grid.Row className="message">
-                  <Grid.Column width={4}>
-                    <Image src={person6} />
+                  <Grid.Column width={3}>
+                    <Image src={msg1Avatar} />
                   </Grid.Column>
-                  <Grid.Column width={12}>
+                  <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField1}</p>
+                    <span className="sub-heading deemphasized">1 min ago</span>
                     <p>{step && step.publicField3}</p>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
@@ -93,32 +112,36 @@ class ChatDialogueView extends React.Component<Props, {}> {
                     </span>
                   </Grid.Column>
                 </Grid.Row>
-                <Grid.Row className="message">
-                  <Grid.Column width={4}>
-                    <Image src={person6} />
-                  </Grid.Column>
-                  <Grid.Column width={12}>
-                    <p className="sub-heading">{step && step.publicField1}</p>
-                    <p>{step && step.publicField4}</p>
-                    <span className="heart">
-                      <Icon name="heart outline" /> 11
-                    </span>
-                    <span className="retweet">
-                      <Icon name="retweet" /> 11
-                    </span>
-                  </Grid.Column>
-                </Grid.Row>
+                {step && step.publicField4 && (
+                  <Grid.Row className="message">
+                    <Grid.Column width={3}>
+                      <Image src={msg1Avatar} />
+                    </Grid.Column>
+                    <Grid.Column width={13}>
+                      <p className="sub-heading">{step && step.publicField1}</p>
+                      <span className="sub-heading deemphasized">1 min ago</span>
+                      <p>{step && step.publicField4}</p>
+                      <span className="heart">
+                        <Icon name="heart outline" /> 11
+                      </span>
+                      <span className="retweet">
+                        <Icon name="retweet" /> 11
+                      </span>
+                    </Grid.Column>
+                  </Grid.Row>
+                )}
               </Grid>
             </div>
 
-            <div className="content-box bottom-msg">
+            <div className="content-box middle-bottom-msg">
               <Grid>
                 <Grid.Row className="message">
-                  <Grid.Column width={4}>
-                    <Image src={person7} />
+                  <Grid.Column width={3}>
+                    <Image src={msg2Avatar} />
                   </Grid.Column>
-                  <Grid.Column width={12}>
+                  <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField5}</p>
+                    <span className="sub-heading deemphasized">1 min ago</span>
                     <p>{step && step.publicField6}</p>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
@@ -129,11 +152,12 @@ class ChatDialogueView extends React.Component<Props, {}> {
                   </Grid.Column>
                 </Grid.Row>
                 <Grid.Row className="message">
-                  <Grid.Column width={4}>
-                    <Image src={person7} />
+                  <Grid.Column width={3}>
+                    <Image src={msg2Avatar} />
                   </Grid.Column>
-                  <Grid.Column width={12}>
+                  <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField5}</p>
+                    <span className="sub-heading deemphasized">1 min ago</span>
                     <p>{step && step.publicField7}</p>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
@@ -144,11 +168,12 @@ class ChatDialogueView extends React.Component<Props, {}> {
                   </Grid.Column>
                 </Grid.Row>
                 <Grid.Row className="message">
-                  <Grid.Column width={4}>
-                    <Image src={person7} />
+                  <Grid.Column width={3}>
+                    <Image src={msg2Avatar} />
                   </Grid.Column>
-                  <Grid.Column width={12}>
+                  <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField5}</p>
+                    <span className="sub-heading deemphasized">1 min ago</span>
                     <p>{step && step.publicField8}</p>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
@@ -160,15 +185,71 @@ class ChatDialogueView extends React.Component<Props, {}> {
                 </Grid.Row>
               </Grid>
             </div>
+
+            {step && step.publicField10 && (
+              <div className="content-box middle-bottom-msg">
+                <Grid>
+                  <Grid.Row className="message">
+                    <Grid.Column width={3}>
+                      <Image src={msg3Avatar} />
+                    </Grid.Column>
+                    <Grid.Column width={13}>
+                      <p className="sub-heading">{step && step.publicField9}</p>
+                      <span className="sub-heading deemphasized">1 min ago</span>
+                      <p>{step && step.publicField10}</p>
+                      <span className="heart">
+                        <Icon name="heart outline" /> 11
+                      </span>
+                      <span className="retweet">
+                        <Icon name="retweet" /> 11
+                      </span>
+                    </Grid.Column>
+                  </Grid.Row>
+                  <Grid.Row className="message">
+                    <Grid.Column width={3}>
+                      <Image src={msg3Avatar} />
+                    </Grid.Column>
+                    <Grid.Column width={13}>
+                      <p className="sub-heading">{step && step.publicField9}</p>
+                      <span className="sub-heading deemphasized">1 min ago</span>
+                      <p>{step && step.publicField11}</p>
+                      <span className="heart">
+                        <Icon name="heart outline" /> 11
+                      </span>
+                      <span className="retweet">
+                        <Icon name="retweet" /> 11
+                      </span>
+                    </Grid.Column>
+                  </Grid.Row>
+                  <Grid.Row className="message">
+                    <Grid.Column width={3}>
+                      <Image src={msg3Avatar} />
+                    </Grid.Column>
+                    <Grid.Column width={13}>
+                      <p className="sub-heading">{step && step.publicField9}</p>
+                      <span className="sub-heading deemphasized">1 min ago</span>
+                      <p>{step && step.publicField12}</p>
+                      <span className="heart">
+                        <Icon name="heart outline" /> 11
+                      </span>
+                      <span className="retweet">
+                        <Icon name="retweet" /> 11
+                      </span>
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+              </div>
+            )}
             <div className="btn-holder">
               <Button
-                className="btn primary"
+                className="btn secondary gameplay action"
                 as={Link}
                 to={`${step && step.privateField1}?lang=${
                   queryString.parse(this.props.location.search).lang
                 }`}
               >
-                {step && step.publicField13}
+                <Image avatar src={chat} />
+                <span>{step && step.publicField13}</span>
               </Button>
             </div>
           </Form>

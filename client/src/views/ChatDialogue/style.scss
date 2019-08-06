@@ -4,8 +4,29 @@
             margin-top: 90px;
         }
 
-        &.bottom-msg {
+        &.middle-bottom-msg {
             margin-top: 20px;
+        }
+
+        .sub-heading {
+            display: inline;
+        }
+
+        .sub-heading.deemphasized {
+            display: inline;
+            margin-left: 20px;
+            position: absolute;
+        }
+
+        .time-ago {
+            font-size: 12px;
+
+        }
+
+        img {
+            width: 66px;
+            height: 70px;
+            margin: 0px auto;
         }
 
         .heart {
@@ -13,6 +34,7 @@
                 font-weight: 600;
             }
         }
+
         .message {
             .retweet {
                 margin-left: 10px;

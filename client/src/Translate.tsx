@@ -3,6 +3,13 @@ export const HOUSING = 'HOUSING'
 export const HOUSING_C1OF3 = 'HOUSING_C1OF3'
 export const HOUSING_C2OF3 = 'HOUSING_C2OF3'
 export const HOUSING_C3OF3 = 'HOUSING_C3OF3'
+export const ECONOMY = 'ECONOMY'
+export const ECONOMY_C1OF2 = 'ECONOMY_C1OF2'
+export const ECONOMY_C2OF2 = 'ECONOMY_C2OF2'
+export const ENVIRONMENT = 'ENVIRONMENT'
+export const ENVIRONMENT_C1OF3 = 'ENVIRONMENT_C1OF3'
+export const ENVIRONMENT_C2OF3 = 'ENVIRONMENT_C2OF3'
+export const ENVIRONMENT_C3OF3 = 'ENVIRONMENT_C3OF3'
 export const YOU_SELECTED = 'YOU_SELECTED'
 export const HOW_IT_AFFECTS_BAYVILLE = 'HOW_IT_AFFECTS_BAYVILLE'
 export const REMAINING_BUDGET = 'REMAINING_BUDGET'
@@ -30,6 +37,41 @@ const translations: any = {
   },
   HOUSING_C3OF3: {
     en: 'Challenge 3 of 3: Regional policy',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  ENVIRONMENT: {
+    en: 'Environment',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  ENVIRONMENT_C1OF3: {
+    en: 'Challenge 1 of 3: Earthquake',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  ENVIRONMENT_C2OF3: {
+    en: 'Challenge 2 of 3: Open Space',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  ENVIRONMENT_C3OF3: {
+    en: 'Challenge 3 of 3: Sea Level Rise',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  ECONOMY: {
+    en: 'Economy',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  ECONOMY_C1OF2: {
+    en: 'Challenge 1 of 2: Shift Location of Jobs',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  ECONOMY_C2OF2: {
+    en: 'Challenge 2 of 2: Workforce',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },

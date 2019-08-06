@@ -38,5 +38,37 @@
             "name": "Shift Location of Jobs",
             "category_id": 4
         }
+    },
+    {
+        "model": "cms.challenge",
+        "pk": 6,
+        "fields":{
+            "name": "Workforce",
+            "category_id": 4
+        }
+    },
+    {
+        "model": "cms.challenge",
+        "pk": 7,
+        "fields":{
+            "name": "Earthquake",
+            "category_id": 6
+        }
+    },
+    {
+        "model": "cms.challenge",
+        "pk": 8,
+        "fields":{
+            "name": "Open Space",
+            "category_id": 6
+        }
+    },
+    {
+        "model": "cms.challenge",
+        "pk": 9,
+        "fields":{
+            "name": "Sea Level Rise",
+            "category_id": 6
+        }
     }
 ]
