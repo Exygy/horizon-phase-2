@@ -15,6 +15,10 @@ import {
   ENVIRONMENT_C2OF3,
   ENVIRONMENT_C3OF3,
   ENVIRONMENT,
+  TRANSPORATION_C1OF3,
+  TRANSPORATION_C2OF3,
+  TRANSPORATION_C3OF3,
+  TRANSPORATION,
 } from 'src/Translate'
 import { Icon } from 'semantic-ui-react'
 import { RouteComponentProps, withRouter } from 'react-router'
@@ -73,6 +77,18 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
       title = translate(lang, ENVIRONMENT)
       customStyleClass = 'extended'
       desc = translate(lang, ENVIRONMENT_C3OF3)
+    } else if (parseInt(stepId) >= 900 && parseInt(stepId) < 1000) {
+      title = translate(lang, TRANSPORATION)
+      customStyleClass = 'extended'
+      desc = translate(lang, TRANSPORATION_C1OF3)
+    } else if (parseInt(stepId) >= 1000 && parseInt(stepId) < 1100) {
+      title = translate(lang, TRANSPORATION)
+      customStyleClass = 'extended'
+      desc = translate(lang, TRANSPORATION_C2OF3)
+    } else if (parseInt(stepId) >= 1100 && parseInt(stepId) < 1200) {
+      title = translate(lang, TRANSPORATION)
+      customStyleClass = 'extended'
+      desc = translate(lang, TRANSPORATION_C3OF3)
     }
 
     return (

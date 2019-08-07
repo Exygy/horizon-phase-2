@@ -10,6 +10,10 @@ export const ENVIRONMENT = 'ENVIRONMENT'
 export const ENVIRONMENT_C1OF3 = 'ENVIRONMENT_C1OF3'
 export const ENVIRONMENT_C2OF3 = 'ENVIRONMENT_C2OF3'
 export const ENVIRONMENT_C3OF3 = 'ENVIRONMENT_C3OF3'
+export const TRANSPORATION = 'TRANSPORATION'
+export const TRANSPORATION_C1OF3 = 'TRANSPORATION_C1OF3'
+export const TRANSPORATION_C2OF3 = 'TRANSPORATION_C2OF3'
+export const TRANSPORATION_C3OF3 = 'TRANSPORATION_C3OF3'
 export const YOU_SELECTED = 'YOU_SELECTED'
 export const HOW_IT_AFFECTS_BAYVILLE = 'HOW_IT_AFFECTS_BAYVILLE'
 export const REMAINING_BUDGET = 'REMAINING_BUDGET'
@@ -57,6 +61,26 @@ const translations: any = {
   },
   ENVIRONMENT_C3OF3: {
     en: 'Challenge 3 of 3: Sea Level Rise',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  TRANSPORATION: {
+    en: 'Transportation',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  TRANSPORATION_C1OF3: {
+    en: 'Challenge 1 of 3: Invest in Transit',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  TRANSPORATION_C2OF3: {
+    en: 'Challenge 2 of 3: Price Transportation Service',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  TRANSPORATION_C3OF3: {
+    en: 'Challenge 3 of 3: Prioritize Active Modes',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },

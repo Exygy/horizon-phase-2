@@ -29,6 +29,15 @@ import chat from 'src/images/chat.png'
 import avatar19 from 'src/images/avatar-19.png'
 import avatar7 from 'src/images/avatar-7.png'
 import avatar18 from 'src/images/avatar-18.png'
+import avatar15 from 'src/images/avatar-15.png'
+import avatar3 from 'src/images/avatar-3.png'
+import avatar9 from 'src/images/avatar-9.png'
+import avatar14 from 'src/images/avatar-14.png'
+import avatar10 from 'src/images/avatar-10.png'
+import avatar22b from 'src/images/avatar-22b.png'
+import avatar11 from 'src/images/avatar-11.png'
+import avatar17 from 'src/images/avatar-17.png'
+import avatar20 from 'src/images/avatar-20.png'
 import { stepQuery } from 'src/Queries'
 import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/Types'
 
@@ -46,13 +55,29 @@ class CharacterView extends React.Component<Props, {}> {
     let personImg = null
 
     if (parseInt(this.props.match.params.stepId) === 101) {
-      personImg = person
+      personImg = avatar15
+    } else if (parseInt(this.props.match.params.stepId) === 201) {
+      personImg = avatar3
+    } else if (parseInt(this.props.match.params.stepId) === 202) {
+      personImg = avatar9
+    } else if (parseInt(this.props.match.params.stepId) === 401) {
+      personImg = avatar14
     } else if (parseInt(this.props.match.params.stepId) === 801) {
       personImg = avatar19
     } else if (parseInt(this.props.match.params.stepId) === 802) {
       personImg = avatar7
     } else if (parseInt(this.props.match.params.stepId) === 803) {
       personImg = avatar18
+    } else if (parseInt(this.props.match.params.stepId) === 901) {
+      personImg = avatar10
+    } else if (parseInt(this.props.match.params.stepId) === 1001) {
+      personImg = avatar22b
+    } else if (parseInt(this.props.match.params.stepId) === 1002) {
+      personImg = avatar11
+    } else if (parseInt(this.props.match.params.stepId) === 1003) {
+      personImg = avatar17
+    } else if (parseInt(this.props.match.params.stepId) === 1101) {
+      personImg = avatar20
     }
 
     return (

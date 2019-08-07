@@ -70,5 +70,29 @@
             "name": "Sea Level Rise",
             "category_id": 6
         }
+    },
+    {
+        "model": "cms.challenge",
+        "pk": 10,
+        "fields":{
+            "name": "Invest in Transit",
+            "category_id": 2
+        }
+    },
+    {
+        "model": "cms.challenge",
+        "pk": 11,
+        "fields":{
+            "name": "Price Transportation Service",
+            "category_id": 2
+        }
+    },
+    {
+        "model": "cms.challenge",
+        "pk": 12,
+        "fields":{
+            "name": "Prioritize Active Modes",
+            "category_id": 2
+        }
     }
 ]

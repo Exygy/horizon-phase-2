@@ -410,12 +410,21 @@
         "pk": 308,
         "fields":{
             "challenge_id": 3,
-            "public_field_1_en": "You selected allow affordable housing in high resource areas!\nImplementing this strategy in the Bay Area is estimated to produce affordable housing for between 100 and 400 households each year within high resource neighborhoods.\nWhile this represents a relatively small share of all new affordable units, residents of these neighborhoods may expect to benefit from a lack of concentrated poverty and easier access to amenities like parks and quality schools. Unfortunately, this policy is unpopular with some residents of those high resource neighborhoods, which could hurt your chances of re-election next term. ",
-            "public_field_1_meta_description": "Content. <coins_spent> and <coins_left> are available variables",
-            "public_field_2_en": "Allow affordable housing in high resource areas",
+            "public_field_1_en": "allow affordable housing in high resource areas!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Affordable housing in high resource areas",
             "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
-            "public_field_3_en": "Next",
-            "public_field_3_meta_description": "Call to action",
+
+            "public_field_3_en": "Implementing this strategy in the Bay Area is estimated to produce affordable housing for between 100 and 400 households each year within high resource neighborhoods. While this represents a relatively small share of all new affordable units, residents of these neighborhoods may expect to benefit from a lack of concentrated poverty and easier access to amenities like parks and quality schools. Unfortunately, this policy is unpopular with some residents of those high resource neighborhoods, which could hurt your chances of re-election next term.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
             "private_field_1": "/summary/310",
             "private_field_1_meta_description": "Next step path"
         }
@@ -425,12 +434,21 @@
         "pk": 309,
         "fields":{
             "challenge_id": 3,
-            "public_field_1_en": "You selected allow diverse housing around transit stops!\nImplementing this strategy in the Bay Area is estimated to produce housing for between 20,000 and 40,000 households located within a ten minute walk of frequent transit service.\nBuilding housing close to transit is likely to have a number of secondary benefits, including decreases in individual transportation costs and greenhouse gas emissions from transportation.\nHowever, a group of people that already lived close to transit stops have written to you to express concerns that they will be displaced by luxury development and rising housing costs on their blocks.",
-            "public_field_1_meta_description": "Content. <coins_spent> and <coins_left> are available variables",
+            "public_field_1_en": "allow diverse housing around transit stops! ",
+            "public_field_1_meta_description": "Content.",
+
             "public_field_2_en": "Diverse housing around transit stops",
             "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
-            "public_field_3_en": "Next",
-            "public_field_3_meta_description": "Call to action",
+
+            "public_field_3_en": "Implementing this strategy in the Bay Area is estimated to produce housing for between 20,000 and 40,000 households located within a ten minute walk of frequent transit service.Building housing close to transit is likely to have a number of secondary benefits, including decreases in individual transportation costs and greenhouse gas emissions from transportation. However, a group of people that already lived close to transit stops have written to you to express concerns that they will be displaced by luxury development and rising housing costs on their blocks.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other housing issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
             "private_field_1": "/summary/310",
             "private_field_1_meta_description": "Next step path"
         } 
@@ -1294,6 +1312,545 @@
         "pk": 809,
         "fields":{
             "challenge_id": 9
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 900,
+        "fields":{
+            "challenge_id": 10,
+            "public_field_1_en": "After another eventful day as mayor, it is time to head home. It’s evening rush hour, and your train is packed as usual. You squeeze into an open spot, and the doors close. You start up a conversation with the person standing next to you.",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "What do they have to say?",
+            "public_field_2_meta_description": "Call to action",
+            "private_field_1": "/character/901",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 901,
+        "fields":{
+            "challenge_id": 10,
+            "public_field_1_en": "Resident 1",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "During rush hour, trains and buses are standing room only and traffic congestion is bumper to bumper. If we don’t invest in our transit system now and our city continues to grow, residents and workers will have an even harder time getting where they need to be. You’re the mayor - what are you going to do for public transportation?",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "Go to your transportation plan!",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "/make-decision/904",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 904,
+        "fields":{
+            "challenge_id": 10,
+            "public_field_1_en": "What’s your top priority for investing in public transit?",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Make a Decision",
+            "public_field_2_meta_description": "CTA text",
+            "private_field_1": "/choose-strategy/905",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 905,
+        "fields":{
+            "challenge_id": 10,
+            "public_field_1_en": "",
+            "public_field_1_meta_description": "DO NOT USE",
+            "public_field_2_en": "Modernize the existing rail network",
+            "public_field_2_meta_description": "Strategy 1 title",
+            "public_field_3_en": "Improve the infrastructure and technology currently in place on the rail system through projects like elevating light rail above traffic and upgrading train control systems to accommodate more frequent service.",
+            "public_field_3_meta_description": "Strategy 1 description",
+            "public_field_4_en": "This strategy would make transit a more attractive service by increasing speed and frequency.",
+            "public_field_4_meta_description": "Strategy 1 pros",
+            "public_field_5_en": "This strategy only directly benefits those that already live near rail transit.",
+            "public_field_5_meta_description": "Strategy 1 cons",
+            "public_field_6_en": "20",
+            "public_field_6_meta_description": "Strategy 1 coins",
+            "public_field_7_en": "",
+            "public_field_7_meta_description": "DO NOT USE",
+
+            "public_field_8_en": "Extend the rail network",
+            "public_field_8_meta_description": "Strategy 2 title",
+            "public_field_9_en": "Connect more neighborhoods and communities directly to the rail system by extending existing lines or building new lines.",
+            "public_field_9_meta_description": "Strategy 2 description",
+            "public_field_10_en": "This strategy would increase the number of destinations accessible by transit.",
+            "public_field_10_meta_description": "Strategy 2 pros",
+            "public_field_11_en": "Expanding the transit service area would increase operations and maintenance costs.",
+            "public_field_11_meta_description": "Strategy 2 cons",
+            "public_field_12_en": "50",
+            "public_field_12_meta_description": "Strategy 2 coins",
+            "public_field_13_en": "",
+            "public_field_13_meta_description": "DO NOT USE",
+
+            "public_field_14_en": "Build and operate a next-generation bus rapid transit network",
+            "public_field_14_meta_description": "Strategy 3 title",
+            "public_field_15_en": "Invest in the development of a more extensive bus rapid transit network, including the creation of bus-only lanes that let buses travel faster on congested roads and enhanced stations that let passengers board more quickly.",
+            "public_field_15_meta_description": "Strategy 3 description",
+            "public_field_16_en": "This strategy can be implemented relatively quickly and at a lower cost than rail transit.",
+            "public_field_16_meta_description": "Strategy 3 pros",
+            "public_field_17_en": "Bus rapid transit cannot accommodate as many people as rail transit can, meaning this service could become overcrowded more quickly.",
+            "public_field_17_meta_description": "Strategy 3 cons",
+            "public_field_18_en": "30",
+            "public_field_18_meta_description": "Strategy 3 coins",
+            "public_field_19_en": "",
+            "public_field_19_meta_description": "DO NOT USE",
+
+            "private_field_1": "/strategy-feedback/906",
+            "private_field_1_meta_description": "Strategy 1 step ID path",
+
+            "private_field_2": "/strategy-feedback/907",
+            "private_field_2_meta_description": "Strategy 2 step ID path",
+
+            "private_field_3": "/strategy-feedback/908",
+            "private_field_3_meta_description": "Strategy 3 step ID path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 906,
+        "fields":{
+            "challenge_id": 10,
+            "public_field_1_en": "modernize the existing rail network!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Modernize existing rail network",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Transit operators in your city are preparing to upgrade their technology and vehicles. Ridership is projected to increase shortly after these projects are complete. Implementing this strategy in the Bay Area is estimated to reduce the share of residents that drive to work from XX percent to XX percent by 2050.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other transportation issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/scenario/1000",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 907,
+        "fields":{
+            "challenge_id": 10,
+            "public_field_1_en": "extend the regional rail network!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Extend regional rail network",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "While the new stations will not be open for a while, residents that live near a new station are already looking forward to opening day. Implementing this strategy in the Bay Area is estimated to reduce the share of residents that drive to work from XX percent to XX percent by 2050. Around XXX more residents would live within a ten minute walk of rail transit thanks to this strategy.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other transportation issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/scenario/1000",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 908,
+        "fields":{
+            "challenge_id": 10,
+            "public_field_1_en": "build and operate a next-generation bus rapid transit network",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Next generation bus",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "The new and improved bus lines will provide a higher quality service, reducing travel times for existing bus riders and attracting new riders looking to improve their commutes. Implementing this strategy in the Bay Area is estimated to reduce the share of residents that drive to work from XX percent to XX percent by 2050. Around XXX more residents will live within a ten minute walk of improved bus transit.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other transportation issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/scenario/1000",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+
+    {
+        "model": "cms.step",
+        "pk": 1000,
+        "fields":{
+            "challenge_id": 11,
+            "public_field_1_en": "The first item on today’s agenda is a forum hosted by the economics club at the local community college. They will be discussing their ideas for the future of transportation pricing and payment - just in time for you to consider their ideas for your transportation plan!",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Let’s hear what they have to say.",
+            "public_field_2_meta_description": "Call to action",
+            "private_field_1": "/character/1001",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 1001,
+        "fields":{
+            "challenge_id": 11,
+            "public_field_1_en": "Resident 1",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "There are so many transportation options these days. We have bike share, scooter share, ridehailing services, and public transit - plus, who knows what new type of transportation will show up next week!? Getting around would be so much easier if we had a free smartphone app that showed all of the transportation options and let you pay for them with one click.",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "See what the next person has to say. ",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "/character/1002",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 1002,
+        "fields":{
+            "challenge_id": 11,
+            "public_field_1_en": "Resident 2",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "Did you know that after housing and food, transportation is the third largest cost in most people’s budgets? I think we should make public transit free for low-income people. That way, everyone could get to where they need to be without having to weigh the cost of taking transit.",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "See what the next person has to say. ",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "/character/1003",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 1003,
+        "fields":{
+            "challenge_id": 11,
+            "public_field_1_en": "Resident 3",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "Traffic congestion is a serious problem in our city. If we charged a small fee for every mile driven on the highway, maybe some people would consider carpooling, taking transit, walking, or biking instead. We could even vary the fee to give a discount to carpoolers or people traveling outside of rush hour. We could invest the fee revenue in improving and expanding transit service.",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "Go to your transportation plan!",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "/make-decision/1004",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 1004,
+        "fields":{
+            "challenge_id": 11,
+            "public_field_1_en": "Which pricing and payment strategy do you want to implement?",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Make a Decision",
+            "public_field_2_meta_description": "CTA text",
+            "private_field_1": "/choose-strategy/1005",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 1005,
+        "fields":{
+            "challenge_id": 11,
+            "public_field_1_en": "",
+            "public_field_1_meta_description": "DO NOT USE",
+            "public_field_2_en": "Develop a single platform to access and pay for all mobility options",
+            "public_field_2_meta_description": "Strategy 1 title",
+            "public_field_3_en": "Invest in the development of a free smartphone app that shows users all of their transportation options, including public transit, ridehailing, and shared mobility, for any given trip and lets them pay for their trip from one account, which can be linked to a debit card or loaded with cash at a kiosk.",
+            "public_field_3_meta_description": "Strategy 1 description",
+            "public_field_4_en": "This strategy would improve the transportation experience for users of all types of transportation.",
+            "public_field_4_meta_description": "Strategy 1 pros",
+            "public_field_5_en": "This strategy could incentivize more automobile trips taken via a ridehailing service.",
+            "public_field_5_meta_description": "Strategy 1 cons",
+            "public_field_6_en": "20",
+            "public_field_6_meta_description": "Strategy 1 coins",
+            "public_field_7_en": "",
+            "public_field_7_meta_description": "DO NOT USE",
+
+            "public_field_8_en": "Provide free transit to low-income riders",
+            "public_field_8_meta_description": "Strategy 2 title",
+            "public_field_9_en": "Work with transit operators to create a free transit program for qualifying low-income residents. ",
+            "public_field_9_meta_description": "Strategy 2 description",
+            "public_field_10_en": "This strategy would reduce the financial barrier to public transit, increasing the mobility options for low-income riders.",
+            "public_field_10_meta_description": "Strategy 2 pros",
+            "public_field_11_en": "Free transit could lead to large increases in ridership, resulting in overcrowding and higher maintenance costs.",
+            "public_field_11_meta_description": "Strategy 2 cons",
+            "public_field_12_en": "50",
+            "public_field_12_meta_description": "Strategy 2 coins",
+            "public_field_13_en": "",
+            "public_field_13_meta_description": "DO NOT USE",
+
+            "public_field_14_en": "Apply time-of-day tolls on all freeways",
+            "public_field_14_meta_description": "Strategy 3 title",
+            "public_field_15_en": "Apply a toll on Bay Area freeways that varies based on the number of miles driven, with discounts for carpoolers and travel outside of periods of peak demand. ",
+            "public_field_15_meta_description": "Strategy 3 description",
+            "public_field_16_en": "This strategy would incentivize more sustainable transportation choices while also generating revenue for transit and active transportation.",
+            "public_field_16_meta_description": "Strategy 3 pros",
+            "public_field_17_en": "Charging the same per-mile toll, regardless of income, would have a larger impact on low-income people.",
+            "public_field_17_meta_description": "Strategy 3 cons",
+            "public_field_18_en": "30",
+            "public_field_18_meta_description": "Strategy 3 coins",
+            "public_field_19_en": "",
+            "public_field_19_meta_description": "DO NOT USE",
+
+            "private_field_1": "/strategy-feedback/1006",
+            "private_field_1_meta_description": "Strategy 1 step ID path",
+
+            "private_field_2": "/strategy-feedback/1007",
+            "private_field_2_meta_description": "Strategy 2 step ID path",
+
+            "private_field_3": "/strategy-feedback/1008",
+            "private_field_3_meta_description": "Strategy 3 step ID path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 1006,
+        "fields":{
+            "challenge_id": 11,
+            "public_field_1_en": "develop a single platform to access and pay for all mobility options!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Develop single platform",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Residents are excited to try the new app and transit operators are hopeful that ridership will increase. Vienna, the capital of Austria, recently released a similar platform for use by its residents. After one year, 21 percent of users reported reducing their car usage. Implementing this strategy in the Bay Area could have a similar impact. ",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other transportation issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/scenario/1100",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 1007,
+        "fields":{
+            "challenge_id": 11,
+            "public_field_1_en": "provide free transit to low-income riders!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Provide free transit",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Staff at the local transit agencies are nervous about the strategy’s effect on operations and maintenance costs, but they are excited to serve more riders. Implementing this strategy in the Bay Area is estimated to increase the daily number of transit trips taken by low-income riders by XX percent and reduce the average share of household income spent on transportation by XX percent.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other transportation issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/scenario/1100",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 1008,
+        "fields":{
+            "challenge_id": 11,
+            "public_field_1_en": "apply time-of-day tolls on all freeways!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Apply tolls",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Unfortunately, drivers in your city are not happy to be paying more for each trip. They’ve already started donating to your opponent in the next election. Implementing this strategy in the Bay Area is estimated to reduce the average daily vehicle miles travelled per person from XX miles per day to XX miles per day.",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other transportation issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/scenario/1100",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+
+    {
+        "model": "cms.step",
+        "pk": 1100,
+        "fields":{
+            "challenge_id": 12,
+            "public_field_1_en": "Now that you have gotten some inspiration on pricing and payment policy, it is time to bike over to your next meeting. Unfortunately, you have a flat tire. Luckily, there is a bike shop just down the street. As you are checking out, the bike shop owner starts talking to you about the active transportation section of your transportation plan.",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "I’m listening.",
+            "public_field_2_meta_description": "Call to action",
+            "private_field_1": "/character/1101",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 1101,
+        "fields":{
+            "challenge_id": 12,
+            "public_field_1_en": "Resident 1",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "Did you know that around half of all trips made in our city today are under three miles? That’s a twenty minute ride on a bike or electric scooter. However, biking and walking make up fewer than XX percent of these short trips. What is your transportation plan going to do to encourage more people to leave their cars at home?",
+            "public_field_2_meta_description": "Content",
+            "public_field_3_en": "Go to your transportation plan!",
+            "public_field_3_meta_description": "Call to action",
+            "private_field_1": "/make-decision/1104",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 1104,
+        "fields":{
+            "challenge_id": 12,
+            "public_field_1_en": "Which strategy would you choose to encourage more residents to leave their cars at home for short trips?",
+            "public_field_1_meta_description": "Content",
+            "public_field_2_en": "Make a Decision",
+            "public_field_2_meta_description": "CTA text",
+            "private_field_1": "/choose-strategy/1105",
+            "private_field_1_meta_description": "Next step path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 1105,
+        "fields":{
+            "challenge_id": 12,
+            "public_field_1_en": "",
+            "public_field_1_meta_description": "DO NOT USE",
+            "public_field_2_en": "Build a complete micromobility network",
+            "public_field_2_meta_description": "Strategy 1 title",
+            "public_field_3_en": "Allocate funding to build a complete network of off-street paths and physically-separated lanes for walking and personal modes of transportation like bicycles and scooters.",
+            "public_field_3_meta_description": "Strategy 1 description",
+            "public_field_4_en": "This strategy would reduce exposure to automobile traffic and make biking and walking safer and more comfortable.",
+            "public_field_4_meta_description": "Strategy 1 pros",
+            "public_field_5_en": "Building some physically separated lanes would likely require the removal of some on-street parking or travel lanes.",
+            "public_field_5_meta_description": "Strategy 1 cons",
+            "public_field_6_en": "20",
+            "public_field_6_meta_description": "Strategy 1 coins",
+            "public_field_7_en": "",
+            "public_field_7_meta_description": "DO NOT USE",
+
+            "public_field_8_en": "Implement Vision Zero speed reduction measures",
+            "public_field_8_meta_description": "Strategy 2 title",
+            "public_field_9_en": "Work with the state government to pass measures reducing the speed limit to 55 miles per hour on all freeways and 25 miles per hour on local streets in communities near public transit or other destinations for cyclists and pedestrians. ",
+            "public_field_9_meta_description": "Strategy 2 description",
+            "public_field_10_en": "Reducing automobile speeds could reduce the overall number of collisions and result in fewer fatalities and serious injuries in the event of a collision, while also reducing greenhouse gas emissions. ",
+            "public_field_10_meta_description": "Strategy 2 pros",
+            "public_field_11_en": "Enforcing speed limit reductions will be difficult, given the large number of roads where new speed limits will be in effect.",
+            "public_field_11_meta_description": "Strategy 2 cons",
+            "public_field_12_en": "50",
+            "public_field_12_meta_description": "Strategy 2 coins",
+            "public_field_13_en": "",
+            "public_field_13_meta_description": "DO NOT USE",
+
+            "public_field_14_en": "Invest in free short-trip service",
+            "public_field_14_meta_description": "Strategy 3 title",
+            "public_field_15_en": "More than double the size of the existing bike share and scooter share system and make it free to all residents, while providing free shuttle service for those who cannot use these services due to mobility limitations.",
+            "public_field_15_meta_description": "Strategy 3 description",
+            "public_field_16_en": "Electric bikes and scooters can be expensive. This strategy removes the cost barrier to these forms of transportation, allowing more people to use them.",
+            "public_field_16_meta_description": "Strategy 3 pros",
+            "public_field_17_en": "This strategy does not directly benefit those who are unwilling to use bike share or scooter share due to the perceived inconvenience or risk.",
+            "public_field_17_meta_description": "Strategy 3 cons",
+            "public_field_18_en": "30",
+            "public_field_18_meta_description": "Strategy 3 coins",
+            "public_field_19_en": "",
+            "public_field_19_meta_description": "DO NOT USE",
+
+            "private_field_1": "/strategy-feedback/1106",
+            "private_field_1_meta_description": "Strategy 1 step ID path",
+
+            "private_field_2": "/strategy-feedback/1107",
+            "private_field_2_meta_description": "Strategy 2 step ID path",
+
+            "private_field_3": "/strategy-feedback/1108",
+            "private_field_3_meta_description": "Strategy 3 step ID path"
+        }
+    },
+    {
+        "model": "cms.step",
+        "pk": 1106,
+        "fields":{
+            "challenge_id": 12,
+            "public_field_1_en": "build a complete micromobility network!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Build micromobility network",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Residents have already written to planning department staff requesting new paths and improved sidewalks in their neighborhoods. Implementing this strategy in the Bay Area is estimated to increase the share of people that walk or bike to work from XX percent to XX percent by 2050. ",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other transportation issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/summary/1109",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 1107,
+        "fields":{
+            "challenge_id": 12,
+            "public_field_1_en": "implement Vision Zero speed reduction measures!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Implement Vision Zero",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Residents are likely to find biking, walking, and scootering more enjoyable and more comfortable, increasing the likelihood that they choose to take these modes over driving for short trips. Implementing this strategy in the Bay Area is estimated to reduce the annual number of traffic deaths from XXX to XXX by 2050. While even one death on our region’s roads is too many, cutting the number of annual traffic deaths in half is a substantial improvement. ",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other transportation issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/summary/1109",
+            "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 1108,
+        "fields":{
+            "challenge_id": 12,
+            "public_field_1_en": "invest in free short-trip service!",
+            "public_field_1_meta_description": "Content.",
+
+            "public_field_2_en": "Invest in short-trip service",
+            "public_field_2_meta_description": "The name of the strategy that will be shown in the graph/chart/summary of how people voted.",
+
+            "public_field_3_en": "Now that the services are free, many residents are trying them out for the first time! Implementing this strategy in the Bay Area is estimated to increase the share of people that walk or bike to work from XX percent to XX percent by 2050. The share of commuters using transit is also estimated to increase by XX percent as more people use bike share or scooter share at the beginning or end of a transit trip. ",
+            "public_field_3_meta_description": "Description of effects of strategy",
+
+            "public_field_4_en": "Now you only have <coins_left> coins to implement strategies related to 2 other transportation issues. Don’t spend too much!",
+            "public_field_4_meta_description": "Remaining budget. <coins_spent> and <coins_left> are available variables",
+            
+            "public_field_5_en": "Next",
+            "public_field_5_meta_description": "Call to action",
+
+            "private_field_1": "/summary/1109",
+            "private_field_1_meta_description": "Next step path"
         } 
     },
 
