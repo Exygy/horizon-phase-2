@@ -52,6 +52,7 @@ class IntroductionView extends React.Component<Props, State> {
   // that a person can replay the game with a fresh state
   componentDidMount = () => {
     cookie.save('session_id', uuidv4(), { path: '/' })
+    cookie.save('completed', JSON.stringify([]))
     clearCoinCookies()
   }
 

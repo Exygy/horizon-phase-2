@@ -128,7 +128,9 @@ type StepQueryProps = ChildDataProps<
 type Props = StepQueryProps & OwnProps
 
 class SummaryView extends React.Component<Props, any> {
-  componentDidMount = () => {
+  componentDidMount = () => {}
+
+  componentWillMount = () => {
     addCompletedCookie(this.props.match.params.stepId)
   }
 

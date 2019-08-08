@@ -7,10 +7,17 @@
   background: url(../../images/default_housing_bg.png);
 }
 .main.housing-special-bg {
-  background: url(../../images/special_housing_bg.png) no-repeat center center;
+  background: url(../../images/city_hall.png) no-repeat center center;
+  background-size: cover;
+  /* <------ */
 }
 .main.housing-choose-strategy-bg {
   background-color: #fdc228;
+}
+.main.transportation-special-bg {
+  background: url(../../images/storefront.png) no-repeat center center;
+  background-size: cover;
+  /* <------ */
 }
 .main .coin-status {
   background: white;

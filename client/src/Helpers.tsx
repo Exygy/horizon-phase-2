@@ -71,32 +71,20 @@ let clearCoinCookies = () => {
   for (const i in transportationDecisionPointsByStepId) {
     cookie.remove(`strat-${transportationDecisionPointsByStepId[i]}`)
   }
-
-  cookie.remove('completed')
 }
 export { clearCoinCookies }
 
 let addCompletedCookie = (stepId: string) => {
-  if (!cookie.load('completed')) {
-    cookie.save('completed', JSON.stringify([]))
-  }
-
   let completedSteps = cookie.load('completed')
-  console.log(stepId)
-  console.log(stepId in completedSteps)
   if (!(stepId in completedSteps)) {
     completedSteps.push(parseInt(stepId))
-    cookie.save('completed', JSON.stringify(completedSteps))
+    cookie.save('completed', completedSteps, { path: '/' })
   }
 }
 export { addCompletedCookie }
 
 let checkIfCompleted = (stepId: string) => {
   let completedSteps = cookie.load('completed')
-  if (completedSteps) {
-    return stepId in completedSteps
-  }
-
-  return false
+  return parseInt(stepId) in completedSteps
 }
 export { checkIfCompleted }

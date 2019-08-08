@@ -5,11 +5,17 @@
     }
 
     &.housing-special-bg {
-        background: url(../../images/special_housing_bg.png) no-repeat center center;
+        background: url(../../images/city_hall.png) no-repeat center center;
+        background-size:     cover;                      /* <------ */
     }
 
     &.housing-choose-strategy-bg {
         background-color: #FDC228;
+    }
+
+    &.transportation-special-bg {
+        background: url(../../images/storefront.png) no-repeat center center;
+        background-size:     cover;                      /* <------ */
     }
 
     display: flex;
