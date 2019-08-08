@@ -1853,7 +1853,6 @@
             "private_field_1_meta_description": "Next step path"
         } 
     },
-
     {
         "model": "cms.step",
         "pk": 10000,
@@ -1949,6 +1948,45 @@
             "public_field_5_meta_description": "Third question",
             "public_field_6_en": "Let's start.",
             "public_field_6_meta_description": "Call to action"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 10006,
+        "fields":{
+            "challenge_id": 4,
+            "public_field_1_en": "Let's Get Started!",
+            "public_field_1_meta_description": "Title",
+            "public_field_2_en": "Choose a topic below to start building your plan",
+            "public_field_2_meta_description": "Content"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 20000,
+        "fields":{
+            "challenge_id": 4,
+            "public_field_1_en": "Welcome to Bayville!",
+            "public_field_1_meta_description": "Title (NOTE - do not fill in spanish or chinese fields in this step)",
+            "public_field_2_en": "In this game you will be empowered to chart the course for the Bay Area's future while having fun!",
+            "public_field_2_meta_description": "Content (NOTE - do not fill in spanish or chinese fields in this step)",
+            "public_field_3_en": "Select a language to start",
+            "public_field_3_meta_description": "Content (NOTE - do not fill in spanish or chinese fields in this step)",
+            "public_field_4_en": "Begin",
+            "public_field_4_meta_description": "English (NOTE - do not fill in spanish or chinese fields in this step)",
+            "public_field_5_en": "Vamanos",
+            "public_field_5_meta_description": "Spanish (NOTE - do not fill in spanish or chinese fields in this step)",
+            "public_field_6_en": "开始",
+            "public_field_6_meta_description": "English (NOTE - do not fill in spanish or chinese fields in this step)",
+
+            "public_field_7_en": "About this game",
+            "public_field_7_meta_description": "Game description - title (NOTE - do not fill in spanish or chinese fields in this step)",
+
+            "public_field_8_en": "This game was created by the Metropolitan Transportation Commission and the Association of Bay Area Governments, two regional planning agencies working together to plan for a better Bay Area.",
+            "public_field_8_meta_description": "Game description - first half content (NOTE - do not fill in spanish or chinese fields in this step)",
+
+            "public_field_9_en": "The purpose of this game is to better...",
+            "public_field_9_meta_description": "Game description - second half content (NOTE - do not fill in spanish or chinese fields in this step)"
         } 
     }
 ]

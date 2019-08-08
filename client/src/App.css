@@ -46,24 +46,28 @@
   font-size: 27px;
   font-weight: bold;
   line-height: 36px;
+  color: #26364c;
 }
 #custom h2 {
   font-family: Lora;
   font-size: 24px;
   font-weight: bold;
   line-height: 28px;
+  color: #26364c;
 }
 #custom h3 {
   font-family: Lora;
   font-size: 21px;
   font-weight: bold;
   line-height: 28px;
+  color: #26364c;
 }
 #custom h4 {
   font-family: Lato;
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
+  color: #26364c;
 }
 #custom .sub-heading {
   font-family: Lato;

@@ -40,7 +40,7 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
     let customStyleClass = ''
     let backBtn = true
 
-    if (parseInt(stepId) >= 10000 && parseInt(stepId) < 20000) {
+    if (parseInt(stepId) >= 10000 && parseInt(stepId) < 30000) {
       title = translate(lang, MOB)
       backBtn = false
     }
@@ -100,7 +100,7 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
           </a>
         )}
         <p>
-          <h3>{title}</h3>
+          <h3 className="title-h3">{title}</h3>
           {desc}
         </p>
       </div>

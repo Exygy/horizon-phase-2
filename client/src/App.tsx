@@ -13,12 +13,14 @@ import ChooseStrategyView from './views/ChooseStrategy/index'
 import StrategyFeedbackView from './views/StrategyFeedback/index'
 import SummaryView from './views/Summary/index'
 import ChatDialogueView from './views/ChatDialogue/index'
-import OnboardingWelcome from './views/OnboardingWelcome/index'
-import OnboardingChallenges from './views/OnboardingChallenges/index'
-import OnboardingFuture from './views/OnboardingFuture/index'
-import OnboardingElected from './views/OnboardingElected/index'
-import OnboardingYourChallenge from './views/OnboardingYourChallenge/index'
-import OnboardingSurvey from './views/OnboardingSurvey/index'
+import OnboardingWelcomeView from './views/OnboardingWelcome/index'
+import OnboardingChallengesView from './views/OnboardingChallenges/index'
+import OnboardingFutureView from './views/OnboardingFuture/index'
+import OnboardingElectedView from './views/OnboardingElected/index'
+import OnboardingYourChallengeView from './views/OnboardingYourChallenge/index'
+import OnboardingSurveyView from './views/OnboardingSurvey/index'
+import OnboardingChooseCategoryView from './views/OnboardingChooseCategory/index'
+import IntroductionView from './views/Introduction/index'
 import './App.css'
 import 'semantic-ui-css/semantic.min.css'
 import cookie from 'react-cookies'
@@ -47,8 +49,7 @@ const RequiresCookieRoute = ({ component: Component, ...rest }: any) => (
   <Route
     {...rest}
     render={props => {
-      if (!cookie.load('session_id'))
-        return <Redirect to={`/onboarding/welcome/10000${props.location.search}`} />
+      if (!cookie.load('session_id')) return <Redirect to={`/`} />
       return <Component {...props} />
     }}
   />
@@ -59,31 +60,37 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div id="custom">
-          <Route exact path="/onboarding/welcome/:stepId" component={OnboardingWelcome} />
+          <Route exact path="/" component={IntroductionView} />
+          <Route exact path="/onboarding/welcome/:stepId" component={OnboardingWelcomeView} />
           <RequiresCookieRoute
             exact
             path="/onboarding/challenges/:stepId"
-            component={OnboardingChallenges}
+            component={OnboardingChallengesView}
           />
           <RequiresCookieRoute
             exact
             path="/onboarding/future/:stepId"
-            component={OnboardingFuture}
+            component={OnboardingFutureView}
           />
           <RequiresCookieRoute
             exact
             path="/onboarding/elected/:stepId"
-            component={OnboardingElected}
+            component={OnboardingElectedView}
           />
           <RequiresCookieRoute
             exact
             path="/onboarding/your-challenge/:stepId"
-            component={OnboardingYourChallenge}
+            component={OnboardingYourChallengeView}
           />
           <RequiresCookieRoute
             exact
             path="/onboarding/survey/:stepId"
-            component={OnboardingSurvey}
+            component={OnboardingSurveyView}
+          />
+          <RequiresCookieRoute
+            exact
+            path="/onboarding/choose-category/:stepId"
+            component={OnboardingChooseCategoryView}
           />
           <RequiresCookieRoute exact path="/kitchensink" component={PostListView} />
           <RequiresCookieRoute exact path="/scenario/:stepId" component={ScenarioView} />

@@ -249,7 +249,10 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         onClick={this.next}
                         disabled={
                           parseInt(this.props.match.params.stepId) === 203 ||
-                          parseInt(this.props.match.params.stepId) === 403
+                          parseInt(this.props.match.params.stepId) === 403 ||
+                          parseInt(this.props.match.params.stepId) === 307 ||
+                          parseInt(this.props.match.params.stepId) === 607 ||
+                          parseInt(this.props.match.params.stepId) === 703
                         }
                       />
                       <h4 className="strat-num">Strategy 2</h4>

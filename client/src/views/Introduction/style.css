@@ -1,0 +1,25 @@
+#introduction-view h3 {
+  text-align: center;
+}
+
+#introduction-view .lang-btn {
+  text-align: center;
+  margin-bottom: 10px;
+}
+#introduction-view .lang-btn .button {
+  width: 206px;
+}
+
+#introduction-view img {
+  display: inline;
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+#introduction-view .cb-top {
+  margin-top: 30px;
+}
+
+#introduction-view .cb-bottom {
+  margin-top: 30px;
+}
