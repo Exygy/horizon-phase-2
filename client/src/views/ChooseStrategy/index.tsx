@@ -174,6 +174,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                 showStatus={false}
                 showArrows={false}
                 showThumbs={false}
+                swipeable={false}
                 selectedItem={this.state.selectedItem}
                 onChange={this.updateCurrentSlide}
               >
