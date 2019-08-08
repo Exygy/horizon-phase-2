@@ -25,19 +25,17 @@ import Main from 'src/components/Main/'
 import { getCoinCount, constructInnerHTML } from 'src/Helpers'
 import coin from 'src/images/money.png'
 import chat from 'src/images/chat.png'
-import {stepQuery} from 'src/Queries'
-import {StepQueryParams, Step, StepQueryResponse, StepRouteParams} from 'src/Types'
+import { stepQuery } from 'src/Queries'
+import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/Types'
 
-
-const queryString = require('query-string');
+const queryString = require('query-string')
 
 type OwnProps = RouteComponentProps<StepRouteParams>
 type StepQueryProps = ChildDataProps<StepQueryParams, StepQueryResponse>
 type Props = StepQueryProps & OwnProps
 
 class ScenarioView extends React.Component<Props, {}> {
-  componentDidMount = () => {
-  }
+  componentDidMount = () => {}
 
   render() {
     const { step, loading } = this.props.data
@@ -45,26 +43,35 @@ class ScenarioView extends React.Component<Props, {}> {
     return (
       <div id="scenario-view" className="view">
         <Main stepId={this.props.match.params.stepId}>
-          <Form
-            className="forma"
-            loading={loading}
-          >
-        <CustomHeader stepId={this.props.match.params.stepId} lang={queryString.parse(this.props.location.search).lang}/>
+          <Form className="forma" loading={loading}>
+            <CustomHeader
+              stepId={this.props.match.params.stepId}
+              lang={queryString.parse(this.props.location.search).lang}
+            />
             <div className="coin-status">
-                <h4 className="">{getCoinCount()}</h4>
-                <Image className="coin-img" src={coin}/>
-                <p>remaining</p>
+              <h4 className="">{getCoinCount(this.props.match.params.stepId)}</h4>
+              <Image className="coin-img" src={coin} />
+              <p>remaining</p>
             </div>
             <div className="content-box bottom">
-                <p className="large" dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField1)}/>
-                <div className="btn-holder-bottom">
-                    <Button className="btn secondary gameplay action" as={Link} to={`${step && step.privateField1}?lang=${queryString.parse(this.props.location.search).lang}`}>
-                        <Image avatar src={chat}/>
-                        <span>{step && step.publicField2}</span>
-                    </Button>
-                </div>
+              <p
+                className="large"
+                dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField1)}
+              />
+              <div className="btn-holder-bottom">
+                <Button
+                  className="btn secondary gameplay action"
+                  as={Link}
+                  to={`${step && step.privateField1}?lang=${
+                    queryString.parse(this.props.location.search).lang
+                  }`}
+                >
+                  <Image avatar src={chat} />
+                  <span>{step && step.publicField2}</span>
+                </Button>
+              </div>
             </div>
-        </Form>
+          </Form>
         </Main>
       </div>
     )
@@ -75,8 +82,10 @@ export default graphql<Props, StepQueryResponse>(stepQuery, {
   options: (props: OwnProps): QueryOpts<StepQueryParams> => ({
     variables: {
       id: parseInt(props.match.params.stepId),
-      lang: queryString.parse(props.location.search).lang ? queryString.parse(props.location.search).lang : "en",
-      renderMdToHtml: true
+      lang: queryString.parse(props.location.search).lang
+        ? queryString.parse(props.location.search).lang
+        : 'en',
+      renderMdToHtml: true,
     },
   }),
 })(ScenarioView)

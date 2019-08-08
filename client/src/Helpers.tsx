@@ -7,27 +7,69 @@ let constructInnerHTML = (text: string | undefined) => {
 export { constructInnerHTML }
 
 const STARTING_COINS = 100
-const decisionPointsByStepId = [102, 203, 307, 403, 507, 607, 703, 805, 905, 1005, 1105]
+const housingDecisionPointsByStepId = [102, 203, 307]
+const economyDecisionPointsByStepId = [403, 507]
+const environmentDecisionPointsByStepId = [607, 703, 805]
+const transportationDecisionPointsByStepId = [905, 1005, 1105]
 
-let getCoinCount = () => {
-  let coinsUsed: number = 0
+let getCoinCount = (stepId: string) => {
+  if (parseInt(stepId) >= 100 && parseInt(stepId) < 400) {
+    let coinsUsed: number = 0
 
-  for (const i in decisionPointsByStepId) {
-    coinsUsed += cookie.load(`strat-${decisionPointsByStepId[i]}`)
-      ? parseInt(cookie.load(`strat-${decisionPointsByStepId[i]}`))
-      : 0
+    for (const i in housingDecisionPointsByStepId) {
+      coinsUsed += cookie.load(`strat-${housingDecisionPointsByStepId[i]}`)
+        ? parseInt(cookie.load(`strat-${housingDecisionPointsByStepId[i]}`))
+        : 0
+    }
+    return STARTING_COINS - coinsUsed
+  } else if (parseInt(stepId) >= 400 && parseInt(stepId) < 600) {
+    let coinsUsed: number = 0
+
+    for (const i in economyDecisionPointsByStepId) {
+      coinsUsed += cookie.load(`strat-${economyDecisionPointsByStepId[i]}`)
+        ? parseInt(cookie.load(`strat-${economyDecisionPointsByStepId[i]}`))
+        : 0
+    }
+    return STARTING_COINS - coinsUsed
+  } else if (parseInt(stepId) >= 600 && parseInt(stepId) < 900) {
+    let coinsUsed: number = 0
+
+    for (const i in environmentDecisionPointsByStepId) {
+      coinsUsed += cookie.load(`strat-${environmentDecisionPointsByStepId[i]}`)
+        ? parseInt(cookie.load(`strat-${environmentDecisionPointsByStepId[i]}`))
+        : 0
+    }
+    return STARTING_COINS - coinsUsed
+  } else if (parseInt(stepId) >= 900 && parseInt(stepId) < 1200) {
+    let coinsUsed: number = 0
+
+    for (const i in transportationDecisionPointsByStepId) {
+      coinsUsed += cookie.load(`strat-${transportationDecisionPointsByStepId[i]}`)
+        ? parseInt(cookie.load(`strat-${transportationDecisionPointsByStepId[i]}`))
+        : 0
+    }
+    return STARTING_COINS - coinsUsed
   }
 
-  // Start coins = 100
-  return STARTING_COINS - coinsUsed
+  return STARTING_COINS
 }
 export { getCoinCount }
 
 let clearCoinCookies = () => {
-  for (const i in decisionPointsByStepId) {
-    cookie.remove(`strat-${decisionPointsByStepId[i]}`)
-      ? parseInt(cookie.load(`strat-${decisionPointsByStepId[i]}`))
-      : 0
+  for (const i in economyDecisionPointsByStepId) {
+    cookie.remove(`strat-${economyDecisionPointsByStepId[i]}`)
+  }
+
+  for (const i in housingDecisionPointsByStepId) {
+    cookie.remove(`strat-${housingDecisionPointsByStepId[i]}`)
+  }
+
+  for (const i in environmentDecisionPointsByStepId) {
+    cookie.remove(`strat-${environmentDecisionPointsByStepId[i]}`)
+  }
+
+  for (const i in transportationDecisionPointsByStepId) {
+    cookie.remove(`strat-${transportationDecisionPointsByStepId[i]}`)
   }
 
   cookie.remove('completed')

@@ -74,7 +74,7 @@ class ChatDialogueView extends React.Component<Props, {}> {
               lang={queryString.parse(this.props.location.search).lang}
             />
             <div className="coin-status">
-              <h4 className="">{getCoinCount()}</h4>
+              <h4 className="">{getCoinCount(this.props.match.params.stepId)}</h4>
               <Image className="coin-img" src={coin} />
               <p>remaining</p>
             </div>

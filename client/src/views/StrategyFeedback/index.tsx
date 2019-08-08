@@ -46,7 +46,10 @@ class StrategyFeedbackView extends React.Component<Props, {}> {
       '&lt;coins_spent&gt;',
       queryString.parse(this.props.location.search).coins_spent
     )
-    text = text.replace('&lt;coins_left&gt;', getCoinCount().toString())
+    text = text.replace(
+      '&lt;coins_left&gt;',
+      getCoinCount(this.props.match.params.stepId).toString()
+    )
     return text
   }
 
@@ -62,7 +65,7 @@ class StrategyFeedbackView extends React.Component<Props, {}> {
               lang={queryString.parse(this.props.location.search).lang}
             />
             <div className="coin-status">
-              <h4 className="">{getCoinCount()}</h4>
+              <h4 className="">{getCoinCount(this.props.match.params.stepId)}</h4>
               <Image className="coin-img" src={coin} />
               <p>remaining</p>
             </div>
