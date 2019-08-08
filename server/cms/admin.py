@@ -48,7 +48,7 @@ class StepAdmin(admin.ModelAdmin):
     exclude = ('private_field_1', 'private_field_1_meta_description', 'private_field_2', 'private_field_2_meta_description', 'private_field_3', 'private_field_3_meta_description', )
 
     def check_if_used(self, field):
-        return field != '' and field != 'DO NOT USE'
+        return field and field != 'DO NOT USE'
 
     def get_fields(self, request, obj=None):
         fields = self.fields
