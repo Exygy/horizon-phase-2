@@ -1,0 +1,104 @@
+#summary-view {
+    .prog-bar {
+        background: white;
+        margin-bottom: 5px;
+    }
+
+    .bar .progress {
+        left: 3px;
+        color: #26364C;
+	font-family: Lora;
+        font-weight: bold;
+        font-size: 14px;
+        margin-top: -5px;
+    }
+
+    .strat {
+        font-weight: bold;
+    }
+
+    .not-mine .bar {
+        background-color: #FFDA4E
+    }
+
+    .mine .bar {
+        background-color: #FFA725;
+    }
+
+    .your-vote {
+        font-size: 12px;
+        margin-top:0px;
+    }
+    
+    .strat-section {
+        margin-bottom: 20px;
+    }
+
+    .top-intro {
+        margin-top: 30px;
+        text-align: center;
+        h1 {
+            margin-bottom: 0px;
+        }
+    }
+
+    .content-box {
+        margin-top: 30px;
+    }
+
+    .share {
+        text-align: center;
+        margin-top:30px;
+    }
+
+    .next-challenges {
+        text-align: center;
+        margin-top:50px;
+    }
+
+    .pill {
+        display: flex;
+        align-items: center;
+        padding-left: 35px;
+        margin: 0px auto;
+        margin-bottom: 10px;
+
+        height: 82px;
+        width: 371px;
+        border-radius: 18px;
+
+        background-image: url('../../images/category.png');
+        background-repeat: no-repeat;
+        background-position: right bottom; 
+        background-size: 179px 65px;
+
+
+        &.housing {
+            background-color: #FFD392;
+            h2 {
+                color: #26364C;
+            }
+        }
+
+        &.transportation {
+            background-color: #F9CBCA;
+            h2 {
+                color: #26364C;
+            }
+        }
+
+        &.economy {
+            background-color: #6FA6E5; 
+            h2 {
+                color: #FFFFFF;
+            }
+        }
+
+        &.environment {
+            background-color: #7EC2B7;
+            h2 {
+                color: #26364C;
+            }
+        }
+    }
+}

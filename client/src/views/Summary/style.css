@@ -1,0 +1,95 @@
+#summary-view .prog-bar {
+  background: white;
+  margin-bottom: 5px;
+}
+
+#summary-view .bar .progress {
+  left: 3px;
+  color: #26364c;
+  font-family: Lora;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: -5px;
+}
+
+#summary-view .strat {
+  font-weight: bold;
+}
+
+#summary-view .not-mine .bar {
+  background-color: #ffda4e;
+}
+
+#summary-view .mine .bar {
+  background-color: #ffa725;
+}
+
+#summary-view .your-vote {
+  font-size: 12px;
+  margin-top: 0px;
+}
+
+#summary-view .strat-section {
+  margin-bottom: 20px;
+}
+
+#summary-view .top-intro {
+  margin-top: 30px;
+  text-align: center;
+}
+#summary-view .top-intro h1 {
+  margin-bottom: 0px;
+}
+
+#summary-view .content-box {
+  margin-top: 30px;
+}
+
+#summary-view .share {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#summary-view .next-challenges {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#summary-view .pill {
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  height: 82px;
+  width: 371px;
+  border-radius: 18px;
+  background-image: url('../../images/category.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 179px 65px;
+}
+#summary-view .pill.housing {
+  background-color: #ffd392;
+}
+#summary-view .pill.housing h2 {
+  color: #26364c;
+}
+#summary-view .pill.transportation {
+  background-color: #f9cbca;
+}
+#summary-view .pill.transportation h2 {
+  color: #26364c;
+}
+#summary-view .pill.economy {
+  background-color: #6fa6e5;
+}
+#summary-view .pill.economy h2 {
+  color: #ffffff;
+}
+#summary-view .pill.environment {
+  background-color: #7ec2b7;
+}
+#summary-view .pill.environment h2 {
+  color: #26364c;
+}

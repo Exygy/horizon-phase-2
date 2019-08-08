@@ -25,7 +25,7 @@ import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/T
 import { constructInnerHTML } from 'src/Helpers'
 import CustomHeader from 'src/components/CustomHeader/'
 import Main from 'src/components/Main/'
-import { MOB, translate } from 'src/Translate'
+import { MOB, HOUSING, ECONOMY, TRANSPORATION, ENVIRONMENT, translate } from 'src/Translate'
 import './style.css'
 
 const queryString = require('query-string')
@@ -64,7 +64,7 @@ class OnboardingChooseCategoryView extends React.Component<Props, {}> {
               }
               href="#"
             >
-              <h2>Housing</h2>
+              <h2>{translate(queryString.parse(this.props.location.search).lang, HOUSING)}</h2>
             </a>
             <a
               className="pill transportation"
@@ -75,7 +75,9 @@ class OnboardingChooseCategoryView extends React.Component<Props, {}> {
               }
               href="#"
             >
-              <h2>Transportation</h2>
+              <h2>
+                {translate(queryString.parse(this.props.location.search).lang, TRANSPORATION)}
+              </h2>
             </a>
             <a
               className="pill economy"
@@ -86,7 +88,7 @@ class OnboardingChooseCategoryView extends React.Component<Props, {}> {
               }
               href="#"
             >
-              <h2>Economy</h2>
+              <h2>{translate(queryString.parse(this.props.location.search).lang, ECONOMY)}</h2>
             </a>
             <a
               className="pill environment"
@@ -97,7 +99,7 @@ class OnboardingChooseCategoryView extends React.Component<Props, {}> {
               }
               href="#"
             >
-              <h2>Environment</h2>
+              <h2>{translate(queryString.parse(this.props.location.search).lang, ENVIRONMENT)}</h2>
             </a>
           </Form>
         </Main>

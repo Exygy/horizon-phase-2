@@ -26,6 +26,7 @@ import { RouteComponentProps, withRouter } from 'react-router'
 type Props = {
   stepId: string
   lang: string
+  desc?: string
 }
 
 class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> {
@@ -57,6 +58,10 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
       title = translate(lang, HOUSING)
       customStyleClass = 'extended'
       desc = translate(lang, HOUSING_C3OF3)
+
+      if (parseInt(stepId) === 310) {
+        desc = this.props.desc
+      }
     } else if (parseInt(stepId) >= 400 && parseInt(stepId) < 500) {
       title = translate(lang, ECONOMY)
       customStyleClass = 'extended'

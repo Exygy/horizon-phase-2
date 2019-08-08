@@ -22,7 +22,7 @@ import {
 } from 'semantic-ui-react'
 import { stepQuery } from 'src/Queries'
 import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/Types'
-import { constructInnerHTML } from 'src/Helpers'
+import { constructInnerHTML, clearCoinCookies } from 'src/Helpers'
 import CustomHeader from 'src/components/CustomHeader/'
 import Main from 'src/components/Main/'
 import { MOB, translate } from 'src/Translate'
@@ -52,6 +52,7 @@ class IntroductionView extends React.Component<Props, State> {
   // that a person can replay the game with a fresh state
   componentDidMount = () => {
     cookie.save('session_id', uuidv4(), { path: '/' })
+    clearCoinCookies()
   }
 
   handleExtraDescription = (e: MouseEvent<HTMLElement>) => {

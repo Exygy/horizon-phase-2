@@ -106,7 +106,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
     this.setState({ isSubmitting: false })
 
     if (!data.error) {
-      cookie.save(this.props.match.params.stepId, coinsSpent, { path: '/' })
+      cookie.save(`strat-${this.props.match.params.stepId}`, coinsSpent, { path: '/' })
       this.props.history.push(
         `${stepIdPath}?lang=${
           queryString.parse(this.props.location.search).lang

@@ -457,7 +457,17 @@
         "model": "cms.step",
         "pk": 310,
         "fields":{
-            "challenge_id": 3
+            "challenge_id": 3,
+            "public_field_1_en": "Your Housing Plan Results",
+            "public_field_1_meta_description": "Header subtitle",
+            "public_field_2_en": "Check out your Housing Plan below",
+            "public_field_2_meta_description": "Subheader subtitle",
+            "public_field_3_en": "Housing affordability",
+            "public_field_3_meta_description": "Challenge 1",
+            "public_field_4_en": "Infill development",
+            "public_field_4_meta_description": "Challenge 2",
+            "public_field_5_en": "Regional policy",
+            "public_field_5_meta_description": "Challenge 3"
         } 
     },
     {
@@ -791,7 +801,15 @@
         "model": "cms.step",
         "pk": 511,
         "fields":{
-            "challenge_id": 6
+            "challenge_id": 6,
+            "public_field_1_en": "Your Economic Plan Results",
+            "public_field_1_meta_description": "Header subtitle",
+            "public_field_2_en": "Check out your Economic Plan below",
+            "public_field_2_meta_description": "Subheader subtitle",
+            "public_field_3_en": "Shift Location of Jobs",
+            "public_field_3_meta_description": "Challenge 1",
+            "public_field_4_en": "Workforce",
+            "public_field_4_meta_description": "Challenge 2"
         } 
     },
     {
@@ -1311,7 +1329,17 @@
         "model": "cms.step",
         "pk": 809,
         "fields":{
-            "challenge_id": 9
+            "challenge_id": 9,
+            "public_field_1_en": "Your Environment Plan Results",
+            "public_field_1_meta_description": "Header subtitle",
+            "public_field_2_en": "Check out your Environment Plan below",
+            "public_field_2_meta_description": "Subheader subtitle",
+            "public_field_3_en": "Earthquake",
+            "public_field_3_meta_description": "Challenge 1",
+            "public_field_4_en": "Open Space",
+            "public_field_4_meta_description": "Challenge 2",
+            "public_field_5_en": "Sea Level Rise",
+            "public_field_5_meta_description": "Challenge 3"
         } 
     },
     {
@@ -1851,6 +1879,23 @@
 
             "private_field_1": "/summary/1109",
             "private_field_1_meta_description": "Next step path"
+        } 
+    },
+    {
+        "model": "cms.step",
+        "pk": 1109,
+        "fields":{
+            "challenge_id": 12,
+            "public_field_1_en": "Your Transportation Plan Results",
+            "public_field_1_meta_description": "Header subtitle",
+            "public_field_2_en": "Check out your Transportation Plan below",
+            "public_field_2_meta_description": "Subheader subtitle",
+            "public_field_3_en": "Invest in Transit",
+            "public_field_3_meta_description": "Challenge 1",
+            "public_field_4_en": "Price Transportation Service",
+            "public_field_4_meta_description": "Challenge 2",
+            "public_field_5_en": "Prioritize Active Modes",
+            "public_field_5_meta_description": "Challenge 3"
         } 
     },
     {
