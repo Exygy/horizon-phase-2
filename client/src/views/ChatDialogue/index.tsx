@@ -86,8 +86,8 @@ class ChatDialogueView extends React.Component<Props, {}> {
                   </Grid.Column>
                   <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField1}</p>
-                    <span className="sub-heading deemphasized">1 min ago</span>
                     <p>{step && step.publicField2}</p>
+                    <div className="sub-heading deemphasized">1 min ago</div>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
                     </span>
@@ -102,8 +102,8 @@ class ChatDialogueView extends React.Component<Props, {}> {
                   </Grid.Column>
                   <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField1}</p>
-                    <span className="sub-heading deemphasized">1 min ago</span>
                     <p>{step && step.publicField3}</p>
+                    <div className="sub-heading deemphasized">1 min ago</div>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
                     </span>
@@ -119,8 +119,8 @@ class ChatDialogueView extends React.Component<Props, {}> {
                     </Grid.Column>
                     <Grid.Column width={13}>
                       <p className="sub-heading">{step && step.publicField1}</p>
-                      <span className="sub-heading deemphasized">1 min ago</span>
                       <p>{step && step.publicField4}</p>
+                      <div className="sub-heading deemphasized">1 min ago</div>
                       <span className="heart">
                         <Icon name="heart outline" /> 11
                       </span>
@@ -137,12 +137,12 @@ class ChatDialogueView extends React.Component<Props, {}> {
               <Grid>
                 <Grid.Row className="message">
                   <Grid.Column width={3}>
-                    <Image src={msg2Avatar} />
+                    <Image className="avatar" src={msg2Avatar} />
                   </Grid.Column>
                   <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField5}</p>
-                    <span className="sub-heading deemphasized">1 min ago</span>
                     <p>{step && step.publicField6}</p>
+                    <div className="sub-heading deemphasized">1 min ago</div>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
                     </span>
@@ -157,8 +157,8 @@ class ChatDialogueView extends React.Component<Props, {}> {
                   </Grid.Column>
                   <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField5}</p>
-                    <span className="sub-heading deemphasized">1 min ago</span>
                     <p>{step && step.publicField7}</p>
+                    <div className="sub-heading deemphasized">1 min ago</div>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
                     </span>
@@ -173,8 +173,8 @@ class ChatDialogueView extends React.Component<Props, {}> {
                   </Grid.Column>
                   <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField5}</p>
-                    <span className="sub-heading deemphasized">1 min ago</span>
                     <p>{step && step.publicField8}</p>
+                    <div className="sub-heading deemphasized">1 min ago</div>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
                     </span>
@@ -195,8 +195,8 @@ class ChatDialogueView extends React.Component<Props, {}> {
                     </Grid.Column>
                     <Grid.Column width={13}>
                       <p className="sub-heading">{step && step.publicField9}</p>
-                      <span className="sub-heading deemphasized">1 min ago</span>
                       <p>{step && step.publicField10}</p>
+                      <div className="sub-heading deemphasized">1 min ago</div>
                       <span className="heart">
                         <Icon name="heart outline" /> 11
                       </span>
@@ -211,8 +211,8 @@ class ChatDialogueView extends React.Component<Props, {}> {
                     </Grid.Column>
                     <Grid.Column width={13}>
                       <p className="sub-heading">{step && step.publicField9}</p>
-                      <span className="sub-heading deemphasized">1 min ago</span>
                       <p>{step && step.publicField11}</p>
+                      <div className="sub-heading deemphasized">1 min ago</div>
                       <span className="heart">
                         <Icon name="heart outline" /> 11
                       </span>
@@ -227,8 +227,8 @@ class ChatDialogueView extends React.Component<Props, {}> {
                     </Grid.Column>
                     <Grid.Column width={13}>
                       <p className="sub-heading">{step && step.publicField9}</p>
-                      <span className="sub-heading deemphasized">1 min ago</span>
                       <p>{step && step.publicField12}</p>
+                      <div className="sub-heading deemphasized">1 min ago</div>
                       <span className="heart">
                         <Icon name="heart outline" /> 11
                       </span>

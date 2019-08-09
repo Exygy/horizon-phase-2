@@ -1,4 +1,9 @@
 #chat-dialogue-view {
+    .message .ui.image {
+        height: auto;
+        width: auto;
+    }
+
     .content-box {
         &.top-msg {
             margin-top: 90px;
@@ -13,9 +18,7 @@
         }
 
         .sub-heading.deemphasized {
-            display: inline;
-            margin-left: 20px;
-            position: absolute;
+            display: block;
         }
 
         .time-ago {

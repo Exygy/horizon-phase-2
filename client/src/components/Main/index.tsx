@@ -11,9 +11,9 @@ class Main extends React.Component<Props, {}> {
     const { stepId, children } = this.props
     let backgroundClass = ''
 
-    if ([100, 101, 106, 400, 401, 402].includes(parseInt(stepId))) {
+    if ([100, 101, 106, 400, 401, 402, 10003, 10004, 10005].includes(parseInt(stepId))) {
       backgroundClass = 'housing-special-bg'
-    } else if ([200, 201, 202, 800, 801, 802, 803, 804].includes(parseInt(stepId))) {
+    } else if ([200, 201, 202, 800, 801, 802, 803, 804, 10002].includes(parseInt(stepId))) {
       backgroundClass = 'beachside-bg'
     } else if ([300, 301, 302].includes(parseInt(stepId))) {
       backgroundClass = 'sm-bg'
@@ -29,13 +29,13 @@ class Main extends React.Component<Props, {}> {
       )
     ) {
       backgroundClass = 'red-bg'
-    } else if ([1100, 1101, 1104].includes(parseInt(stepId))) {
+    } else if ([1100, 1101, 1104, 10001].includes(parseInt(stepId))) {
       backgroundClass = 'sidewalk-bg'
     } else if ([607, 608, 609, 703, 704, 705, 805, 806, 807, 808, 809].includes(parseInt(stepId))) {
       backgroundClass = 'green-bg'
     } else if ([1000, 1001, 1002, 1003, 1004].includes(parseInt(stepId))) {
       backgroundClass = 'college-bg'
-    } else if ([700, 701, 702].includes(parseInt(stepId))) {
+    } else if ([700, 701, 702, 10000, 20000].includes(parseInt(stepId))) {
       backgroundClass = 'park-bg'
     } else if ([600, 601, 602].includes(parseInt(stepId))) {
       backgroundClass = 'sm-2-bg'
