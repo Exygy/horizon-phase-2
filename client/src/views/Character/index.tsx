@@ -38,6 +38,7 @@ import avatar22b from 'src/images/avatar-22b.png'
 import avatar11 from 'src/images/avatar-11.png'
 import avatar17 from 'src/images/avatar-17.png'
 import avatar20 from 'src/images/avatar-20.png'
+import avatar2 from 'src/images/avatar-2.png'
 import { stepQuery } from 'src/Queries'
 import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/Types'
 import './style.css'
@@ -79,6 +80,8 @@ class CharacterView extends React.Component<Props, {}> {
       personImg = avatar17
     } else if (parseInt(this.props.match.params.stepId) === 1101) {
       personImg = avatar20
+    } else if (parseInt(this.props.match.params.stepId) === 701) {
+      personImg = avatar2
     }
 
     return (
