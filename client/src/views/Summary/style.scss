@@ -56,6 +56,19 @@
         margin-top:50px;
     }
 
+    // Mobile only
+    @media only screen and (max-width: 480px) {
+        .pill {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 480px) {
+        .pill {
+            width: 371px;
+        }
+    }
+
     .pill {
         display: flex;
         align-items: center;
@@ -64,7 +77,6 @@
         margin-bottom: 10px;
 
         height: 82px;
-        width: 371px;
         border-radius: 18px;
 
         background-repeat: no-repeat;
