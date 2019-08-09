@@ -1,0 +1,13 @@
+#onboarding-survey-view label {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #26364c;
+}
+
+#onboarding-survey-view input {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 600;
+}

@@ -27,6 +27,7 @@ import cookie from 'react-cookies'
 import CustomHeader from 'src/components/CustomHeader/'
 import Main from 'src/components/Main/'
 import { MOB, translate } from 'src/Translate'
+import './style.css'
 
 const queryString = require('query-string')
 
@@ -99,7 +100,7 @@ class OnboardingSurveyView extends React.Component<Props, State> {
     const { zipcode, isSubmitting, errorMsg } = this.state
 
     return (
-      <div className="view">
+      <div className="view" id="onboarding-survey-view">
         <Main stepId={this.props.match.params.stepId}>
           <Form className="forma" loading={isSubmitting} onValidSubmit={this.onValidSubmit}>
             <CustomHeader

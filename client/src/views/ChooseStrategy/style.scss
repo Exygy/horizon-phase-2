@@ -1,7 +1,6 @@
 #choose-strategy-view {
     .instructions {
         text-align: center;
-        padding-top: 50px;
     }
 
     .carousel .slide {
@@ -47,7 +46,7 @@
     }
 
     .carousel-holder {
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     .nav {
@@ -69,8 +68,9 @@
     }
 
     .divider-line {
-        border-color: #FDC228;
-        width: 160px;
+        height: 1px;
+        background-color: #FDC228;
+        border: none;
+        width: 73px;
     }
-
 }

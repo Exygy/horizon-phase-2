@@ -167,7 +167,10 @@ class ChooseStrategyView extends React.Component<Props, State> {
               <Image className="coin-img" src={coin} />
               <p>remaining</p>
             </div>
-            <h4 className="instructions">Choose one of the following strategies.</h4>
+            <h4 className="instructions">
+              Choose one of the <br />
+              following strategies.
+            </h4>
             <div className="carousel-holder">
               <Carousel
                 showIndicators={false}
@@ -203,7 +206,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <Grid>
                         <Grid.Column width={8} className="col-left">
                           <Button className="btn secondary" onClick={() => this.handleClick(0)}>
-                            Click to flip
+                            Flip for more
                           </Button>
                         </Grid.Column>
                         <Grid.Column width={8} className="col-right">

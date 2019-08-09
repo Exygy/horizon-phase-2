@@ -1,52 +1,68 @@
 #choose-strategy-view .instructions {
   text-align: center;
-  padding-top: 50px; }
+}
 
 #choose-strategy-view .carousel .slide {
   background-color: inherit;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+}
 
 #choose-strategy-view .content-box {
-  margin-top: 0px; }
-  #choose-strategy-view .content-box p {
-    text-align: left; }
-  #choose-strategy-view .content-box .strat-num {
-    margin-top: 0px; }
-  #choose-strategy-view .content-box .coin-cost {
-    margin-top: 10px;
-    display: inline;
-    padding-top: 20px; }
-  #choose-strategy-view .content-box .col-left {
-    padding-right: 0px;
-    text-align: left; }
-  #choose-strategy-view .content-box .col-right {
-    padding-left: 0px;
-    text-align: right;
-    padding-top: 25px; }
-  #choose-strategy-view .content-box .coin-img {
-    display: inherit;
-    width: 20px;
-    display: inline;
-    margin-left: 8px;
-    margin-top: 2px; }
+  margin-top: 0px;
+}
+#choose-strategy-view .content-box p {
+  text-align: left;
+}
+#choose-strategy-view .content-box .strat-num {
+  margin-top: 0px;
+}
+#choose-strategy-view .content-box .coin-cost {
+  margin-top: 10px;
+  display: inline;
+  padding-top: 20px;
+}
+#choose-strategy-view .content-box .col-left {
+  padding-right: 0px;
+  text-align: left;
+}
+#choose-strategy-view .content-box .col-right {
+  padding-left: 0px;
+  text-align: right;
+  padding-top: 25px;
+}
+#choose-strategy-view .content-box .coin-img {
+  display: inherit;
+  width: 20px;
+  display: inline;
+  margin-left: 8px;
+  margin-top: 2px;
+}
 
 #choose-strategy-view .carousel-holder {
-  margin-top: 50px; }
+  margin-top: 20px;
+}
 
 #choose-strategy-view .nav {
   color: white;
-  background-color: #1E8FE1; }
+  background-color: #1e8fe1;
+}
 
 #choose-strategy-view .prev-btn {
-  float: left; }
+  float: left;
+}
 
 #choose-strategy-view .next-btn {
-  float: right; }
+  float: right;
+}
 
 #choose-strategy-view .edge-nav {
   display: flex;
-  align-items: center; }
+  align-items: center;
+}
 
 #choose-strategy-view .divider-line {
-  border-color: #FDC228;
-  width: 160px; }
+  height: 1px;
+  background-color: #fdc228;
+  border: none;
+  width: 73px;
+}
