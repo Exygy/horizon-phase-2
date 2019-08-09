@@ -64,31 +64,34 @@
   height: 82px;
   width: 371px;
   border-radius: 18px;
-  background-image: url('../../images/category.png');
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 179px 65px;
 }
 #summary-view .pill.housing {
   background-color: #ffd392;
+  background-image: url('../../images/housing.png');
 }
 #summary-view .pill.housing h2 {
   color: #26364c;
 }
 #summary-view .pill.transportation {
   background-color: #f9cbca;
+  background-image: url('../../images/transportation.png');
 }
 #summary-view .pill.transportation h2 {
   color: #26364c;
 }
 #summary-view .pill.economy {
   background-color: #6fa6e5;
+  background-image: url('../../images/economy.png');
 }
 #summary-view .pill.economy h2 {
   color: #ffffff;
 }
 #summary-view .pill.environment {
   background-color: #7ec2b7;
+  background-image: url('../../images/environment.png');
 }
 #summary-view .pill.environment h2 {
   color: #26364c;

@@ -5,17 +5,64 @@
     }
 
     &.housing-special-bg {
-        background: url(../../images/city_hall.png) no-repeat center center;
-        background-size:     cover;                      /* <------ */
+        background: url(../../images/city_hall_bg.png) no-repeat center center;
+        background-size:     cover;                      
     }
 
-    &.housing-choose-strategy-bg {
-        background-color: #FDC228;
+    &.beachside-bg {
+        background: url(../../images/beachside_bg.png) no-repeat center center;
+        background-size:     cover;                      
+    }
+
+    &.sm-bg {
+        background: url(../../images/sm-bg.png) no-repeat center center;
+        background-size:     cover;                      
+    }
+
+    &.yellow-bg {
+        background-color: #FED57C;
+    }
+
+    &.blue-bg {
+        background-color: #adccf0;
+    }
+
+    &.train-bg {
+        background: url(../../images/train-bg.png) no-repeat center center;
+        background-size:     cover;                      
+    }
+
+    &.red-bg {
+        background-color: #adccf0;
+    }
+
+    &.sidewalk-bg {
+        background: url(../../images/sidewalk-bg.png) no-repeat center center;
+        background-size:     cover;                      
+    }
+
+    &.college-bg {
+        background: url(../../images/college-bg.png) no-repeat center center;
+        background-size:     cover;                      
+    }
+
+    &.green-bg {
+        background-color: #7EC2B7;
     }
 
     &.transportation-special-bg {
         background: url(../../images/storefront.png) no-repeat center center;
-        background-size:     cover;                      /* <------ */
+        background-size:     cover;                     
+    }
+
+    &.park-bg {
+        background: url(../../images/park-bg.png) no-repeat center center;
+        background-size:     cover;                     
+    }
+
+    &.sm-2-bg {
+        background: url(../../images/sm-2.png) no-repeat center center;
+        background-size:     cover;                     
     }
 
     display: flex;
@@ -94,28 +141,23 @@
             border-bottom-left-radius: 0px;
             border-bottom-right-radius: 0px;
 
+        }
+
+        .cb-holder {
+            position: relative;
+
             .person {
                 width: 100px;
                 height: 107px;
                 position: absolute;
-                right: 0px;
-                top: -60px;
+                right: -40px;
+                top: -110px;
             }
         }
     }
 
     .forma {
         height: 100%;
-    }
-
-    .btn-holder-bottom {
-        bottom: 20px;
-        position: absolute;
-        width: 100%;
-        margin-top: 40px;
-        text-align: center;
-        position:relative;
-        bottom:0px;
     }
 
     // Mobile only
@@ -127,6 +169,13 @@
             margin-top: 40px;
             text-align: center;
         }
+
+        .btn-holder-bottom {
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            bottom:20px;
+        }
     }
 
     @media only screen and (min-width: 480px) {
@@ -134,6 +183,12 @@
             width: 100%;
             margin-top: 40px;
             text-align: center;
+        }
+
+        .btn-holder-bottom {
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
         }
     }
 }

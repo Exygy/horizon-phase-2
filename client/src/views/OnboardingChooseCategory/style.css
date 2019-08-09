@@ -16,31 +16,34 @@
   height: 82px;
   width: 371px;
   border-radius: 18px;
-  background-image: url('../../images/category.png');
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 179px 65px;
 }
 #onboarding-choose-category-view .pill.housing {
   background-color: #ffd392;
+  background-image: url('../../images/housing.png');
 }
 #onboarding-choose-category-view .pill.housing h2 {
   color: #26364c;
 }
 #onboarding-choose-category-view .pill.transportation {
   background-color: #f9cbca;
+  background-image: url('../../images/transportation.png');
 }
 #onboarding-choose-category-view .pill.transportation h2 {
   color: #26364c;
 }
 #onboarding-choose-category-view .pill.economy {
   background-color: #6fa6e5;
+  background-image: url('../../images/economy.png');
 }
 #onboarding-choose-category-view .pill.economy h2 {
   color: #ffffff;
 }
 #onboarding-choose-category-view .pill.environment {
   background-color: #7ec2b7;
+  background-image: url('../../images/environment.png');
 }
 #onboarding-choose-category-view .pill.environment h2 {
   color: #26364c;

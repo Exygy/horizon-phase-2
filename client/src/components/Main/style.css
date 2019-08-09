@@ -7,17 +7,52 @@
   background: url(../../images/default_housing_bg.png);
 }
 .main.housing-special-bg {
-  background: url(../../images/city_hall.png) no-repeat center center;
+  background: url(../../images/city_hall_bg.png) no-repeat center center;
   background-size: cover;
-  /* <------ */
 }
-.main.housing-choose-strategy-bg {
-  background-color: #fdc228;
+.main.beachside-bg {
+  background: url(../../images/beachside_bg.png) no-repeat center center;
+  background-size: cover;
+}
+.main.sm-bg {
+  background: url(../../images/sm-bg.png) no-repeat center center;
+  background-size: cover;
+}
+.main.yellow-bg {
+  background-color: #fed57c;
+}
+.main.blue-bg {
+  background-color: #adccf0;
+}
+.main.train-bg {
+  background: url(../../images/train-bg.png) no-repeat center center;
+  background-size: cover;
+}
+.main.red-bg {
+  background-color: #adccf0;
+}
+.main.sidewalk-bg {
+  background: url(../../images/sidewalk-bg.png) no-repeat center center;
+  background-size: cover;
+}
+.main.college-bg {
+  background: url(../../images/college-bg.png) no-repeat center center;
+  background-size: cover;
+}
+.main.green-bg {
+  background-color: #7ec2b7;
 }
 .main.transportation-special-bg {
   background: url(../../images/storefront.png) no-repeat center center;
   background-size: cover;
-  /* <------ */
+}
+.main.park-bg {
+  background: url(../../images/park-bg.png) no-repeat center center;
+  background-size: cover;
+}
+.main.sm-2-bg {
+  background: url(../../images/sm-2.png) no-repeat center center;
+  background-size: cover;
 }
 .main .coin-status {
   background: white;
@@ -86,24 +121,18 @@
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.main .content-box.bottom .person {
+.main .content-box .cb-holder {
+  position: relative;
+}
+.main .content-box .cb-holder .person {
   width: 100px;
   height: 107px;
   position: absolute;
-  right: 0px;
-  top: -60px;
+  right: -40px;
+  top: -110px;
 }
 .main .forma {
   height: 100%;
-}
-.main .btn-holder-bottom {
-  bottom: 20px;
-  position: absolute;
-  width: 100%;
-  margin-top: 40px;
-  text-align: center;
-  position: relative;
-  bottom: 0px;
 }
 @media only screen and (max-width: 480px) {
   .main .btn-holder {
@@ -113,11 +142,22 @@
     margin-top: 40px;
     text-align: center;
   }
+  .main .btn-holder-bottom {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 20px;
+  }
 }
 @media only screen and (min-width: 480px) {
   .main .btn-holder {
     width: 100%;
     margin-top: 40px;
     text-align: center;
+  }
+  .main .btn-holder-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
   }
 }

@@ -40,6 +40,7 @@ import avatar17 from 'src/images/avatar-17.png'
 import avatar20 from 'src/images/avatar-20.png'
 import { stepQuery } from 'src/Queries'
 import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/Types'
+import './style.css'
 
 const queryString = require('query-string')
 
@@ -93,25 +94,27 @@ class CharacterView extends React.Component<Props, {}> {
               <Image className="coin-img" src={coin} />
               <p>remaining</p>
             </div>
-            <div className="content-box bottom">
-              <Image className="person" src={personImg} />
-              <h1 className="">{step && step.publicField1}</h1>
-              <p
-                className="large"
-                dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}
-              />
-              <div className="btn-holder-bottom">
-                <Button
-                  className="btn secondary gameplay action"
-                  as={Link}
-                  to={`${step && step.privateField1}?lang=${
-                    queryString.parse(this.props.location.search).lang
-                  }`}
-                >
-                  <Image avatar src={chat} />
-                  {step && step.publicField3}
-                </Button>
+            <div className="content-box">
+              <div className="cb-holder">
+                <Image className="person" src={personImg} />
+                <h1 className="">{step && step.publicField1}</h1>
+                <p
+                  className="large"
+                  dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}
+                />
               </div>
+            </div>
+            <div className="btn-holder-bottom">
+              <Button
+                className="btn secondary gameplay action"
+                as={Link}
+                to={`${step && step.privateField1}?lang=${
+                  queryString.parse(this.props.location.search).lang
+                }`}
+              >
+                <Image avatar src={chat} />
+                {step && step.publicField3}
+              </Button>
             </div>
           </Form>
         </Main>

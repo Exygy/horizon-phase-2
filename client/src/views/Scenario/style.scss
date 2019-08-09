@@ -1,2 +1,12 @@
 #scenario-view {
+    .content-box {
+        padding-bottom: 110px;
+    }
+
+    @media only screen and (min-width: 480px) {
+        .btn-holder-bottom {
+            bottom: 25px;
+            position: absolute;
+        }
+    }
 }

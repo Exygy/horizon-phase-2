@@ -27,6 +27,7 @@ import coin from 'src/images/money.png'
 import chat from 'src/images/chat.png'
 import { stepQuery } from 'src/Queries'
 import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/Types'
+import './style.css'
 
 const queryString = require('query-string')
 
@@ -58,18 +59,18 @@ class ScenarioView extends React.Component<Props, {}> {
                 className="large"
                 dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField1)}
               />
-              <div className="btn-holder-bottom">
-                <Button
-                  className="btn secondary gameplay action"
-                  as={Link}
-                  to={`${step && step.privateField1}?lang=${
-                    queryString.parse(this.props.location.search).lang
-                  }`}
-                >
-                  <Image avatar src={chat} />
-                  <span>{step && step.publicField2}</span>
-                </Button>
-              </div>
+            </div>
+            <div className="btn-holder-bottom">
+              <Button
+                className="btn secondary gameplay action"
+                as={Link}
+                to={`${step && step.privateField1}?lang=${
+                  queryString.parse(this.props.location.search).lang
+                }`}
+              >
+                <Image avatar src={chat} />
+                <span>{step && step.publicField2}</span>
+              </Button>
             </div>
           </Form>
         </Main>

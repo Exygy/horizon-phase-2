@@ -20,14 +20,13 @@
         width: 371px;
         border-radius: 18px;
 
-        background-image: url('../../images/category.png');
         background-repeat: no-repeat;
         background-position: right bottom; 
         background-size: 179px 65px;
 
-
         &.housing {
             background-color: #FFD392;
+            background-image: url('../../images/housing.png');
             h2 {
                 color: #26364C;
             }
@@ -35,6 +34,7 @@
 
         &.transportation {
             background-color: #F9CBCA;
+            background-image: url('../../images/transportation.png');
             h2 {
                 color: #26364C;
             }
@@ -42,6 +42,7 @@
 
         &.economy {
             background-color: #6FA6E5; 
+            background-image: url('../../images/economy.png');
             h2 {
                 color: #FFFFFF;
             }
@@ -49,6 +50,7 @@
 
         &.environment {
             background-color: #7EC2B7;
+            background-image: url('../../images/environment.png');
             h2 {
                 color: #26364C;
             }
