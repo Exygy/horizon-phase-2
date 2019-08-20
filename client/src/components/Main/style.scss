@@ -36,6 +36,10 @@
         background-color: #F5BFAE;
     }
 
+    &.white-bg {
+        background-color: #FFFFFF;
+    }
+
     &.sidewalk-bg {
         background: url(../../images/sidewalk-bg.png) no-repeat center center;
         background-size:     cover;                      
@@ -148,7 +152,7 @@
                 height: 107px;
                 position: absolute;
                 right: -25px;
-                top: -110px;
+                top: -85px;
             }
         }
     }

@@ -31,6 +31,9 @@
 .main.red-bg {
   background-color: #f5bfae;
 }
+.main.white-bg {
+  background-color: #ffffff;
+}
 .main.sidewalk-bg {
   background: url(../../images/sidewalk-bg.png) no-repeat center center;
   background-size: cover;
@@ -126,7 +129,7 @@
   height: 107px;
   position: absolute;
   right: -25px;
-  top: -110px;
+  top: -85px;
 }
 .main .forma {
   height: 100%;

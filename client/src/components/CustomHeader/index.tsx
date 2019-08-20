@@ -39,11 +39,9 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
     let title = null
     let desc = null
     let customStyleClass = ''
-    let backBtn = true
 
     if (parseInt(stepId) >= 10000 && parseInt(stepId) < 30000) {
       title = translate(lang, MOB)
-      backBtn = false
     }
 
     if (parseInt(stepId) >= 100 && parseInt(stepId) < 200) {
@@ -54,6 +52,11 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
       title = translate(lang, HOUSING)
       customStyleClass = 'extended'
       desc = translate(lang, HOUSING_C3OF3)
+
+      if (parseInt(stepId) === 206) {
+        desc = ''
+        customStyleClass = ''
+      }
     } else if (parseInt(stepId) >= 300 && parseInt(stepId) < 400) {
       title = translate(lang, HOUSING)
       customStyleClass = 'extended'
@@ -66,6 +69,10 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
       title = translate(lang, ECONOMY)
       customStyleClass = 'extended'
       desc = translate(lang, ECONOMY_C2OF2)
+      if (parseInt(stepId) === 406) {
+        desc = ''
+        customStyleClass = ''
+      }
     } else if (parseInt(stepId) >= 500 && parseInt(stepId) < 600) {
       title = translate(lang, ECONOMY)
       customStyleClass = 'extended'
@@ -74,6 +81,10 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
       title = translate(lang, ENVIRONMENT)
       customStyleClass = 'extended'
       desc = translate(lang, ENVIRONMENT_C3OF3)
+      if (parseInt(stepId) === 610) {
+        desc = ''
+        customStyleClass = ''
+      }
     } else if (parseInt(stepId) >= 700 && parseInt(stepId) < 800) {
       title = translate(lang, ENVIRONMENT)
       customStyleClass = 'extended'
@@ -86,6 +97,10 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
       title = translate(lang, TRANSPORATION)
       customStyleClass = 'extended'
       desc = translate(lang, TRANSPORATION_C3OF3)
+      if (parseInt(stepId) === 909) {
+        desc = ''
+        customStyleClass = ''
+      }
     } else if (parseInt(stepId) >= 1000 && parseInt(stepId) < 1100) {
       title = translate(lang, TRANSPORATION)
       customStyleClass = 'extended'
@@ -98,7 +113,7 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
 
     return (
       <div className={customStyleClass} id="custom-header">
-        {backBtn && (
+        {parseInt(stepId) !== 20000 && (
           <a className="back-btn" href="#" onClick={this.goBack}>
             <Icon name="arrow left" />
             Back

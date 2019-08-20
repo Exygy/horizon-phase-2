@@ -226,7 +226,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField5}</p>
                       <Button className="btn secondary" onClick={() => this.handleClick(0)}>
-                        Flip over
+                        Flip for more
                       </Button>
                     </div>
                   </div>
@@ -266,7 +266,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <Grid>
                         <Grid.Column width={8} className="col-left">
                           <Button className="btn secondary" onClick={() => this.handleClick(1)}>
-                            Click to flip
+                            Flip for more
                           </Button>
                         </Grid.Column>
                         <Grid.Column width={8} className="col-right">
@@ -286,7 +286,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField11}</p>
                       <Button className="btn secondary" onClick={() => this.handleClick(1)}>
-                        Flip over
+                        Flip for more
                       </Button>
                     </div>
                   </div>
@@ -316,7 +316,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <Grid>
                         <Grid.Column width={8} className="col-left">
                           <Button className="btn secondary" onClick={() => this.handleClick(2)}>
-                            Click to flip
+                            Flip for more
                           </Button>
                         </Grid.Column>
                         <Grid.Column width={8} className="col-right">
@@ -336,7 +336,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField17}</p>
                       <Button className="btn secondary" onClick={() => this.handleClick(2)}>
-                        Flip over
+                        Flip for more
                       </Button>
                     </div>
                   </div>
