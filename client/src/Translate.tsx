@@ -30,17 +30,17 @@ const translations: any = {
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   HOUSING_C1OF3: {
-    en: "Challenge 1 of 3: Renter's issues",
+    en: 'Challenge 1 of 3: Housing Affordability',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   HOUSING_C2OF3: {
-    en: 'Challenge 2 of 3: Infill Development',
+    en: 'Challenge 2 of 3: Regional Policy',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   HOUSING_C3OF3: {
-    en: 'Challenge 3 of 3: Regional policy',
+    en: 'Challenge 3 of 3: Infill Development',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
@@ -50,17 +50,17 @@ const translations: any = {
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   ENVIRONMENT_C1OF3: {
-    en: 'Challenge 1 of 3: Earthquake',
+    en: 'Challenge 1 of 3: Open Space',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   ENVIRONMENT_C2OF3: {
-    en: 'Challenge 2 of 3: Open Space',
+    en: 'Challenge 2 of 3: Sea Level Rise',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   ENVIRONMENT_C3OF3: {
-    en: 'Challenge 3 of 3: Sea Level Rise',
+    en: 'Challenge 3 of 3: Earthquake',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
@@ -70,17 +70,17 @@ const translations: any = {
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   TRANSPORATION_C1OF3: {
-    en: 'Challenge 1 of 3: Invest in Transit',
+    en: 'Challenge 1 of 3: Price Transportation Service',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   TRANSPORATION_C2OF3: {
-    en: 'Challenge 2 of 3: Price Transportation Service',
+    en: 'Challenge 2 of 3: Prioritize Active Modes',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   TRANSPORATION_C3OF3: {
-    en: 'Challenge 3 of 3: Prioritize Active Modes',
+    en: 'Challenge 3 of 3: Invest in Transit',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
@@ -90,12 +90,12 @@ const translations: any = {
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   ECONOMY_C1OF2: {
-    en: 'Challenge 1 of 2: Shift Location of Jobs',
+    en: 'Challenge 1 of 2: Workforce',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   ECONOMY_C2OF2: {
-    en: 'Challenge 2 of 2: Workforce',
+    en: 'Challenge 2 of 2: Shift Location of Jobs',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },

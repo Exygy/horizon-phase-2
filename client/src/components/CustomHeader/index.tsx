@@ -53,11 +53,11 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
     } else if (parseInt(stepId) >= 200 && parseInt(stepId) < 300) {
       title = translate(lang, HOUSING)
       customStyleClass = 'extended'
-      desc = translate(lang, HOUSING_C2OF3)
+      desc = translate(lang, HOUSING_C3OF3)
     } else if (parseInt(stepId) >= 300 && parseInt(stepId) < 400) {
       title = translate(lang, HOUSING)
       customStyleClass = 'extended'
-      desc = translate(lang, HOUSING_C3OF3)
+      desc = translate(lang, HOUSING_C2OF3)
 
       if (parseInt(stepId) === 310) {
         desc = this.props.desc
@@ -65,35 +65,35 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
     } else if (parseInt(stepId) >= 400 && parseInt(stepId) < 500) {
       title = translate(lang, ECONOMY)
       customStyleClass = 'extended'
-      desc = translate(lang, ECONOMY_C1OF2)
+      desc = translate(lang, ECONOMY_C2OF2)
     } else if (parseInt(stepId) >= 500 && parseInt(stepId) < 600) {
       title = translate(lang, ECONOMY)
       customStyleClass = 'extended'
-      desc = translate(lang, ECONOMY_C2OF2)
+      desc = translate(lang, ECONOMY_C1OF2)
     } else if (parseInt(stepId) >= 600 && parseInt(stepId) < 700) {
       title = translate(lang, ENVIRONMENT)
       customStyleClass = 'extended'
-      desc = translate(lang, ENVIRONMENT_C1OF3)
+      desc = translate(lang, ENVIRONMENT_C3OF3)
     } else if (parseInt(stepId) >= 700 && parseInt(stepId) < 800) {
       title = translate(lang, ENVIRONMENT)
       customStyleClass = 'extended'
-      desc = translate(lang, ENVIRONMENT_C2OF3)
+      desc = translate(lang, ENVIRONMENT_C1OF3)
     } else if (parseInt(stepId) >= 800 && parseInt(stepId) < 900) {
       title = translate(lang, ENVIRONMENT)
       customStyleClass = 'extended'
-      desc = translate(lang, ENVIRONMENT_C3OF3)
+      desc = translate(lang, ENVIRONMENT_C2OF3)
     } else if (parseInt(stepId) >= 900 && parseInt(stepId) < 1000) {
       title = translate(lang, TRANSPORATION)
       customStyleClass = 'extended'
-      desc = translate(lang, TRANSPORATION_C1OF3)
+      desc = translate(lang, TRANSPORATION_C3OF3)
     } else if (parseInt(stepId) >= 1000 && parseInt(stepId) < 1100) {
       title = translate(lang, TRANSPORATION)
       customStyleClass = 'extended'
-      desc = translate(lang, TRANSPORATION_C2OF3)
+      desc = translate(lang, TRANSPORATION_C1OF3)
     } else if (parseInt(stepId) >= 1100 && parseInt(stepId) < 1200) {
       title = translate(lang, TRANSPORATION)
       customStyleClass = 'extended'
-      desc = translate(lang, TRANSPORATION_C3OF3)
+      desc = translate(lang, TRANSPORATION_C2OF3)
     }
 
     return (

@@ -432,7 +432,7 @@ class SummaryView extends React.Component<Props, any> {
                   className="pill transportation"
                   onClick={() =>
                     this.props.history.push(
-                      `/scenario/900?lang=${queryString.parse(this.props.location.search).lang}`
+                      `/scenario/1000?lang=${queryString.parse(this.props.location.search).lang}`
                     )
                   }
                   href="#"
@@ -445,7 +445,7 @@ class SummaryView extends React.Component<Props, any> {
                   className="pill economy"
                   onClick={() =>
                     this.props.history.push(
-                      `/scenario/400?lang=${queryString.parse(this.props.location.search).lang}`
+                      `/scenario/500?lang=${queryString.parse(this.props.location.search).lang}`
                     )
                   }
                   href="#"
@@ -456,7 +456,7 @@ class SummaryView extends React.Component<Props, any> {
                   className="pill environment"
                   onClick={() =>
                     this.props.history.push(
-                      `/scenario/600?lang=${queryString.parse(this.props.location.search).lang}`
+                      `/scenario/700?lang=${queryString.parse(this.props.location.search).lang}`
                     )
                   }
                   href="#"

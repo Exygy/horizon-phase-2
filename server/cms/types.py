@@ -95,7 +95,7 @@ class StrategyChoiceSummary(ObjectType):
         step_id = info.context.args['step_id']
         session_id = info.context.args['session_id']
 
-        if step_id == 310:
+        if step_id == 206:
             try:
                 your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=102).step
                 if your_step.id == 103:
@@ -108,36 +108,38 @@ class StrategyChoiceSummary(ObjectType):
             except StrategyChoiceModel.DoesNotExist:
                 return -1
 
-        elif step_id == 511:
+        elif step_id == 406:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=403).step
-                if your_step.id == 404:
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=507).step
+                if your_step.id == 508:
                     return 0
-                if your_step.id == 405:
+                if your_step.id == 509:
+                    return 1
+                if your_step.id == 510:
+                    return 2
+                return -1
+            except StrategyChoiceModel.DoesNotExist:
+                return -1
+
+        elif step_id == 610:
+            try:
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=703).step
+                if your_step.id == 704:
+                    return 0
+                if your_step.id == 705:
                     return 1
                 return -1
             except StrategyChoiceModel.DoesNotExist:
                 return -1
 
-        elif step_id == 809:
+        elif step_id == 909:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=607).step
-                if your_step.id == 608:
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=1005).step
+                if your_step.id == 1006:
                     return 0
-                if your_step.id == 609:
+                if your_step.id == 1007:
                     return 1
-                return -1
-            except StrategyChoiceModel.DoesNotExist:
-                return -1
-
-        elif step_id == 1109:
-            try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=905).step
-                if your_step.id == 906:
-                    return 0
-                if your_step.id == 907:
-                    return 1
-                if your_step.id == 908:
+                if your_step.id == 1008:
                     return 2
                 return -1
             except StrategyChoiceModel.DoesNotExist:
@@ -147,7 +149,7 @@ class StrategyChoiceSummary(ObjectType):
         step_id = info.context.args['step_id']
         session_id = info.context.args['session_id']
 
-        if step_id == 310:
+        if step_id == 206:
             try:
                 your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=102).step
                 return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[103,104,105]).count()
@@ -156,28 +158,28 @@ class StrategyChoiceSummary(ObjectType):
             except ZeroDivisionError:
                 return 0
 
-        elif step_id == 511:
+        elif step_id == 406:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=403).step
-                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[404,405]).count()
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=507).step
+                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[508,509,510]).count()
             except StrategyChoiceModel.DoesNotExist:
                 return 0
             except ZeroDivisionError:
                 return 0
 
-        elif step_id == 809:
+        elif step_id == 610:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=607).step
-                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[608,609]).count()
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=703).step
+                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[704,705]).count()
             except StrategyChoiceModel.DoesNotExist:
                 return 0
             except ZeroDivisionError:
                 return 0
 
-        elif step_id == 1109:
+        elif step_id == 909:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=905).step
-                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[906,907,908]).count()
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=1005).step
+                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[1006,1007,1008]).count()
             except StrategyChoiceModel.DoesNotExist:
                 return 0
             except ZeroDivisionError:
@@ -186,14 +188,14 @@ class StrategyChoiceSummary(ObjectType):
     def resolve_c1_s1_name(self, info):
         step_id = info.context.args['step_id']
 
-        if step_id == 310:
+        if step_id == 206:
             step = StepModel.objects.get(id=102)
-        elif step_id == 511:
-            step = StepModel.objects.get(id=403)
-        elif step_id == 809:
-            step = StepModel.objects.get(id=607)
-        elif step_id == 1109:
-            step = StepModel.objects.get(id=905)
+        elif step_id == 406:
+            step = StepModel.objects.get(id=507)
+        elif step_id == 610:
+            step = StepModel.objects.get(id=703)
+        elif step_id == 909:
+            step = StepModel.objects.get(id=1005)
 
         return process_output(
                 info.context,
@@ -208,28 +210,28 @@ class StrategyChoiceSummary(ObjectType):
 
         try:
             # Housing
-            if step_id == 310:
+            if step_id == 206:
                 return StrategyChoiceModel.objects.filter(step_id=103).count() / StrategyChoiceModel.objects.filter(step_id__in=[103,104,105]).count()
-            elif step_id == 511:
-                return StrategyChoiceModel.objects.filter(step_id=404).count() / StrategyChoiceModel.objects.filter(step_id__in=[404,405]).count()
-            elif step_id == 809:
-                return StrategyChoiceModel.objects.filter(step_id=608).count() / StrategyChoiceModel.objects.filter(step_id__in=[608,609]).count()
-            elif step_id == 1109:
-                return StrategyChoiceModel.objects.filter(step_id=906).count() / StrategyChoiceModel.objects.filter(step_id__in=[906,907,908]).count()
+            elif step_id == 406:
+                return StrategyChoiceModel.objects.filter(step_id=508).count() / StrategyChoiceModel.objects.filter(step_id__in=[508,509,510]).count()
+            elif step_id == 610:
+                return StrategyChoiceModel.objects.filter(step_id=704).count() / StrategyChoiceModel.objects.filter(step_id__in=[704,705]).count()
+            elif step_id == 909:
+                return StrategyChoiceModel.objects.filter(step_id=1006).count() / StrategyChoiceModel.objects.filter(step_id__in=[1006,1007,1008]).count()
         except ZeroDivisionError:
             return 0
 
     def resolve_c1_s2_name(self, info):
         step_id = info.context.args['step_id']
 
-        if step_id == 310:
+        if step_id == 206:
             step = StepModel.objects.get(id=102)
-        elif step_id == 511:
-            step = StepModel.objects.get(id=403)
-        elif step_id == 809:
-            step = StepModel.objects.get(id=607)
-        elif step_id == 1109:
-            step = StepModel.objects.get(id=905)
+        elif step_id == 406:
+            step = StepModel.objects.get(id=507)
+        elif step_id == 610:
+            step = StepModel.objects.get(id=703)
+        elif step_id == 909:
+            step = StepModel.objects.get(id=1005)
 
         return process_output(
                 info.context,
@@ -244,28 +246,28 @@ class StrategyChoiceSummary(ObjectType):
 
         try:
             # Housing
-            if step_id == 310:
+            if step_id == 206:
                 return StrategyChoiceModel.objects.filter(step_id=104).count() / StrategyChoiceModel.objects.filter(step_id__in=[103,104,105]).count()
-            elif step_id == 511:
-                return StrategyChoiceModel.objects.filter(step_id=405).count() / StrategyChoiceModel.objects.filter(step_id__in=[404,405]).count()
-            elif step_id == 809:
-                return StrategyChoiceModel.objects.filter(step_id=609).count() / StrategyChoiceModel.objects.filter(step_id__in=[608,609]).count()
-            elif step_id == 1109:
-                return StrategyChoiceModel.objects.filter(step_id=907).count() / StrategyChoiceModel.objects.filter(step_id__in=[906,907,908]).count()
+            elif step_id == 406:
+                return StrategyChoiceModel.objects.filter(step_id=509).count() / StrategyChoiceModel.objects.filter(step_id__in=[508,509,510]).count()
+            elif step_id == 610:
+                return StrategyChoiceModel.objects.filter(step_id=705).count() / StrategyChoiceModel.objects.filter(step_id__in=[704,705]).count()
+            elif step_id == 909:
+                return StrategyChoiceModel.objects.filter(step_id=1007).count() / StrategyChoiceModel.objects.filter(step_id__in=[1006,1007,1008]).count()
         except ZeroDivisionError:
             return 0
 
     def resolve_c1_s3_name(self, info):
         step_id = info.context.args['step_id']
 
-        if step_id == 310:
+        if step_id == 206:
             step = StepModel.objects.get(id=102)
-        elif step_id == 511:
+        elif step_id == 406:
+            step = StepModel.objects.get(id=507)
+        elif step_id == 610:
             return None
-        elif step_id == 809:
-            return None
-        elif step_id == 1109:
-            step = StepModel.objects.get(id=905)
+        elif step_id == 909:
+            step = StepModel.objects.get(id=1005)
 
         return process_output(
                 info.context,
@@ -280,14 +282,14 @@ class StrategyChoiceSummary(ObjectType):
 
         try: 
             # Housing
-            if step_id == 310:
+            if step_id == 206:
                 return StrategyChoiceModel.objects.filter(step_id=105).count() / StrategyChoiceModel.objects.filter(step_id__in=[103,104,105]).count()
-            elif step_id == 511:
+            elif step_id == 406:
+                return StrategyChoiceModel.objects.filter(step_id=510).count() / StrategyChoiceModel.objects.filter(step_id__in=[508,509,510]).count()
+            elif step_id == 610:
                 return 0
-            elif step_id == 809:
-                return 0
-            elif step_id == 1109:
-                return StrategyChoiceModel.objects.filter(step_id=908).count() / StrategyChoiceModel.objects.filter(step_id__in=[906,907,908]).count()
+            elif step_id == 909:
+                return StrategyChoiceModel.objects.filter(step_id=1008).count() / StrategyChoiceModel.objects.filter(step_id__in=[1006,1007,1008]).count()
         except ZeroDivisionError:
             return 0
 
@@ -297,49 +299,49 @@ class StrategyChoiceSummary(ObjectType):
         step_id = info.context.args['step_id']
         session_id = info.context.args['session_id']
 
-        if step_id == 310:
+        if step_id == 206:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=203).step
-                if your_step.id == 204:
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=307).step
+                if your_step.id == 308:
                     return 0
-                if your_step.id == 205:
+                if your_step.id == 309:
                     return 1
                 return -1
             except StrategyChoiceModel.DoesNotExist:
                 return -1
 
-        elif step_id == 511:
+        elif step_id == 406:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=507).step
-                if your_step.id == 508:
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=403).step
+                if your_step.id == 404:
                     return 0
-                if your_step.id == 509:
+                if your_step.id == 405:
                     return 1
-                if your_step.id == 510:
+                return -1
+            except StrategyChoiceModel.DoesNotExist:
+                return -1
+
+        elif step_id == 610:
+            try:
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=805).step
+                if your_step.id == 806:
+                    return 0
+                if your_step.id == 807:
+                    return 1
+                if your_step.id == 808:
                     return 2
                 return -1
             except StrategyChoiceModel.DoesNotExist:
                 return -1
 
-        elif step_id == 809:
+        elif step_id == 909:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=703).step
-                if your_step.id == 704:
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=1105).step
+                if your_step.id == 1106:
                     return 0
-                if your_step.id == 705:
+                if your_step.id == 1107:
                     return 1
-                return -1
-            except StrategyChoiceModel.DoesNotExist:
-                return -1
-
-        elif step_id == 1109:
-            try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=1005).step
-                if your_step.id == 1006:
-                    return 0
-                if your_step.id == 1007:
-                    return 1
-                if your_step.id == 1008:
+                if your_step.id == 1108:
                     return 2
                 return -1
             except StrategyChoiceModel.DoesNotExist:
@@ -360,45 +362,45 @@ class StrategyChoiceSummary(ObjectType):
         step_id = info.context.args['step_id']
         session_id = info.context.args['session_id']
 
-        if step_id == 310:
+        if step_id == 206:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=203).step
-                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=307).step
+                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
             except StrategyChoiceModel.DoesNotExist:
                 return 0
 
-        elif step_id == 511:
+        elif step_id == 406:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=507).step
-                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[508,509,510]).count()
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=403).step
+                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[404,405]).count()
             except StrategyChoiceModel.DoesNotExist:
                 return 0
 
-        elif step_id == 809:
+        elif step_id == 610:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=703).step
-                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[704,705]).count()
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=805).step
+                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[806,807,808]).count()
             except StrategyChoiceModel.DoesNotExist:
                 return 0
 
-        elif step_id == 1109:
+        elif step_id == 909:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=1005).step
-                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[1006,1007,1008]).count()
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=1105).step
+                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[1106,1107,1108]).count()
             except StrategyChoiceModel.DoesNotExist:
                 return 0
 
     def resolve_c2_s1_name(self, info):
         step_id = info.context.args['step_id']
 
-        if step_id == 310:
-            step = StepModel.objects.get(id=203)
-        elif step_id == 511:
-            step = StepModel.objects.get(id=507)
-        elif step_id == 809:
-            step = StepModel.objects.get(id=703)
-        elif step_id == 1109:
-            step = StepModel.objects.get(id=1005)
+        if step_id == 206:
+            step = StepModel.objects.get(id=307)
+        elif step_id == 406:
+            step = StepModel.objects.get(id=403)
+        elif step_id == 610:
+            step = StepModel.objects.get(id=805)
+        elif step_id == 909:
+            step = StepModel.objects.get(id=1105)
         return process_output(
                 info.context,
                 step.public_field_2_en,
@@ -412,28 +414,28 @@ class StrategyChoiceSummary(ObjectType):
 
         try:
             # Housing
-            if step_id == 310:
-                return StrategyChoiceModel.objects.filter(step_id=204).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
-            elif step_id == 511:
-                return StrategyChoiceModel.objects.filter(step_id=508).count() / StrategyChoiceModel.objects.filter(step_id__in=[508,509,510]).count()
-            elif step_id == 809:
-                return StrategyChoiceModel.objects.filter(step_id=704).count() / StrategyChoiceModel.objects.filter(step_id__in=[704,705]).count()
-            elif step_id == 1109:
-                return StrategyChoiceModel.objects.filter(step_id=1006).count() / StrategyChoiceModel.objects.filter(step_id__in=[1006,1007,1008]).count()
+            if step_id == 206:
+                return StrategyChoiceModel.objects.filter(step_id=308).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
+            elif step_id == 406:
+                return StrategyChoiceModel.objects.filter(step_id=404).count() / StrategyChoiceModel.objects.filter(step_id__in=[404,405]).count()
+            elif step_id == 610:
+                return StrategyChoiceModel.objects.filter(step_id=806).count() / StrategyChoiceModel.objects.filter(step_id__in=[806,807,808]).count()
+            elif step_id == 909:
+                return StrategyChoiceModel.objects.filter(step_id=1106).count() / StrategyChoiceModel.objects.filter(step_id__in=[1106,1107,1108]).count()
         except ZeroDivisionError:
             return 0
 
     def resolve_c2_s2_name(self, info):
         step_id = info.context.args['step_id']
 
-        if step_id == 310:
-            step = StepModel.objects.get(id=203)
-        elif step_id == 511:
-            step = StepModel.objects.get(id=507)
-        elif step_id == 809:
-            step = StepModel.objects.get(id=703)
-        elif step_id == 1109:
-            step = StepModel.objects.get(id=1005)
+        if step_id == 206:
+            step = StepModel.objects.get(id=307)
+        elif step_id == 406:
+            step = StepModel.objects.get(id=403)
+        elif step_id == 610:
+            step = StepModel.objects.get(id=805)
+        elif step_id == 909:
+            step = StepModel.objects.get(id=1105)
         return process_output(
                 info.context,
                 step.public_field_8_en,
@@ -447,28 +449,28 @@ class StrategyChoiceSummary(ObjectType):
 
         try:
             # Housing
-            if step_id == 310:
-                return StrategyChoiceModel.objects.filter(step_id=205).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
-            elif step_id == 511:
-                return StrategyChoiceModel.objects.filter(step_id=509).count() / StrategyChoiceModel.objects.filter(step_id__in=[508,509,510]).count()
-            elif step_id == 809:
-                return StrategyChoiceModel.objects.filter(step_id=705).count() / StrategyChoiceModel.objects.filter(step_id__in=[704,705]).count()
-            elif step_id == 1109:
-                return StrategyChoiceModel.objects.filter(step_id=1007).count() / StrategyChoiceModel.objects.filter(step_id__in=[1006,1007,1008]).count()
+            if step_id == 206:
+                return StrategyChoiceModel.objects.filter(step_id=309).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
+            elif step_id == 406:
+                return StrategyChoiceModel.objects.filter(step_id=405).count() / StrategyChoiceModel.objects.filter(step_id__in=[404,405]).count()
+            elif step_id == 610:
+                return StrategyChoiceModel.objects.filter(step_id=807).count() / StrategyChoiceModel.objects.filter(step_id__in=[806,807,808]).count()
+            elif step_id == 909:
+                return StrategyChoiceModel.objects.filter(step_id=1107).count() / StrategyChoiceModel.objects.filter(step_id__in=[1106,1107,1108]).count()
         except ZeroDivisionError:
             return 0
 
     def resolve_c2_s3_name(self, info):
         step_id = info.context.args['step_id']
 
-        if step_id == 310:
+        if step_id == 206:
             return None
-        elif step_id == 511:
-            step = StepModel.objects.get(id=507)
-        elif step_id == 809:
+        elif step_id == 406:
             return None
-        elif step_id == 1109:
-            step = StepModel.objects.get(id=1005)
+        elif step_id == 610:
+            step = StepModel.objects.get(id=805)
+        elif step_id == 909:
+            step = StepModel.objects.get(id=1105)
         return process_output(
                 info.context,
                 step.public_field_14_en,
@@ -482,14 +484,14 @@ class StrategyChoiceSummary(ObjectType):
 
         try:
             # Housing
-            if step_id == 310:
+            if step_id == 206:
                 return None
-            elif step_id == 511:
-                return StrategyChoiceModel.objects.filter(step_id=510).count() / StrategyChoiceModel.objects.filter(step_id__in=[508,509,510]).count()
-            elif step_id == 809:
+            elif step_id == 406:
                 return None
-            elif step_id == 1109:
-                return StrategyChoiceModel.objects.filter(step_id=1008).count() / StrategyChoiceModel.objects.filter(step_id__in=[1006,1007,1008]).count()
+            elif step_id == 610:
+                return StrategyChoiceModel.objects.filter(step_id=808).count() / StrategyChoiceModel.objects.filter(step_id__in=[806,807,808]).count()
+            elif step_id == 909:
+                return StrategyChoiceModel.objects.filter(step_id=1108).count() / StrategyChoiceModel.objects.filter(step_id__in=[1106,1107,1108]).count()
         except ZeroDivisionError:
             return 0
 
@@ -510,24 +512,24 @@ class StrategyChoiceSummary(ObjectType):
         step_id = info.context.args['step_id']
         session_id = info.context.args['session_id']
 
-        if step_id == 310:
+        if step_id == 206:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=307).step
-                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=203).step
+                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
             except StrategyChoiceModel.DoesNotExist:
                 return 0
-        elif step_id == 511:
+        elif step_id == 406:
             return 0
-        elif step_id == 809:
+        elif step_id == 610:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=805).step
-                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[806,807,808]).count()
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=607).step
+                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[608,609]).count()
             except StrategyChoiceModel.DoesNotExist:
                 return 0
-        elif step_id == 1109:
+        elif step_id == 909:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=1105).step
-                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[1106,1107,1108]).count()
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=905).step
+                return StrategyChoiceModel.objects.filter(step_id=your_step).count() / StrategyChoiceModel.objects.filter(step_id__in=[906,907,908]).count()
             except StrategyChoiceModel.DoesNotExist:
                 return 0
 
@@ -535,38 +537,36 @@ class StrategyChoiceSummary(ObjectType):
         step_id = info.context.args['step_id']
         session_id = info.context.args['session_id']
 
-        if step_id == 310:
+        if step_id == 206:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=307).step
-                if your_step.id == 308:
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=203).step
+                if your_step.id == 204:
                     return 0
-                if your_step.id == 309:
+                if your_step.id == 205:
                     return 1
                 return -1
             except StrategyChoiceModel.DoesNotExist:
                 return -1
-        elif step_id == 511:
+        elif step_id == 406:
             return 0
-        elif step_id == 809:
+        elif step_id == 610:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=805).step
-                if your_step.id == 806:
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=607).step
+                if your_step.id == 608:
                     return 0
-                elif your_step.id == 807:
+                elif your_step.id == 609:
                     return 1
-                elif your_step.id == 808:
-                    return 2
                 return -1
             except StrategyChoiceModel.DoesNotExist:
                 return -1
-        elif step_id == 1109:
+        elif step_id == 909:
             try:
-                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=1105).step
-                if your_step.id == 1106:
+                your_step = StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=905).step
+                if your_step.id == 906:
                     return 0
-                elif your_step.id == 1107:
+                elif your_step.id == 907:
                     return 1
-                elif your_step.id == 1108:
+                elif your_step.id == 908:
                     return 2
                 return -1
             except StrategyChoiceModel.DoesNotExist:
@@ -575,14 +575,14 @@ class StrategyChoiceSummary(ObjectType):
     def resolve_c3_s1_name(self, info):
         step_id = info.context.args['step_id']
 
-        if step_id == 310:
-            step = StepModel.objects.get(id=307)
-        elif step_id == 511:
+        if step_id == 206:
+            step = StepModel.objects.get(id=203)
+        elif step_id == 406:
             return None
-        elif step_id == 809:
-            step = StepModel.objects.get(id=805)
-        elif step_id == 1109:
-            step = StepModel.objects.get(id=1105)
+        elif step_id == 610:
+            step = StepModel.objects.get(id=607)
+        elif step_id == 909:
+            step = StepModel.objects.get(id=905)
         return process_output(
                 info.context,
                 step.public_field_2_en,
@@ -596,28 +596,28 @@ class StrategyChoiceSummary(ObjectType):
 
         try:
             # Housing
-            if step_id == 310:
-                return StrategyChoiceModel.objects.filter(step_id=308).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
-            elif step_id == 511:
+            if step_id == 206:
+                return StrategyChoiceModel.objects.filter(step_id=204).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
+            elif step_id == 406:
                 return 0
-            elif step_id == 809:
-                return StrategyChoiceModel.objects.filter(step_id=806).count() / StrategyChoiceModel.objects.filter(step_id__in=[806,807,808]).count()
-            elif step_id == 1109:
-                return StrategyChoiceModel.objects.filter(step_id=1106).count() / StrategyChoiceModel.objects.filter(step_id__in=[1106,1107,1108]).count()
+            elif step_id == 610:
+                return StrategyChoiceModel.objects.filter(step_id=608).count() / StrategyChoiceModel.objects.filter(step_id__in=[608,609]).count()
+            elif step_id == 909:
+                return StrategyChoiceModel.objects.filter(step_id=906).count() / StrategyChoiceModel.objects.filter(step_id__in=[906,907,908]).count()
         except ZeroDivisionError:
             return 0
 
     def resolve_c3_s2_name(self, info):
         step_id = info.context.args['step_id']
 
-        if step_id == 310:
-            step = StepModel.objects.get(id=307)
-        elif step_id == 511:
+        if step_id == 206:
+            step = StepModel.objects.get(id=203)
+        elif step_id == 406:
             return None
-        elif step_id == 809:
-            step = StepModel.objects.get(id=805)
-        elif step_id == 1109:
-            step = StepModel.objects.get(id=1105)
+        elif step_id == 610:
+            step = StepModel.objects.get(id=607)
+        elif step_id == 909:
+            step = StepModel.objects.get(id=905)
         return process_output(
                 info.context,
                 step.public_field_8_en,
@@ -631,28 +631,28 @@ class StrategyChoiceSummary(ObjectType):
 
         try:
             # Housing
-            if step_id == 310:
-                return StrategyChoiceModel.objects.filter(step_id=309).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
-            elif step_id == 511:
+            if step_id == 206:
+                return StrategyChoiceModel.objects.filter(step_id=205).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
+            elif step_id == 406:
                 return 0
-            elif step_id == 809:
-                return StrategyChoiceModel.objects.filter(step_id=807).count() / StrategyChoiceModel.objects.filter(step_id__in=[806,807,808]).count()
-            elif step_id == 1109:
-                return StrategyChoiceModel.objects.filter(step_id=1107).count() / StrategyChoiceModel.objects.filter(step_id__in=[1106,1107,1108]).count()
+            elif step_id == 610:
+                return StrategyChoiceModel.objects.filter(step_id=609).count() / StrategyChoiceModel.objects.filter(step_id__in=[608,609]).count()
+            elif step_id == 909:
+                return StrategyChoiceModel.objects.filter(step_id=907).count() / StrategyChoiceModel.objects.filter(step_id__in=[906,907,908]).count()
         except ZeroDivisionError:
             return 0
 
     def resolve_c3_s3_name(self, info):
         step_id = info.context.args['step_id']
 
-        if step_id == 310:
+        if step_id == 206:
             return None
-        elif step_id == 511:
+        elif step_id == 406:
             return None
-        elif step_id == 809:
-            step = StepModel.objects.get(id=805)
-        elif step_id == 1109:
-            step = StepModel.objects.get(id=1105)
+        elif step_id == 610:
+            step = StepModel.objects.get(id=607)
+        elif step_id == 909:
+            step = StepModel.objects.get(id=905)
 
         return process_output(
                 info.context,
@@ -667,75 +667,16 @@ class StrategyChoiceSummary(ObjectType):
 
         try:
             # Housing
-            if step_id == 310:
+            if step_id == 206:
                 return None
-            elif step_id == 511:
+            elif step_id == 406:
                 return None
-            elif step_id == 809:
-                return StrategyChoiceModel.objects.filter(step_id=808).count() / StrategyChoiceModel.objects.filter(step_id__in=[806,807,808]).count()
-            elif step_id == 1109:
-                return StrategyChoiceModel.objects.filter(step_id=1108).count() / StrategyChoiceModel.objects.filter(step_id__in=[1106,1107,1108]).count()
+            elif step_id == 610:
+                return None
+            elif step_id == 909:
+                return StrategyChoiceModel.objects.filter(step_id=908).count() / StrategyChoiceModel.objects.filter(step_id__in=[906,907,908]).count()
         except ZeroDivisionError:
             return 0
-
-    """
-    def resolve_you_c1(self, info):
-        step_id = info.context.args['step_id']
-        session_id = info.context.args['session_id']
-
-        # Housing
-        if step_id == 310:
-            return StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=102).step.public_field_2_en
-
-    def resolve_you_c2(self, info):
-        step_id = info.context.args['step_id']
-        session_id = info.context.args['session_id']
-
-        # Housing
-        if step_id == 310:
-            return StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=203).step.public_field_2_en
-
-    def resolve_you_c3(self, info):
-        step_id = info.context.args['step_id']
-        session_id = info.context.args['session_id']
-
-        # Housing
-        if step_id == 310:
-            return StrategyChoiceModel.objects.get(session_id=session_id, origin_step_id=307).step.public_field_2_en
-
-
-    def resolve_c2_s1_percentage(self, info):
-        step_id = info.context.args['step_id']
-        session_id = info.context.args['session_id']
-
-        # Housing
-        if step_id == 310:
-            return StrategyChoiceModel.objects.filter(step_id=204).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
-
-    def resolve_c2_s2_percentage(self, info):
-        step_id = info.context.args['step_id']
-        session_id = info.context.args['session_id']
-
-        # Housing
-        if step_id == 310:
-            return StrategyChoiceModel.objects.filter(step_id=205).count() / StrategyChoiceModel.objects.filter(step_id__in=[204,205]).count()
-
-    def resolve_c3_s1_percentage(self, info):
-        step_id = info.context.args['step_id']
-        session_id = info.context.args['session_id']
-
-        # Housing
-        if step_id == 310:
-            return StrategyChoiceModel.objects.filter(step_id=308).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
-
-    def resolve_c3_s2_percentage(self, info):
-        step_id = info.context.args['step_id']
-        session_id = info.context.args['session_id']
-
-        # Housing
-        if step_id == 310:
-            return StrategyChoiceModel.objects.filter(step_id=309).count() / StrategyChoiceModel.objects.filter(step_id__in=[308,309]).count()
-    """
 
 
 class Step(DjangoObjectType):
