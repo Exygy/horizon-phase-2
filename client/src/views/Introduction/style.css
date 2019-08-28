@@ -16,10 +16,18 @@
   margin-right: 20px;
 }
 
-#introduction-view .cb-top {
+#introduction-view .cb-bottom {
   margin-top: 30px;
 }
 
-#introduction-view .cb-bottom {
-  margin-top: 30px;
+@media only screen and (max-width: 480px) {
+  #introduction-view .cb-top {
+    margin-top: 40%;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  #introduction-view .cb-top {
+    margin-top: 30px;
+  }
 }

@@ -92,17 +92,17 @@ class StrategyFeedbackView extends React.Component<Props, {}> {
                   this.processText(step && step.publicField4)
                 )}
               />
-            </div>
-            <div className="custom-btn-holder">
-              <Button
-                className="btn primary"
-                as={Link}
-                to={`${step && step.privateField1}?lang=${
-                  queryString.parse(this.props.location.search).lang
-                }`}
-              >
-                {step && step.publicField5}
-              </Button>
+              <div className="custom-btn-holder">
+                <Button
+                  className="btn primary"
+                  as={Link}
+                  to={`${step && step.privateField1}?lang=${
+                    queryString.parse(this.props.location.search).lang
+                  }`}
+                >
+                  {step && step.publicField5}
+                </Button>
+              </div>
             </div>
           </Form>
         </Main>

@@ -161,16 +161,14 @@
         height: 100%;
     }
 
+    .btn-holder {
+        width: 100%;
+        margin-top: 40px;
+        text-align: center;
+    }
+
     // Mobile only
     @media only screen and (max-width: 480px) {
-        .btn-holder {
-            bottom: 20px;
-            position: absolute;
-            width: 100%;
-            margin-top: 40px;
-            text-align: center;
-        }
-
         .btn-holder-bottom {
             position: fixed;
             width: 100%;
@@ -180,12 +178,6 @@
     }
 
     @media only screen and (min-width: 480px) {
-        .btn-holder {
-            width: 100%;
-            margin-top: 40px;
-            text-align: center;
-        }
-
         .btn-holder-bottom {
             width: 100%;
             text-align: center;

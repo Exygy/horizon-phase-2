@@ -126,11 +126,11 @@ class OnboardingSurveyView extends React.Component<Props, State> {
                 placeholder="Type your zipcode"
                 onChange={this.onFieldChange}
               />
-            </div>
-            <div className="btn-holder">
-              <Button className="btn primary" disabled={isSubmitting}>
-                {step && step.publicField6}
-              </Button>
+              <div className="btn-holder">
+                <Button className="btn primary" disabled={isSubmitting}>
+                  {step && step.publicField6}
+                </Button>
+              </div>
             </div>
           </Form>
         </Main>

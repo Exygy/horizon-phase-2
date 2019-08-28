@@ -134,14 +134,12 @@
 .main .forma {
   height: 100%;
 }
+.main .btn-holder {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+}
 @media only screen and (max-width: 480px) {
-  .main .btn-holder {
-    bottom: 20px;
-    position: absolute;
-    width: 100%;
-    margin-top: 40px;
-    text-align: center;
-  }
   .main .btn-holder-bottom {
     position: fixed;
     width: 100%;
@@ -150,11 +148,6 @@
   }
 }
 @media only screen and (min-width: 480px) {
-  .main .btn-holder {
-    width: 100%;
-    margin-top: 40px;
-    text-align: center;
-  }
   .main .btn-holder-bottom {
     width: 100%;
     text-align: center;

@@ -54,17 +54,17 @@ class OnboardingWelcomeView extends React.Component<Props, {}> {
                 className="large"
                 dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}
               />
-            </div>
-            <div className="btn-holder">
-              <Button
-                className="btn primary"
-                as={Link}
-                to={`/onboarding/challenges/10001?lang=${
-                  queryString.parse(this.props.location.search).lang
-                }`}
-              >
-                {step && step.publicField3}
-              </Button>
+              <div className="btn-holder">
+                <Button
+                  className="btn primary"
+                  as={Link}
+                  to={`/onboarding/challenges/10001?lang=${
+                    queryString.parse(this.props.location.search).lang
+                  }`}
+                >
+                  {step && step.publicField3}
+                </Button>
+              </div>
             </div>
           </Form>
         </Main>

@@ -18,11 +18,20 @@
         margin-right: 20px;
     }
 
-    .cb-top {
+    .cb-bottom {
         margin-top: 30px;
     }
 
-    .cb-bottom {
-        margin-top: 30px;
+    // Mobile only
+    @media only screen and (max-width: 480px) {
+        .cb-top {
+            margin-top: 40%;
+        }
+    }
+
+    @media only screen and (min-width: 480px) {
+        .cb-top {
+            margin-top: 30px;
+        }
     }
 }
