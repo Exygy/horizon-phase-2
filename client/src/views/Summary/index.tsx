@@ -8,10 +8,8 @@ import {
   Button,
   Container,
   Grid,
-  Form,
   Header,
   Icon,
-  Input,
   Image,
   Label,
   Menu,
@@ -21,6 +19,7 @@ import {
   Sidebar,
   Transition,
 } from 'semantic-ui-react'
+import { Form, Input } from 'formsy-semantic-ui-react'
 import { stepQuery } from 'src/Queries'
 import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/Types'
 import { constructInnerHTML, getCoinCount, addCompletedCookie, checkIfCompleted } from 'src/Helpers'
@@ -71,6 +70,10 @@ export const strategyChoiceSummaryQuery = gql`
       c3S2Percentage
       c3S3Name
       c3S3Percentage
+
+      feedbackTitle
+      feedbackSubtitle
+      feedbackCta
     }
   }
 `
@@ -114,6 +117,33 @@ export type StrategyChoiceSummary = {
   c3S2Percentage: number
   c3S3Name: string
   c3S3Percentage: number
+
+  feedbackTitle: string
+  feedbackSubtitle: string
+  feedbackCta: string
+}
+
+const feedbackMutation = gql`
+  mutation createCategoryFeedback($text: String!, $sessionId: UUID!, $stepId: Int!) {
+    createCategoryFeedback(text: $text, sessionId: $sessionId, stepId: $stepId) {
+      error
+    }
+  }
+`
+
+type State = {
+  isSubmitting: boolean
+  feedbackText: string
+  errorMsg: string
+}
+
+type FeedbackResponse = {
+  error: string
+}
+
+type FeedbackMutationParams = {
+  feedbackText: string
+  sessionId: string
 }
 
 export type StrategyChoiceSummaryResponse = {
@@ -125,22 +155,65 @@ type StepQueryProps = ChildDataProps<
   StrategyChoiceSummaryQueryParams,
   StrategyChoiceSummaryResponse
 >
-type Props = StepQueryProps & OwnProps
+type Props = StepQueryProps & OwnProps & { feedbackMutation: Function }
 
-class SummaryView extends React.Component<Props, any> {
+class SummaryView extends React.Component<Props, State> {
+  state = {
+    isSubmitting: false,
+    feedbackText: '',
+    errorMsg: '',
+  }
+
   componentDidMount = () => {}
 
   componentWillMount = () => {
     addCompletedCookie(this.props.match.params.stepId)
   }
 
+  onValidSubmit = async () => {
+    this.setState({ errorMsg: '', isSubmitting: true })
+    const { feedbackText } = this.state
+
+    let { data } = await this.props.feedbackMutation({
+      variables: {
+        text: feedbackText,
+        sessionId: cookie.load('session_id'),
+        stepId: parseInt(this.props.match.params.stepId),
+      },
+    })
+    this.setState({ isSubmitting: false })
+
+    if (!data.createCategoryFeedback.error) {
+      this.props.history.push(
+        `/onboarding/choose-category/10006?lang=${
+          queryString.parse(this.props.location.search).lang
+        }&submittedfeedback=true`
+      )
+    } else {
+      console.error('Error')
+    }
+  }
+
+  onFieldChange = (e: React.FormEvent<HTMLTextAreaElement>) => {
+    const { name, value, type } = e.currentTarget
+    this.setState(prevState => ({
+      ...prevState,
+      [name]: value,
+    }))
+  }
+
   render() {
     const { strategyChoiceSummary, loading } = this.props.data
+    const { feedbackText, isSubmitting, errorMsg } = this.state
 
     return (
       <div className="view" id="summary-view">
         <Main stepId={this.props.match.params.stepId}>
-          <Form className="forma" loading={loading}>
+          <Form
+            className="forma"
+            loading={loading || isSubmitting}
+            onValidSubmit={this.onValidSubmit}
+          >
             <CustomHeader
               stepId={this.props.match.params.stepId}
               lang={queryString.parse(this.props.location.search).lang}
@@ -466,6 +539,26 @@ class SummaryView extends React.Component<Props, any> {
                   </h2>
                 </a>
               </div>
+              <div className="feedback">
+                <h1>{strategyChoiceSummary && strategyChoiceSummary.feedbackTitle}</h1>
+                <p className="sub-heading">
+                  {strategyChoiceSummary && strategyChoiceSummary.feedbackSubtitle}
+                </p>
+                <Form.TextArea
+                  name="feedbackText"
+                  className="ta"
+                  label=""
+                  required
+                  value={feedbackText}
+                  placeholder=""
+                  onChange={this.onFieldChange}
+                />
+                <div className="btn-holder-feedback">
+                  <Button className="btn primary" disabled={isSubmitting}>
+                    {strategyChoiceSummary && strategyChoiceSummary.feedbackCta}
+                  </Button>
+                </div>
+              </div>
             </div>
           </Form>
         </Main>
@@ -474,15 +567,18 @@ class SummaryView extends React.Component<Props, any> {
   }
 }
 
-export default graphql<Props, StrategyChoiceSummaryResponse>(strategyChoiceSummaryQuery, {
-  options: (props: OwnProps): QueryOpts<StrategyChoiceSummaryQueryParams> => ({
-    variables: {
-      id: parseInt(props.match.params.stepId),
-      sessionId: cookie.load('session_id'),
-      lang: queryString.parse(props.location.search).lang
-        ? queryString.parse(props.location.search).lang
-        : 'en',
-      renderMdToHtml: true,
-    },
-  }),
-})(SummaryView)
+export default compose(
+  graphql(feedbackMutation, { name: 'feedbackMutation' }),
+  graphql<Props, StrategyChoiceSummaryResponse>(strategyChoiceSummaryQuery, {
+    options: (props: OwnProps): QueryOpts<StrategyChoiceSummaryQueryParams> => ({
+      variables: {
+        id: parseInt(props.match.params.stepId),
+        sessionId: cookie.load('session_id'),
+        lang: queryString.parse(props.location.search).lang
+          ? queryString.parse(props.location.search).lang
+          : 'en',
+        renderMdToHtml: true,
+      },
+    }),
+  })
+)(SummaryView)

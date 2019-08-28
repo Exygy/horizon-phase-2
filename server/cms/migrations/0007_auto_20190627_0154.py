@@ -18,7 +18,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='step',
             name='private_field_1_meta_description',
-            field=models.CharField(blank=True, max_length=128, null=True, verbose_name='Private field 1 Meta Description'),
+            field=models.CharField(blank=True, max_length=128, null=True,
+                                   verbose_name='Private field 1 Meta Description'),
         ),
         migrations.AddField(
             model_name='step',
@@ -28,7 +29,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='step',
             name='private_field_2_meta_description',
-            field=models.CharField(blank=True, max_length=128, null=True, verbose_name='Private field 2 Meta Description'),
+            field=models.CharField(blank=True, max_length=128, null=True,
+                                   verbose_name='Private field 2 Meta Description'),
         ),
         migrations.AddField(
             model_name='step',
@@ -38,6 +40,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='step',
             name='private_field_3_meta_description',
-            field=models.CharField(blank=True, max_length=128, null=True, verbose_name='Private field 3 Meta Description'),
+            field=models.CharField(blank=True, max_length=128, null=True,
+                                   verbose_name='Private field 3 Meta Description'),
         ),
     ]

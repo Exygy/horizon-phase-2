@@ -15,6 +15,7 @@ import {
   Image,
   Label,
   Menu,
+  Message,
   Responsive,
   Segment,
   Sidebar,
@@ -48,6 +49,12 @@ class OnboardingChooseCategoryView extends React.Component<Props, {}> {
               stepId={this.props.match.params.stepId}
               lang={queryString.parse(this.props.location.search).lang}
             />
+            {queryString.parse(this.props.location.search).submittedfeedback && (
+              <Message positive className="msg">
+                <Message.Header>{step && step.publicField3}</Message.Header>
+                <p>{step && step.publicField4}</p>
+              </Message>
+            )}
             <div className="top-text">
               <h1 className="">{step && step.publicField1}</h1>
               <p

@@ -7,6 +7,12 @@
   margin-bottom: 0px;
 }
 
+#onboarding-choose-category-view .msg {
+  width: 350px;
+  margin: 0px auto;
+  margin-top: 30px;
+}
+
 #onboarding-choose-category-view .pill {
   display: flex;
   align-items: center;

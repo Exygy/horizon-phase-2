@@ -28,7 +28,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='step',
             name='public_field_10_meta_description',
-            field=models.CharField(blank=True, max_length=128, null=True, verbose_name='Public field 10 Meta Description'),
+            field=models.CharField(blank=True, max_length=128, null=True,
+                                   verbose_name='Public field 10 Meta Description'),
         ),
         migrations.AddField(
             model_name='step',
@@ -48,7 +49,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='step',
             name='public_field_11_meta_description',
-            field=models.CharField(blank=True, max_length=128, null=True, verbose_name='Public field 11 Meta Description'),
+            field=models.CharField(blank=True, max_length=128, null=True,
+                                   verbose_name='Public field 11 Meta Description'),
         ),
         migrations.AddField(
             model_name='step',
@@ -68,7 +70,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='step',
             name='public_field_12_meta_description',
-            field=models.CharField(blank=True, max_length=128, null=True, verbose_name='Public field 12 Meta Description'),
+            field=models.CharField(blank=True, max_length=128, null=True,
+                                   verbose_name='Public field 12 Meta Description'),
         ),
         migrations.AddField(
             model_name='step',
@@ -88,7 +91,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='step',
             name='public_field_13_meta_description',
-            field=models.CharField(blank=True, max_length=128, null=True, verbose_name='Public field 13 Meta Description'),
+            field=models.CharField(blank=True, max_length=128, null=True,
+                                   verbose_name='Public field 13 Meta Description'),
         ),
         migrations.AddField(
             model_name='step',
@@ -108,7 +112,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='step',
             name='public_field_14_meta_description',
-            field=models.CharField(blank=True, max_length=128, null=True, verbose_name='Public field 14 Meta Description'),
+            field=models.CharField(blank=True, max_length=128, null=True,
+                                   verbose_name='Public field 14 Meta Description'),
         ),
         migrations.AddField(
             model_name='step',
@@ -128,7 +133,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='step',
             name='public_field_15_meta_description',
-            field=models.CharField(blank=True, max_length=128, null=True, verbose_name='Public field 15 Meta Description'),
+            field=models.CharField(blank=True, max_length=128, null=True,
+                                   verbose_name='Public field 15 Meta Description'),
         ),
         migrations.AddField(
             model_name='step',
@@ -148,7 +154,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='step',
             name='public_field_16_meta_description',
-            field=models.CharField(blank=True, max_length=128, null=True, verbose_name='Public field 16 Meta Description'),
+            field=models.CharField(blank=True, max_length=128, null=True,
+                                   verbose_name='Public field 16 Meta Description'),
         ),
         migrations.AddField(
             model_name='step',
@@ -168,6 +175,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='step',
             name='public_field_9_meta_description',
-            field=models.CharField(blank=True, max_length=128, null=True, verbose_name='Public field 9 Meta Description'),
+            field=models.CharField(blank=True, max_length=128, null=True,
+                                   verbose_name='Public field 9 Meta Description'),
         ),
     ]

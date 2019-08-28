@@ -24,7 +24,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='strategychoice',
             name='origin_step',
-            field=models.ForeignKey(default=None, on_delete=django.db.models.deletion.CASCADE, related_name='origin', to='cms.Step'),
+            field=models.ForeignKey(default=None, on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='origin', to='cms.Step'),
             preserve_default=False,
         ),
     ]

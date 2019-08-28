@@ -5,7 +5,6 @@ import { Redirect, BrowserRouter as Router, Route } from 'react-router-dom'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
-import PostListView from './views/PostList/index'
 import ScenarioView from './views/Scenario/index'
 import CharacterView from './views/Character/index'
 import MakeDecisionView from './views/MakeDecision/index'
@@ -92,7 +91,6 @@ function App() {
             path="/onboarding/choose-category/:stepId"
             component={OnboardingChooseCategoryView}
           />
-          <RequiresCookieRoute exact path="/kitchensink" component={PostListView} />
           <RequiresCookieRoute exact path="/scenario/:stepId" component={ScenarioView} />
           <RequiresCookieRoute exact path="/character/:stepId" component={CharacterView} />
           <RequiresCookieRoute exact path="/make-decision/:stepId" component={MakeDecisionView} />

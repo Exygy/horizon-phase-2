@@ -67,6 +67,19 @@
   }
 }
 
+#summary-view .feedback {
+  margin-top: 81px;
+}
+#summary-view .feedback textarea {
+  width: 330px;
+  height: 185px;
+}
+#summary-view .feedback .ta,
+#summary-view .feedback .sub-heading,
+#summary-view .feedback .btn-holder-feedback {
+  text-align: center;
+}
+
 #summary-view .pill {
   display: flex;
   align-items: center;

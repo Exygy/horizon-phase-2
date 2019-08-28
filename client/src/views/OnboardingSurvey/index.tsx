@@ -102,7 +102,11 @@ class OnboardingSurveyView extends React.Component<Props, State> {
     return (
       <div className="view" id="onboarding-survey-view">
         <Main stepId={this.props.match.params.stepId}>
-          <Form className="forma" loading={isSubmitting} onValidSubmit={this.onValidSubmit}>
+          <Form
+            className="forma"
+            loading={loading || isSubmitting}
+            onValidSubmit={this.onValidSubmit}
+          >
             <CustomHeader
               stepId={this.props.match.params.stepId}
               lang={queryString.parse(this.props.location.search).lang}
