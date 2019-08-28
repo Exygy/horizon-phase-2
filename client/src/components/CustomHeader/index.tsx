@@ -19,6 +19,7 @@ import {
   TRANSPORATION_C2OF3,
   TRANSPORATION_C3OF3,
   TRANSPORATION,
+  BACK,
 } from 'src/Translate'
 import { Icon } from 'semantic-ui-react'
 import { RouteComponentProps, withRouter } from 'react-router'
@@ -28,6 +29,8 @@ type Props = {
   lang: string
   desc?: string
 }
+
+const queryString = require('query-string')
 
 class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> {
   goBack = () => {
@@ -116,7 +119,7 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
         {parseInt(stepId) !== 20000 && (
           <a className="back-btn" href="#" onClick={this.goBack}>
             <Icon name="arrow left" />
-            Back
+            {translate(queryString.parse(this.props.location.search).lang, BACK)}
           </a>
         )}
         <p>

@@ -17,6 +17,21 @@ export const TRANSPORATION_C3OF3 = 'TRANSPORATION_C3OF3'
 export const YOU_SELECTED = 'YOU_SELECTED'
 export const HOW_IT_AFFECTS_BAYVILLE = 'HOW_IT_AFFECTS_BAYVILLE'
 export const REMAINING_BUDGET = 'REMAINING_BUDGET'
+export const REMAINING = 'REMAINING'
+export const MIN_AGO = 'MIN_AGO'
+export const CHOOSE_ONE_OF_THE = 'CHOOSE_ONE_OF_THE'
+export const FOLLOWING_STRATEGIES = 'FOLLOWING_STRATEGIES'
+export const FLIP_FOR_MORE = 'FLIP_FOR_MORE'
+export const STRATEGY_1 = 'STRATEGY_1'
+export const STRATEGY_2 = 'STRATEGY_2'
+export const STRATEGY_3 = 'STRATEGY_3'
+export const CHOOSE_THIS_STRATEGY = 'CHOOSE_THIS_STRATEGY'
+export const NICE_WORK_MAYOR = 'NICE_WORK_MAYOR'
+export const OF_PARTICIPANTS = 'OF_PARTICIPANTS'
+export const YOUR_VOTE = 'YOUR_VOTE'
+export const SHARE_YOUR_RESULTS = 'SHARE_YOUR_RESULTS'
+export const READY_NEXT = 'READY_NEXT'
+export const BACK = 'BACK'
 
 const translations: any = {
   MOB: {
@@ -111,6 +126,81 @@ const translations: any = {
   },
   REMAINING_BUDGET: {
     en: 'Remaining budget',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  REMAINING: {
+    en: 'remaining',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  MIN_AGO: {
+    en: '1 min ago',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  CHOOSE_ONE_OF_THE: {
+    en: 'Choose one of the',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  FOLLOWING_STRATEGIES: {
+    en: 'following strategies.',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  FLIP_FOR_MORE: {
+    en: 'Flip for more',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  CHOOSE_THIS_STRATEGY: {
+    en: 'Choose this strategy',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  STRATEGY_1: {
+    en: 'Strategy 1',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  STRATEGY_2: {
+    en: 'Strategy 2',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  STRATEGY_3: {
+    en: 'Strategy 3',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  NICE_WORK_MAYOR: {
+    en: 'Nice work Mayor!',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  OF_PARTICIPANTS: {
+    en: 'of participants agreed with you',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  YOUR_VOTE: {
+    en: 'YOUR VOTE',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  SHARE_YOUR_RESULTS: {
+    en: 'Share Your Results',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  READY_NEXT: {
+    en: 'Ready to take on your next challenge?',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  BACK: {
+    en: 'Back',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },

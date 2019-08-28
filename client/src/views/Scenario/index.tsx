@@ -28,6 +28,7 @@ import chat from 'src/images/chat.png'
 import { stepQuery } from 'src/Queries'
 import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/Types'
 import './style.css'
+import { REMAINING, translate } from 'src/Translate'
 
 const queryString = require('query-string')
 
@@ -52,7 +53,7 @@ class ScenarioView extends React.Component<Props, {}> {
             <div className="coin-status">
               <h4 className="">{getCoinCount(this.props.match.params.stepId)}</h4>
               <Image className="coin-img" src={coin} />
-              <p>remaining</p>
+              <p>{translate(queryString.parse(this.props.location.search).lang, REMAINING)}</p>
             </div>
             <div className="content-box bottom">
               <p

@@ -37,6 +37,7 @@ import chat from 'src/images/chat.png'
 import './style.css'
 import { stepQuery } from 'src/Queries'
 import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/Types'
+import { REMAINING, MIN_AGO, translate } from 'src/Translate'
 
 const queryString = require('query-string')
 
@@ -76,7 +77,7 @@ class ChatDialogueView extends React.Component<Props, {}> {
             <div className="coin-status">
               <h4 className="">{getCoinCount(this.props.match.params.stepId)}</h4>
               <Image className="coin-img" src={coin} />
-              <p>remaining</p>
+              <p>{translate(queryString.parse(this.props.location.search).lang, REMAINING)}</p>
             </div>
             <div className="content-box top-msg">
               <Grid>
@@ -87,7 +88,9 @@ class ChatDialogueView extends React.Component<Props, {}> {
                   <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField1}</p>
                     <p>{step && step.publicField2}</p>
-                    <div className="sub-heading deemphasized">1 min ago</div>
+                    <div className="sub-heading deemphasized">
+                      {translate(queryString.parse(this.props.location.search).lang, MIN_AGO)}
+                    </div>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
                     </span>
@@ -103,7 +106,9 @@ class ChatDialogueView extends React.Component<Props, {}> {
                   <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField1}</p>
                     <p>{step && step.publicField3}</p>
-                    <div className="sub-heading deemphasized">1 min ago</div>
+                    <div className="sub-heading deemphasized">
+                      {translate(queryString.parse(this.props.location.search).lang, MIN_AGO)}
+                    </div>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
                     </span>
@@ -120,7 +125,9 @@ class ChatDialogueView extends React.Component<Props, {}> {
                     <Grid.Column width={13}>
                       <p className="sub-heading">{step && step.publicField1}</p>
                       <p>{step && step.publicField4}</p>
-                      <div className="sub-heading deemphasized">1 min ago</div>
+                      <div className="sub-heading deemphasized">
+                        {translate(queryString.parse(this.props.location.search).lang, MIN_AGO)}
+                      </div>
                       <span className="heart">
                         <Icon name="heart outline" /> 11
                       </span>
@@ -142,7 +149,9 @@ class ChatDialogueView extends React.Component<Props, {}> {
                   <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField5}</p>
                     <p>{step && step.publicField6}</p>
-                    <div className="sub-heading deemphasized">1 min ago</div>
+                    <div className="sub-heading deemphasized">
+                      {translate(queryString.parse(this.props.location.search).lang, MIN_AGO)}
+                    </div>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
                     </span>
@@ -158,7 +167,9 @@ class ChatDialogueView extends React.Component<Props, {}> {
                   <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField5}</p>
                     <p>{step && step.publicField7}</p>
-                    <div className="sub-heading deemphasized">1 min ago</div>
+                    <div className="sub-heading deemphasized">
+                      {translate(queryString.parse(this.props.location.search).lang, MIN_AGO)}
+                    </div>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
                     </span>
@@ -174,7 +185,9 @@ class ChatDialogueView extends React.Component<Props, {}> {
                   <Grid.Column width={13}>
                     <p className="sub-heading">{step && step.publicField5}</p>
                     <p>{step && step.publicField8}</p>
-                    <div className="sub-heading deemphasized">1 min ago</div>
+                    <div className="sub-heading deemphasized">
+                      {translate(queryString.parse(this.props.location.search).lang, MIN_AGO)}
+                    </div>
                     <span className="heart">
                       <Icon name="heart outline" /> 11
                     </span>
@@ -196,7 +209,9 @@ class ChatDialogueView extends React.Component<Props, {}> {
                     <Grid.Column width={13}>
                       <p className="sub-heading">{step && step.publicField9}</p>
                       <p>{step && step.publicField10}</p>
-                      <div className="sub-heading deemphasized">1 min ago</div>
+                      <div className="sub-heading deemphasized">
+                        {translate(queryString.parse(this.props.location.search).lang, MIN_AGO)}
+                      </div>
                       <span className="heart">
                         <Icon name="heart outline" /> 11
                       </span>
@@ -212,7 +227,9 @@ class ChatDialogueView extends React.Component<Props, {}> {
                     <Grid.Column width={13}>
                       <p className="sub-heading">{step && step.publicField9}</p>
                       <p>{step && step.publicField11}</p>
-                      <div className="sub-heading deemphasized">1 min ago</div>
+                      <div className="sub-heading deemphasized">
+                        {translate(queryString.parse(this.props.location.search).lang, MIN_AGO)}
+                      </div>
                       <span className="heart">
                         <Icon name="heart outline" /> 11
                       </span>
@@ -228,7 +245,9 @@ class ChatDialogueView extends React.Component<Props, {}> {
                     <Grid.Column width={13}>
                       <p className="sub-heading">{step && step.publicField9}</p>
                       <p>{step && step.publicField12}</p>
-                      <div className="sub-heading deemphasized">1 min ago</div>
+                      <div className="sub-heading deemphasized">
+                        {translate(queryString.parse(this.props.location.search).lang, MIN_AGO)}
+                      </div>
                       <span className="heart">
                         <Icon name="heart outline" /> 11
                       </span>

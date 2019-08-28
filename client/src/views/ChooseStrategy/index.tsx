@@ -28,6 +28,17 @@ import CustomHeader from 'src/components/CustomHeader/'
 import { getCoinCount, constructInnerHTML } from 'src/Helpers'
 import './style.css'
 import coin from 'src/images/money.png'
+import {
+  STRATEGY_1,
+  STRATEGY_2,
+  STRATEGY_3,
+  CHOOSE_THIS_STRATEGY,
+  FLIP_FOR_MORE,
+  CHOOSE_ONE_OF_THE,
+  FOLLOWING_STRATEGIES,
+  REMAINING,
+  translate,
+} from 'src/Translate'
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
@@ -165,11 +176,12 @@ class ChooseStrategyView extends React.Component<Props, State> {
             <div className="coin-status">
               <h4 className="">{getCoinCount(this.props.match.params.stepId)}</h4>
               <Image className="coin-img" src={coin} />
-              <p>remaining</p>
+              <p>{translate(queryString.parse(this.props.location.search).lang, REMAINING)}</p>
             </div>
             <h4 className="instructions">
-              Choose one of the <br />
-              following strategies.
+              {translate(queryString.parse(this.props.location.search).lang, CHOOSE_ONE_OF_THE)}
+              <br />
+              {translate(queryString.parse(this.props.location.search).lang, FOLLOWING_STRATEGIES)}
             </h4>
             <div className="carousel-holder">
               <Carousel
@@ -199,14 +211,19 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         icon="arrow right"
                         onClick={this.next}
                       />
-                      <h4 className="strat-num">Strategy 1</h4>
+                      <h4 className="strat-num">
+                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_1)}
+                      </h4>
                       <hr className="divider-line" />
                       <h1 className="">{step && step.publicField2}</h1>
                       <p>{step && step.publicField3}</p>
                       <Grid>
                         <Grid.Column width={8} className="col-left">
                           <Button className="btn secondary" onClick={() => this.handleClick(0)}>
-                            Flip for more
+                            {translate(
+                              queryString.parse(this.props.location.search).lang,
+                              FLIP_FOR_MORE
+                            )}
                           </Button>
                         </Grid.Column>
                         <Grid.Column width={8} className="col-right">
@@ -226,7 +243,10 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField5}</p>
                       <Button className="btn secondary" onClick={() => this.handleClick(0)}>
-                        Flip for more
+                        {translate(
+                          queryString.parse(this.props.location.search).lang,
+                          FLIP_FOR_MORE
+                        )}
                       </Button>
                     </div>
                   </div>
@@ -259,14 +279,19 @@ class ChooseStrategyView extends React.Component<Props, State> {
                           parseInt(this.props.match.params.stepId) === 703
                         }
                       />
-                      <h4 className="strat-num">Strategy 2</h4>
+                      <h4 className="strat-num">
+                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_2)}
+                      </h4>
                       <hr className="divider-line" />
                       <h1 className="">{step && step.publicField8}</h1>
                       <p>{step && step.publicField9}</p>
                       <Grid>
                         <Grid.Column width={8} className="col-left">
                           <Button className="btn secondary" onClick={() => this.handleClick(1)}>
-                            Flip for more
+                            {translate(
+                              queryString.parse(this.props.location.search).lang,
+                              FLIP_FOR_MORE
+                            )}
                           </Button>
                         </Grid.Column>
                         <Grid.Column width={8} className="col-right">
@@ -286,7 +311,10 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField11}</p>
                       <Button className="btn secondary" onClick={() => this.handleClick(1)}>
-                        Flip for more
+                        {translate(
+                          queryString.parse(this.props.location.search).lang,
+                          FLIP_FOR_MORE
+                        )}
                       </Button>
                     </div>
                   </div>
@@ -309,14 +337,19 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         onClick={this.next}
                         disabled
                       />
-                      <h4 className="strat-num">Strategy 3</h4>
+                      <h4 className="strat-num">
+                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_3)}
+                      </h4>
                       <hr className="divider-line" />
                       <h1 className="">{step && step.publicField14}</h1>
                       <p>{step && step.publicField15}</p>
                       <Grid>
                         <Grid.Column width={8} className="col-left">
                           <Button className="btn secondary" onClick={() => this.handleClick(2)}>
-                            Flip for more
+                            {translate(
+                              queryString.parse(this.props.location.search).lang,
+                              FLIP_FOR_MORE
+                            )}
                           </Button>
                         </Grid.Column>
                         <Grid.Column width={8} className="col-right">
@@ -336,7 +369,10 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField17}</p>
                       <Button className="btn secondary" onClick={() => this.handleClick(2)}>
-                        Flip for more
+                        {translate(
+                          queryString.parse(this.props.location.search).lang,
+                          FLIP_FOR_MORE
+                        )}
                       </Button>
                     </div>
                   </div>
@@ -344,7 +380,10 @@ class ChooseStrategyView extends React.Component<Props, State> {
               </Carousel>
               <div className="custom-btn-holder">
                 <Button onClick={this.recordChoiceAndRedirect} className="btn primary">
-                  Choose this strategy
+                  {translate(
+                    queryString.parse(this.props.location.search).lang,
+                    CHOOSE_THIS_STRATEGY
+                  )}
                 </Button>
               </div>
             </div>

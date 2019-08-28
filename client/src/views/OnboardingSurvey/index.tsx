@@ -120,10 +120,10 @@ class OnboardingSurveyView extends React.Component<Props, State> {
               />
               <Form.Input
                 name="zipcode"
-                label="Zipcode"
+                label={step && step.publicField3}
                 required
                 value={zipcode}
-                placeholder="Type your zipcode"
+                placeholder=""
                 onChange={this.onFieldChange}
               />
               <div className="btn-holder">

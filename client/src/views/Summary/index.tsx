@@ -27,7 +27,22 @@ import cookie from 'react-cookies'
 import CustomHeader from 'src/components/CustomHeader/'
 import Main from 'src/components/Main/'
 import './style.css'
-import { MOB, HOUSING, ECONOMY, TRANSPORATION, ENVIRONMENT, translate } from 'src/Translate'
+import {
+  STRATEGY_1,
+  STRATEGY_2,
+  STRATEGY_3,
+  OF_PARTICIPANTS,
+  YOUR_VOTE,
+  SHARE_YOUR_RESULTS,
+  READY_NEXT,
+  NICE_WORK_MAYOR,
+  MOB,
+  HOUSING,
+  ECONOMY,
+  TRANSPORATION,
+  ENVIRONMENT,
+  translate,
+} from 'src/Translate'
 
 const queryString = require('query-string')
 
@@ -220,7 +235,9 @@ class SummaryView extends React.Component<Props, State> {
               desc={strategyChoiceSummary && strategyChoiceSummary.headerSubtitle}
             />
             <div className="top-intro">
-              <h1 className="">Nice work Mayor!</h1>
+              <h1 className="">
+                {translate(queryString.parse(this.props.location.search).lang, NICE_WORK_MAYOR)}
+              </h1>
               <p
                 className="large"
                 dangerouslySetInnerHTML={constructInnerHTML(
@@ -238,12 +255,15 @@ class SummaryView extends React.Component<Props, State> {
                   <p className="emphasized">
                     {strategyChoiceSummary &&
                       Math.round(strategyChoiceSummary.c1PercentAgreed * 100)}
-                    % of participants agreed with you
+                    %{' '}
+                    {translate(queryString.parse(this.props.location.search).lang, OF_PARTICIPANTS)}
                   </p>
 
                   <div className="strat-section">
                     <p>
-                      <span className="strat">Strategy 1: </span>
+                      <span className="strat">
+                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_1)}:{' '}
+                      </span>
                       {strategyChoiceSummary && strategyChoiceSummary.c1S1Name}
                     </p>
                     <Progress
@@ -259,13 +279,17 @@ class SummaryView extends React.Component<Props, State> {
                       }
                     />
                     {strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 0 && (
-                      <h4 className="your-vote">YOUR VOTE</h4>
+                      <h4 className="your-vote">
+                        {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                      </h4>
                     )}
                   </div>
 
                   <div className="strat-section">
                     <p>
-                      <span className="strat">Strategy 2: </span>
+                      <span className="strat">
+                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_2)}:{' '}
+                      </span>
                       {strategyChoiceSummary && strategyChoiceSummary.c1S2Name}
                     </p>
                     <Progress
@@ -281,14 +305,22 @@ class SummaryView extends React.Component<Props, State> {
                       }
                     />
                     {strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 1 && (
-                      <h4 className="your-vote">YOUR VOTE</h4>
+                      <h4 className="your-vote">
+                        {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                      </h4>
                     )}
                   </div>
 
                   {strategyChoiceSummary && strategyChoiceSummary.c1S3Name && (
                     <div className="strat-section">
                       <p>
-                        <span className="strat">Strategy 3: </span>
+                        <span className="strat">
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            STRATEGY_3
+                          )}
+                          :{' '}
+                        </span>
                         {strategyChoiceSummary && strategyChoiceSummary.c1S3Name}
                       </p>
                       <Progress
@@ -304,7 +336,9 @@ class SummaryView extends React.Component<Props, State> {
                         }
                       />
                       {strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 2 && (
-                        <h4 className="your-vote">YOUR VOTE</h4>
+                        <h4 className="your-vote">
+                          {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                        </h4>
                       )}
                     </div>
                   )}
@@ -320,12 +354,15 @@ class SummaryView extends React.Component<Props, State> {
                   <p className="emphasized">
                     {strategyChoiceSummary &&
                       Math.round(strategyChoiceSummary.c2PercentAgreed * 100)}
-                    % of participants agreed with you
+                    %{' '}
+                    {translate(queryString.parse(this.props.location.search).lang, OF_PARTICIPANTS)}
                   </p>
 
                   <div className="strat-section">
                     <p>
-                      <span className="strat">Strategy 1: </span>
+                      <span className="strat">
+                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_1)}:{' '}
+                      </span>
                       {strategyChoiceSummary && strategyChoiceSummary.c2S1Name}
                     </p>
                     <Progress
@@ -341,13 +378,17 @@ class SummaryView extends React.Component<Props, State> {
                       }
                     />
                     {strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 0 && (
-                      <h4 className="your-vote">YOUR VOTE</h4>
+                      <h4 className="your-vote">
+                        {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                      </h4>
                     )}
                   </div>
 
                   <div className="strat-section">
                     <p>
-                      <span className="strat">Strategy 2: </span>
+                      <span className="strat">
+                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_2)}:{' '}
+                      </span>
                       {strategyChoiceSummary && strategyChoiceSummary.c2S2Name}
                     </p>
                     <Progress
@@ -363,14 +404,22 @@ class SummaryView extends React.Component<Props, State> {
                       }
                     />
                     {strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 1 && (
-                      <h4 className="your-vote">YOUR VOTE</h4>
+                      <h4 className="your-vote">
+                        {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                      </h4>
                     )}
                   </div>
 
                   {strategyChoiceSummary && strategyChoiceSummary.c2S3Name && (
                     <div className="strat-section">
                       <p>
-                        <span className="strat">Strategy 3: </span>
+                        <span className="strat">
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            STRATEGY_3
+                          )}
+                          :{' '}
+                        </span>
                         {strategyChoiceSummary && strategyChoiceSummary.c2S3Name}
                       </p>
                       <Progress
@@ -386,7 +435,9 @@ class SummaryView extends React.Component<Props, State> {
                         }
                       />
                       {strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 2 && (
-                        <h4 className="your-vote">YOUR VOTE</h4>
+                        <h4 className="your-vote">
+                          {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                        </h4>
                       )}
                     </div>
                   )}
@@ -403,12 +454,22 @@ class SummaryView extends React.Component<Props, State> {
                     <p className="emphasized">
                       {strategyChoiceSummary &&
                         Math.round(strategyChoiceSummary.c3PercentAgreed * 100)}
-                      % of participants agreed with you
+                      %{' '}
+                      {translate(
+                        queryString.parse(this.props.location.search).lang,
+                        OF_PARTICIPANTS
+                      )}
                     </p>
 
                     <div className="strat-section">
                       <p>
-                        <span className="strat">Strategy 1: </span>
+                        <span className="strat">
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            STRATEGY_1
+                          )}
+                          :{' '}
+                        </span>
                         {strategyChoiceSummary && strategyChoiceSummary.c3S1Name}
                       </p>
                       <Progress
@@ -424,13 +485,21 @@ class SummaryView extends React.Component<Props, State> {
                         }
                       />
                       {strategyChoiceSummary && strategyChoiceSummary.c3SIndex == 0 && (
-                        <h4 className="your-vote">YOUR VOTE</h4>
+                        <h4 className="your-vote">
+                          {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                        </h4>
                       )}
                     </div>
 
                     <div className="strat-section">
                       <p>
-                        <span className="strat">Strategy 2: </span>
+                        <span className="strat">
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            STRATEGY_2
+                          )}
+                          :{' '}
+                        </span>
                         {strategyChoiceSummary && strategyChoiceSummary.c3S2Name}
                       </p>
                       <Progress
@@ -446,14 +515,22 @@ class SummaryView extends React.Component<Props, State> {
                         }
                       />
                       {strategyChoiceSummary && strategyChoiceSummary.c3SIndex == 1 && (
-                        <h4 className="your-vote">YOUR VOTE</h4>
+                        <h4 className="your-vote">
+                          {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                        </h4>
                       )}
                     </div>
 
                     {strategyChoiceSummary && strategyChoiceSummary.c3S3Name && (
                       <div className="strat-section">
                         <p>
-                          <span className="strat">Strategy 3: </span>
+                          <span className="strat">
+                            {translate(
+                              queryString.parse(this.props.location.search).lang,
+                              STRATEGY_3
+                            )}
+                            :{' '}
+                          </span>
                           {strategyChoiceSummary && strategyChoiceSummary.c3S3Name}
                         </p>
                         <Progress
@@ -469,7 +546,12 @@ class SummaryView extends React.Component<Props, State> {
                           }
                         />
                         {strategyChoiceSummary && strategyChoiceSummary.c3SIndex == 2 && (
-                          <h4 className="your-vote">YOUR VOTE</h4>
+                          <h4 className="your-vote">
+                            {translate(
+                              queryString.parse(this.props.location.search).lang,
+                              YOUR_VOTE
+                            )}
+                          </h4>
                         )}
                       </div>
                     )}
@@ -478,7 +560,12 @@ class SummaryView extends React.Component<Props, State> {
               )}
 
               <div className="share">
-                <h4>Share Your Results</h4>
+                <h4>
+                  {translate(
+                    queryString.parse(this.props.location.search).lang,
+                    SHARE_YOUR_RESULTS
+                  )}
+                </h4>
                 <Button color="facebook" icon labelPosition="left">
                   <Icon name="facebook" />
                   Facebook
@@ -489,7 +576,7 @@ class SummaryView extends React.Component<Props, State> {
                 </Button>
               </div>
               <div className="next-challenges">
-                <h1>Ready to take on your next challenge?</h1>
+                <h1>{translate(queryString.parse(this.props.location.search).lang, READY_NEXT)}</h1>
                 <a
                   className="pill housing"
                   onClick={() =>

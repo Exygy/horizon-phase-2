@@ -28,6 +28,7 @@ import coin from 'src/images/money.png'
 import './style.css'
 import { stepQuery } from 'src/Queries'
 import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/Types'
+import { REMAINING, translate } from 'src/Translate'
 
 const queryString = require('query-string')
 
@@ -57,7 +58,7 @@ class MakeDecisionView extends React.Component<Props, {}> {
             <div className="coin-status">
               <h4 className="">{getCoinCount(this.props.match.params.stepId)}</h4>
               <Image className="coin-img" src={coin} />
-              <p>remaining</p>
+              <p>{translate(queryString.parse(this.props.location.search).lang, REMAINING)}</p>
             </div>
             <div className="content-box centered">
               <h1 className="">{step && step.publicField1}</h1>

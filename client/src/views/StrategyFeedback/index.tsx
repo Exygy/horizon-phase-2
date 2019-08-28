@@ -28,7 +28,13 @@ import Main from 'src/components/Main/'
 import CustomHeader from 'src/components/CustomHeader/'
 import coin from 'src/images/money.png'
 import './style.css'
-import { translate, HOW_IT_AFFECTS_BAYVILLE, REMAINING_BUDGET, YOU_SELECTED } from 'src/Translate'
+import {
+  translate,
+  REMAINING,
+  HOW_IT_AFFECTS_BAYVILLE,
+  REMAINING_BUDGET,
+  YOU_SELECTED,
+} from 'src/Translate'
 
 const queryString = require('query-string')
 
@@ -67,7 +73,7 @@ class StrategyFeedbackView extends React.Component<Props, {}> {
             <div className="coin-status">
               <h4 className="">{getCoinCount(this.props.match.params.stepId)}</h4>
               <Image className="coin-img" src={coin} />
-              <p>remaining</p>
+              <p>{translate(queryString.parse(this.props.location.search).lang, REMAINING)}</p>
             </div>
             <div className="content-box">
               <h2>
