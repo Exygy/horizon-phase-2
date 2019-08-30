@@ -121,7 +121,6 @@ class OnboardingSurveyView extends React.Component<Props, State> {
               <Form.Input
                 name="zipcode"
                 label={step && step.publicField3}
-                required
                 value={zipcode}
                 placeholder=""
                 onChange={this.onFieldChange}
