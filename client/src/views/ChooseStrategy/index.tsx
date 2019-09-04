@@ -37,6 +37,8 @@ import {
   CHOOSE_ONE_OF_THE,
   FOLLOWING_STRATEGIES,
   REMAINING,
+  VIEW_MORE,
+  FLIP_BACK,
   translate,
 } from 'src/Translate'
 
@@ -217,20 +219,26 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <hr className="divider-line" />
                       <h1 className="">{step && step.publicField2}</h1>
                       <p>{step && step.publicField3}</p>
-                      <Grid>
-                        <Grid.Column width={8} className="col-left">
-                          <Button className="btn secondary" onClick={() => this.handleClick(0)}>
-                            {translate(
-                              queryString.parse(this.props.location.search).lang,
-                              FLIP_FOR_MORE
-                            )}
-                          </Button>
-                        </Grid.Column>
-                        <Grid.Column width={8} className="col-right">
-                          <h2 className="coin-cost">{step && step.publicField6}</h2>
-                          <Image className="coin-img" src={coin} />
-                        </Grid.Column>
-                      </Grid>
+                      <p className="view-more">
+                        <a href="#" onClick={() => this.handleClick(0)}>
+                          {translate(queryString.parse(this.props.location.search).lang, VIEW_MORE)}
+                          <Icon name="long arrow alternate right" />
+                        </a>
+                      </p>
+                    </div>
+                    <div className="content-box-bottom">
+                      <div className="col-left">
+                        <h2 className="coin-cost">{step && step.publicField6}</h2>
+                        <Image className="coin-img" src={coin} />
+                      </div>
+                      <div className="col-right">
+                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            CHOOSE_THIS_STRATEGY
+                          )}
+                        </Button>
+                      </div>
                     </div>
                   </div>
                   <div key="back">
@@ -242,12 +250,24 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p>{step && step.publicField4}</p>
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField5}</p>
-                      <Button className="btn secondary" onClick={() => this.handleClick(0)}>
-                        {translate(
-                          queryString.parse(this.props.location.search).lang,
-                          FLIP_FOR_MORE
-                        )}
-                      </Button>
+                      <a href="#" onClick={() => this.handleClick(0)}>
+                        {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
+                        <Icon name="long arrow alternate right" />
+                      </a>
+                    </div>
+                    <div className="content-box-bottom">
+                      <div className="col-left">
+                        <h2 className="coin-cost">{step && step.publicField6}</h2>
+                        <Image className="coin-img" src={coin} />
+                      </div>
+                      <div className="col-right">
+                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            CHOOSE_THIS_STRATEGY
+                          )}
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </ReactCardFlip>
@@ -285,20 +305,26 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <hr className="divider-line" />
                       <h1 className="">{step && step.publicField8}</h1>
                       <p>{step && step.publicField9}</p>
-                      <Grid>
-                        <Grid.Column width={8} className="col-left">
-                          <Button className="btn secondary" onClick={() => this.handleClick(1)}>
-                            {translate(
-                              queryString.parse(this.props.location.search).lang,
-                              FLIP_FOR_MORE
-                            )}
-                          </Button>
-                        </Grid.Column>
-                        <Grid.Column width={8} className="col-right">
-                          <h2 className="coin-cost">{step && step.publicField12}</h2>
-                          <Image className="coin-img" src={coin} />
-                        </Grid.Column>
-                      </Grid>
+                      <p className="view-more">
+                        <a href="#" onClick={() => this.handleClick(1)}>
+                          {translate(queryString.parse(this.props.location.search).lang, VIEW_MORE)}
+                          <Icon name="long arrow alternate right" />
+                        </a>
+                      </p>
+                    </div>
+                    <div className="content-box-bottom">
+                      <div className="col-left">
+                        <h2 className="coin-cost">{step && step.publicField6}</h2>
+                        <Image className="coin-img" src={coin} />
+                      </div>
+                      <div className="col-right">
+                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            CHOOSE_THIS_STRATEGY
+                          )}
+                        </Button>
+                      </div>
                     </div>
                   </div>
                   <div key="back">
@@ -310,12 +336,24 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p>{step && step.publicField10}</p>
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField11}</p>
-                      <Button className="btn secondary" onClick={() => this.handleClick(1)}>
-                        {translate(
-                          queryString.parse(this.props.location.search).lang,
-                          FLIP_FOR_MORE
-                        )}
-                      </Button>
+                      <a href="#" onClick={() => this.handleClick(1)}>
+                        {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
+                        <Icon name="long arrow alternate right" />
+                      </a>
+                    </div>
+                    <div className="content-box-bottom">
+                      <div className="col-left">
+                        <h2 className="coin-cost">{step && step.publicField6}</h2>
+                        <Image className="coin-img" src={coin} />
+                      </div>
+                      <div className="col-right">
+                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            CHOOSE_THIS_STRATEGY
+                          )}
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </ReactCardFlip>
@@ -343,20 +381,26 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <hr className="divider-line" />
                       <h1 className="">{step && step.publicField14}</h1>
                       <p>{step && step.publicField15}</p>
-                      <Grid>
-                        <Grid.Column width={8} className="col-left">
-                          <Button className="btn secondary" onClick={() => this.handleClick(2)}>
-                            {translate(
-                              queryString.parse(this.props.location.search).lang,
-                              FLIP_FOR_MORE
-                            )}
-                          </Button>
-                        </Grid.Column>
-                        <Grid.Column width={8} className="col-right">
-                          <h2 className="coin-cost">{step && step.publicField18}</h2>
-                          <Image className="coin-img" src={coin} />
-                        </Grid.Column>
-                      </Grid>
+                      <p className="view-more">
+                        <a href="#" onClick={() => this.handleClick(2)}>
+                          {translate(queryString.parse(this.props.location.search).lang, VIEW_MORE)}
+                          <Icon name="long arrow alternate right" />
+                        </a>
+                      </p>
+                    </div>
+                    <div className="content-box-bottom">
+                      <div className="col-left">
+                        <h2 className="coin-cost">{step && step.publicField6}</h2>
+                        <Image className="coin-img" src={coin} />
+                      </div>
+                      <div className="col-right">
+                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            CHOOSE_THIS_STRATEGY
+                          )}
+                        </Button>
+                      </div>
                     </div>
                   </div>
                   <div key="back">
@@ -368,24 +412,28 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p>{step && step.publicField16}</p>
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField17}</p>
-                      <Button className="btn secondary" onClick={() => this.handleClick(2)}>
-                        {translate(
-                          queryString.parse(this.props.location.search).lang,
-                          FLIP_FOR_MORE
-                        )}
-                      </Button>
+                      <a href="#" onClick={() => this.handleClick(2)}>
+                        {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
+                        <Icon name="long arrow alternate right" />
+                      </a>
+                    </div>
+                    <div className="content-box-bottom">
+                      <div className="col-left">
+                        <h2 className="coin-cost">{step && step.publicField6}</h2>
+                        <Image className="coin-img" src={coin} />
+                      </div>
+                      <div className="col-right">
+                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            CHOOSE_THIS_STRATEGY
+                          )}
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </ReactCardFlip>
               </Carousel>
-              <div className="custom-btn-holder">
-                <Button onClick={this.recordChoiceAndRedirect} className="btn primary">
-                  {translate(
-                    queryString.parse(this.props.location.search).lang,
-                    CHOOSE_THIS_STRATEGY
-                  )}
-                </Button>
-              </div>
             </div>
           </Form>
         </Main>

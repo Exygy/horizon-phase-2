@@ -9,6 +9,10 @@
 
 #choose-strategy-view .content-box {
   margin-top: 0px;
+  border-top-left-radius: 29px;
+  border-top-right-radius: 29px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 #choose-strategy-view .content-box p {
   text-align: left;
@@ -16,26 +20,52 @@
 #choose-strategy-view .content-box .strat-num {
   margin-top: 0px;
 }
-#choose-strategy-view .content-box .coin-cost {
+#choose-strategy-view .content-box .view-more {
+  text-align: center;
+}
+
+#choose-strategy-view .content-box-bottom {
+  background: red;
+  max-width: 668px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom-left-radius: 29px;
+  border-bottom-right-radius: 29px;
+  background-color: #1e8fe1;
+  height: 79px;
+}
+#choose-strategy-view .content-box-bottom .coin-cost {
   margin-top: 10px;
   display: inline;
+  color: white;
   padding-top: 20px;
 }
-#choose-strategy-view .content-box .col-left {
-  padding-right: 0px;
-  text-align: left;
+#choose-strategy-view .content-box-bottom .col-left {
+  float: left;
+  padding-left: 36px;
+  padding-top: 26px;
+  padding-bottom: 25px;
 }
-#choose-strategy-view .content-box .col-right {
-  padding-left: 0px;
-  text-align: right;
-  padding-top: 25px;
+#choose-strategy-view .content-box-bottom .col-right {
+  float: right;
+  padding-right: 18px;
+  padding-top: 16px;
 }
-#choose-strategy-view .content-box .coin-img {
+#choose-strategy-view .content-box-bottom .coin-img {
   display: inherit;
   width: 20px;
   display: inline;
   margin-left: 8px;
   margin-top: 2px;
+}
+@media only screen and (max-width: 768px) {
+  #choose-strategy-view .content-box-bottom {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+#choose-strategy-view .content-box-bottom .btn.secondary {
+  background-color: white;
 }
 
 #choose-strategy-view .carousel-holder {

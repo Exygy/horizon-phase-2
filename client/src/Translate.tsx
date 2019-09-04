@@ -32,6 +32,8 @@ export const YOUR_VOTE = 'YOUR_VOTE'
 export const SHARE_YOUR_RESULTS = 'SHARE_YOUR_RESULTS'
 export const READY_NEXT = 'READY_NEXT'
 export const BACK = 'BACK'
+export const VIEW_MORE = 'VIEW_MORE'
+export const FLIP_BACK = 'FLIP_BACK'
 
 const translations: any = {
   MOB: {
@@ -201,6 +203,16 @@ const translations: any = {
   },
   BACK: {
     en: 'Back',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  VIEW_MORE: {
+    en: 'View more',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  FLIP_BACK: {
+    en: 'Flip back',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
