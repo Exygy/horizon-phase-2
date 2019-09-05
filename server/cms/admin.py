@@ -156,7 +156,7 @@ class ChallengeAdmin(admin.ModelAdmin):
 
 
 class StrategyChoiceResource(resources.ModelResource):
-    choice = Field(attribute='step__public_field_2_en', column_name='choice')
+    choice = Field(attribute='step__public_field_1_en', column_name='choice')
     date_updated = Field()
 
     class Meta:
@@ -199,7 +199,7 @@ class StrategyChoiceAdmin(ExportMixin, admin.ModelAdmin):
     ordering = ('-date_updated', )
 
     def get_choice_desc(self, obj):
-        return obj.step.public_field_2_en
+        return obj.step.public_field_1_en
 
     get_choice_desc.short_description = 'Choice'
 
