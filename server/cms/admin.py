@@ -157,12 +157,14 @@ class ChallengeAdmin(admin.ModelAdmin):
 
 class StrategyChoiceResource(resources.ModelResource):
     choice = Field(attribute='step__public_field_1_en', column_name='choice')
+    category = Field(attribute='step__challenge__category__name', column_name='category')
+    challenge = Field(attribute='step__challenge__name', column_name='challenge')
     date_updated = Field()
 
     class Meta:
         model = StrategyChoice
-        fields = ('id', 'session_id', 'date_updated', 'choice', )
-        export_order = ('id', 'session_id', 'choice', 'date_updated')
+        fields = ('id', 'session_id', 'category', 'challenge', 'choice', 'date_updated', )
+        export_order = ('id', 'session_id', 'category', 'challenge', 'choice', 'date_updated', )
 
     def dehydrate_date_updated(self, strategy_choice):
         return strategy_choice.date_updated.astimezone(pytz.timezone(settings.ZONE)).strftime('%B %-d, %Y %-I:%M:%S %p')
@@ -195,13 +197,21 @@ class SurveyResponseAdmin(ExportMixin, admin.ModelAdmin):
 class StrategyChoiceAdmin(ExportMixin, admin.ModelAdmin):
     resource_class = StrategyChoiceResource
     list_display_links = None
-    list_display = ('session_id', 'get_choice_desc', 'date_updated', )
+    list_display = ('id', 'session_id', 'get_category', 'get_challenge', 'get_choice_desc', 'date_updated', )
     ordering = ('-date_updated', )
+
+    def get_category(self, obj):
+        return obj.step.challenge.category.name
+
+    def get_challenge(self, obj):
+        return obj.step.challenge.name
 
     def get_choice_desc(self, obj):
         return obj.step.public_field_1_en
 
     get_choice_desc.short_description = 'Choice'
+    get_category.short_description = 'Category'
+    get_challenge.short_description = 'Challenge'
 
     def has_add_permission(self, request, obj=None):
         return False
