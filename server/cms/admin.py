@@ -156,7 +156,7 @@ class ChallengeAdmin(admin.ModelAdmin):
 
 
 class StrategyChoiceResource(resources.ModelResource):
-    choice = Field(attribute='step__public_field_1_en', column_name='choice')
+    choice = Field()
     category = Field(attribute='step__challenge__category__name', column_name='category')
     challenge = Field(attribute='step__challenge__name', column_name='challenge')
     date_updated = Field()
@@ -168,6 +168,14 @@ class StrategyChoiceResource(resources.ModelResource):
 
     def dehydrate_date_updated(self, strategy_choice):
         return strategy_choice.date_updated.astimezone(pytz.timezone(settings.ZONE)).strftime('%B %-d, %Y %-I:%M:%S %p')
+
+    def dehydrate_choice(self, strategy_choice):
+        if strategy_choice.step.id in [103,204,308,404,508, 608, 704, 806, 906, 1006, 1106]:
+            return strategy_choice.origin_step.public_field_2_en
+        elif strategy_choice.step.id in [104,205,309, 405, 509, 609, 705, 807, 907, 1007, 1107]:
+            return strategy_choice.origin_step.public_field_8_en
+        elif strategy_choice.step.id in [105, 510, 808, 908, 1008, 1108]:
+            return strategy_choice.origin_step.public_field_14_en
 
 
 class SurveyResponseResource(resources.ModelResource):
@@ -207,7 +215,12 @@ class StrategyChoiceAdmin(ExportMixin, admin.ModelAdmin):
         return obj.step.challenge.name
 
     def get_choice_desc(self, obj):
-        return obj.step.public_field_1_en
+        if obj.step.id in [103,204,308,404,508, 608, 704, 806, 906, 1006, 1106]:
+            return obj.origin_step.public_field_2_en
+        elif obj.step.id in [104,205,309, 405, 509, 609, 705, 807, 907, 1007, 1107]:
+            return obj.origin_step.public_field_8_en
+        elif obj.step.id in [105, 510, 808, 908, 1008, 1108]:
+            return obj.origin_step.public_field_14_en
 
     get_choice_desc.short_description = 'Choice'
     get_category.short_description = 'Category'
@@ -216,8 +229,10 @@ class StrategyChoiceAdmin(ExportMixin, admin.ModelAdmin):
     def has_add_permission(self, request, obj=None):
         return False
 
+    """
     def has_delete_permission(self, request, obj=None):
         return False
+    """
 
 
 class CategoryFeedbackResource(resources.ModelResource):
