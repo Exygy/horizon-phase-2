@@ -307,7 +307,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                     </div>
                     <div className="content-box-bottom">
                       <div className="col-left">
-                        <h2 className="coin-cost">{step && step.publicField6}</h2>
+                        <h2 className="coin-cost">{step && step.publicField12}</h2>
                         <Image className="coin-img" src={coin} />
                       </div>
                       <div className="col-right">
@@ -332,7 +332,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                     </div>
                     <div className="content-box-bottom">
                       <div className="col-left">
-                        <h2 className="coin-cost">{step && step.publicField6}</h2>
+                        <h2 className="coin-cost">{step && step.publicField12}</h2>
                         <Image className="coin-img" src={coin} />
                       </div>
                       <div className="col-right">
@@ -376,7 +376,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                     </div>
                     <div className="content-box-bottom">
                       <div className="col-left">
-                        <h2 className="coin-cost">{step && step.publicField6}</h2>
+                        <h2 className="coin-cost">{step && step.publicField18}</h2>
                         <Image className="coin-img" src={coin} />
                       </div>
                       <div className="col-right">
@@ -401,7 +401,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                     </div>
                     <div className="content-box-bottom">
                       <div className="col-left">
-                        <h2 className="coin-cost">{step && step.publicField6}</h2>
+                        <h2 className="coin-cost">{step && step.publicField18}</h2>
                         <Image className="coin-img" src={coin} />
                       </div>
                       <div className="col-right">
