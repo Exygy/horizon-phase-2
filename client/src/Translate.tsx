@@ -207,7 +207,7 @@ const translations: any = {
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   VIEW_MORE: {
-    en: 'View more',
+    en: 'View more details',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },

@@ -23,6 +23,11 @@
 #choose-strategy-view .content-box .view-more {
   text-align: center;
 }
+#choose-strategy-view .content-box .arrow-right {
+  position: absolute;
+  padding-left: 8px;
+  padding-top: 1px;
+}
 
 #choose-strategy-view .content-box-bottom {
   background: red;
@@ -56,7 +61,7 @@
   width: 20px;
   display: inline;
   margin-left: 8px;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 @media only screen and (max-width: 768px) {
   #choose-strategy-view .content-box-bottom {

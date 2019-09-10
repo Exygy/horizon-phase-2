@@ -222,7 +222,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p className="view-more">
                         <a href="#" onClick={() => this.handleClick(0)}>
                           {translate(queryString.parse(this.props.location.search).lang, VIEW_MORE)}
-                          <Icon name="long arrow alternate right" />
+                          <Icon className="arrow-right" name="long arrow alternate right" />
                         </a>
                       </p>
                     </div>
@@ -250,10 +250,6 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p>{step && step.publicField4}</p>
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField5}</p>
-                      <a href="#" onClick={() => this.handleClick(0)}>
-                        {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
-                        <Icon name="long arrow alternate right" />
-                      </a>
                     </div>
                     <div className="content-box-bottom">
                       <div className="col-left">
@@ -261,11 +257,8 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         <Image className="coin-img" src={coin} />
                       </div>
                       <div className="col-right">
-                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
-                          {translate(
-                            queryString.parse(this.props.location.search).lang,
-                            CHOOSE_THIS_STRATEGY
-                          )}
+                        <Button className="btn secondary" onClick={() => this.handleClick(0)}>
+                          {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
                         </Button>
                       </div>
                     </div>
@@ -308,7 +301,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p className="view-more">
                         <a href="#" onClick={() => this.handleClick(1)}>
                           {translate(queryString.parse(this.props.location.search).lang, VIEW_MORE)}
-                          <Icon name="long arrow alternate right" />
+                          <Icon className="arrow-right" name="long arrow alternate right" />
                         </a>
                       </p>
                     </div>
@@ -336,10 +329,6 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p>{step && step.publicField10}</p>
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField11}</p>
-                      <a href="#" onClick={() => this.handleClick(1)}>
-                        {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
-                        <Icon name="long arrow alternate right" />
-                      </a>
                     </div>
                     <div className="content-box-bottom">
                       <div className="col-left">
@@ -347,11 +336,8 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         <Image className="coin-img" src={coin} />
                       </div>
                       <div className="col-right">
-                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
-                          {translate(
-                            queryString.parse(this.props.location.search).lang,
-                            CHOOSE_THIS_STRATEGY
-                          )}
+                        <Button className="btn secondary" onClick={() => this.handleClick(1)}>
+                          {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
                         </Button>
                       </div>
                     </div>
@@ -384,7 +370,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p className="view-more">
                         <a href="#" onClick={() => this.handleClick(2)}>
                           {translate(queryString.parse(this.props.location.search).lang, VIEW_MORE)}
-                          <Icon name="long arrow alternate right" />
+                          <Icon className="arrow-right" name="long arrow alternate right" />
                         </a>
                       </p>
                     </div>
@@ -412,10 +398,6 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       <p>{step && step.publicField16}</p>
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField17}</p>
-                      <a href="#" onClick={() => this.handleClick(2)}>
-                        {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
-                        <Icon name="long arrow alternate right" />
-                      </a>
                     </div>
                     <div className="content-box-bottom">
                       <div className="col-left">
@@ -423,11 +405,8 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         <Image className="coin-img" src={coin} />
                       </div>
                       <div className="col-right">
-                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
-                          {translate(
-                            queryString.parse(this.props.location.search).lang,
-                            CHOOSE_THIS_STRATEGY
-                          )}
+                        <Button className="btn secondary" onClick={() => this.handleClick(2)}>
+                          {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
                         </Button>
                       </div>
                     </div>

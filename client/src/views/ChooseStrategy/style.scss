@@ -28,6 +28,12 @@
             text-align: center;
         }
 
+        .arrow-right {
+            position: absolute;
+            padding-left: 8px;
+            padding-top: 1px;
+        }
+
     }
 
     .content-box-bottom {
@@ -65,7 +71,7 @@
             width: 20px;
             display: inline;
             margin-left: 8px;
-            margin-top: 2px;
+            margin-top: 4px;
         }
 
         @media only screen and (max-width: 768px) {
