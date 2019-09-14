@@ -246,211 +246,201 @@ class SummaryView extends React.Component<Props, State> {
               />
             </div>
             <div className="content-box">
-              <Grid>
-                <Grid.Column width={1}>
-                  <h2>1.</h2>
-                </Grid.Column>
-                <Grid.Column width={15}>
-                  <h2>{strategyChoiceSummary && strategyChoiceSummary.c1Title}</h2>
-                  <p className="emphasized">
-                    {strategyChoiceSummary &&
-                      Math.round(strategyChoiceSummary.c1PercentAgreed * 100)}
-                    %{' '}
-                    {translate(queryString.parse(this.props.location.search).lang, OF_PARTICIPANTS)}
+              <h2>
+                1.{' '}
+                <span className="challenge-title">
+                  {strategyChoiceSummary && strategyChoiceSummary.c1Title}
+                </span>
+              </h2>
+              <div className="challenge-details">
+                <p className="emphasized">
+                  {strategyChoiceSummary && Math.round(strategyChoiceSummary.c1PercentAgreed * 100)}
+                  % {translate(queryString.parse(this.props.location.search).lang, OF_PARTICIPANTS)}
+                </p>
+
+                <div className="strat-section">
+                  <p>
+                    <span className="strat">
+                      {translate(queryString.parse(this.props.location.search).lang, STRATEGY_1)}:{' '}
+                    </span>
+                    {strategyChoiceSummary && strategyChoiceSummary.c1S1Name}
                   </p>
-
-                  <div className="strat-section">
-                    <p>
-                      <span className="strat">
-                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_1)}:{' '}
-                      </span>
-                      {strategyChoiceSummary && strategyChoiceSummary.c1S1Name}
-                    </p>
-                    <Progress
-                      progress
-                      className={`prog-bar ${
-                        strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 0
-                          ? 'mine'
-                          : 'not-mine'
-                      }`}
-                      percent={
-                        strategyChoiceSummary &&
-                        Math.round(strategyChoiceSummary.c1S1Percentage * 100)
-                      }
-                    />
-                    {strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 0 && (
-                      <h4 className="your-vote">
-                        {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
-                      </h4>
-                    )}
-                  </div>
-
-                  <div className="strat-section">
-                    <p>
-                      <span className="strat">
-                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_2)}:{' '}
-                      </span>
-                      {strategyChoiceSummary && strategyChoiceSummary.c1S2Name}
-                    </p>
-                    <Progress
-                      progress
-                      className={`prog-bar ${
-                        strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 1
-                          ? 'mine'
-                          : 'not-mine'
-                      }`}
-                      percent={
-                        strategyChoiceSummary &&
-                        Math.round(strategyChoiceSummary.c1S2Percentage * 100)
-                      }
-                    />
-                    {strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 1 && (
-                      <h4 className="your-vote">
-                        {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
-                      </h4>
-                    )}
-                  </div>
-
-                  {strategyChoiceSummary && strategyChoiceSummary.c1S3Name && (
-                    <div className="strat-section">
-                      <p>
-                        <span className="strat">
-                          {translate(
-                            queryString.parse(this.props.location.search).lang,
-                            STRATEGY_3
-                          )}
-                          :{' '}
-                        </span>
-                        {strategyChoiceSummary && strategyChoiceSummary.c1S3Name}
-                      </p>
-                      <Progress
-                        progress
-                        className={`prog-bar ${
-                          strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 2
-                            ? 'mine'
-                            : 'not-mine'
-                        }`}
-                        percent={
-                          strategyChoiceSummary &&
-                          Math.round(strategyChoiceSummary.c1S3Percentage * 100)
-                        }
-                      />
-                      {strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 2 && (
-                        <h4 className="your-vote">
-                          {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
-                        </h4>
-                      )}
-                    </div>
+                  <Progress
+                    progress
+                    className={`prog-bar ${
+                      strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 0
+                        ? 'mine'
+                        : 'not-mine'
+                    }`}
+                    percent={
+                      strategyChoiceSummary &&
+                      Math.round(strategyChoiceSummary.c1S1Percentage * 100)
+                    }
+                  />
+                  {strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 0 && (
+                    <h4 className="your-vote">
+                      {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                    </h4>
                   )}
-                </Grid.Column>
-              </Grid>
+                </div>
 
-              <Grid>
-                <Grid.Column width={1}>
-                  <h2>2.</h2>
-                </Grid.Column>
-                <Grid.Column width={15}>
-                  <h2>{strategyChoiceSummary && strategyChoiceSummary.c2Title}</h2>
-                  <p className="emphasized">
-                    {strategyChoiceSummary &&
-                      Math.round(strategyChoiceSummary.c2PercentAgreed * 100)}
-                    %{' '}
-                    {translate(queryString.parse(this.props.location.search).lang, OF_PARTICIPANTS)}
+                <div className="strat-section">
+                  <p>
+                    <span className="strat">
+                      {translate(queryString.parse(this.props.location.search).lang, STRATEGY_2)}:{' '}
+                    </span>
+                    {strategyChoiceSummary && strategyChoiceSummary.c1S2Name}
                   </p>
-
-                  <div className="strat-section">
-                    <p>
-                      <span className="strat">
-                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_1)}:{' '}
-                      </span>
-                      {strategyChoiceSummary && strategyChoiceSummary.c2S1Name}
-                    </p>
-                    <Progress
-                      progress
-                      className={`prog-bar ${
-                        strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 0
-                          ? 'mine'
-                          : 'not-mine'
-                      }`}
-                      percent={
-                        strategyChoiceSummary &&
-                        Math.round(strategyChoiceSummary.c2S1Percentage * 100)
-                      }
-                    />
-                    {strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 0 && (
-                      <h4 className="your-vote">
-                        {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
-                      </h4>
-                    )}
-                  </div>
-
-                  <div className="strat-section">
-                    <p>
-                      <span className="strat">
-                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_2)}:{' '}
-                      </span>
-                      {strategyChoiceSummary && strategyChoiceSummary.c2S2Name}
-                    </p>
-                    <Progress
-                      progress
-                      className={`prog-bar ${
-                        strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 1
-                          ? 'mine'
-                          : 'not-mine'
-                      }`}
-                      percent={
-                        strategyChoiceSummary &&
-                        Math.round(strategyChoiceSummary.c2S2Percentage * 100)
-                      }
-                    />
-                    {strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 1 && (
-                      <h4 className="your-vote">
-                        {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
-                      </h4>
-                    )}
-                  </div>
-
-                  {strategyChoiceSummary && strategyChoiceSummary.c2S3Name && (
-                    <div className="strat-section">
-                      <p>
-                        <span className="strat">
-                          {translate(
-                            queryString.parse(this.props.location.search).lang,
-                            STRATEGY_3
-                          )}
-                          :{' '}
-                        </span>
-                        {strategyChoiceSummary && strategyChoiceSummary.c2S3Name}
-                      </p>
-                      <Progress
-                        progress
-                        className={`prog-bar ${
-                          strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 2
-                            ? 'mine'
-                            : 'not-mine'
-                        }`}
-                        percent={
-                          strategyChoiceSummary &&
-                          Math.round(strategyChoiceSummary.c2S3Percentage * 100)
-                        }
-                      />
-                      {strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 2 && (
-                        <h4 className="your-vote">
-                          {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
-                        </h4>
-                      )}
-                    </div>
+                  <Progress
+                    progress
+                    className={`prog-bar ${
+                      strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 1
+                        ? 'mine'
+                        : 'not-mine'
+                    }`}
+                    percent={
+                      strategyChoiceSummary &&
+                      Math.round(strategyChoiceSummary.c1S2Percentage * 100)
+                    }
+                  />
+                  {strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 1 && (
+                    <h4 className="your-vote">
+                      {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                    </h4>
                   )}
-                </Grid.Column>
-              </Grid>
+                </div>
+
+                {strategyChoiceSummary && strategyChoiceSummary.c1S3Name && (
+                  <div className="strat-section">
+                    <p>
+                      <span className="strat">
+                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_3)}:{' '}
+                      </span>
+                      {strategyChoiceSummary && strategyChoiceSummary.c1S3Name}
+                    </p>
+                    <Progress
+                      progress
+                      className={`prog-bar ${
+                        strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 2
+                          ? 'mine'
+                          : 'not-mine'
+                      }`}
+                      percent={
+                        strategyChoiceSummary &&
+                        Math.round(strategyChoiceSummary.c1S3Percentage * 100)
+                      }
+                    />
+                    {strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 2 && (
+                      <h4 className="your-vote">
+                        {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                      </h4>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              <h2>
+                2.{' '}
+                <span className="challenge-title">
+                  {strategyChoiceSummary && strategyChoiceSummary.c2Title}
+                </span>
+              </h2>
+              <div className="challenge-details">
+                <p className="emphasized">
+                  {strategyChoiceSummary && Math.round(strategyChoiceSummary.c2PercentAgreed * 100)}
+                  % {translate(queryString.parse(this.props.location.search).lang, OF_PARTICIPANTS)}
+                </p>
+
+                <div className="strat-section">
+                  <p>
+                    <span className="strat">
+                      {translate(queryString.parse(this.props.location.search).lang, STRATEGY_1)}:{' '}
+                    </span>
+                    {strategyChoiceSummary && strategyChoiceSummary.c2S1Name}
+                  </p>
+                  <Progress
+                    progress
+                    className={`prog-bar ${
+                      strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 0
+                        ? 'mine'
+                        : 'not-mine'
+                    }`}
+                    percent={
+                      strategyChoiceSummary &&
+                      Math.round(strategyChoiceSummary.c2S1Percentage * 100)
+                    }
+                  />
+                  {strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 0 && (
+                    <h4 className="your-vote">
+                      {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                    </h4>
+                  )}
+                </div>
+
+                <div className="strat-section">
+                  <p>
+                    <span className="strat">
+                      {translate(queryString.parse(this.props.location.search).lang, STRATEGY_2)}:{' '}
+                    </span>
+                    {strategyChoiceSummary && strategyChoiceSummary.c2S2Name}
+                  </p>
+                  <Progress
+                    progress
+                    className={`prog-bar ${
+                      strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 1
+                        ? 'mine'
+                        : 'not-mine'
+                    }`}
+                    percent={
+                      strategyChoiceSummary &&
+                      Math.round(strategyChoiceSummary.c2S2Percentage * 100)
+                    }
+                  />
+                  {strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 1 && (
+                    <h4 className="your-vote">
+                      {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                    </h4>
+                  )}
+                </div>
+
+                {strategyChoiceSummary && strategyChoiceSummary.c2S3Name && (
+                  <div className="strat-section">
+                    <p>
+                      <span className="strat">
+                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_3)}:{' '}
+                      </span>
+                      {strategyChoiceSummary && strategyChoiceSummary.c2S3Name}
+                    </p>
+                    <Progress
+                      progress
+                      className={`prog-bar ${
+                        strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 2
+                          ? 'mine'
+                          : 'not-mine'
+                      }`}
+                      percent={
+                        strategyChoiceSummary &&
+                        Math.round(strategyChoiceSummary.c2S3Percentage * 100)
+                      }
+                    />
+                    {strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 2 && (
+                      <h4 className="your-vote">
+                        {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                      </h4>
+                    )}
+                  </div>
+                )}
+              </div>
 
               {strategyChoiceSummary && strategyChoiceSummary.c3Title && (
-                <Grid>
-                  <Grid.Column width={1}>
-                    <h2>3.</h2>
-                  </Grid.Column>
-                  <Grid.Column width={15}>
-                    <h2>{strategyChoiceSummary && strategyChoiceSummary.c3Title}</h2>
+                <>
+                  <h2>
+                    3.{' '}
+                    <span className="challenge-title">
+                      {strategyChoiceSummary && strategyChoiceSummary.c3Title}
+                    </span>
+                  </h2>
+                  <div className="challenge-details">
                     <p className="emphasized">
                       {strategyChoiceSummary &&
                         Math.round(strategyChoiceSummary.c3PercentAgreed * 100)}
@@ -555,8 +545,8 @@ class SummaryView extends React.Component<Props, State> {
                         )}
                       </div>
                     )}
-                  </Grid.Column>
-                </Grid>
+                  </div>
+                </>
               )}
 
               <div className="share">

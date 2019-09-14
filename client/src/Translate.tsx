@@ -34,6 +34,8 @@ export const READY_NEXT = 'READY_NEXT'
 export const BACK = 'BACK'
 export const VIEW_MORE = 'VIEW_MORE'
 export const FLIP_BACK = 'FLIP_BACK'
+export const BUDGET_WARNING = 'BUDGET_WARNING'
+export const OK_MAYOR_HARD = 'OK_MAYOR_HARD'
 
 const translations: any = {
   MOB: {
@@ -213,6 +215,16 @@ const translations: any = {
   },
   FLIP_BACK: {
     en: 'Flip back',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  BUDGET_WARNING: {
+    en: 'BUDGET WARNING!',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  OK_MAYOR_HARD: {
+    en: 'Ok. Being a mayor is hard.',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },

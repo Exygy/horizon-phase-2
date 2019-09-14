@@ -20,6 +20,15 @@
   background-color: #ffda4e;
 }
 
+#summary-view .challenge-title {
+  padding-left: 16px;
+}
+
+#summary-view .challenge-details {
+  padding-left: 40px;
+  padding-bottom: 7px;
+}
+
 #summary-view .mine .bar {
   background-color: #ffa725;
 }
