@@ -215,7 +215,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                 <hr id="special-divider" />
                 <p id="special-p">{step && step.publicField19}</p>
                 <div id="special-btn-holder">
-                  <Button id="special-btn" onClick={this.recordChoiceAndRedirect}>
+                  <Button id="special-btn" onClick={this.handleClose}>
                     {translate(queryString.parse(this.props.location.search).lang, OK_MAYOR_HARD)}
                   </Button>
                 </div>
