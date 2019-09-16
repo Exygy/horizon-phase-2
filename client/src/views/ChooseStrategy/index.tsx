@@ -213,7 +213,9 @@ class ChooseStrategyView extends React.Component<Props, State> {
                   {translate(queryString.parse(this.props.location.search).lang, BUDGET_WARNING)}
                 </h3>
                 <hr id="special-divider" />
-                <p id="special-p">{step && step.publicField19}</p>
+                <Form loading={loading}>
+                  <p id="special-p">{step && step.publicField19}</p>
+                </Form>
                 <div id="special-btn-holder">
                   <Button id="special-btn" onClick={this.handleClose}>
                     {translate(queryString.parse(this.props.location.search).lang, OK_MAYOR_HARD)}
