@@ -92,7 +92,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
   componentDidMount = () => {
     const coinCount = getCoinCount(this.props.match.params.stepId)
 
-    if (coinCount === 100) {
+    if (coinCount < 0) {
       this.setState({ modalOpen: true })
     }
   }

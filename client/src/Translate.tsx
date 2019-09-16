@@ -224,7 +224,7 @@ const translations: any = {
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   OK_MAYOR_HARD: {
-    en: 'Ok. Being a mayor is hard.',
+    en: 'Got it',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
