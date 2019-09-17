@@ -25,6 +25,7 @@ export const FLIP_FOR_MORE = 'FLIP_FOR_MORE'
 export const STRATEGY_1 = 'STRATEGY_1'
 export const STRATEGY_2 = 'STRATEGY_2'
 export const STRATEGY_3 = 'STRATEGY_3'
+export const STRATEGY_4 = 'STRATEGY_4'
 export const CHOOSE_THIS_STRATEGY = 'CHOOSE_THIS_STRATEGY'
 export const NICE_WORK_MAYOR = 'NICE_WORK_MAYOR'
 export const OF_PARTICIPANTS = 'OF_PARTICIPANTS'
@@ -225,6 +226,11 @@ const translations: any = {
   },
   OK_MAYOR_HARD: {
     en: 'Got it',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  STRATEGY_4: {
+    en: 'Strategy 4',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },

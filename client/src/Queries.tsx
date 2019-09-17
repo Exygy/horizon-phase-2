@@ -23,9 +23,15 @@ export const stepQuery = gql`
       publicField17
       publicField18
       publicField19
+      publicField20
+      publicField21
+      publicField22
+      publicField23
+      publicField24
       privateField1
       privateField2
       privateField3
-    },
+      privateField4
+    }
   }
 `

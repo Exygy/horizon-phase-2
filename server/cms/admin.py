@@ -35,6 +35,11 @@ class StepAdmin(admin.ModelAdmin):
         "public_field_17_meta_description",
         "public_field_18_meta_description",
         "public_field_19_meta_description",
+        "public_field_20_meta_description",
+        "public_field_21_meta_description",
+        "public_field_22_meta_description",
+        "public_field_23_meta_description",
+        "public_field_24_meta_description",
     ]
     list_display = ('id', 'get_category', 'get_challenge', )
     formfield_overrides = {
@@ -111,6 +116,21 @@ class StepAdmin(admin.ModelAdmin):
         if self.check_if_used(obj.public_field_19_meta_description):
             fields = fields + ('public_field_19_meta_description', 'public_field_19_en',
                                'public_field_19_es', 'public_field_19_cn',)
+        if self.check_if_used(obj.public_field_20_meta_description):
+            fields = fields + ('public_field_20_meta_description', 'public_field_20_en',
+                               'public_field_20_es', 'public_field_20_cn',)
+        if self.check_if_used(obj.public_field_21_meta_description):
+            fields = fields + ('public_field_21_meta_description', 'public_field_21_en',
+                               'public_field_21_es', 'public_field_21_cn',)
+        if self.check_if_used(obj.public_field_22_meta_description):
+            fields = fields + ('public_field_22_meta_description', 'public_field_22_en',
+                               'public_field_22_es', 'public_field_22_cn',)
+        if self.check_if_used(obj.public_field_23_meta_description):
+            fields = fields + ('public_field_23_meta_description', 'public_field_23_en',
+                               'public_field_23_es', 'public_field_23_cn',)
+        if self.check_if_used(obj.public_field_24_meta_description):
+            fields = fields + ('public_field_24_meta_description', 'public_field_24_en',
+                               'public_field_24_es', 'public_field_24_cn',)
 
         return fields
 
