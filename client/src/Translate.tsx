@@ -37,6 +37,9 @@ export const VIEW_MORE = 'VIEW_MORE'
 export const FLIP_BACK = 'FLIP_BACK'
 export const BUDGET_WARNING = 'BUDGET_WARNING'
 export const OK_MAYOR_HARD = 'OK_MAYOR_HARD'
+export const THREE_CHALLENGES = 'THREE_CHALLENGES'
+export const TWO_CHALLENGES = 'TWO_CHALLENGES'
+export const ONE_HUNDRED_COINS = 'ONE_HUNDRED_COINS'
 
 const translations: any = {
   MOB: {
@@ -231,6 +234,21 @@ const translations: any = {
   },
   STRATEGY_4: {
     en: 'Strategy 4',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  THREE_CHALLENGES: {
+    en: '3 challenges',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  TWO_CHALLENGES: {
+    en: '2 challenges',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  ONE_HUNDRED_COINS: {
+    en: '100 coins',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },

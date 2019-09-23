@@ -15,16 +15,15 @@
 
 #onboarding-choose-category-view .pill {
   display: flex;
-  align-items: center;
   padding-left: 35px;
   margin: 0px auto;
   margin-bottom: 10px;
-  height: 82px;
-  width: 350px;
+  height: 100px;
+  width: 371px;
   border-radius: 18px;
   background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: 143px 52px;
+  background-position: right center;
+  background-size: 120px 64px;
 }
 #onboarding-choose-category-view .pill.housing {
   background-color: #ffd392;
@@ -32,6 +31,11 @@
 }
 #onboarding-choose-category-view .pill.housing h2 {
   color: #26364c;
+  margin-top: 23px;
+}
+#onboarding-choose-category-view .pill.housing h4 {
+  position: absolute;
+  margin-top: 54px;
 }
 #onboarding-choose-category-view .pill.transportation {
   background-color: #f9cbca;
@@ -39,6 +43,11 @@
 }
 #onboarding-choose-category-view .pill.transportation h2 {
   color: #26364c;
+  margin-top: 23px;
+}
+#onboarding-choose-category-view .pill.transportation h4 {
+  position: absolute;
+  margin-top: 54px;
 }
 #onboarding-choose-category-view .pill.economy {
   background-color: #6fa6e5;
@@ -46,6 +55,12 @@
 }
 #onboarding-choose-category-view .pill.economy h2 {
   color: #ffffff;
+  margin-top: 23px;
+}
+#onboarding-choose-category-view .pill.economy h4 {
+  position: absolute;
+  color: #ffffff;
+  margin-top: 54px;
 }
 #onboarding-choose-category-view .pill.environment {
   background-color: #7ec2b7;
@@ -53,4 +68,9 @@
 }
 #onboarding-choose-category-view .pill.environment h2 {
   color: #26364c;
+  margin-top: 23px;
+}
+#onboarding-choose-category-view .pill.environment h4 {
+  position: absolute;
+  margin-top: 54px;
 }

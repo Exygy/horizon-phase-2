@@ -26,7 +26,17 @@ import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/T
 import { constructInnerHTML } from 'src/Helpers'
 import CustomHeader from 'src/components/CustomHeader/'
 import Main from 'src/components/Main/'
-import { MOB, HOUSING, ECONOMY, TRANSPORATION, ENVIRONMENT, translate } from 'src/Translate'
+import {
+  THREE_CHALLENGES,
+  TWO_CHALLENGES,
+  ONE_HUNDRED_COINS,
+  MOB,
+  HOUSING,
+  ECONOMY,
+  TRANSPORATION,
+  ENVIRONMENT,
+  translate,
+} from 'src/Translate'
 import './style.css'
 
 const queryString = require('query-string')
@@ -63,17 +73,6 @@ class OnboardingChooseCategoryView extends React.Component<Props, {}> {
               />
             </div>
             <a
-              className="pill housing"
-              onClick={() =>
-                this.props.history.push(
-                  `/scenario/100?lang=${queryString.parse(this.props.location.search).lang}`
-                )
-              }
-              href="#"
-            >
-              <h2>{translate(queryString.parse(this.props.location.search).lang, HOUSING)}</h2>
-            </a>
-            <a
               className="pill transportation"
               onClick={() =>
                 this.props.history.push(
@@ -85,17 +84,25 @@ class OnboardingChooseCategoryView extends React.Component<Props, {}> {
               <h2>
                 {translate(queryString.parse(this.props.location.search).lang, TRANSPORATION)}
               </h2>
+              <h4>
+                {translate(queryString.parse(this.props.location.search).lang, THREE_CHALLENGES)} •{' '}
+                {translate(queryString.parse(this.props.location.search).lang, ONE_HUNDRED_COINS)}
+              </h4>
             </a>
             <a
-              className="pill economy"
+              className="pill housing"
               onClick={() =>
                 this.props.history.push(
-                  `/scenario/500?lang=${queryString.parse(this.props.location.search).lang}`
+                  `/scenario/100?lang=${queryString.parse(this.props.location.search).lang}`
                 )
               }
               href="#"
             >
-              <h2>{translate(queryString.parse(this.props.location.search).lang, ECONOMY)}</h2>
+              <h2>{translate(queryString.parse(this.props.location.search).lang, HOUSING)}</h2>
+              <h4>
+                {translate(queryString.parse(this.props.location.search).lang, THREE_CHALLENGES)} •{' '}
+                {translate(queryString.parse(this.props.location.search).lang, ONE_HUNDRED_COINS)}
+              </h4>
             </a>
             <a
               className="pill environment"
@@ -107,6 +114,25 @@ class OnboardingChooseCategoryView extends React.Component<Props, {}> {
               href="#"
             >
               <h2>{translate(queryString.parse(this.props.location.search).lang, ENVIRONMENT)}</h2>
+              <h4>
+                {translate(queryString.parse(this.props.location.search).lang, TWO_CHALLENGES)} •{' '}
+                {translate(queryString.parse(this.props.location.search).lang, ONE_HUNDRED_COINS)}
+              </h4>
+            </a>
+            <a
+              className="pill economy"
+              onClick={() =>
+                this.props.history.push(
+                  `/scenario/500?lang=${queryString.parse(this.props.location.search).lang}`
+                )
+              }
+              href="#"
+            >
+              <h2>{translate(queryString.parse(this.props.location.search).lang, ECONOMY)}</h2>
+              <h4>
+                {translate(queryString.parse(this.props.location.search).lang, THREE_CHALLENGES)} •{' '}
+                {translate(queryString.parse(this.props.location.search).lang, ONE_HUNDRED_COINS)}
+              </h4>
             </a>
           </Form>
         </Main>

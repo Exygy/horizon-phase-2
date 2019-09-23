@@ -52,6 +52,7 @@
 
 #summary-view .content-box {
   margin-top: 30px;
+  padding: 0px;
 }
 
 #summary-view .share {
@@ -62,6 +63,10 @@
 #summary-view .next-challenges {
   text-align: center;
   margin-top: 50px;
+}
+
+#summary-view .stats {
+  padding: 37px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -91,15 +96,15 @@
 
 #summary-view .pill {
   display: flex;
-  align-items: center;
   padding-left: 35px;
   margin: 0px auto;
   margin-bottom: 10px;
-  height: 82px;
+  height: 100px;
+  max-width: 371px;
   border-radius: 18px;
   background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: 143px 52px;
+  background-position: right center;
+  background-size: 120px 64px;
 }
 #summary-view .pill.housing {
   background-color: #ffd392;
@@ -107,6 +112,11 @@
 }
 #summary-view .pill.housing h2 {
   color: #26364c;
+  margin-top: 23px;
+}
+#summary-view .pill.housing h4 {
+  position: absolute;
+  margin-top: 54px;
 }
 #summary-view .pill.transportation {
   background-color: #f9cbca;
@@ -114,6 +124,11 @@
 }
 #summary-view .pill.transportation h2 {
   color: #26364c;
+  margin-top: 23px;
+}
+#summary-view .pill.transportation h4 {
+  position: absolute;
+  margin-top: 54px;
 }
 #summary-view .pill.economy {
   background-color: #6fa6e5;
@@ -121,6 +136,12 @@
 }
 #summary-view .pill.economy h2 {
   color: #ffffff;
+  margin-top: 23px;
+}
+#summary-view .pill.economy h4 {
+  position: absolute;
+  color: #ffffff;
+  margin-top: 54px;
 }
 #summary-view .pill.environment {
   background-color: #7ec2b7;
@@ -128,4 +149,9 @@
 }
 #summary-view .pill.environment h2 {
   color: #26364c;
+  margin-top: 23px;
+}
+#summary-view .pill.environment h4 {
+  position: absolute;
+  margin-top: 54px;
 }

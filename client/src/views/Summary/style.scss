@@ -53,6 +53,7 @@
 
     .content-box {
         margin-top: 30px;
+        padding: 0px;
     }
 
     .share {
@@ -63,6 +64,10 @@
     .next-challenges {
         text-align: center;
         margin-top:50px;
+    }
+
+    .stats {
+        padding: 37px;
     }
 
     // Mobile only
@@ -96,23 +101,29 @@
 
     .pill {
         display: flex;
-        align-items: center;
         padding-left: 35px;
         margin: 0px auto;
         margin-bottom: 10px;
 
-        height: 82px;
+        height: 100px;
+        max-width: 371px;
         border-radius: 18px;
 
         background-repeat: no-repeat;
-        background-position: right bottom; 
-        background-size: 143px 52px;
+        background-position: right center; 
+        background-size: 120px 64px;
 
         &.housing {
             background-color: #FFD392;
             background-image: url('../../images/topic_housing.png');
             h2 {
                 color: #26364C;
+                margin-top: 23px;
+            }
+
+            h4 {
+                position: absolute;
+                margin-top: 54px;
             }
         }
 
@@ -121,6 +132,12 @@
             background-image: url('../../images/topic_transportation.png');
             h2 {
                 color: #26364C;
+                margin-top: 23px;
+            }
+
+            h4 {
+                position: absolute;
+                margin-top: 54px;
             }
         }
 
@@ -129,6 +146,13 @@
             background-image: url('../../images/topic_economy.png');
             h2 {
                 color: #FFFFFF;
+                margin-top: 23px;
+            }
+
+            h4 {
+                position: absolute;
+                color: #FFFFFF;
+                margin-top: 54px;
             }
         }
 
@@ -137,6 +161,12 @@
             background-image: url('../../images/topic_environment.png');
             h2 {
                 color: #26364C;
+                margin-top: 23px;
+            }
+
+            h4 {
+                position: absolute;
+                margin-top: 54px;
             }
         }
     }
