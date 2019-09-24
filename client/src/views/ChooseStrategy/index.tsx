@@ -260,21 +260,21 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       </h4>
                       <hr className="divider-line" />
                       <h1 className="">{step && step.publicField2}</h1>
-                      <p>{step && step.publicField3}</p>
-                      <p className="view-more">
-                        <a href="#" onClick={() => this.handleClick(0)}>
-                          {translate(queryString.parse(this.props.location.search).lang, VIEW_MORE)}
-                          <Icon className="arrow-right" name="long arrow alternate right" />
-                        </a>
-                      </p>
-                    </div>
-                    <div className="content-box-bottom">
-                      <div className="col-left">
+                      <div className="cost-details">
                         <h2 className="coin-cost">{step && step.publicField6}</h2>
-                        <Image className="coin-img" src={coin} />
+                        <img className="coin-img" src={coin} />
                       </div>
-                      <div className="col-right">
-                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
+                      <p>{step && step.publicField3}</p>
+                      <div className="flip-more-btn-holder">
+                        <Button className="btn secondary" onClick={() => this.handleClick(0)}>
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            FLIP_FOR_MORE
+                          )}
+                        </Button>
+                      </div>
+                      <div>
+                        <Button className="btn primary" onClick={this.recordChoiceAndRedirect}>
                           {translate(
                             queryString.parse(this.props.location.search).lang,
                             CHOOSE_THIS_STRATEGY
@@ -286,19 +286,17 @@ class ChooseStrategyView extends React.Component<Props, State> {
                   <div key="back">
                     <div className="content-box">
                       <h1 className="">{step && step.publicField2}</h1>
+                      <div className="cost-details">
+                        <h2 className="coin-cost">{step && step.publicField6}</h2>
+                        <img className="coin-img" src={coin} />
+                      </div>
                       <p className="large">What it is:</p>
                       <p>{step && step.publicField3}</p>
                       <p className="large">Pros:</p>
                       <p>{step && step.publicField4}</p>
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField5}</p>
-                    </div>
-                    <div className="content-box-bottom">
-                      <div className="col-left">
-                        <h2 className="coin-cost">{step && step.publicField6}</h2>
-                        <Image className="coin-img" src={coin} />
-                      </div>
-                      <div className="col-right">
+                      <div className="flip-more-btn-holder">
                         <Button className="btn secondary" onClick={() => this.handleClick(0)}>
                           {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
                         </Button>
@@ -306,6 +304,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                     </div>
                   </div>
                 </ReactCardFlip>
+
                 <ReactCardFlip
                   isFlipped={this.state.flippedStates[1]}
                   cardZIndex={-100}
@@ -332,21 +331,21 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       </h4>
                       <hr className="divider-line" />
                       <h1 className="">{step && step.publicField8}</h1>
-                      <p>{step && step.publicField9}</p>
-                      <p className="view-more">
-                        <a href="#" onClick={() => this.handleClick(1)}>
-                          {translate(queryString.parse(this.props.location.search).lang, VIEW_MORE)}
-                          <Icon className="arrow-right" name="long arrow alternate right" />
-                        </a>
-                      </p>
-                    </div>
-                    <div className="content-box-bottom">
-                      <div className="col-left">
+                      <div className="cost-details">
                         <h2 className="coin-cost">{step && step.publicField12}</h2>
-                        <Image className="coin-img" src={coin} />
+                        <img className="coin-img" src={coin} />
                       </div>
-                      <div className="col-right">
-                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
+                      <p>{step && step.publicField9}</p>
+                      <div className="flip-more-btn-holder">
+                        <Button className="btn secondary" onClick={() => this.handleClick(1)}>
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            FLIP_FOR_MORE
+                          )}
+                        </Button>
+                      </div>
+                      <div>
+                        <Button className="btn primary" onClick={this.recordChoiceAndRedirect}>
                           {translate(
                             queryString.parse(this.props.location.search).lang,
                             CHOOSE_THIS_STRATEGY
@@ -358,19 +357,17 @@ class ChooseStrategyView extends React.Component<Props, State> {
                   <div key="back">
                     <div className="content-box">
                       <h1 className="">{step && step.publicField8}</h1>
+                      <div className="cost-details">
+                        <h2 className="coin-cost">{step && step.publicField12}</h2>
+                        <img className="coin-img" src={coin} />
+                      </div>
                       <p className="large">What it is:</p>
                       <p>{step && step.publicField9}</p>
                       <p className="large">Pros:</p>
                       <p>{step && step.publicField10}</p>
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField11}</p>
-                    </div>
-                    <div className="content-box-bottom">
-                      <div className="col-left">
-                        <h2 className="coin-cost">{step && step.publicField12}</h2>
-                        <Image className="coin-img" src={coin} />
-                      </div>
-                      <div className="col-right">
+                      <div className="flip-more-btn-holder">
                         <Button className="btn secondary" onClick={() => this.handleClick(1)}>
                           {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
                         </Button>
@@ -378,6 +375,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                     </div>
                   </div>
                 </ReactCardFlip>
+
                 <ReactCardFlip isFlipped={this.state.flippedStates[2]} flipDirection="horizontal">
                   <div key="front">
                     <div className="content-box">
@@ -407,30 +405,27 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       </h4>
                       <hr className="divider-line" />
                       <h1 className="">{step && step.publicField14}</h1>
+                      <div className="cost-details">
+                        <h2 className="coin-cost">{step && step.publicField18}</h2>
+                        <img className="coin-img" src={coin} />
+                      </div>
                       <p>{step && step.publicField15}</p>
                       {parseInt(this.props.match.params.stepId) !== 203 &&
                         parseInt(this.props.match.params.stepId) !== 403 &&
                         parseInt(this.props.match.params.stepId) !== 307 &&
                         parseInt(this.props.match.params.stepId) !== 607 &&
                         parseInt(this.props.match.params.stepId) !== 703 && (
-                          <p className="view-more">
-                            <a href="#" onClick={() => this.handleClick(2)}>
+                          <div className="flip-more-btn-holder">
+                            <Button className="btn secondary" onClick={() => this.handleClick(2)}>
                               {translate(
                                 queryString.parse(this.props.location.search).lang,
-                                VIEW_MORE
+                                FLIP_FOR_MORE
                               )}
-                              <Icon className="arrow-right" name="long arrow alternate right" />
-                            </a>
-                          </p>
+                            </Button>
+                          </div>
                         )}
-                    </div>
-                    <div className="content-box-bottom">
-                      <div className="col-left">
-                        <h2 className="coin-cost">{step && step.publicField18}</h2>
-                        <Image className="coin-img" src={coin} />
-                      </div>
-                      <div className="col-right">
-                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
+                      <div>
+                        <Button className="btn primary" onClick={this.recordChoiceAndRedirect}>
                           {translate(
                             queryString.parse(this.props.location.search).lang,
                             CHOOSE_THIS_STRATEGY
@@ -442,19 +437,17 @@ class ChooseStrategyView extends React.Component<Props, State> {
                   <div key="back">
                     <div className="content-box">
                       <h1 className="">{step && step.publicField14}</h1>
+                      <div className="cost-details">
+                        <h2 className="coin-cost">{step && step.publicField18}</h2>
+                        <img className="coin-img" src={coin} />
+                      </div>
                       <p className="large">What it is:</p>
                       <p>{step && step.publicField15}</p>
                       <p className="large">Pros:</p>
                       <p>{step && step.publicField16}</p>
                       <p className="large">Cons:</p>
                       <p>{step && step.publicField17}</p>
-                    </div>
-                    <div className="content-box-bottom">
-                      <div className="col-left">
-                        <h2 className="coin-cost">{step && step.publicField18}</h2>
-                        <Image className="coin-img" src={coin} />
-                      </div>
-                      <div className="col-right">
+                      <div className="flip-more-btn-holder">
                         <Button className="btn secondary" onClick={() => this.handleClick(2)}>
                           {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
                         </Button>
@@ -462,6 +455,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                     </div>
                   </div>
                 </ReactCardFlip>
+
                 <ReactCardFlip isFlipped={this.state.flippedStates[3]} flipDirection="horizontal">
                   <div key="front">
                     <div className="content-box">
@@ -485,26 +479,26 @@ class ChooseStrategyView extends React.Component<Props, State> {
                       </h4>
                       <hr className="divider-line" />
                       <h1 className="">{step && step.publicField20}</h1>
-                      <p>{step && step.publicField21}</p>
-                    </div>
-                    <div className="content-box-bottom">
-                      <div className="col-left">
+                      <div className="cost-details">
                         <h2 className="coin-cost">{step && step.publicField24}</h2>
-                        <Image className="coin-img" src={coin} />
+                        <img className="coin-img" src={coin} />
                       </div>
-                      <div className="col-right">
-                        <Button className="btn secondary" onClick={this.recordChoiceAndRedirect}>
-                          {translate(
-                            queryString.parse(this.props.location.search).lang,
-                            CHOOSE_THIS_STRATEGY
-                          )}
-                        </Button>
-                      </div>
+                      <p>{step && step.publicField21}</p>
+                      <Button className="btn primary" onClick={this.recordChoiceAndRedirect}>
+                        {translate(
+                          queryString.parse(this.props.location.search).lang,
+                          CHOOSE_THIS_STRATEGY
+                        )}
+                      </Button>
                     </div>
                   </div>
                   <div key="back">
                     <div className="content-box">
                       <h1 className="">{step && step.publicField20}</h1>
+                      <div className="cost-details">
+                        <h2 className="coin-cost">{step && step.publicField24}</h2>
+                        <img className="coin-img" src={coin} />
+                      </div>
                       <p className="large">What it is:</p>
                       <p>{step && step.publicField21}</p>
                       <p className="large">Pros:</p>

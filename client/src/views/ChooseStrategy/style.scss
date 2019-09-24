@@ -23,8 +23,8 @@
 
         border-top-left-radius: 29px;
         border-top-right-radius: 29px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 29px;
+        border-bottom-right-radius: 29px;
 
         .view-more {
             text-align: center;
@@ -36,53 +36,28 @@
             padding-top: 1px;
         }
 
-    }
-
-    .content-box-bottom {
-        background: red;
-        max-width: 668px;
-        margin-left: auto;
-        margin-right: auto;
-        border-bottom-left-radius: 29px;
-        border-bottom-right-radius: 29px;
-        background-color: #1E8FE1;
-        height: 79px;
+        .coin-img {
+            height: 18px;
+            width: 18px;
+            margin-top: 5px;
+            margin-left: 8px;
+        }
 
         .coin-cost {
-            margin-top:10px;
             display: inline;
-            color: white;
-            padding-top: 20px;
         }
 
-        .col-left {
-            float: left;
-            padding-left: 36px;
-            padding-top: 26px;
-            padding-bottom: 25px;
+        .cost-details {
+            padding-bottom: 17px;
         }
 
-        .col-right {
-            float: right;
-            padding-right: 18px;
-            padding-top: 16px;
+        .flip-more-btn-holder {
+            margin-top: 32px;
+            margin-bottom: 16px;
         }
 
-        .coin-img {
-            display: inherit;
-            width: 20px;
-            display: inline;
-            margin-left: 8px;
-            margin-top: 4px;
-        }
-
-        @media only screen and (max-width: 768px) {
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-
-        .btn.secondary {
-            background-color: white;
+        .btn {
+            width: 186px;
         }
     }
 

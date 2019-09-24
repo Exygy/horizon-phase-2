@@ -115,7 +115,7 @@ class OnboardingChooseCategoryView extends React.Component<Props, {}> {
             >
               <h2>{translate(queryString.parse(this.props.location.search).lang, ENVIRONMENT)}</h2>
               <h4>
-                {translate(queryString.parse(this.props.location.search).lang, TWO_CHALLENGES)} •{' '}
+                {translate(queryString.parse(this.props.location.search).lang, THREE_CHALLENGES)} •{' '}
                 {translate(queryString.parse(this.props.location.search).lang, ONE_HUNDRED_COINS)}
               </h4>
             </a>
@@ -130,7 +130,7 @@ class OnboardingChooseCategoryView extends React.Component<Props, {}> {
             >
               <h2>{translate(queryString.parse(this.props.location.search).lang, ECONOMY)}</h2>
               <h4>
-                {translate(queryString.parse(this.props.location.search).lang, THREE_CHALLENGES)} •{' '}
+                {translate(queryString.parse(this.props.location.search).lang, TWO_CHALLENGES)} •{' '}
                 {translate(queryString.parse(this.props.location.search).lang, ONE_HUNDRED_COINS)}
               </h4>
             </a>

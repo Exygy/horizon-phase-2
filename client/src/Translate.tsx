@@ -158,12 +158,12 @@ const translations: any = {
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   FLIP_FOR_MORE: {
-    en: 'Flip for more',
+    en: 'Flip for Details',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },
   CHOOSE_THIS_STRATEGY: {
-    en: 'Choose this strategy',
+    en: 'Select Strategy',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },

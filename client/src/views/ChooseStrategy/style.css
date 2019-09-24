@@ -11,8 +11,8 @@
   margin-top: 0px;
   border-top-left-radius: 29px;
   border-top-right-radius: 29px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 29px;
+  border-bottom-right-radius: 29px;
 }
 #choose-strategy-view .content-box p {
   text-align: left;
@@ -28,49 +28,24 @@
   padding-left: 8px;
   padding-top: 1px;
 }
-
-#choose-strategy-view .content-box-bottom {
-  background: red;
-  max-width: 668px;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom-left-radius: 29px;
-  border-bottom-right-radius: 29px;
-  background-color: #1e8fe1;
-  height: 79px;
-}
-#choose-strategy-view .content-box-bottom .coin-cost {
-  margin-top: 10px;
-  display: inline;
-  color: white;
-  padding-top: 20px;
-}
-#choose-strategy-view .content-box-bottom .col-left {
-  float: left;
-  padding-left: 36px;
-  padding-top: 26px;
-  padding-bottom: 25px;
-}
-#choose-strategy-view .content-box-bottom .col-right {
-  float: right;
-  padding-right: 18px;
-  padding-top: 16px;
-}
-#choose-strategy-view .content-box-bottom .coin-img {
-  display: inherit;
-  width: 20px;
-  display: inline;
+#choose-strategy-view .content-box .coin-img {
+  height: 18px;
+  width: 18px;
+  margin-top: 5px;
   margin-left: 8px;
-  margin-top: 4px;
 }
-@media only screen and (max-width: 768px) {
-  #choose-strategy-view .content-box-bottom {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
+#choose-strategy-view .content-box .coin-cost {
+  display: inline;
 }
-#choose-strategy-view .content-box-bottom .btn.secondary {
-  background-color: white;
+#choose-strategy-view .content-box .cost-details {
+  padding-bottom: 17px;
+}
+#choose-strategy-view .content-box .flip-more-btn-holder {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+#choose-strategy-view .content-box .btn {
+  width: 186px;
 }
 
 #choose-strategy-view .carousel-holder {

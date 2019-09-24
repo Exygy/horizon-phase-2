@@ -770,7 +770,7 @@ class SummaryView extends React.Component<Props, State> {
                     <h4>
                       {translate(
                         queryString.parse(this.props.location.search).lang,
-                        TWO_CHALLENGES
+                        THREE_CHALLENGES
                       )}{' '}
                       •{' '}
                       {translate(
@@ -796,7 +796,7 @@ class SummaryView extends React.Component<Props, State> {
                     <h4>
                       {translate(
                         queryString.parse(this.props.location.search).lang,
-                        THREE_CHALLENGES
+                        TWO_CHALLENGES
                       )}{' '}
                       •{' '}
                       {translate(
