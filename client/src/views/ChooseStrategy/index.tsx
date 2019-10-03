@@ -15,7 +15,6 @@ import {
   Image,
   Label,
   Menu,
-  Modal,
   Responsive,
   Segment,
   Sidebar,
@@ -78,7 +77,6 @@ type State = {
   isFlipped: boolean
   selectedItem: number
   flippedStates: Array<boolean>
-  modalOpen: boolean
 }
 
 class ChooseStrategyView extends React.Component<Props, State> {
@@ -87,15 +85,6 @@ class ChooseStrategyView extends React.Component<Props, State> {
     isFlipped: false,
     selectedItem: 0,
     flippedStates: [],
-    modalOpen: false,
-  }
-
-  componentDidMount = () => {
-    const coinCount = getCoinCount(this.props.match.params.stepId)
-
-    if (coinCount < 0) {
-      this.setState({ modalOpen: true })
-    }
   }
 
   recordChoiceAndRedirect = async () => {
@@ -181,10 +170,6 @@ class ChooseStrategyView extends React.Component<Props, State> {
     this.setState({ flippedStates })
   }
 
-  handleClose = () => {
-    this.setState({ modalOpen: false })
-  }
-
   render() {
     const { step, loading } = this.props.data
 
@@ -206,27 +191,6 @@ class ChooseStrategyView extends React.Component<Props, State> {
               <br />
               {translate(queryString.parse(this.props.location.search).lang, FOLLOWING_STRATEGIES)}
             </h4>
-            <Modal
-              open={this.state.modalOpen}
-              closeIcon
-              onClose={this.handleClose}
-              className="warning-modal"
-            >
-              <Modal.Content>
-                <h3 id="special-h3">
-                  {translate(queryString.parse(this.props.location.search).lang, BUDGET_WARNING)}
-                </h3>
-                <hr id="special-divider" />
-                <Form loading={loading}>
-                  <p id="special-p">{step && step.publicField19}</p>
-                </Form>
-                <div id="special-btn-holder">
-                  <Button id="special-btn" onClick={this.handleClose}>
-                    {translate(queryString.parse(this.props.location.search).lang, OK_MAYOR_HARD)}
-                  </Button>
-                </div>
-              </Modal.Content>
-            </Modal>
             <div className="carousel-holder">
               <Carousel
                 showIndicators={false}

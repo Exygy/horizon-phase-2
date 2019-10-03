@@ -59,7 +59,7 @@ class OnboardingElectedView extends React.Component<Props, {}> {
                   <Button
                     className="btn primary"
                     as={Link}
-                    to={`/onboarding/your-challenge/10004?lang=${
+                    to={`/onboarding/survey/10005?lang=${
                       queryString.parse(this.props.location.search).lang
                     }`}
                   >

@@ -233,6 +233,17 @@ class SummaryView extends React.Component<Props, State> {
     }))
   }
 
+  shareFacebook = () => {
+    //const height =
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u=https://bayville.planbayarea.org',
+      'fbShareWindow',
+      'height=450, width=550, top=' +
+        ((window as any).height / 2 - 275) +
+        ',toolbar=0, location=0, menubar=0, directories=0, scrollbars=0'
+    )
+  }
+
   render() {
     const { strategyChoiceSummary, loading } = this.props.data
     const { feedbackText, isSubmitting, errorMsg } = this.state
@@ -690,7 +701,7 @@ class SummaryView extends React.Component<Props, State> {
                       SHARE_YOUR_RESULTS
                     )}
                   </h4>
-                  <Button color="facebook" icon labelPosition="left">
+                  <Button color="facebook" icon labelPosition="left" onClick={this.shareFacebook}>
                     <Icon name="facebook" />
                     Facebook
                   </Button>

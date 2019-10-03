@@ -15,6 +15,7 @@ import {
   Image,
   Label,
   Menu,
+  Modal,
   Responsive,
   Segment,
   Sidebar,
@@ -34,6 +35,8 @@ import {
   HOW_IT_AFFECTS_BAYVILLE,
   REMAINING_BUDGET,
   YOU_SELECTED,
+  BUDGET_WARNING,
+  OK_MAYOR_HARD,
 } from 'src/Translate'
 
 const queryString = require('query-string')
@@ -42,8 +45,22 @@ type OwnProps = RouteComponentProps<StepRouteParams>
 type StepQueryProps = ChildDataProps<StepQueryParams, StepQueryResponse>
 type Props = StepQueryProps & OwnProps
 
-class StrategyFeedbackView extends React.Component<Props, {}> {
-  componentDidMount = () => {}
+type State = {
+  modalOpen: boolean
+}
+
+class StrategyFeedbackView extends React.Component<Props, State> {
+  state = {
+    modalOpen: false,
+  }
+
+  componentDidMount = () => {
+    const coinCount = getCoinCount(this.props.match.params.stepId)
+
+    if (coinCount < 0) {
+      this.setState({ modalOpen: true })
+    }
+  }
 
   processText = (text: string | undefined) => {
     if (!text || !queryString.parse(this.props.location.search).coins_spent) return
@@ -57,6 +74,10 @@ class StrategyFeedbackView extends React.Component<Props, {}> {
       getCoinCount(this.props.match.params.stepId).toString()
     )
     return text
+  }
+
+  handleClose = () => {
+    this.setState({ modalOpen: false })
   }
 
   render() {
@@ -75,6 +96,27 @@ class StrategyFeedbackView extends React.Component<Props, {}> {
               <Image className="coin-img" src={coin} />
               <p>{translate(queryString.parse(this.props.location.search).lang, REMAINING)}</p>
             </div>
+            <Modal
+              open={this.state.modalOpen}
+              closeIcon
+              onClose={this.handleClose}
+              className="warning-modal"
+            >
+              <Modal.Content>
+                <h3 id="special-h3">
+                  {translate(queryString.parse(this.props.location.search).lang, BUDGET_WARNING)}
+                </h3>
+                <hr id="special-divider" />
+                <Form loading={loading}>
+                  <p id="special-p">{step && step.publicField19}</p>
+                </Form>
+                <div id="special-btn-holder">
+                  <Button id="special-btn" onClick={this.handleClose}>
+                    {translate(queryString.parse(this.props.location.search).lang, OK_MAYOR_HARD)}
+                  </Button>
+                </div>
+              </Modal.Content>
+            </Modal>
             <div className="content-box">
               <h2>
                 <span className="you-selected">
