@@ -42,6 +42,9 @@ import {
   FLIP_BACK,
   BUDGET_WARNING,
   OK_MAYOR_HARD,
+  DESCRIPTION,
+  PROS,
+  CONS,
   translate,
 } from 'src/Translate'
 
@@ -254,11 +257,18 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         <h2 className="coin-cost">{step && step.publicField6}</h2>
                         <img className="coin-img" src={coin} />
                       </div>
-                      <p className="large">What it is:</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, DESCRIPTION)}
+                        :
+                      </p>
                       <p>{step && step.publicField3}</p>
-                      <p className="large">Pros:</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, PROS)}:
+                      </p>
                       <p>{step && step.publicField4}</p>
-                      <p className="large">Cons:</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, CONS)}:
+                      </p>
                       <p>{step && step.publicField5}</p>
                       <div className="flip-more-btn-holder">
                         <Button className="btn secondary" onClick={() => this.handleClick(0)}>
@@ -325,11 +335,18 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         <h2 className="coin-cost">{step && step.publicField12}</h2>
                         <img className="coin-img" src={coin} />
                       </div>
-                      <p className="large">What it is:</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, DESCRIPTION)}
+                        :
+                      </p>
                       <p>{step && step.publicField9}</p>
-                      <p className="large">Pros:</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, PROS)}:
+                      </p>
                       <p>{step && step.publicField10}</p>
-                      <p className="large">Cons:</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, CONS)}:
+                      </p>
                       <p>{step && step.publicField11}</p>
                       <div className="flip-more-btn-holder">
                         <Button className="btn secondary" onClick={() => this.handleClick(1)}>
@@ -405,11 +422,18 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         <h2 className="coin-cost">{step && step.publicField18}</h2>
                         <img className="coin-img" src={coin} />
                       </div>
-                      <p className="large">What it is:</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, DESCRIPTION)}
+                        :
+                      </p>
                       <p>{step && step.publicField15}</p>
-                      <p className="large">Pros:</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, PROS)}:
+                      </p>
                       <p>{step && step.publicField16}</p>
-                      <p className="large">Cons:</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, CONS)}:
+                      </p>
                       <p>{step && step.publicField17}</p>
                       <div className="flip-more-btn-holder">
                         <Button className="btn secondary" onClick={() => this.handleClick(2)}>
@@ -463,11 +487,18 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         <h2 className="coin-cost">{step && step.publicField24}</h2>
                         <img className="coin-img" src={coin} />
                       </div>
-                      <p className="large">What it is:</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, DESCRIPTION)}
+                        :
+                      </p>
                       <p>{step && step.publicField21}</p>
-                      <p className="large">Pros:</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, PROS)}:
+                      </p>
                       <p>{step && step.publicField22}</p>
-                      <p className="large">Cons:</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, CONS)}:
+                      </p>
                       <p>{step && step.publicField23}</p>
                     </div>
                     <div className="content-box-bottom">

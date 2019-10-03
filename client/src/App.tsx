@@ -4,6 +4,7 @@ import { ApolloProvider } from 'react-apollo'
 import { Redirect, BrowserRouter as Router, Route } from 'react-router-dom'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
+import Analytics from 'react-router-ga'
 
 import ScenarioView from './views/Scenario/index'
 import CharacterView from './views/Character/index'
@@ -58,55 +59,57 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div id="custom">
-          <Route exact path="/" component={IntroductionView} />
-          <Route exact path="/onboarding/welcome/:stepId" component={OnboardingWelcomeView} />
-          <RequiresCookieRoute
-            exact
-            path="/onboarding/challenges/:stepId"
-            component={OnboardingChallengesView}
-          />
-          <RequiresCookieRoute
-            exact
-            path="/onboarding/future/:stepId"
-            component={OnboardingFutureView}
-          />
-          <RequiresCookieRoute
-            exact
-            path="/onboarding/elected/:stepId"
-            component={OnboardingElectedView}
-          />
-          <RequiresCookieRoute
-            exact
-            path="/onboarding/your-challenge/:stepId"
-            component={OnboardingYourChallengeView}
-          />
-          <RequiresCookieRoute
-            exact
-            path="/onboarding/survey/:stepId"
-            component={OnboardingSurveyView}
-          />
-          <RequiresCookieRoute
-            exact
-            path="/onboarding/choose-category/:stepId"
-            component={OnboardingChooseCategoryView}
-          />
-          <RequiresCookieRoute exact path="/scenario/:stepId" component={ScenarioView} />
-          <RequiresCookieRoute exact path="/character/:stepId" component={CharacterView} />
-          <RequiresCookieRoute exact path="/make-decision/:stepId" component={MakeDecisionView} />
-          <RequiresCookieRoute
-            exact
-            path="/choose-strategy/:stepId"
-            component={ChooseStrategyView}
-          />
-          <RequiresCookieRoute
-            exact
-            path="/strategy-feedback/:stepId"
-            component={StrategyFeedbackView}
-          />
-          <RequiresCookieRoute exact path="/summary/:stepId" component={SummaryView} />
-          <RequiresCookieRoute exact path="/chat-dialogue/:stepId" component={ChatDialogueView} />
-        </div>
+        <Analytics id=" UA-148651664-1">
+          <div id="custom">
+            <Route exact path="/" component={IntroductionView} />
+            <Route exact path="/onboarding/welcome/:stepId" component={OnboardingWelcomeView} />
+            <RequiresCookieRoute
+              exact
+              path="/onboarding/challenges/:stepId"
+              component={OnboardingChallengesView}
+            />
+            <RequiresCookieRoute
+              exact
+              path="/onboarding/future/:stepId"
+              component={OnboardingFutureView}
+            />
+            <RequiresCookieRoute
+              exact
+              path="/onboarding/elected/:stepId"
+              component={OnboardingElectedView}
+            />
+            <RequiresCookieRoute
+              exact
+              path="/onboarding/your-challenge/:stepId"
+              component={OnboardingYourChallengeView}
+            />
+            <RequiresCookieRoute
+              exact
+              path="/onboarding/survey/:stepId"
+              component={OnboardingSurveyView}
+            />
+            <RequiresCookieRoute
+              exact
+              path="/onboarding/choose-category/:stepId"
+              component={OnboardingChooseCategoryView}
+            />
+            <RequiresCookieRoute exact path="/scenario/:stepId" component={ScenarioView} />
+            <RequiresCookieRoute exact path="/character/:stepId" component={CharacterView} />
+            <RequiresCookieRoute exact path="/make-decision/:stepId" component={MakeDecisionView} />
+            <RequiresCookieRoute
+              exact
+              path="/choose-strategy/:stepId"
+              component={ChooseStrategyView}
+            />
+            <RequiresCookieRoute
+              exact
+              path="/strategy-feedback/:stepId"
+              component={StrategyFeedbackView}
+            />
+            <RequiresCookieRoute exact path="/summary/:stepId" component={SummaryView} />
+            <RequiresCookieRoute exact path="/chat-dialogue/:stepId" component={ChatDialogueView} />
+          </div>
+        </Analytics>
       </Router>
     </ApolloProvider>
   )

@@ -44,17 +44,20 @@ export const TRANSPORTATION_SOCIAL_MEDIA = 'TRANSPORTATION_SOCIAL_MEDIA'
 export const ENVIRONMENT_SOCIAL_MEDIA = 'ENVIRONMENT_SOCIAL_MEDIA'
 export const ECONOMY_SOCIAL_MEDIA = 'ECONOMY_SOCIAL_MEDIA'
 export const HOUSING_SOCIAL_MEDIA = 'HOUSING_SOCIAL_MEDIA'
+export const DESCRIPTION = 'DESCRIPTION'
+export const PROS = 'PROS'
+export const CONS = 'CONS'
 
 const translations: any = {
   MOB: {
     en: 'Mayor of Bayville',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Alcalde de Bayville',
+    cn: 'Bayville市長',
   },
   HOUSING: {
     en: 'Housing',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Vivienda',
+    cn: '住房',
   },
   HOUSING_C1OF3: {
     en: 'Challenge 1 of 3: Housing Affordability',
@@ -73,8 +76,8 @@ const translations: any = {
   },
   ENVIRONMENT: {
     en: 'Environment',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Medio ambiente',
+    cn: '環境',
   },
   ENVIRONMENT_C1OF3: {
     en: 'Challenge 1 of 3: Open Space',
@@ -93,8 +96,8 @@ const translations: any = {
   },
   TRANSPORATION: {
     en: 'Transportation',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Transporte',
+    cn: '交通',
   },
   TRANSPORATION_C1OF3: {
     en: 'Challenge 1 of 3: Price Transportation Service',
@@ -113,8 +116,8 @@ const translations: any = {
   },
   ECONOMY: {
     en: 'Economy',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Economía',
+    cn: '經濟',
   },
   ECONOMY_C1OF2: {
     en: 'Challenge 1 of 2: Workforce',
@@ -128,23 +131,23 @@ const translations: any = {
   },
   YOU_SELECTED: {
     en: 'You selected',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Usted seleccionó',
+    cn: '你選擇了',
   },
   HOW_IT_AFFECTS_BAYVILLE: {
     en: 'How it affects Bayville',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Cómo afecta a Bayville',
+    cn: '它如何影響Bayville',
   },
   REMAINING_BUDGET: {
     en: 'Remaining budget',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Presupuesto restante',
+    cn: '剩餘預算',
   },
   REMAINING: {
     en: 'remaining',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'sobrantes',
+    cn: '剩餘',
   },
   MIN_AGO: {
     en: '1 min ago',
@@ -153,8 +156,8 @@ const translations: any = {
   },
   CHOOSE_ONE_OF_THE: {
     en: 'Choose one of the',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Seleccione una de las siguientes estrategias',
+    cn: '選擇以下策略之一',
   },
   FOLLOWING_STRATEGIES: {
     en: 'following strategies.',
@@ -168,28 +171,28 @@ const translations: any = {
   },
   CHOOSE_THIS_STRATEGY: {
     en: 'Select Strategy',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Seleccione esta estrategia',
+    cn: '選擇此策略',
   },
   STRATEGY_1: {
     en: 'Strategy 1',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Estrategia 1',
+    cn: '策略1',
   },
   STRATEGY_2: {
     en: 'Strategy 2',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Estrategia 2',
+    cn: '策略2',
   },
   STRATEGY_3: {
     en: 'Strategy 3',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Estrategia 3',
+    cn: '策略3',
   },
   NICE_WORK_MAYOR: {
     en: 'Nice work Mayor!',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: '¡Buen trabajo, Alcalde!',
+    cn: '幹得好，市長！',
   },
   OF_PARTICIPANTS: {
     en: 'of participants agreed with you',
@@ -208,23 +211,23 @@ const translations: any = {
   },
   READY_NEXT: {
     en: 'Ready to take on your next challenge?',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: '¿Listo para enfrentar el próximo desafío?',
+    cn: '你準備好接受下一個挑戰了嗎？',
   },
   BACK: {
     en: 'Back',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Volver',
+    cn: '返回',
   },
   VIEW_MORE: {
     en: 'View more details',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Ver más detalles',
+    cn: '查看更多詳情',
   },
   FLIP_BACK: {
     en: 'Flip back',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Regresar',
+    cn: '返回',
   },
   BUDGET_WARNING: {
     en: 'BUDGET WARNING!',
@@ -279,6 +282,21 @@ const translations: any = {
       'How would you make housing more affordable and plan for future development in your city? Click here to play mayor for a day.',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  DESCRIPTION: {
+    en: 'What it is',
+    es: 'Descripción',
+    cn: '描述',
+  },
+  PROS: {
+    en: 'Pros',
+    es: 'Pros',
+    cn: '優點',
+  },
+  CONS: {
+    en: 'Cons',
+    es: 'Contras',
+    cn: '缺點',
   },
 }
 
