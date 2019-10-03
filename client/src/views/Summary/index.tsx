@@ -234,12 +234,13 @@ class SummaryView extends React.Component<Props, State> {
   }
 
   shareFacebook = () => {
-    //const height =
     window.open(
       'https://www.facebook.com/sharer/sharer.php?u=https://bayville.planbayarea.org',
       'fbShareWindow',
       'height=450, width=550, top=' +
-        ((window as any).height / 2 - 275) +
+        ((window as any).innerHeight / 2 - 275) +
+        ', left=' +
+        ((window as any).innerWidth / 2 - 225) +
         ',toolbar=0, location=0, menubar=0, directories=0, scrollbars=0'
     )
   }
