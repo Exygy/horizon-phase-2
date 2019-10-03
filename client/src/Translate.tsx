@@ -40,6 +40,10 @@ export const OK_MAYOR_HARD = 'OK_MAYOR_HARD'
 export const THREE_CHALLENGES = 'THREE_CHALLENGES'
 export const TWO_CHALLENGES = 'TWO_CHALLENGES'
 export const ONE_HUNDRED_COINS = 'ONE_HUNDRED_COINS'
+export const TRANSPORTATION_SOCIAL_MEDIA = 'TRANSPORTATION_SOCIAL_MEDIA'
+export const ENVIRONMENT_SOCIAL_MEDIA = 'ENVIRONMENT_SOCIAL_MEDIA'
+export const ECONOMY_SOCIAL_MEDIA = 'ECONOMY_SOCIAL_MEDIA'
+export const HOUSING_SOCIAL_MEDIA = 'HOUSING_SOCIAL_MEDIA'
 
 const translations: any = {
   MOB: {
@@ -249,6 +253,30 @@ const translations: any = {
   },
   ONE_HUNDRED_COINS: {
     en: '100 coins',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  TRANSPORTATION_SOCIAL_MEDIA: {
+    en:
+      'How would you make transportation in your city more convenient and sustainable? Click here to play mayor for a day.',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  ENVIRONMENT_SOCIAL_MEDIA: {
+    en:
+      'How would you make your city more resilient to damage from earthquake and sea level rise? Click here to play mayor for a day.',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  ECONOMY_SOCIAL_MEDIA: {
+    en:
+      'How would you help families and neighborhoods thrive in a changing economy? Click here to play mayor for a day.',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
+  },
+  HOUSING_SOCIAL_MEDIA: {
+    en:
+      'How would you make housing more affordable and plan for future development in your city? Click here to play mayor for a day.',
     es: 'NEEDS SPANISH TRANSLATION',
     cn: 'NEEDS CHINESE TRANSLATION',
   },

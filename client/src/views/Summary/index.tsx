@@ -45,6 +45,10 @@ import {
   THREE_CHALLENGES,
   TWO_CHALLENGES,
   ONE_HUNDRED_COINS,
+  TRANSPORTATION_SOCIAL_MEDIA,
+  ENVIRONMENT_SOCIAL_MEDIA,
+  HOUSING_SOCIAL_MEDIA,
+  ECONOMY_SOCIAL_MEDIA,
   translate,
 } from 'src/Translate'
 
@@ -189,6 +193,8 @@ type StepQueryProps = ChildDataProps<
 type Props = StepQueryProps & OwnProps & { feedbackMutation: Function }
 
 class SummaryView extends React.Component<Props, State> {
+  siteUrl = 'https://bayville.planbayarea.org'
+
   state = {
     isSubmitting: false,
     feedbackText: '',
@@ -235,8 +241,44 @@ class SummaryView extends React.Component<Props, State> {
 
   shareFacebook = () => {
     window.open(
-      'https://www.facebook.com/sharer/sharer.php?u=https://bayville.planbayarea.org',
+      `https://www.facebook.com/sharer/sharer.php?u=${this.siteUrl}`,
       'fbShareWindow',
+      'height=450, width=550, top=' +
+        ((window as any).innerHeight / 2 - 275) +
+        ', left=' +
+        ((window as any).innerWidth / 2 - 225) +
+        ',toolbar=0, location=0, menubar=0, directories=0, scrollbars=0'
+    )
+  }
+
+  shareTwitter = () => {
+    let shareText = null
+    const stepId = parseInt(this.props.match.params.stepId)
+
+    if (stepId === 909) {
+      shareText = translate(
+        queryString.parse(this.props.location.search).lang,
+        TRANSPORTATION_SOCIAL_MEDIA
+      )
+    } else if (stepId === 206) {
+      shareText = translate(
+        queryString.parse(this.props.location.search).lang,
+        HOUSING_SOCIAL_MEDIA
+      )
+    } else if (stepId === 610) {
+      shareText = translate(
+        queryString.parse(this.props.location.search).lang,
+        ENVIRONMENT_SOCIAL_MEDIA
+      )
+    } else if (stepId === 406) {
+      shareText = translate(
+        queryString.parse(this.props.location.search).lang,
+        ECONOMY_SOCIAL_MEDIA
+      )
+    }
+    window.open(
+      `https://twitter.com/share?text=${shareText}&url=${this.siteUrl}`,
+      'twitterShareWindow',
       'height=450, width=550, top=' +
         ((window as any).innerHeight / 2 - 275) +
         ', left=' +
@@ -706,7 +748,7 @@ class SummaryView extends React.Component<Props, State> {
                     <Icon name="facebook" />
                     Facebook
                   </Button>
-                  <Button color="twitter" icon labelPosition="left">
+                  <Button color="twitter" icon labelPosition="left" onClick={this.shareTwitter}>
                     <Icon name="twitter" />
                     Twitter
                   </Button>
