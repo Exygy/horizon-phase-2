@@ -47,6 +47,7 @@ export const HOUSING_SOCIAL_MEDIA = 'HOUSING_SOCIAL_MEDIA'
 export const DESCRIPTION = 'DESCRIPTION'
 export const PROS = 'PROS'
 export const CONS = 'CONS'
+export const WARNING_MESSAGE_WHEN_UNDER_BUDGET = 'WARNING_MESSAGE_WHEN_UNDER_BUDGET'
 
 const translations: any = {
   MOB: {
@@ -166,8 +167,8 @@ const translations: any = {
   },
   FLIP_FOR_MORE: {
     en: 'Flip for Details',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Ver más detalles',
+    cn: '查看更多詳情',
   },
   CHOOSE_THIS_STRATEGY: {
     en: 'Select Strategy',
@@ -297,6 +298,11 @@ const translations: any = {
     en: 'Cons',
     es: 'Contras',
     cn: '缺點',
+  },
+  WARNING_MESSAGE_WHEN_UNDER_BUDGET: {
+    en: 'FILL IN',
+    es: 'NEEDS SPANISH TRANSLATION',
+    cn: 'NEEDS CHINESE TRANSLATION',
   },
 }
 

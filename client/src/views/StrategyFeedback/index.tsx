@@ -37,6 +37,7 @@ import {
   YOU_SELECTED,
   BUDGET_WARNING,
   OK_MAYOR_HARD,
+  WARNING_MESSAGE_WHEN_UNDER_BUDGET,
 } from 'src/Translate'
 
 const queryString = require('query-string')
@@ -108,7 +109,12 @@ class StrategyFeedbackView extends React.Component<Props, State> {
                 </h3>
                 <hr id="special-divider" />
                 <Form loading={loading}>
-                  <p id="special-p">{step && step.publicField19}</p>
+                  <p id="special-p">
+                    {translate(
+                      queryString.parse(this.props.location.search).lang,
+                      WARNING_MESSAGE_WHEN_UNDER_BUDGET
+                    )}
+                  </p>
                 </Form>
                 <div id="special-btn-holder">
                   <Button id="special-btn" onClick={this.handleClose}>
