@@ -11,6 +11,8 @@ This application is a choose-your-adventure esque game where a user navigates th
 * Each step is identified by its ID. When one loads a path like so (/onboarding/welcome/10000?lang=en), the step with the ID 10000 is loaded from the backend. 
 * The data for each step can be modified through the backend CMS interface (/admin/). 
 * Each step contains up to 20 fields. Each field has an english version (`_en`), a spanish version (`_es`), and a chinese version (`_cn`). Additionally, there is a field that describes the purpose of the field (`_meta_description`). 
+* Each step also private fields. These are not exposed in the CMS and are used mostly for logic and sequencing.
+* There specials steps where variables can be used (e.g. step 103). The views that load these steps run code to replace the variables with the actual values.
 * Users can save their choices around strategy. There is a lot of hardcoded work that runs light analytics on top of this data. Should a new step be added or removed, please remember to chance this piece of the codebase.
 * Database backups are turned on. Should the client accidentially delete step data and want to revert, Exygy staff will need to use heroku to revert to a past snapshot (more on that [here](https://devcenter.heroku.com/articles/heroku-postgres-backups). 
 
