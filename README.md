@@ -14,7 +14,7 @@ This application is a choose-your-adventure esque game where a user navigates th
 * Users can save their choices around strategy. There is a lot of hardcoded work that runs light analytics on top of this data. Should a new step be added or removed, please remember to chance this piece of the codebase.
 * Database backups are turned on. Should the client accidentially delete step data and want to revert, Exygy staff will need to use heroku to revert to a past snapshot (more on that [here](https://devcenter.heroku.com/articles/heroku-postgres-backups). 
 
-## Frontend notes
+### Frontend notes
 
 * A URL parameter `lang` is supplied in each query string. This controls the language. Options are 'en', 'es', and 'cn'. If none is supplied, it will default to english. 
 * All content is sourced from the backend; there is some that is hardcoded. These entries are stored in [`Translate.tsx`](/client/src/Translate.tsx). 
