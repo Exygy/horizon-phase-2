@@ -258,6 +258,51 @@ class Step(models.Model):
     public_field_24_meta_description = models.CharField(
         max_length=128, verbose_name='Public field 24 Meta Description', blank=True, null=True)
 
+    public_field_25_en = models.CharField(
+        max_length=1024, verbose_name='Public field 25 (English)', blank=True, null=True)
+    public_field_25_es = models.CharField(
+        max_length=1024, verbose_name='Public field 25 (Spanish)', blank=True, null=True)
+    public_field_25_cn = models.CharField(
+        max_length=1024, verbose_name='Public field 25 (Chinese)', blank=True, null=True)
+    public_field_25_meta_description = models.CharField(
+        max_length=128, verbose_name='Public field 25 Meta Description', blank=True, null=True)
+
+    public_field_26_en = models.CharField(
+        max_length=1024, verbose_name='Public field 26 (English)', blank=True, null=True)
+    public_field_26_es = models.CharField(
+        max_length=1024, verbose_name='Public field 26 (Spanish)', blank=True, null=True)
+    public_field_26_cn = models.CharField(
+        max_length=1024, verbose_name='Public field 26 (Chinese)', blank=True, null=True)
+    public_field_26_meta_description = models.CharField(
+        max_length=128, verbose_name='Public field 26 Meta Description', blank=True, null=True)
+
+    public_field_27_en = models.CharField(
+        max_length=1024, verbose_name='Public field 27 (English)', blank=True, null=True)
+    public_field_27_es = models.CharField(
+        max_length=1024, verbose_name='Public field 27 (Spanish)', blank=True, null=True)
+    public_field_27_cn = models.CharField(
+        max_length=1024, verbose_name='Public field 27 (Chinese)', blank=True, null=True)
+    public_field_27_meta_description = models.CharField(
+        max_length=128, verbose_name='Public field 27 Meta Description', blank=True, null=True)
+
+    public_field_28_en = models.CharField(
+        max_length=1024, verbose_name='Public field 28 (English)', blank=True, null=True)
+    public_field_28_es = models.CharField(
+        max_length=1024, verbose_name='Public field 28 (Spanish)', blank=True, null=True)
+    public_field_28_cn = models.CharField(
+        max_length=1024, verbose_name='Public field 28 (Chinese)', blank=True, null=True)
+    public_field_28_meta_description = models.CharField(
+        max_length=128, verbose_name='Public field 28 Meta Description', blank=True, null=True)
+
+    public_field_29_en = models.CharField(
+        max_length=1024, verbose_name='Public field 29 (English)', blank=True, null=True)
+    public_field_29_es = models.CharField(
+        max_length=1024, verbose_name='Public field 29 (Spanish)', blank=True, null=True)
+    public_field_29_cn = models.CharField(
+        max_length=1024, verbose_name='Public field 29 (Chinese)', blank=True, null=True)
+    public_field_29_meta_description = models.CharField(
+        max_length=128, verbose_name='Public field 29 Meta Description', blank=True, null=True)
+
     private_field_1 = models.CharField(max_length=1024, verbose_name='Private field 1', blank=True, null=True)
     private_field_1_meta_description = models.CharField(
         max_length=128, verbose_name='Private field 1 Meta Description', blank=True, null=True)
@@ -273,3 +318,7 @@ class Step(models.Model):
     private_field_4 = models.CharField(max_length=1024, verbose_name='Private field 4', blank=True, null=True)
     private_field_4_meta_description = models.CharField(
         max_length=128, verbose_name='Private field 4 Meta Description', blank=True, null=True)
+
+    private_field_5 = models.CharField(max_length=1024, verbose_name='Private field 5', blank=True, null=True)
+    private_field_5_meta_description = models.CharField(
+        max_length=128, verbose_name='Private field 5 Meta Description', blank=True, null=True)

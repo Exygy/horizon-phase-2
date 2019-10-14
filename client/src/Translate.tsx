@@ -62,18 +62,18 @@ const translations: any = {
   },
   HOUSING_C1OF3: {
     en: 'Challenge 1 of 3: Housing Affordability',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Desafío 1 de 3: Accesibilidad en precio de la vivienda',
+    cn: '3個挑戰之1：住房可負擔能力',
   },
   HOUSING_C2OF3: {
     en: 'Challenge 2 of 3: Regional Policy',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Desafío 2 de 3: Política regional',
+    cn: '3個挑戰之2：區域政策',
   },
   HOUSING_C3OF3: {
     en: 'Challenge 3 of 3: Infill Development',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Desafío 3 de 3: Reutilización y reurbanización',
+    cn: '3個挑戰之3：重複使用和重新開發',
   },
   ENVIRONMENT: {
     en: 'Environment',
@@ -82,18 +82,18 @@ const translations: any = {
   },
   ENVIRONMENT_C1OF3: {
     en: 'Challenge 1 of 3: Open Space',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Desafío 1 de 3: Espacios abiertos',
+    cn: '3個挑戰之1：空間',
   },
   ENVIRONMENT_C2OF3: {
     en: 'Challenge 2 of 3: Sea Level Rise',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Desafío 2 de 3: Subida del nivel del mar',
+    cn: '3個挑戰之2：海平面上升',
   },
   ENVIRONMENT_C3OF3: {
     en: 'Challenge 3 of 3: Earthquake',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Desafío 3 de 3: Terremoto',
+    cn: '3個挑戰之3：地震',
   },
   TRANSPORATION: {
     en: 'Transportation',
@@ -102,18 +102,18 @@ const translations: any = {
   },
   TRANSPORATION_C1OF3: {
     en: 'Challenge 1 of 3: Price Transportation Service',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Desafío 1 de 3: Poner precio a los servicios de transporte',
+    cn: '3個挑戰之1：定價交通服務',
   },
   TRANSPORATION_C2OF3: {
     en: 'Challenge 2 of 3: Prioritize Active Modes',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Desafío 2 de 3: Priorizar las modalidades activas',
+    cn: '3個挑戰之2：排序有效模式',
   },
   TRANSPORATION_C3OF3: {
     en: 'Challenge 3 of 3: Invest in Transit',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Desafío 3 de 3: Invertir en el transporte público',
+    cn: '3個挑戰之3：投資交通服務',
   },
   ECONOMY: {
     en: 'Economy',
@@ -122,13 +122,13 @@ const translations: any = {
   },
   ECONOMY_C1OF2: {
     en: 'Challenge 1 of 2: Workforce',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Desafío 1 de 2: Capacitación y compensación a los trabajadores',
+    cn: '2個挑戰之1：工人培訓及賠償',
   },
   ECONOMY_C2OF2: {
     en: 'Challenge 2 of 2: Shift Location of Jobs',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Desafío 2 de 2: Cambiar la ubicación de los empleos',
+    cn: '2個挑戰之2：工作地點變動',
   },
   YOU_SELECTED: {
     en: 'You selected',
@@ -152,8 +152,8 @@ const translations: any = {
   },
   MIN_AGO: {
     en: '1 min ago',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: '1 min antes',
+    cn: '1 分鐘前',
   },
   CHOOSE_ONE_OF_THE: {
     en: 'Choose one of the',
@@ -197,18 +197,18 @@ const translations: any = {
   },
   OF_PARTICIPANTS: {
     en: 'of participants agreed with you',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'de los participantes estuvieron de acuerdo con usted',
+    cn: '參加者同意你的看法',
   },
   YOUR_VOTE: {
     en: 'YOUR VOTE',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Su selección',
+    cn: '你的選擇',
   },
   SHARE_YOUR_RESULTS: {
     en: 'Share Your Results',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Comparta sus resultados',
+    cn: '分享你的結果',
   },
   READY_NEXT: {
     en: 'Ready to take on your next challenge?',
@@ -242,8 +242,8 @@ const translations: any = {
   },
   STRATEGY_4: {
     en: 'Strategy 4',
-    es: 'NEEDS SPANISH TRANSLATION',
-    cn: 'NEEDS CHINESE TRANSLATION',
+    es: 'Estrategia 4',
+    cn: '策略4',
   },
   THREE_CHALLENGES: {
     en: '3 challenges',
