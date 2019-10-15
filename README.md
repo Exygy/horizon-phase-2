@@ -35,7 +35,13 @@ This application is a choose-your-adventure esque game where a user navigates th
 ./d start
 ```
 
-Peek inside `./d` for more.
+It's suggested to load the base data. You can load the fixtures from the `server/cms/fixtures` directory. Alternatively, if you want the latest data from production, run the following commands:
+
+```
+heroku run python server/manage.py dumpdata cms.step > step.data
+python3 -mjson.tool step.data > step_readable.json
+python server/manage.py loaddata step_readable.json
+```
 
 ### Frontend
 ```
