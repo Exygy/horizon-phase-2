@@ -152,9 +152,9 @@ const translations: any = {
     cn: '剩餘',
   },
   MIN_AGO: {
-    en: '1 min ago',
-    es: '1 min antes',
-    cn: '1 分鐘前',
+    en: 'min ago',
+    es: 'min antes',
+    cn: '分鐘前',
   },
   CHOOSE_ONE_OF_THE: {
     en: 'Choose one of the',

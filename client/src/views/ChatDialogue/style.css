@@ -17,10 +17,12 @@
 
 #chat-dialogue-view .content-box .sub-heading.deemphasized {
   display: block;
+  margin-bottom: 1em;
 }
 
-#chat-dialogue-view .content-box .time-ago {
-  font-size: 12px;
+#chat-dialogue-view .content-box .content {
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 #chat-dialogue-view .content-box img {
