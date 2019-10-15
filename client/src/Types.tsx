@@ -29,10 +29,16 @@ export type Step = {
   publicField22: string
   publicField23: string
   publicField24: string
+  publicField25: string
+  publicField26: string
+  publicField27: string
+  publicField28: string
+  publicField29: string
   privateField1: string
   privateField2: string
   privateField3: string
   privateField4: string
+  privateField5: string
 }
 
 export type StepQueryResponse = {

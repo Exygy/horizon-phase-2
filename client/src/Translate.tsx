@@ -26,6 +26,7 @@ export const STRATEGY_1 = 'STRATEGY_1'
 export const STRATEGY_2 = 'STRATEGY_2'
 export const STRATEGY_3 = 'STRATEGY_3'
 export const STRATEGY_4 = 'STRATEGY_4'
+export const STRATEGY_5 = 'STRATEGY_5'
 export const CHOOSE_THIS_STRATEGY = 'CHOOSE_THIS_STRATEGY'
 export const NICE_WORK_MAYOR = 'NICE_WORK_MAYOR'
 export const OF_PARTICIPANTS = 'OF_PARTICIPANTS'
@@ -189,6 +190,11 @@ const translations: any = {
     en: 'Strategy 3',
     es: 'Estrategia 3',
     cn: '策略3',
+  },
+  STRATEGY_5: {
+    en: 'Strategy 5',
+    es: 'Estrategia 5',
+    cn: '策略5',
   },
   NICE_WORK_MAYOR: {
     en: 'Nice work Mayor!',

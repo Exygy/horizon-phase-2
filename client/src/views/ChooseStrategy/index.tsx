@@ -33,6 +33,7 @@ import {
   STRATEGY_2,
   STRATEGY_3,
   STRATEGY_4,
+  STRATEGY_5,
   CHOOSE_THIS_STRATEGY,
   FLIP_FOR_MORE,
   CHOOSE_ONE_OF_THE,
@@ -110,6 +111,9 @@ class ChooseStrategyView extends React.Component<Props, State> {
     } else if (selectedItem == 3) {
       stepIdPath = this.props.data.step.privateField4
       coinsSpent = this.props.data.step.publicField24
+    } else if (selectedItem == 4) {
+      stepIdPath = this.props.data.step.privateField5
+      coinsSpent = this.props.data.step.publicField29
     }
 
     // Separate step ID from path
@@ -373,13 +377,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         circular
                         icon="arrow right"
                         onClick={this.next}
-                        disabled={
-                          parseInt(this.props.match.params.stepId) === 203 ||
-                          parseInt(this.props.match.params.stepId) === 403 ||
-                          parseInt(this.props.match.params.stepId) === 307 ||
-                          parseInt(this.props.match.params.stepId) === 607 ||
-                          parseInt(this.props.match.params.stepId) === 703
-                        }
+                        disabled={parseInt(this.props.match.params.stepId) === 607}
                       />
                       <h4 className="strat-num">
                         {translate(queryString.parse(this.props.location.search).lang, STRATEGY_3)}
@@ -391,20 +389,16 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         <img className="coin-img" src={coin} />
                       </div>
                       <p>{step && step.publicField15}</p>
-                      {parseInt(this.props.match.params.stepId) !== 203 &&
-                        parseInt(this.props.match.params.stepId) !== 403 &&
-                        parseInt(this.props.match.params.stepId) !== 307 &&
-                        parseInt(this.props.match.params.stepId) !== 607 &&
-                        parseInt(this.props.match.params.stepId) !== 703 && (
-                          <div className="flip-more-btn-holder">
-                            <Button className="btn secondary" onClick={() => this.handleClick(2)}>
-                              {translate(
-                                queryString.parse(this.props.location.search).lang,
-                                FLIP_FOR_MORE
-                              )}
-                            </Button>
-                          </div>
-                        )}
+                      {parseInt(this.props.match.params.stepId) !== 607 && (
+                        <div className="flip-more-btn-holder">
+                          <Button className="btn secondary" onClick={() => this.handleClick(2)}>
+                            {translate(
+                              queryString.parse(this.props.location.search).lang,
+                              FLIP_FOR_MORE
+                            )}
+                          </Button>
+                        </div>
+                      )}
                       <div>
                         <Button className="btn primary" onClick={this.recordChoiceAndRedirect}>
                           {translate(
@@ -459,7 +453,17 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         className="nav next-btn"
                         circular
                         icon="arrow right"
-                        disabled
+                        disabled={
+                          parseInt(this.props.match.params.stepId) === 102 ||
+                          parseInt(this.props.match.params.stepId) === 203 ||
+                          parseInt(this.props.match.params.stepId) === 307 ||
+                          parseInt(this.props.match.params.stepId) === 403 ||
+                          parseInt(this.props.match.params.stepId) === 507 ||
+                          parseInt(this.props.match.params.stepId) === 607 ||
+                          parseInt(this.props.match.params.stepId) === 703 ||
+                          parseInt(this.props.match.params.stepId) === 805 ||
+                          parseInt(this.props.match.params.stepId) === 905
+                        }
                         onClick={this.next}
                       />
                       <h4 className="strat-num">
@@ -472,12 +476,32 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         <img className="coin-img" src={coin} />
                       </div>
                       <p>{step && step.publicField21}</p>
-                      <Button className="btn primary" onClick={this.recordChoiceAndRedirect}>
-                        {translate(
-                          queryString.parse(this.props.location.search).lang,
-                          CHOOSE_THIS_STRATEGY
+                      {parseInt(this.props.match.params.stepId) !== 102 &&
+                        parseInt(this.props.match.params.stepId) !== 203 &&
+                        parseInt(this.props.match.params.stepId) !== 307 &&
+                        parseInt(this.props.match.params.stepId) !== 403 &&
+                        parseInt(this.props.match.params.stepId) !== 507 &&
+                        parseInt(this.props.match.params.stepId) !== 607 &&
+                        parseInt(this.props.match.params.stepId) !== 703 &&
+                        parseInt(this.props.match.params.stepId) !== 805 &&
+                        parseInt(this.props.match.params.stepId) !== 905 && (
+                          <div className="flip-more-btn-holder">
+                            <Button className="btn secondary" onClick={() => this.handleClick(3)}>
+                              {translate(
+                                queryString.parse(this.props.location.search).lang,
+                                FLIP_FOR_MORE
+                              )}
+                            </Button>
+                          </div>
                         )}
-                      </Button>
+                      <div>
+                        <Button className="btn primary" onClick={this.recordChoiceAndRedirect}>
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            CHOOSE_THIS_STRATEGY
+                          )}
+                        </Button>
+                      </div>
                     </div>
                   </div>
                   <div key="back">
@@ -500,14 +524,79 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         {translate(queryString.parse(this.props.location.search).lang, CONS)}:
                       </p>
                       <p>{step && step.publicField23}</p>
+                      <div className="flip-more-btn-holder">
+                        <Button className="btn secondary" onClick={() => this.handleClick(3)}>
+                          {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </ReactCardFlip>
+
+                <ReactCardFlip isFlipped={this.state.flippedStates[4]} flipDirection="horizontal">
+                  <div key="front">
+                    <div className="content-box">
+                      <Button
+                        size="large"
+                        className="nav prev-btn"
+                        circular
+                        icon="arrow left"
+                        onClick={this.prev}
+                      />
+                      <Button
+                        size="large"
+                        className="nav next-btn"
+                        circular
+                        icon="arrow right"
+                        disabled
+                        onClick={this.next}
+                      />
+                      <h4 className="strat-num">
+                        {translate(queryString.parse(this.props.location.search).lang, STRATEGY_5)}
+                      </h4>
+                      <hr className="divider-line" />
+                      <h1 className="">{step && step.publicField25}</h1>
+                      <div className="cost-details">
+                        <h2 className="coin-cost">{step && step.publicField29}</h2>
+                        <img className="coin-img" src={coin} />
+                      </div>
+                      <p>{step && step.publicField26}</p>
+                      <Button className="btn primary" onClick={this.recordChoiceAndRedirect}>
+                        {translate(
+                          queryString.parse(this.props.location.search).lang,
+                          CHOOSE_THIS_STRATEGY
+                        )}
+                      </Button>
+                    </div>
+                  </div>
+                  <div key="back">
+                    <div className="content-box">
+                      <h1 className="">{step && step.publicField25}</h1>
+                      <div className="cost-details">
+                        <h2 className="coin-cost">{step && step.publicField29}</h2>
+                        <img className="coin-img" src={coin} />
+                      </div>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, DESCRIPTION)}
+                        :
+                      </p>
+                      <p>{step && step.publicField26}</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, PROS)}:
+                      </p>
+                      <p>{step && step.publicField27}</p>
+                      <p className="large">
+                        {translate(queryString.parse(this.props.location.search).lang, CONS)}:
+                      </p>
+                      <p>{step && step.publicField23}</p>
                     </div>
                     <div className="content-box-bottom">
                       <div className="col-left">
-                        <h2 className="coin-cost">{step && step.publicField24}</h2>
+                        <h2 className="coin-cost">{step && step.publicField29}</h2>
                         <Image className="coin-img" src={coin} />
                       </div>
                       <div className="col-right">
-                        <Button className="btn secondary" onClick={() => this.handleClick(3)}>
+                        <Button className="btn secondary" onClick={() => this.handleClick(4)}>
                           {translate(queryString.parse(this.props.location.search).lang, FLIP_BACK)}
                         </Button>
                       </div>

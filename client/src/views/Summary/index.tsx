@@ -32,6 +32,7 @@ import {
   STRATEGY_2,
   STRATEGY_3,
   STRATEGY_4,
+  STRATEGY_5,
   OF_PARTICIPANTS,
   YOUR_VOTE,
   SHARE_YOUR_RESULTS,
@@ -75,6 +76,8 @@ export const strategyChoiceSummaryQuery = gql`
       c1S3Percentage
       c1S4Name
       c1S4Percentage
+      c1S5Name
+      c1S5Percentage
 
       c2Title
       c2SIndex
@@ -87,6 +90,8 @@ export const strategyChoiceSummaryQuery = gql`
       c2S3Percentage
       c2S4Name
       c2S4Percentage
+      c2S5Name
+      c2S5Percentage
 
       c3Title
       c3SIndex
@@ -128,6 +133,8 @@ export type StrategyChoiceSummary = {
   c1S3Percentage: number
   c1S4Name: string
   c1S4Percentage: number
+  c1S5Name: string
+  c1S5Percentage: number
 
   c2Title: string
   c2SIndex: number
@@ -140,6 +147,8 @@ export type StrategyChoiceSummary = {
   c2S3Percentage: number
   c2S4Name: string
   c2S4Percentage: number
+  c2S5Name: string
+  c2S5Percentage: number
 
   c3Title: string
   c3SIndex: number
@@ -446,6 +455,38 @@ class SummaryView extends React.Component<Props, State> {
                       )}
                     </div>
                   )}
+
+                  {strategyChoiceSummary && strategyChoiceSummary.c1S5Name && (
+                    <div className="strat-section">
+                      <p>
+                        <span className="strat">
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            STRATEGY_5
+                          )}
+                          :{' '}
+                        </span>
+                        {strategyChoiceSummary && strategyChoiceSummary.c1S5Name}
+                      </p>
+                      <Progress
+                        progress
+                        className={`prog-bar ${
+                          strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 4
+                            ? 'mine'
+                            : 'not-mine'
+                        }`}
+                        percent={
+                          strategyChoiceSummary &&
+                          Math.round(strategyChoiceSummary.c1S5Percentage * 100)
+                        }
+                      />
+                      {strategyChoiceSummary && strategyChoiceSummary.c1SIndex == 4 && (
+                        <h4 className="your-vote">
+                          {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                        </h4>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 <h2>
@@ -571,6 +612,38 @@ class SummaryView extends React.Component<Props, State> {
                         }
                       />
                       {strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 3 && (
+                        <h4 className="your-vote">
+                          {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
+                        </h4>
+                      )}
+                    </div>
+                  )}
+
+                  {strategyChoiceSummary && strategyChoiceSummary.c2S5Name && (
+                    <div className="strat-section">
+                      <p>
+                        <span className="strat">
+                          {translate(
+                            queryString.parse(this.props.location.search).lang,
+                            STRATEGY_5
+                          )}
+                          :{' '}
+                        </span>
+                        {strategyChoiceSummary && strategyChoiceSummary.c2S5Name}
+                      </p>
+                      <Progress
+                        progress
+                        className={`prog-bar ${
+                          strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 4
+                            ? 'mine'
+                            : 'not-mine'
+                        }`}
+                        percent={
+                          strategyChoiceSummary &&
+                          Math.round(strategyChoiceSummary.c2S5Percentage * 100)
+                        }
+                      />
+                      {strategyChoiceSummary && strategyChoiceSummary.c2SIndex == 4 && (
                         <h4 className="your-vote">
                           {translate(queryString.parse(this.props.location.search).lang, YOUR_VOTE)}
                         </h4>
