@@ -50,6 +50,7 @@ import {
   ENVIRONMENT_SOCIAL_MEDIA,
   HOUSING_SOCIAL_MEDIA,
   ECONOMY_SOCIAL_MEDIA,
+  CHECK_OUT_HOW,
   translate,
 } from 'src/Translate'
 
@@ -319,10 +320,9 @@ class SummaryView extends React.Component<Props, State> {
               </h1>
               <p
                 className="large"
-                dangerouslySetInnerHTML={constructInnerHTML(
-                  strategyChoiceSummary && strategyChoiceSummary.subheaderSubtitle
-                )}
-              />
+              >
+                {translate(queryString.parse(this.props.location.search).lang, CHECK_OUT_HOW)}
+              </p>
             </div>
             <div className="content-box">
               <div className="stats">

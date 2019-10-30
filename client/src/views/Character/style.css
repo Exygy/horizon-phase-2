@@ -1,14 +1,10 @@
 @media only screen and (max-width: 480px) {
   #choose-scenario-view .content-box {
     margin-top: 40%;
-    padding-bottom: 100px;
-  }
-  #choose-scenario-view .content-box h1 {
-    width: 250px;
-  }
-}
+    padding-bottom: 100px; }
+    #choose-scenario-view .content-box h1 {
+      width: 250px; } }
 
 #choose-scenario-view .content-box h1 {
   text-align: left;
-  margin-top: 0px;
-}
+  margin-top: 0px; }

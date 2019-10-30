@@ -1,98 +1,74 @@
 #summary-view .prog-bar {
   background: white;
-  margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
 #summary-view .bar .progress {
   left: 3px;
-  color: #26364c;
+  color: #26364C;
   font-family: Lora;
   font-weight: bold;
   font-size: 14px;
-  margin-top: -5px;
-}
+  margin-top: -5px; }
 
 #summary-view .strat {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 #summary-view .not-mine .bar {
-  background-color: #ffda4e;
-}
+  background-color: #FFDA4E; }
 
 #summary-view .challenge-title {
-  padding-left: 16px;
-}
+  padding-left: 16px; }
 
 #summary-view .challenge-details {
   padding-left: 40px;
-  padding-bottom: 7px;
-}
+  padding-bottom: 7px; }
 
 #summary-view .mine .bar {
-  background-color: #ffa725;
-}
+  background-color: #FFA725; }
 
 #summary-view .your-vote {
   font-size: 12px;
-  margin-top: 0px;
-}
+  margin-top: 0px; }
 
 #summary-view .strat-section {
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 #summary-view .top-intro {
   margin-top: 30px;
-  text-align: center;
-}
-#summary-view .top-intro h1 {
-  margin-bottom: 0px;
-}
+  text-align: center; }
+  #summary-view .top-intro h1 {
+    margin-bottom: 0px; }
 
 #summary-view .content-box {
   margin-top: 30px;
-  padding: 0px;
-}
+  padding: 0px; }
 
 #summary-view .share {
   text-align: center;
-  margin-top: 30px;
-}
+  margin-top: 30px; }
 
 #summary-view .next-challenges {
   text-align: center;
-  margin-top: 50px;
-}
+  margin-top: 50px; }
 
 #summary-view .stats {
-  padding: 37px;
-}
+  padding: 37px; }
 
 @media only screen and (max-width: 480px) {
   #summary-view .pill {
-    width: 100%;
-  }
-}
+    width: 100%; } }
 
 @media only screen and (min-width: 480px) {
   #summary-view .pill {
-    width: 371px;
-  }
-}
+    width: 371px; } }
 
 #summary-view .feedback {
-  margin-top: 81px;
-}
-#summary-view .feedback textarea {
-  width: 330px;
-  height: 185px;
-}
-#summary-view .feedback .ta,
-#summary-view .feedback .sub-heading,
-#summary-view .feedback .btn-holder-feedback {
-  text-align: center;
-}
+  margin-top: 81px; }
+  #summary-view .feedback textarea {
+    width: 330px;
+    height: 185px; }
+  #summary-view .feedback .ta, #summary-view .feedback .sub-heading, #summary-view .feedback .btn-holder-feedback {
+    text-align: center; }
 
 #summary-view .pill {
   display: flex;
@@ -104,54 +80,41 @@
   border-radius: 18px;
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: 120px 64px;
-}
-#summary-view .pill.housing {
-  background-color: #ffd392;
-  background-image: url('../../images/topic_housing.png');
-}
-#summary-view .pill.housing h2 {
-  color: #26364c;
-  margin-top: 23px;
-}
-#summary-view .pill.housing h4 {
-  position: absolute;
-  margin-top: 54px;
-}
-#summary-view .pill.transportation {
-  background-color: #f5bfae;
-  background-image: url('../../images/topic_transportation.png');
-}
-#summary-view .pill.transportation h2 {
-  color: #26364c;
-  margin-top: 23px;
-}
-#summary-view .pill.transportation h4 {
-  position: absolute;
-  margin-top: 54px;
-}
-#summary-view .pill.economy {
-  background-color: #6fa6e5;
-  background-image: url('../../images/topic_economy.png');
-}
-#summary-view .pill.economy h2 {
-  color: #ffffff;
-  margin-top: 23px;
-}
-#summary-view .pill.economy h4 {
-  position: absolute;
-  color: #ffffff;
-  margin-top: 54px;
-}
-#summary-view .pill.environment {
-  background-color: #7ec2b7;
-  background-image: url('../../images/topic_environment.png');
-}
-#summary-view .pill.environment h2 {
-  color: #26364c;
-  margin-top: 23px;
-}
-#summary-view .pill.environment h4 {
-  position: absolute;
-  margin-top: 54px;
-}
+  background-size: 120px 64px; }
+  #summary-view .pill.housing {
+    background-color: #FFD392;
+    background-image: url("../../images/topic_housing.png"); }
+    #summary-view .pill.housing h2 {
+      color: #26364C;
+      margin-top: 23px; }
+    #summary-view .pill.housing h4 {
+      position: absolute;
+      margin-top: 54px; }
+  #summary-view .pill.transportation {
+    background-color: #F5BFAE;
+    background-image: url("../../images/topic_transportation.png"); }
+    #summary-view .pill.transportation h2 {
+      color: #26364C;
+      margin-top: 23px; }
+    #summary-view .pill.transportation h4 {
+      position: absolute;
+      margin-top: 54px; }
+  #summary-view .pill.economy {
+    background-color: #6FA6E5;
+    background-image: url("../../images/topic_economy.png"); }
+    #summary-view .pill.economy h2 {
+      color: #FFFFFF;
+      margin-top: 23px; }
+    #summary-view .pill.economy h4 {
+      position: absolute;
+      color: #FFFFFF;
+      margin-top: 54px; }
+  #summary-view .pill.environment {
+    background-color: #7EC2B7;
+    background-image: url("../../images/topic_environment.png"); }
+    #summary-view .pill.environment h2 {
+      color: #26364C;
+      margin-top: 23px; }
+    #summary-view .pill.environment h4 {
+      position: absolute;
+      margin-top: 54px; }

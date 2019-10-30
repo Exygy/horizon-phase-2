@@ -1,40 +1,31 @@
 #chat-dialogue-view .message .ui.image {
   height: auto;
-  width: auto;
-}
+  width: auto; }
 
 #chat-dialogue-view .content-box.top-msg {
-  margin-top: 90px;
-}
+  margin-top: 90px; }
 
 #chat-dialogue-view .content-box.middle-bottom-msg {
-  margin-top: 20px;
-}
+  margin-top: 20px; }
 
 #chat-dialogue-view .content-box .sub-heading {
-  display: inline;
-}
+  display: inline; }
 
 #chat-dialogue-view .content-box .sub-heading.deemphasized {
   display: block;
-  margin-bottom: 1em;
-}
+  margin-bottom: 1em; }
 
 #chat-dialogue-view .content-box .content {
   margin-bottom: 0px;
-  margin-top: 0px;
-}
+  margin-top: 0px; }
 
 #chat-dialogue-view .content-box img {
   width: 66px;
   height: 70px;
-  margin: 0px auto;
-}
+  margin: 0px auto; }
 
 #chat-dialogue-view .content-box .heart i {
-  font-weight: 600;
-}
+  font-weight: 600; }
 
 #chat-dialogue-view .content-box .message .retweet {
-  margin-left: 10px;
-}
+  margin-left: 10px; }

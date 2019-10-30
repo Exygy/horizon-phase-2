@@ -40,11 +40,13 @@ type Props = StepQueryProps & OwnProps
 
 type State = {
   extendedDescriptionVisible: boolean
+  contentBoxVisible: boolean
 }
 
 class IntroductionView extends React.Component<Props, State> {
   state = {
     extendedDescriptionVisible: false,
+    contentBoxVisible: false
   }
 
   // NOTE: The session ID gets created here and gets used down the line.
@@ -54,6 +56,10 @@ class IntroductionView extends React.Component<Props, State> {
     cookie.save('session_id', uuidv4(), { path: '/' })
     cookie.save('completed', JSON.stringify([]))
     clearCoinCookies()
+
+    setTimeout(() => {
+        this.setState({contentBoxVisible: true})
+    }, 1250)
   }
 
   handleExtraDescription = (e: MouseEvent<HTMLElement>) => {
@@ -63,13 +69,15 @@ class IntroductionView extends React.Component<Props, State> {
 
   render() {
     const { step, loading } = this.props.data
-    const { extendedDescriptionVisible } = this.state
+    const { extendedDescriptionVisible, contentBoxVisible } = this.state
 
     return (
       <div id="introduction-view" className="view">
         <Main stepId={'20000'}>
           <Form className="forma" loading={loading}>
             <CustomHeader stepId={'20000'} lang={'en'} />
+                <Transition visible={contentBoxVisible} animation='fade' duration={500}>
+                <div>
             <div className="content-box cb-top">
               <h1 className="">{step && step.publicField1}</h1>
               <br />
@@ -94,6 +102,7 @@ class IntroductionView extends React.Component<Props, State> {
                 </Button>
               </div>
             </div>
+
             <div className="content-box cb-bottom">
               <h1 className="">{step && step.publicField7}</h1>
               <br />
@@ -116,6 +125,8 @@ class IntroductionView extends React.Component<Props, State> {
               <Image className="" src={mtc} />
               <Image className="" src={abag} />
             </div>
+        </div>
+                </Transition>
           </Form>
         </Main>
       </div>

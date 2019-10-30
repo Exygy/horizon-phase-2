@@ -1,78 +1,60 @@
 #choose-strategy-view .instructions {
-  text-align: center;
-}
+  text-align: center; }
 
 #choose-strategy-view .carousel .slide {
   background-color: inherit;
-  padding-bottom: 10px;
-}
+  padding-bottom: 10px; }
 
 #choose-strategy-view .content-box {
   margin-top: 0px;
   border-top-left-radius: 29px;
   border-top-right-radius: 29px;
   border-bottom-left-radius: 29px;
-  border-bottom-right-radius: 29px;
-}
-#choose-strategy-view .content-box p {
-  text-align: left;
-}
-#choose-strategy-view .content-box .strat-num {
-  margin-top: 0px;
-}
-#choose-strategy-view .content-box .view-more {
-  text-align: center;
-}
-#choose-strategy-view .content-box .arrow-right {
-  position: absolute;
-  padding-left: 8px;
-  padding-top: 1px;
-}
-#choose-strategy-view .content-box .coin-img {
-  height: 18px;
-  width: 18px;
-  margin-top: 6px;
-  margin-left: 8px;
-}
-#choose-strategy-view .content-box .coin-cost {
-  display: inline;
-}
-#choose-strategy-view .content-box .cost-details {
-  padding-bottom: 17px;
-}
-#choose-strategy-view .content-box .flip-more-btn-holder {
-  margin-top: 32px;
-  margin-bottom: 16px;
-}
-#choose-strategy-view .content-box .btn {
-  width: 186px;
-}
+  border-bottom-right-radius: 29px; }
+  #choose-strategy-view .content-box p {
+    text-align: left; }
+  #choose-strategy-view .content-box .strat-num {
+    margin-top: 0px; }
+  #choose-strategy-view .content-box .view-more {
+    text-align: center; }
+  #choose-strategy-view .content-box .arrow-right {
+    position: absolute;
+    padding-left: 8px;
+    padding-top: 1px; }
+  #choose-strategy-view .content-box .coin-img {
+    height: 18px;
+    width: 18px;
+    margin-top: 6px;
+    margin-left: 8px; }
+  #choose-strategy-view .content-box .coin-cost {
+    display: inline; }
+  #choose-strategy-view .content-box .cost-details {
+    padding-bottom: 17px; }
+  #choose-strategy-view .content-box .flip-more-btn-holder {
+    margin-top: 32px;
+    margin-bottom: 16px; }
+  #choose-strategy-view .content-box .btn {
+    width: 186px; }
 
 #choose-strategy-view .carousel-holder {
-  margin-top: 20px;
-}
+  margin-top: 20px; }
 
 #choose-strategy-view .nav {
   color: white;
-  background-color: #1e8fe1;
-}
+  background-color: #1E8FE1; }
 
 #choose-strategy-view .prev-btn {
-  float: left;
-}
+  float: left; }
 
 #choose-strategy-view .next-btn {
-  float: right;
-}
+  float: right; }
 
 #choose-strategy-view .edge-nav {
   display: flex;
-  align-items: center;
-}
+  align-items: center; }
 
 #choose-strategy-view .divider-line {
   height: 2px;
-  background-color: #fdc228;
+  background-color: #FDC228;
   border: none;
-  width: 73px;
-}
+  width: 73px; }

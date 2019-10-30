@@ -1,17 +1,14 @@
 #onboarding-choose-category-view .top-text {
   margin-top: 30px;
   margin-bottom: 20px;
-  text-align: center;
-}
-#onboarding-choose-category-view .top-text h1 {
-  margin-bottom: 0px;
-}
+  text-align: center; }
+  #onboarding-choose-category-view .top-text h1 {
+    margin-bottom: 0px; }
 
 #onboarding-choose-category-view .msg {
   width: 350px;
   margin: 0px auto;
-  margin-top: 30px;
-}
+  margin-top: 30px; }
 
 #onboarding-choose-category-view .pill {
   display: flex;
@@ -23,54 +20,41 @@
   border-radius: 18px;
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: 120px 64px;
-}
-#onboarding-choose-category-view .pill.housing {
-  background-color: #ffd392;
-  background-image: url('../../images/topic_housing.png');
-}
-#onboarding-choose-category-view .pill.housing h2 {
-  color: #26364c;
-  margin-top: 23px;
-}
-#onboarding-choose-category-view .pill.housing h4 {
-  position: absolute;
-  margin-top: 54px;
-}
-#onboarding-choose-category-view .pill.transportation {
-  background-color: #f5bfae;
-  background-image: url('../../images/topic_transportation.png');
-}
-#onboarding-choose-category-view .pill.transportation h2 {
-  color: #26364c;
-  margin-top: 23px;
-}
-#onboarding-choose-category-view .pill.transportation h4 {
-  position: absolute;
-  margin-top: 54px;
-}
-#onboarding-choose-category-view .pill.economy {
-  background-color: #6fa6e5;
-  background-image: url('../../images/topic_economy.png');
-}
-#onboarding-choose-category-view .pill.economy h2 {
-  color: #ffffff;
-  margin-top: 23px;
-}
-#onboarding-choose-category-view .pill.economy h4 {
-  position: absolute;
-  color: #ffffff;
-  margin-top: 54px;
-}
-#onboarding-choose-category-view .pill.environment {
-  background-color: #7ec2b7;
-  background-image: url('../../images/topic_environment.png');
-}
-#onboarding-choose-category-view .pill.environment h2 {
-  color: #26364c;
-  margin-top: 23px;
-}
-#onboarding-choose-category-view .pill.environment h4 {
-  position: absolute;
-  margin-top: 54px;
-}
+  background-size: 120px 64px; }
+  #onboarding-choose-category-view .pill.housing {
+    background-color: #FFD392;
+    background-image: url("../../images/topic_housing.png"); }
+    #onboarding-choose-category-view .pill.housing h2 {
+      color: #26364C;
+      margin-top: 23px; }
+    #onboarding-choose-category-view .pill.housing h4 {
+      position: absolute;
+      margin-top: 54px; }
+  #onboarding-choose-category-view .pill.transportation {
+    background-color: #F5BFAE;
+    background-image: url("../../images/topic_transportation.png"); }
+    #onboarding-choose-category-view .pill.transportation h2 {
+      color: #26364C;
+      margin-top: 23px; }
+    #onboarding-choose-category-view .pill.transportation h4 {
+      position: absolute;
+      margin-top: 54px; }
+  #onboarding-choose-category-view .pill.economy {
+    background-color: #6FA6E5;
+    background-image: url("../../images/topic_economy.png"); }
+    #onboarding-choose-category-view .pill.economy h2 {
+      color: #FFFFFF;
+      margin-top: 23px; }
+    #onboarding-choose-category-view .pill.economy h4 {
+      position: absolute;
+      color: #FFFFFF;
+      margin-top: 54px; }
+  #onboarding-choose-category-view .pill.environment {
+    background-color: #7EC2B7;
+    background-image: url("../../images/topic_environment.png"); }
+    #onboarding-choose-category-view .pill.environment h2 {
+      color: #26364C;
+      margin-top: 23px; }
+    #onboarding-choose-category-view .pill.environment h4 {
+      position: absolute;
+      margin-top: 54px; }

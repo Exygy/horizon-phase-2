@@ -1,10 +1,7 @@
 #scenario-view .content-box {
-  padding-bottom: 110px;
-}
+  padding-bottom: 110px; }
 
 @media only screen and (min-width: 480px) {
   #scenario-view .btn-holder-bottom {
     bottom: 25px;
-    position: absolute;
-  }
-}
+    position: absolute; } }
