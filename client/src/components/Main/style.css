@@ -7,7 +7,7 @@
   background: url(../../images/default_housing_bg.png);
 }
 .main.intro-bg {
-  background: url(../../images/intro-bg.png);
+  background: url(../../images/intro-bg.png) no-repeat center center;
   background-size: cover;
 }
 .main.housing-special-bg {
