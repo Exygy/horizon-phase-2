@@ -216,9 +216,9 @@ class StrategyChoiceResource(resources.ModelResource):
             return strategy_choice.origin_step.public_field_2_en
         elif strategy_choice.step.id in [104,205,309, 405, 509, 609, 705, 807, 907, 1007, 1107]:
             return strategy_choice.origin_step.public_field_8_en
-        elif strategy_choice.step.id in [105, 510, 808, 908, 1008, 1108, 408, 707, 312, 209, 611]:
+        elif strategy_choice.step.id in [105, 510, 808, 908, 1008, 1108, 408, 312, 209, 611, 706]:
             return strategy_choice.origin_step.public_field_14_en
-        elif strategy_choice.step.id in [1010, 1111, 407, 706, 311, 208, 512, 810, 107, 910]:
+        elif strategy_choice.step.id in [1010, 1111, 407, 311, 208, 512, 810, 107, 910]:
             return strategy_choice.origin_step.public_field_20_en
         elif strategy_choice.step.id in [1009, 1110]:
             return strategy_choice.origin_step.public_field_25_en
@@ -265,9 +265,9 @@ class StrategyChoiceAdmin(ExportMixin, admin.ModelAdmin):
             return obj.origin_step.public_field_2_en
         elif obj.step.id in [104,205,309, 405, 509, 609, 705, 807, 907, 1007, 1107]:
             return obj.origin_step.public_field_8_en
-        elif obj.step.id in [105, 510, 808, 908, 1008, 1108, 408, 707, 312, 209, 611]:
+        elif obj.step.id in [105, 510, 808, 908, 1008, 1108, 408, 312, 209, 611, 706]:
             return obj.origin_step.public_field_14_en
-        elif obj.step.id in [1010, 1111, 407, 706, 311, 208, 512, 810, 107, 910]:
+        elif obj.step.id in [1010, 1111, 407, 311, 208, 512, 810, 107, 910]:
             return obj.origin_step.public_field_20_en
         elif obj.step.id in [1009, 1110]:
             return obj.origin_step.public_field_25_en
