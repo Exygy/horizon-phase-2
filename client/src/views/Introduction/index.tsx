@@ -46,7 +46,7 @@ type State = {
 class IntroductionView extends React.Component<Props, State> {
   state = {
     extendedDescriptionVisible: false,
-    contentBoxVisible: false
+    contentBoxVisible: false,
   }
 
   // NOTE: The session ID gets created here and gets used down the line.
@@ -58,8 +58,8 @@ class IntroductionView extends React.Component<Props, State> {
     clearCoinCookies()
 
     setTimeout(() => {
-        this.setState({contentBoxVisible: true})
-    }, 1250)
+      this.setState({ contentBoxVisible: true })
+    }, 500)
   }
 
   handleExtraDescription = (e: MouseEvent<HTMLElement>) => {
@@ -76,57 +76,69 @@ class IntroductionView extends React.Component<Props, State> {
         <Main stepId={'20000'}>
           <Form className="forma" loading={loading}>
             <CustomHeader stepId={'20000'} lang={'en'} />
-                <Transition visible={contentBoxVisible} animation='fade' duration={500}>
-                <div>
-            <div className="content-box cb-top">
-              <h1 className="">{step && step.publicField1}</h1>
-              <br />
-              <p
-                className="large"
-                dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}
-              />
-              <h3>{step && step.publicField3}</h3>
-              <div className="lang-btn">
-                <Button className="btn primary" as={Link} to={`/onboarding/welcome/10000?lang=en`}>
-                  {step && step.publicField4}
-                </Button>
-              </div>
-              <div className="lang-btn">
-                <Button className="btn primary" as={Link} to={`/onboarding/welcome/10000?lang=es`}>
-                  {step && step.publicField5}
-                </Button>
-              </div>
-              <div className="lang-btn">
-                <Button className="btn primary" as={Link} to={`/onboarding/welcome/10000?lang=cn`}>
-                  {step && step.publicField6}
-                </Button>
-              </div>
-            </div>
+            <Transition visible={contentBoxVisible} animation="fade" duration={500}>
+              <div>
+                <div className="content-box cb-top">
+                  <h1 className="">{step && step.publicField1}</h1>
+                  <br />
+                  <p
+                    className="large"
+                    dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}
+                  />
+                  <h3>{step && step.publicField3}</h3>
+                  <div className="lang-btn">
+                    <Button
+                      className="btn primary"
+                      as={Link}
+                      to={`/onboarding/welcome/10000?lang=en`}
+                    >
+                      {step && step.publicField4}
+                    </Button>
+                  </div>
+                  <div className="lang-btn">
+                    <Button
+                      className="btn primary"
+                      as={Link}
+                      to={`/onboarding/welcome/10000?lang=es`}
+                    >
+                      {step && step.publicField5}
+                    </Button>
+                  </div>
+                  <div className="lang-btn">
+                    <Button
+                      className="btn primary"
+                      as={Link}
+                      to={`/onboarding/welcome/10000?lang=cn`}
+                    >
+                      {step && step.publicField6}
+                    </Button>
+                  </div>
+                </div>
 
-            <div className="content-box cb-bottom">
-              <h1 className="">{step && step.publicField7}</h1>
-              <br />
-              <p>{step && step.publicField8}</p>
-              {!extendedDescriptionVisible && (
-                <a href="#" onClick={this.handleExtraDescription}>
-                  Read more
-                </a>
-              )}
-              {extendedDescriptionVisible && (
-                <>
-                  <p>{step && step.publicField9}</p>
-                  <a href="#" onClick={this.handleExtraDescription}>
-                    Read less
-                  </a>
-                </>
-              )}
-              <br />
-              <br />
-              <Image className="" src={mtc} />
-              <Image className="" src={abag} />
-            </div>
-        </div>
-                </Transition>
+                <div className="content-box cb-bottom">
+                  <h1 className="">{step && step.publicField7}</h1>
+                  <br />
+                  <p>{step && step.publicField8}</p>
+                  {!extendedDescriptionVisible && (
+                    <a href="#" onClick={this.handleExtraDescription}>
+                      Read more
+                    </a>
+                  )}
+                  {extendedDescriptionVisible && (
+                    <>
+                      <p>{step && step.publicField9}</p>
+                      <a href="#" onClick={this.handleExtraDescription}>
+                        Read less
+                      </a>
+                    </>
+                  )}
+                  <br />
+                  <br />
+                  <Image className="" src={mtc} />
+                  <Image className="" src={abag} />
+                </div>
+              </div>
+            </Transition>
           </Form>
         </Main>
       </div>

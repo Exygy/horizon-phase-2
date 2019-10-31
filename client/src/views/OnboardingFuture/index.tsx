@@ -41,7 +41,7 @@ class OnboardingFutureView extends React.Component<Props, {}> {
   componentDidMount = () => {
     setTimeout(() => {
       this.setState({ contentBoxVisible: true })
-    }, 1250)
+    }, 500)
   }
 
   render() {

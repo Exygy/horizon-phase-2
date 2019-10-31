@@ -71,7 +71,7 @@ class OnboardingSurveyView extends React.Component<Props, State> {
   componentDidMount = () => {
     setTimeout(() => {
       this.setState({ contentBoxVisible: true })
-    }, 1250)
+    }, 500)
   }
 
   onValidSubmit = async () => {
