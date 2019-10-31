@@ -35,12 +35,14 @@ class Main extends React.Component<Props, {}> {
       backgroundClass = 'green-bg'
     } else if ([1000, 1001, 1002, 1003, 1004].includes(parseInt(stepId))) {
       backgroundClass = 'college-bg'
-    } else if ([700, 701, 702, 10000, 20000].includes(parseInt(stepId))) {
+    } else if ([700, 701, 702, 10000].includes(parseInt(stepId))) {
       backgroundClass = 'park-bg'
     } else if ([600, 601, 602].includes(parseInt(stepId))) {
       backgroundClass = 'sm-2-bg'
     } else if ([10006].includes(parseInt(stepId))) {
       backgroundClass = 'white-bg'
+    } else if ([20000].includes(parseInt(stepId))) {
+      backgroundClass = 'intro-bg'
     } else {
       backgroundClass = 'default-bg'
     }
