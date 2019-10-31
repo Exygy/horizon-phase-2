@@ -377,7 +377,10 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         circular
                         icon="arrow right"
                         onClick={this.next}
-                        disabled={parseInt(this.props.match.params.stepId) === 607}
+                        disabled={
+                          parseInt(this.props.match.params.stepId) === 607 ||
+                          parseInt(this.props.match.params.stepId) === 703
+                        }
                       />
                       <h4 className="strat-num">
                         {translate(queryString.parse(this.props.location.search).lang, STRATEGY_3)}
@@ -389,16 +392,17 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         <img className="coin-img" src={coin} />
                       </div>
                       <p>{step && step.publicField15}</p>
-                      {parseInt(this.props.match.params.stepId) !== 607 && (
-                        <div className="flip-more-btn-holder">
-                          <Button className="btn secondary" onClick={() => this.handleClick(2)}>
-                            {translate(
-                              queryString.parse(this.props.location.search).lang,
-                              FLIP_FOR_MORE
-                            )}
-                          </Button>
-                        </div>
-                      )}
+                      {parseInt(this.props.match.params.stepId) !== 607 &&
+                        parseInt(this.props.match.params.stepId) !== 703 && (
+                          <div className="flip-more-btn-holder">
+                            <Button className="btn secondary" onClick={() => this.handleClick(2)}>
+                              {translate(
+                                queryString.parse(this.props.location.search).lang,
+                                FLIP_FOR_MORE
+                              )}
+                            </Button>
+                          </div>
+                        )}
                       <div>
                         <Button className="btn primary" onClick={this.recordChoiceAndRedirect}>
                           {translate(
@@ -460,7 +464,6 @@ class ChooseStrategyView extends React.Component<Props, State> {
                           parseInt(this.props.match.params.stepId) === 403 ||
                           parseInt(this.props.match.params.stepId) === 507 ||
                           parseInt(this.props.match.params.stepId) === 607 ||
-                          parseInt(this.props.match.params.stepId) === 703 ||
                           parseInt(this.props.match.params.stepId) === 805 ||
                           parseInt(this.props.match.params.stepId) === 905
                         }
@@ -482,7 +485,6 @@ class ChooseStrategyView extends React.Component<Props, State> {
                         parseInt(this.props.match.params.stepId) !== 403 &&
                         parseInt(this.props.match.params.stepId) !== 507 &&
                         parseInt(this.props.match.params.stepId) !== 607 &&
-                        parseInt(this.props.match.params.stepId) !== 703 &&
                         parseInt(this.props.match.params.stepId) !== 805 &&
                         parseInt(this.props.match.params.stepId) !== 905 && (
                           <div className="flip-more-btn-holder">
