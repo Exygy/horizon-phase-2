@@ -8,6 +8,7 @@
 }
 .main.intro-bg {
   background: url(../../images/intro-bg.png);
+  background-size: cover;
 }
 .main.housing-special-bg {
   background: url(../../images/city_hall_bg.jpg) no-repeat center center;
