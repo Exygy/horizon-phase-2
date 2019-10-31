@@ -35,6 +35,7 @@ type State = {
   isSubmitting: boolean
   zipcode: string
   errorMsg: string
+  contentBoxVisible: boolean
 }
 
 const surveyMutation = gql`
@@ -64,6 +65,13 @@ class OnboardingSurveyView extends React.Component<Props, State> {
     isSubmitting: false,
     zipcode: '',
     errorMsg: '',
+    contentBoxVisible: false,
+  }
+
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.setState({ contentBoxVisible: true })
+    }, 1250)
   }
 
   onValidSubmit = async () => {
@@ -97,7 +105,7 @@ class OnboardingSurveyView extends React.Component<Props, State> {
 
   render() {
     const { step, loading } = this.props.data
-    const { zipcode, isSubmitting, errorMsg } = this.state
+    const { contentBoxVisible, zipcode, isSubmitting, errorMsg } = this.state
 
     return (
       <div className="view" id="onboarding-survey-view">
@@ -111,26 +119,28 @@ class OnboardingSurveyView extends React.Component<Props, State> {
               stepId={this.props.match.params.stepId}
               lang={queryString.parse(this.props.location.search).lang}
             />
-            <div className="content-box">
-              <h1 className="">{step && step.publicField1}</h1>
-              <br />
-              <p
-                className="large"
-                dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}
-              />
-              <Form.Input
-                name="zipcode"
-                label={step && step.publicField3}
-                value={zipcode}
-                placeholder=""
-                onChange={this.onFieldChange}
-              />
-              <div className="btn-holder">
-                <Button className="btn primary" disabled={isSubmitting}>
-                  {step && step.publicField6}
-                </Button>
+            <Transition visible={contentBoxVisible} animation="fade" duration={500}>
+              <div className="content-box">
+                <h1 className="">{step && step.publicField1}</h1>
+                <br />
+                <p
+                  className="large"
+                  dangerouslySetInnerHTML={constructInnerHTML(step && step.publicField2)}
+                />
+                <Form.Input
+                  name="zipcode"
+                  label={step && step.publicField3}
+                  value={zipcode}
+                  placeholder=""
+                  onChange={this.onFieldChange}
+                />
+                <div className="btn-holder">
+                  <Button className="btn primary" disabled={isSubmitting}>
+                    {step && step.publicField6}
+                  </Button>
+                </div>
               </div>
-            </div>
+            </Transition>
           </Form>
         </Main>
       </div>

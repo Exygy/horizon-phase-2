@@ -34,10 +34,19 @@ type StepQueryProps = ChildDataProps<StepQueryParams, StepQueryResponse>
 type Props = StepQueryProps & OwnProps
 
 class OnboardingElectedView extends React.Component<Props, {}> {
-  componentDidMount = () => {}
+  state = {
+    contentBoxVisible: false,
+  }
+
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.setState({ contentBoxVisible: true })
+    }, 1250)
+  }
 
   render() {
     const { step, loading } = this.props.data
+    const { contentBoxVisible } = this.state
 
     return (
       <div className="view">
@@ -47,7 +56,7 @@ class OnboardingElectedView extends React.Component<Props, {}> {
               stepId={this.props.match.params.stepId}
               lang={queryString.parse(this.props.location.search).lang}
             />
-            <div>
+            <Transition visible={contentBoxVisible} animation="fade" duration={500}>
               <div className="content-box">
                 <h1 className="">{step && step.publicField1}</h1>
                 <br />
@@ -67,7 +76,7 @@ class OnboardingElectedView extends React.Component<Props, {}> {
                   </Button>
                 </div>
               </div>
-            </div>
+            </Transition>
           </Form>
         </Main>
       </div>
