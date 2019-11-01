@@ -159,13 +159,13 @@ const translations: any = {
   },
   CHOOSE_ONE_OF_THE: {
     en: 'Choose one of the',
-    es: 'Seleccione una de las siguientes estrategias',
+    es: 'Seleccione una de las',
     cn: '選擇以下策略之一',
   },
   FOLLOWING_STRATEGIES: {
     en: 'following strategies.',
     es: 'siguientes estrategias',
-    cn: '遵循策略',
+    cn: '',
   },
   FLIP_FOR_MORE: {
     en: 'Flip for Details',
@@ -270,25 +270,29 @@ const translations: any = {
   TRANSPORTATION_SOCIAL_MEDIA: {
     en:
       'How would you make transportation in your city more convenient and sustainable? Click here to play mayor for a day.',
-    es: '¿Qué haría para que el transporte en su ciudad sea más conveniente y sostenible?Haga clic aquí para jugar al alcalde por un día',
+    es:
+      '¿Qué haría para que el transporte en su ciudad sea más conveniente y sostenible?Haga clic aquí para jugar al alcalde por un día',
     cn: '如何讓你的城市交通更加便利、更可持續？點選此處當一天的市長。',
   },
   ENVIRONMENT_SOCIAL_MEDIA: {
     en:
       'How would you make your city more resilient to damage from earthquake and sea level rise? Click here to play mayor for a day.',
-    es: '¿Cómo haría para que su ciudad sea más resistente a los daños causados por el terremoto y el aumento del nivel del mar?Haga clic aquí para jugar al alcalde por un día',
+    es:
+      '¿Cómo haría para que su ciudad sea más resistente a los daños causados por el terremoto y el aumento del nivel del mar?Haga clic aquí para jugar al alcalde por un día',
     cn: '如何讓你的城市更從容地面對地震和海平面上升？點選此處當一天的市長。',
   },
   ECONOMY_SOCIAL_MEDIA: {
     en:
       'How would you help families and neighborhoods thrive in a changing economy? Click here to play mayor for a day.',
-    es: '¿Cómo ayudaría a las familias y a los vecindarios a prosperar en una economía cambiante?Haga clic aquí para jugar al alcalde por un día',
+    es:
+      '¿Cómo ayudaría a las familias y a los vecindarios a prosperar en una economía cambiante?Haga clic aquí para jugar al alcalde por un día',
     cn: '如何幫助家庭和鄰里在不斷變化的經濟中興旺發達？點選此處當一天的市長。',
   },
   HOUSING_SOCIAL_MEDIA: {
     en:
       'How would you make housing more affordable and plan for future development in your city? Click here to play mayor for a day.',
-    es: '¿Qué haría para que la vivienda fuera más económica y para planear el desarrollo futuro de su ciudad?Haga clic aquí para jugar al alcalde por un día',
+    es:
+      '¿Qué haría para que la vivienda fuera más económica y para planear el desarrollo futuro de su ciudad?Haga clic aquí para jugar al alcalde por un día',
     cn: '如何讓你的城市住房更可負擔並制定未來開發計劃？點選此處當一天的市長。',
   },
   DESCRIPTION: {
@@ -307,9 +311,12 @@ const translations: any = {
     cn: '缺點',
   },
   WARNING_MESSAGE_WHEN_UNDER_BUDGET: {
-    en: 'Addressing these challenges can be expensive, and now the costs of your plan have exceeded your 100 coin budget. You can use the back button to make a different choice, or go into debt to fund your plan.',
-    es: 'Abordar estos desafíos puede ser costoso, y ahora los costos de su plan han excedido su presupuesto de 100 monedas. Puede usar el botón de Atrás para hacer una elección diferente, o endeudarse para financiar su plan.',
-    cn: '解決這些挑戰可能代價高昂，現在你的計劃費用已經超出100枚硬幣預算。你可以使用後退按鈕做不同的選擇，或是舉債為你的計劃提供資金。',
+    en:
+      'Addressing these challenges can be expensive, and now the costs of your plan have exceeded your 100 coin budget. You can use the back button to make a different choice, or go into debt to fund your plan.',
+    es:
+      'Abordar estos desafíos puede ser costoso, y ahora los costos de su plan han excedido su presupuesto de 100 monedas. Puede usar el botón de Atrás para hacer una elección diferente, o endeudarse para financiar su plan.',
+    cn:
+      '解決這些挑戰可能代價高昂，現在你的計劃費用已經超出100枚硬幣預算。你可以使用後退按鈕做不同的選擇，或是舉債為你的計劃提供資金。',
   },
   CHECK_OUT_HOW: {
     en: 'Check out how your votes compares to other players',
