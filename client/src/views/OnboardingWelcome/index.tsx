@@ -43,7 +43,7 @@ class OnboardingWelcomeView extends React.Component<Props, {}> {
   componentDidMount = () => {
     setTimeout(() => {
       this.setState({ contentBoxVisible: true })
-    }, 500)
+    }, 1000)
   }
 
   render() {

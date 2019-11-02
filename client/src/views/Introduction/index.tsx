@@ -59,7 +59,7 @@ class IntroductionView extends React.Component<Props, State> {
 
     setTimeout(() => {
       this.setState({ contentBoxVisible: true })
-    }, 500)
+    }, 1000)
   }
 
   handleExtraDescription = (e: MouseEvent<HTMLElement>) => {
