@@ -40,7 +40,7 @@ It's suggested to load the base data. You can load the fixtures from the `server
 ```
 heroku run python server/manage.py dumpdata cms.step > step.data
 python3 -mjson.tool step.data > step_readable.json
-python server/manage.py loaddata step_readable.json
+docker-compose run horizon python manage.py loaddata step_readable.json
 ```
 
 ### Frontend
