@@ -5,6 +5,7 @@ import { Redirect, BrowserRouter as Router, Route } from 'react-router-dom'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import Analytics from 'react-router-ga'
+import ReactPixel from 'react-facebook-pixel'
 
 import ScenarioView from './views/Scenario/index'
 import CharacterView from './views/Character/index'
@@ -56,6 +57,8 @@ const RequiresCookieRoute = ({ component: Component, ...rest }: any) => (
 )
 
 function App() {
+  ReactPixel.init('511646379657678')
+
   return (
     <ApolloProvider client={client}>
       <Router>
