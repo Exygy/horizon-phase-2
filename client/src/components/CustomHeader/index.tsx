@@ -122,10 +122,8 @@ class CustomHeader extends React.Component<Props & RouteComponentProps<{}>, {}> 
             {translate(queryString.parse(this.props.location.search).lang, BACK)}
           </a>
         )}
-        <p>
-          <h3 className="title-h3">{title}</h3>
-          {desc}
-        </p>
+        <h3 className="title-h3">{title}</h3>
+        <p>{desc}</p>
       </div>
     )
   }
