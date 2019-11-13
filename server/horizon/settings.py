@@ -2,8 +2,16 @@ import django_heroku
 import os
 import environ
 import pytz
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
 
 from django.utils import timezone
+
+# Report all bugs to Sentry
+sentry_sdk.init(
+    dsn=os.environ['SENTRY_DSN'],
+    integrations=[DjangoIntegration()]
+)
 
 root = environ.Path(__file__) - 2                            # two folders back (/a/b/ - 2 = /)
 DEFAULT_ENV_PATH = environ.Path(__file__) - 3                # default location of .env file
