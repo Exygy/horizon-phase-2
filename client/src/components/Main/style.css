@@ -63,15 +63,16 @@
 }
 .main .coin-status {
   background: white;
-  position: absolute;
-  border-top-left-radius: 29px;
   border-bottom-left-radius: 29px;
-  width: 92px;
+  border-top-left-radius: 29px;
   height: 46px;
-  right: 0px;
-  margin-top: 10px;
   margin-left: 15px;
+  margin-top: 10px;
   padding: 5px 20px;
+  position: absolute;
+  right: 0px;
+  width: 92px;
+  z-index: 1;
   -webkit-box-shadow: -1px 2px 5px 0px #24364d;
   -moz-box-shadow: -1px 2px 5px 0px #24364d;
   box-shadow: -1px 2px 5px 0px #24364d;
