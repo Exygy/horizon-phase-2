@@ -57,7 +57,7 @@ docker-compose run horizon python manage.py loaddata category_readable.json
 ##### Challenges
 
 ```
-heroku run python manage.py dumpdata cms.challenge > category.data
+heroku run python manage.py dumpdata cms.challenge > challenge.data
 python3 -mjson.tool server/challenge.data > server/challenge_readable.json
 docker-compose run horizon python manage.py loaddata challenge_readable.json
 ```
