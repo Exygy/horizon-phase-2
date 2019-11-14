@@ -1,4 +1,3 @@
-
 .main {
     &.default-bg {
         background: url(../../images/default_housing_bg.png);
@@ -6,22 +5,22 @@
 
     &.intro-bg {
         background: url(../../images/intro-bg.png) no-repeat center center;
-        background-size:     cover;                      
+        background-size: cover;
     }
 
     &.housing-special-bg {
         background: url(../../images/city_hall_bg.jpg) no-repeat center center;
-        background-size:     cover;                      
+        background-size: cover;
     }
 
     &.beachside-bg {
         background: url(../../images/beachside_bg.jpg) no-repeat center center;
-        background-size:     cover;                      
+        background-size: cover;
     }
 
     &.sm-bg {
         background: url(../../images/sm-bg.jpg) no-repeat center center;
-        background-size:     cover;                      
+        background-size: cover;
     }
 
     &.yellow-bg {
@@ -34,7 +33,7 @@
 
     &.train-bg {
         background: url(../../images/train-bg.jpg) no-repeat center center;
-        background-size:     cover;                      
+        background-size: cover;
     }
 
     &.red-bg {
@@ -47,12 +46,12 @@
 
     &.sidewalk-bg {
         background: url(../../images/sidewalk-bg.jpg) no-repeat center center;
-        background-size:     cover;                      
+        background-size: cover;
     }
 
     &.college-bg {
         background: url(../../images/college-bg.jpg) no-repeat center center;
-        background-size:     cover;                      
+        background-size: cover;
     }
 
     &.green-bg {
@@ -61,17 +60,17 @@
 
     &.transportation-special-bg {
         background: url(../../images/storefront_bg.png) no-repeat center center;
-        background-size:     cover;                     
+        background-size: cover;
     }
 
     &.park-bg {
         background: url(../../images/park-bg.jpg) no-repeat center center;
-        background-size:     cover;                     
+        background-size: cover;
     }
 
     &.sm-2-bg {
         background: url(../../images/sm-2.jpg) no-repeat center center;
-        background-size:     cover;                     
+        background-size: cover;
     }
 
     display: flex;
@@ -80,25 +79,27 @@
 
     .coin-status {
         background: white;
+        border-bottom-left-radius: 29px;
+        border-top-left-radius: 29px;
+        height: 46px;
+        margin-left: 15px;
+        margin-top: 10px;
+        padding: 5px 20px;
         position: absolute;
+        right: 0px;
+        width: 92px;
+        z-index: 1;
+
+        -webkit-box-shadow: -1px 2px 5px 0px rgba(36, 54, 77, 1);
+        -moz-box-shadow: -1px 2px 5px 0px rgba(36, 54, 77, 1);
+        box-shadow: -1px 2px 5px 0px rgba(36, 54, 77, 1);
+
         .coin-img {
             width: 20px;
             height: 20px;
             margin-top: 4px;
             margin-left: 40px;
         }
-        border-top-left-radius: 29px;
-        border-bottom-left-radius: 29px;
-        width: 92px;
-        height: 46px;
-        right: 0px;
-        margin-top: 10px;
-        margin-left: 15px;
-        padding: 5px 20px;
-
-        -webkit-box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
-        -moz-box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
-        box-shadow: -1px 2px 5px 0px rgba(36,54,77,1);
 
         h4 {
             margin-bottom: 0px;
@@ -141,7 +142,7 @@
             bottom: 0px;
             left: 0px;
             right: 0px;
-            margin-top:0px;
+            margin-top: 0px;
             border-top-left-radius: 29px;
             border-top-right-radius: 29px;
             border-bottom-left-radius: 0px;
@@ -178,7 +179,7 @@
             position: fixed;
             width: 100%;
             text-align: center;
-            bottom:20px;
+            bottom: 20px;
         }
     }
 
@@ -190,4 +191,3 @@
         }
     }
 }
-
