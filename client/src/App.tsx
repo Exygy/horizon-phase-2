@@ -5,7 +5,8 @@ import { Redirect, BrowserRouter as Router, Route } from 'react-router-dom'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import Analytics from 'react-router-ga'
-
+import ReactFacebookPixel from 'react-facebook-pixel'
+const ReactSnapchatPixel = require('react-snapchat-pixel')
 import ScenarioView from './views/Scenario/index'
 import CharacterView from './views/Character/index'
 import MakeDecisionView from './views/MakeDecision/index'
@@ -56,6 +57,9 @@ const RequiresCookieRoute = ({ component: Component, ...rest }: any) => (
 )
 
 function App() {
+  ReactFacebookPixel.init('511646379657678')
+  ReactSnapchatPixel.default.init('46f0c607-52f8-4afc-ad93-92a914f7838b')
+
   return (
     <ApolloProvider client={client}>
       <Router>

@@ -283,11 +283,7 @@ class ChooseStrategyView extends React.Component<Props, State> {
                   </div>
                 </ReactCardFlip>
 
-                <ReactCardFlip
-                  isFlipped={this.state.flippedStates[1]}
-                  cardZIndex={-100}
-                  flipDirection="horizontal"
-                >
+                <ReactCardFlip isFlipped={this.state.flippedStates[1]} flipDirection="horizontal">
                   <div key="front">
                     <div className="content-box">
                       <Button
