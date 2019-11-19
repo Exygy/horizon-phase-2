@@ -35,12 +35,39 @@ This application is a choose-your-adventure esque game where a user navigates th
 ./d start
 ```
 
-It's suggested to load the base data. You can load the fixtures from the `server/cms/fixtures` directory. Alternatively, if you want the latest data from production, run the following commands:
+It's suggested to load the base data. You can load the fixtures from the `server/cms/fixtures` directory. 
 
 ```
-heroku run python server/manage.py dumpdata cms.step > step.data
-python3 -mjson.tool step.data > step_readable.json
-python server/manage.py loaddata step_readable.json
+docker-compose run horizon python manage.py loaddata cms/fixtures/category
+docker-compose run horizon python manage.py loaddata cms/fixtures/challenge
+docker-compose run horizon python manage.py loaddata cms/fixtures/step
+```
+
+
+Alternatively, if you want the latest data from production, run the following commands:
+
+##### Categories
+
+```
+heroku run python manage.py dumpdata cms.category > category.data
+python3 -mjson.tool server/category.data > server/category_readable.json
+docker-compose run horizon python manage.py loaddata category_readable.json
+```
+
+##### Challenges
+
+```
+heroku run python manage.py dumpdata cms.challenge > challenge.data
+python3 -mjson.tool server/challenge.data > server/challenge_readable.json
+docker-compose run horizon python manage.py loaddata challenge_readable.json
+```
+
+##### Steps
+
+```
+heroku run python manage.py dumpdata cms.step > step.data
+python3 -mjson.tool server/step.data > server/step_readable.json
+docker-compose run horizon python manage.py loaddata step_readable.json
 ```
 
 ### Frontend

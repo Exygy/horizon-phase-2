@@ -23,6 +23,8 @@ import {
 import { stepQuery } from 'src/Queries'
 import { StepQueryParams, Step, StepQueryResponse, StepRouteParams } from 'src/Types'
 import { constructInnerHTML } from 'src/Helpers'
+import ReactFacebookPixel from 'react-facebook-pixel'
+const ReactSnapchatPixel = require('react-snapchat-pixel')
 import CustomHeader from 'src/components/CustomHeader/'
 import Main from 'src/components/Main/'
 import { MOB, translate } from 'src/Translate'
@@ -39,6 +41,9 @@ class OnboardingFutureView extends React.Component<Props, {}> {
   }
 
   componentDidMount = () => {
+    ReactFacebookPixel.track('ViewContent', {})
+    ReactSnapchatPixel.default.track('ViewContent', {})
+
     setTimeout(() => {
       this.setState({ contentBoxVisible: true })
     }, 1000)
