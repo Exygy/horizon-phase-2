@@ -66,7 +66,8 @@
         var total_count = '{{total_count}}';
         document.getElementById('page_number').innerHTML = '';
         var options = '';
-        for (var i = 1; i < (parseInt(total_count) / parseInt(document.getElementById('record_per_page').value)); i++) {
+        for (var i = 1; i <= (Math.ceil(parseInt(total_count) / parseInt(document.getElementById('record_per_page')
+                .value))); i++) {
             options += '<option value="' + i + '">' + i + '</option>';
         }
         document.getElementById('page_number').innerHTML = '<option value="" selected="">---</option>' + options;
