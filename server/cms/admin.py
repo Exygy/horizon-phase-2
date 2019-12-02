@@ -1,12 +1,18 @@
+from datetime import datetime
 import pytz
 
 from django.conf import settings
 from django.contrib import admin
+from django.core.exceptions import PermissionDenied
 from django.db import models
 from django.forms import TextInput, Textarea
+from django.http import HttpResponse
+from django.template.response import TemplateResponse
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin, ExportMixin
 from import_export.fields import Field
+from import_export.forms import ExportForm
+from import_export.signals import post_export
 
 from .models import Category, CategoryFeedback, Challenge, StrategyChoice, Step, SurveyResponse
 
@@ -212,9 +218,9 @@ class StrategyChoiceResource(resources.ModelResource):
         return strategy_choice.date_updated.astimezone(pytz.timezone(settings.ZONE)).strftime('%B %-d, %Y %-I:%M:%S %p')
 
     def dehydrate_choice(self, strategy_choice):
-        if strategy_choice.step.id in [103,204,308,404,508, 608, 704, 806, 906, 1006, 1106]:
+        if strategy_choice.step.id in [103, 204, 308, 404, 508, 608, 704, 806, 906, 1006, 1106]:
             return strategy_choice.origin_step.public_field_2_en
-        elif strategy_choice.step.id in [104,205,309, 405, 509, 609, 705, 807, 907, 1007, 1107]:
+        elif strategy_choice.step.id in [104, 205, 309, 405, 509, 609, 705, 807, 907, 1007, 1107]:
             return strategy_choice.origin_step.public_field_8_en
         elif strategy_choice.step.id in [105, 510, 808, 908, 1008, 1108, 408, 312, 209, 611, 706]:
             return strategy_choice.origin_step.public_field_14_en
@@ -254,20 +260,25 @@ class StrategyChoiceAdmin(ExportMixin, admin.ModelAdmin):
     list_display = ('id', 'session_id', 'get_category', 'get_challenge', 'get_choice_desc', 'date_updated', )
     ordering = ('-date_updated', )
 
+    export_template_name = 'export_strategy_choices.html'
+
     def get_category(self, obj):
         return obj.step.challenge.category.name
 
     def get_challenge(self, obj):
         return obj.step.challenge.name
 
-
     def get_export_queryset(self, request):
-        return StrategyChoice.objects.all()[0:100]
+        page_number = int(request.POST.get('page_number', 1))
+        record_per_page = int(request.POST.get('record_per_page', 100))
+        offset = page_number*record_per_page
+        limit = offset+record_per_page
+        return StrategyChoice.objects.order_by('-id')[offset:limit]
 
     def get_choice_desc(self, obj):
-        if obj.step.id in [103,204,308,404,508, 608, 704, 806, 906, 1006, 1106]:
+        if obj.step.id in [103, 204, 308, 404, 508, 608, 704, 806, 906, 1006, 1106]:
             return obj.origin_step.public_field_2_en
-        elif obj.step.id in [104,205,309, 405, 509, 609, 705, 807, 907, 1007, 1107]:
+        elif obj.step.id in [104, 205, 309, 405, 509, 609, 705, 807, 907, 1007, 1107]:
             return obj.origin_step.public_field_8_en
         elif obj.step.id in [105, 510, 808, 908, 1008, 1108, 408, 312, 209, 611, 706]:
             return obj.origin_step.public_field_14_en
@@ -287,6 +298,42 @@ class StrategyChoiceAdmin(ExportMixin, admin.ModelAdmin):
     def has_delete_permission(self, request, obj=None):
         return False
     """
+
+    def export_action(self, request, *args, **kwargs):
+        if not self.has_export_permission(request):
+            raise PermissionDenied
+
+        formats = self.get_export_formats()
+        form = ExportForm(formats, request.POST or None)
+        if form.is_valid():
+            file_format = formats[
+                int(form.cleaned_data['file_format'])
+            ]()
+
+            queryset = self.get_export_queryset(request)
+            export_data = self.get_export_data(file_format, queryset, request=request)
+            content_type = file_format.get_content_type()
+            response = HttpResponse(export_data, content_type=content_type)
+            response['Content-Disposition'] = 'attachment; filename="%s"' % (
+                "%s-%s.%s" % (self.model.__name__,
+                              datetime.now().strftime('%Y-%m-%d'),
+                              file_format.get_extension())
+            )
+
+            post_export.send(sender=None, model=self.model)
+            return response
+
+        context = self.get_export_context_data()
+
+        context.update(self.admin_site.each_context(request))
+
+        context['title'] = "Export"
+        context['form'] = form
+        context['opts'] = self.model._meta
+        context['total_count'] = self.model.objects.count()
+        request.current_app = self.admin_site.name
+        return TemplateResponse(request, [self.export_template_name],
+                                context)
 
 
 class CategoryFeedbackResource(resources.ModelResource):

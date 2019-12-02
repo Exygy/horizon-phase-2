@@ -7,17 +7,17 @@ from sentry_sdk.integrations.django import DjangoIntegration
 
 from django.utils import timezone
 
-# Report all bugs to Sentry
-sentry_sdk.init(
-    dsn=os.environ['SENTRY_DSN'],
-    integrations=[DjangoIntegration()]
-)
-
 root = environ.Path(__file__) - 2                            # two folders back (/a/b/ - 2 = /)
 DEFAULT_ENV_PATH = environ.Path(__file__) - 3                # default location of .env file
 DEFAULT_ENV_FILE = DEFAULT_ENV_PATH.path('.env')()
 env = environ.Env(DEBUG=(bool, False),)                      # set default values and casting
 environ.Env.read_env(env.str('ENV_PATH', DEFAULT_ENV_FILE))  # reading .env file
+
+# Report all bugs to Sentry
+sentry_sdk.init(
+    dsn=env('SENTRY_DSN', default=False),
+    integrations=[DjangoIntegration()]
+)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = root()
@@ -76,7 +76,7 @@ ROOT_URLCONF = 'horizon.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

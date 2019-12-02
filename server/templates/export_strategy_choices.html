@@ -1,0 +1,78 @@
+{% extends "admin/import_export/base.html" %}
+{% load i18n %}
+{% load admin_urls %}
+{% load import_export_tags %}
+
+{% block breadcrumbs_last %}
+{% trans "Export" %}
+{% endblock %}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <fieldset class="module aligned">
+        {% for field in form %}
+        <div class="form-row">
+            {{ field.errors }}
+
+            {{ field.label_tag }}
+
+            {{ field }}
+
+            {% if field.field.help_text %}
+            <p class="help">{{ field.field.help_text|safe }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </fieldset>
+
+
+    <fieldset class="module aligned">
+        <div class="form-row">
+            <label for="page_number">Export Page</label>
+
+            <select name="page_number" required="" id="page_number">
+                <option value="" selected="">---</option>
+            </select>
+        </div>
+    </fieldset>
+
+    <fieldset class="module aligned">
+        <div class="form-row">
+            <label for="record_per_page">Records per Page</label>
+
+            <select name="record_per_page" required="" id="record_per_page">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option selected="selected" value="500">500</option>
+                <option value="1000">1000</option>
+                <option value="2000">2000</option>
+            </select>
+        </div>
+    </fieldset>
+
+    <div class="submit-row">
+        <input type="submit" class="default" value="{% trans "Submit" %}">
+    </div>
+</form>
+
+
+<script>
+    function updateAvailablePageCount() {
+        var total_count = '{{total_count}}';
+        document.getElementById('page_number').innerHTML = '';
+        var options = '';
+        for (var i = 1; i < (parseInt(total_count) / parseInt(document.getElementById('record_per_page').value)); i++) {
+            options += '<option value="' + i + '">' + i + '</option>';
+        }
+        document.getElementById('page_number').innerHTML = '<option value="" selected="">---</option>' + options;
+    }
+    document.getElementById('record_per_page').onchange = updateAvailablePageCount;
+    updateAvailablePageCount();
+</script>
+
+{% endblock %}
