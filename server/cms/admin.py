@@ -229,7 +229,7 @@ class SurveyResponseResource(resources.ModelResource):
 
     class Meta:
         model = SurveyResponse
-        export_order = ('id', 'session_id', 'name', 'date_updated')
+        export_order = ('id', 'session_id', 'date_updated')
 
     def dehydrate_date_updated(self, strategy_choice):
         return strategy_choice.date_updated.astimezone(pytz.timezone(settings.ZONE)).strftime('%B %-d, %Y %-I:%M:%S %p')
