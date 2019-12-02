@@ -259,7 +259,6 @@ class StrategyChoiceAdmin(ExportMixin, admin.ModelAdmin):
     list_display_links = None
     list_display = ('id', 'session_id', 'get_category', 'get_challenge', 'get_choice_desc', 'date_updated', )
     ordering = ('-date_updated', )
-
     export_template_name = 'export_strategy_choices.html'
 
     def get_category(self, obj):
