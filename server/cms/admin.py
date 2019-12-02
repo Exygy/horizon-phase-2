@@ -260,6 +260,10 @@ class StrategyChoiceAdmin(ExportMixin, admin.ModelAdmin):
     def get_challenge(self, obj):
         return obj.step.challenge.name
 
+
+    def get_export_queryset(self, request):
+        return StrategyChoice.objects.all()[0:100]
+
     def get_choice_desc(self, obj):
         if obj.step.id in [103,204,308,404,508, 608, 704, 806, 906, 1006, 1106]:
             return obj.origin_step.public_field_2_en
