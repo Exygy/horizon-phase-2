@@ -70,6 +70,14 @@ python3 -mjson.tool server/step.data > server/step_readable.json
 docker-compose run horizon python manage.py loaddata step_readable.json
 ```
 
+#### Loading a DB dump from Heroku to the local docker DB
+```
+docker-compose run horizon pg_restore --clean --no-owner --no-acl --no-tablespaces --host db --user postgres --dbname horizon < latest.dump
+```
+check for success and otherwise work with the local database via CLI with:
+```
+docker-compose run horizon psql --host db --user postgres horizon
+```
 ### Frontend
 ```
 cd client
