@@ -147,6 +147,7 @@ REACT_APP_DIR = os.path.join('client')
 if not DEBUG:
     STATICFILES_DIRS = [
         os.path.join(REACT_APP_DIR, 'build', 'static'),
+        os.path.join('static'),
     ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
