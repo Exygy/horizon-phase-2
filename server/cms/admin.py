@@ -259,21 +259,13 @@ class StrategyChoiceAdmin(ExportMixin, admin.ModelAdmin):
     list_display_links = None
     list_display = ('id', 'session_id', 'get_category', 'get_challenge', 'get_choice_desc', 'date_updated', )
     ordering = ('-date_updated', )
-    export_template_name = 'export_strategy_choices.html'
 
     def get_export_queryset(self, request):
-        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-        if x_forwarded_for:
-            ip = x_forwarded_for.split(',')[0]
-        else:
-            ip = request.META.get('REMOTE_ADDR')
-        print(ip)
+        return StrategyChoice.objects.select_related('step__challenge__category').select_related('origin_step')
 
-        page_number = int(request.POST.get('page_number', 1))
-        record_per_page = int(request.POST.get('record_per_page', 100))
-        offset = page_number*record_per_page
-        limit = offset+record_per_page
-        return StrategyChoice.objects.order_by('-id')[offset:limit]
+    def get_queryset(self, request):
+        queryset = super().get_queryset(request)
+        return queryset.select_related('step__challenge__category').select_related('origin_step')
 
     def get_category(self, obj):
         return obj.step.challenge.category.name
