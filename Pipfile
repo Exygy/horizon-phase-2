@@ -19,6 +19,8 @@ django-extensions = "*"
 mistune = "*"
 django-import-export = "*"
 sentry-sdk = "*"
+nplusone = "*"
+django-debug-toolbar = "*"
 
 [dev-packages]
 pytest-django = "==3.3.2"

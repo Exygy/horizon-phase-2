@@ -11,3 +11,11 @@ urlpatterns = [
     path('gql', csrf_exempt(GraphQLView.as_view())),
     re_path(r'.*', FrontendAppView.as_view()),
 ]
+
+
+if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns += [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ]
